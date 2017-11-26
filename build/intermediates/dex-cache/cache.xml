@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/andrea/AndroidStudioProjects/wikibot/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="89e7663946cad7bd6c1dde2207f90b9f88c3a6ca">
+        <dex dex="/home/andrea/AndroidStudioProjects/wikibot/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_5e23aa9626970c82d496b49f4ce7b73b3eee8220/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/andrea/AndroidStudioProjects/wikibot/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="12920f9016b8b05acbc2af7cdc13cef6946fe7d3">
+        <dex dex="/home/andrea/AndroidStudioProjects/wikibot/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_516f20c0e6ea966407fd0fc5c0ec12361b4c1e6c/classes.dex" />
+    </item>
+
+</items>

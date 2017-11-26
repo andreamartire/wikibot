@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Libro Parlante</string>
+    <string name="player.button.backward30"><![CDATA[30s<]]></string>
+    <string name="player.button.backward10"><![CDATA[10s<]]></string>
+    <string name="player.button.forward10"><![CDATA[>10s]]></string>
+    <string name="player.button.forward30"><![CDATA[>30s]]></string>
+    <string name="info_title">Informazioni</string>
+    <string name="info_message">Tutti i contenuti audio e le immagini sono liberamente accessibili in rete e scaricati direttamente dai siti web dei rispettivi possessori dei diritti. L\'applicazione non ha un server associato pertanto nessun contenuto è ospitato sui nostri sistemi. Per suggerimenti/segnalazioni: techbrain@autistici.org</string>
+    <string name="cancel">Annulla</string>
+    <string name="ok">Cancella</string>
+    <string name="label_curiosita">Curiosità</string>
+    <string name="label_citazione">Citazione</string>
+    <string name="label_proverbio">Proverbio</string>
+    <string name="label_nonciclopedia">NonCiclopedia</string>
+    <string name="label_send">Send</string>
+</resources>
