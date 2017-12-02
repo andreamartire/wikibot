@@ -8,7 +8,9 @@
         android:layout_width="match_parent"
         android:layout_height="213dp"
         android:id="@+id/listContents"
-        android:layout_weight="0.92">
+        android:layout_weight="0.92"
+        android:transcriptMode="alwaysScroll"
+        android:stackFromBottom="true">
 
     </ListView>
     <LinearLayout
