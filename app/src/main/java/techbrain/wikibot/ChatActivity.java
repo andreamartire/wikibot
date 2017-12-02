@@ -14,6 +14,12 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
+
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.net.URL;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 
 import newtech.audiolibrary.R;
@@ -150,6 +156,7 @@ public class ChatActivity extends Activity {
         if(!message.isEmpty()){
             //update list
             listItems.add(message);
+            adapter.notifyDataSetChanged();
             //clear edit box
             editBox.setText("");
 
@@ -161,7 +168,12 @@ public class ChatActivity extends Activity {
                     editBox.getWindowToken(),
                     InputMethodManager.HIDE_NOT_ALWAYS);
 
-            adapter.notifyDataSetChanged();
+            try{
+                RetrieveGoogleTask task = new RetrieveGoogleTask(context, listItems, adapter, message);
+                task.execute();
+            }catch (Exception e){
+                e.printStackTrace();
+            }
         }
     }
 

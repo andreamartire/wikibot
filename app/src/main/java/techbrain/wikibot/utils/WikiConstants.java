@@ -13,8 +13,8 @@ public class WikiConstants {
 	static String WIKI_PREFIX = "https://it.wikipedia.org/wiki/";
 	public static String NONCICLOPEDIA_URL = "http://nonciclopedia.wikia.com/wiki/Speciale:PaginaCasuale";
 
-	static String GOOGLE_CX = "004001173590099652672:ls07lv3jtwm";
-	static String GAK = "AIzaSyCf8GaliX65nWeelUq5so0dg5H14sYFv3c";
+	public static String CX = "004001173590099652672:ls07lv3jtwm";
+	public static String GAK = "AIzaSyCf8GaliX65nWeelUq5so0dg5H14sYFv3c";
 
 	static ArrayList<String> wikipediaItems = new ArrayList<String>(Arrays.asList(
 		"Moto perpetuo",
