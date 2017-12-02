@@ -1,20 +1,22 @@
 package techbrain.wikibot.utils;
 
+import android.widget.ArrayAdapter;
+
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.Collections;
+
+import techbrain.wikibot.RetrieveNonciclopediaTask;
 
 public class WikiConstants {
 
-	String TELEGRAM_SERVER = "api.telegram.org";
-	String WIKI_PREFIX = "https://it.wikipedia.org/wiki/";
-	String NONCICLOPEDIA_URL = "http://nonciclopedia.wikia.com/wiki/Speciale:PaginaCasuale";
+	static String WIKI_PREFIX = "https://it.wikipedia.org/wiki/";
+	public static String NONCICLOPEDIA_URL = "http://nonciclopedia.wikia.com/wiki/Speciale:PaginaCasuale";
 
-	String WIKIPEDIA_URL= "it.wikipedia.org";
-	String GOOGLE_CX= "004001173590099652672:ls07lv3jtwm";
-	String GOOGLE_API_KEY= "AIzaSyCf8GaliX65nWeelUq5so0dg5H14sYFv3c";
+	static String GOOGLE_CX = "004001173590099652672:ls07lv3jtwm";
+	static String GAK = "AIzaSyCf8GaliX65nWeelUq5so0dg5H14sYFv3c";
 
-	Set<String> wikipediaItems = new HashSet<String>(Arrays.asList(
+	static ArrayList<String> wikipediaItems = new ArrayList<String>(Arrays.asList(
 		"Moto perpetuo",
 		"Ragogna",
 		"Oro di Yamashita",
@@ -1315,4 +1317,22 @@ public class WikiConstants {
 		"Tabi",
 		"Minuto di 61 secondi"
 	));
+
+	public static String getRandomItem() {
+		Collections.shuffle(wikipediaItems);
+		return WIKI_PREFIX + wikipediaItems.get(0);
+	}
+
+	public static String getRandomNonciclopedia(ArrayList<String> listItems, ArrayAdapter<String> adapter) {
+		String item = null;
+
+		try{
+			RetrieveNonciclopediaTask task = new RetrieveNonciclopediaTask(listItems, adapter);
+			task.execute();
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+
+		return  item;
+	}
 };

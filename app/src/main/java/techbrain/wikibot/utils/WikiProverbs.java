@@ -1,12 +1,14 @@
 package techbrain.wikibot.utils;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
 public class WikiProverbs {
 
-	Set<String> proverbs = new HashSet<>(Arrays.asList(
+	static ArrayList<String> proverbs = new ArrayList<>(Arrays.asList(
 		"A brigante brigante e mezzo.",
 		"A buon cavalier non manca lancia.",
 		"A buon cavallo non manca sella.",
@@ -1155,4 +1157,9 @@ public class WikiProverbs {
 		"Vizio di natura fino alla fossa dura.",
 		"Vizio di natura, fino alla morte dura."
 	));
+
+	public static String getRandomItem() {
+		Collections.shuffle(proverbs);
+		return proverbs.get(0);
+	}
 }

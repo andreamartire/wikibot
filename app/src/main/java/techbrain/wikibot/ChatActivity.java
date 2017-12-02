@@ -17,6 +17,9 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import newtech.audiolibrary.R;
+import techbrain.wikibot.utils.WikiConstants;
+import techbrain.wikibot.utils.WikiProverbs;
+import techbrain.wikibot.utils.WikiQuotes;
 
 /**
  * Created by andrea on 18/10/17.
@@ -40,6 +43,42 @@ public class ChatActivity extends Activity {
         list.setAdapter(adapter);
 
         final Context context = this;
+
+        addRandomProverb(listItems, adapter);
+        addRandomQuote(listItems, adapter);
+        addRandomCuriosita(listItems, adapter);
+
+        Button curiositaBtn = (Button) findViewById(R.id.curiosita_button);
+        curiositaBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addRandomCuriosita(listItems, adapter);
+            }
+        });
+
+        Button citazioneBtn = (Button) findViewById(R.id.citazione_button);
+        citazioneBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addRandomQuote(listItems, adapter);
+            }
+        });
+
+        Button proverbBtn = (Button) findViewById(R.id.proverb_button);
+        proverbBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addRandomProverb(listItems, adapter);
+            }
+        });
+
+        Button nonciclopediaBtn = (Button) findViewById(R.id.nonciclopedia_button);
+        nonciclopediaBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addRandomNonciclopedia(listItems, adapter);
+            }
+        });
 
         final EditText ediBox = (EditText) findViewById(R.id.editBox);
         ediBox.setOnKeyListener(new View.OnKeyListener() {
@@ -70,6 +109,39 @@ public class ChatActivity extends Activity {
                 manageMessage(context, ediBox);
             }
         });
+    }
+
+    private void addRandomNonciclopedia(ArrayList<String> listItems, ArrayAdapter<String> adapter) {
+        WikiConstants.getRandomNonciclopedia(listItems, adapter);
+    }
+
+    private void addRandomCuriosita(ArrayList<String> listItems, ArrayAdapter<String> adapter) {
+
+        String randomItem = WikiConstants.getRandomItem();
+
+        //update list
+        listItems.add(randomItem);
+
+        adapter.notifyDataSetChanged();
+    }
+
+    private void addRandomProverb(ArrayList<String> listItems, ArrayAdapter<String> adapter) {
+        String randomItem = WikiProverbs.getRandomItem();
+
+        //update list
+        listItems.add(randomItem);
+
+        adapter.notifyDataSetChanged();
+    }
+
+    private void addRandomQuote(ArrayList<String> listItems, ArrayAdapter<String> adapter) {
+
+        String randomItem = WikiQuotes.getRandomItem();
+
+        //update list
+        listItems.add(randomItem);
+
+        adapter.notifyDataSetChanged();
     }
 
     public void manageMessage(Context context, EditText editBox){

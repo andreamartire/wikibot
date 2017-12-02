@@ -1,12 +1,14 @@
 package techbrain.wikibot.utils;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
 public class WikiQuotes {
 
-	Set<String> quotes = new HashSet<>(Arrays.asList(
+	static ArrayList<String> quotes = new ArrayList<>(Arrays.asList(
 		"Ancora un anno è bruciato, senza un lamento, senza un grido levato a vincere d\'improvviso un giorno. (Salvatore Quasimodo)",
 		"Io mi dico: è stato meglio lasciarci che non esserci mai incontrati. (Fabrizio De André)",
 		"Mi piace il lavoro, mi affascina. Potrei stare per ore seduto ad osservarlo... (Jerome Klapka Jerome)",
@@ -374,4 +376,9 @@ public class WikiQuotes {
 		"La responsabilità è ciò che attende fuori dell\'Eden della creatività. (Nadine Gordimer)",
 		"Ciò che diciamo principio spesso è la fine, e finire è cominciare. La fine è là onde partiamo. (Thomas Stearns Eliot)"
 	));
+
+	public static String getRandomItem() {
+		Collections.shuffle(quotes);
+		return quotes.get(0);
+	}
 }
