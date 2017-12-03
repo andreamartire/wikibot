@@ -4,18 +4,45 @@
     android:layout_height="match_parent"
     android:weightSum="1">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary">
+
+        <ImageButton
+            android:src="@drawable/ic_info_outline_black_24dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="right"
+            android:background="?selectableItemBackground"
+            android:padding="5dp"
+            android:id="@+id/infoButton" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:layout_gravity="left" />
+
+    </android.support.v7.widget.Toolbar>
+
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="213dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
         android:id="@+id/listContents"
-        android:layout_weight="0.92"
         android:transcriptMode="alwaysScroll"
         android:stackFromBottom="true">
 
     </ListView>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,12 +50,14 @@
             android:orientation="horizontal"
             android:layout_gravity="center_horizontal">
             <Button
-                android:layout_width="180dp"
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
                 android:layout_height="50dp"
                 android:text="@string/label_curiosita"
                 android:id="@+id/curiosita_button"/>
             <Button
-                android:layout_width="180dp"
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
                 android:layout_height="50dp"
                 android:text="@string/label_citazione"
                 android:id="@+id/citazione_button"/>
@@ -38,12 +67,14 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <Button
-                android:layout_width="180dp"
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
                 android:layout_height="50dp"
                 android:text="@string/label_proverbio"
                 android:id="@+id/proverb_button"/>
             <Button
-                android:layout_width="180dp"
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
                 android:layout_height="50dp"
                 android:text="@string/label_nonciclopedia"
                 android:id="@+id/nonciclopedia_button"/>
@@ -55,11 +86,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <EditText
-            android:layout_width="290dp"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
             android:layout_height="90dp"
             android:id="@+id/editBox"/>
         <Button
-            android:layout_width="60dp"
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
             android:layout_height="60dp"
             android:id="@+id/sendButton"
             android:text="@string/label_send"/>

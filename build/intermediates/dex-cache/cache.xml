@@ -12,24 +12,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/andrea/AndroidStudioProjects/wikibot/app/libs/google-http-client-android-1.23.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="56496af73c94e82389fb939081debbe3d5011717">
-        <dex dex="/home/andrea/AndroidStudioProjects/wikibot/app/build/intermediates/transforms/dex/debug/folders/1000/2/google-http-client-android-1.23.0_4a06dc0fc2423a9ce63391cd7a2e5fbb50f49837/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/andrea/AndroidStudioProjects/wikibot/app/libs/google-api-client-android-1.23.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="177ba3bf82d794e307dcd14c7b0949ce0b810ed0">
-        <dex dex="/home/andrea/AndroidStudioProjects/wikibot/app/build/intermediates/transforms/dex/debug/folders/1000/2/google-api-client-android-1.23.0_21aabe041dcc8f59874ab62cae93dbff9a5d5bf5/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/andrea/AndroidStudioProjects/wikibot/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"

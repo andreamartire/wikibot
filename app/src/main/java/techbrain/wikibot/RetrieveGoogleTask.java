@@ -78,9 +78,6 @@ public class RetrieveGoogleTask extends AsyncTask<String, Void, String> {
     }
 
     protected void onPostExecute(String item) {
-        //update list
-        listItems.add(item);
 
-        adapter.notifyDataSetChanged();
     }
 }

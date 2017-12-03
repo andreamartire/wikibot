@@ -1,6 +1,7 @@
 package techbrain.wikibot;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.text.Editable;
@@ -11,18 +12,20 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.google.gson.Gson;
 
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
+import java.util.concurrent.ThreadPoolExecutor;
 
 import newtech.audiolibrary.R;
+import techbrain.wikibot.utils.AppRater;
 import techbrain.wikibot.utils.WikiConstants;
 import techbrain.wikibot.utils.WikiProverbs;
 import techbrain.wikibot.utils.WikiQuotes;
@@ -42,13 +45,28 @@ public class ChatActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_chat);
 
+        final Context context = this;
+
+        AppRater.app_launched(this);
+
+        ImageButton infoButton = (ImageButton) findViewById(R.id.infoButton);
+        infoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setMessage(R.string.info_message)
+                        .setTitle(R.string.info_title);
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
+
         final ListView list = (ListView) findViewById(R.id.listContents);
         adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1,
                 listItems);
         list.setAdapter(adapter);
-
-        final Context context = this;
 
         addRandomProverb(listItems, adapter);
         addRandomQuote(listItems, adapter);
