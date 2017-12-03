@@ -20,6 +20,10 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.net.URL;
@@ -47,6 +51,12 @@ public class ChatActivity extends Activity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_chat);
+
+        MobileAds.initialize(this, "ca-app-pub-1872225169177247~8401929001");
+
+        AdView mAdView = (AdView) findViewById(R.id.mainChatAdView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         final Context context = this;
 
