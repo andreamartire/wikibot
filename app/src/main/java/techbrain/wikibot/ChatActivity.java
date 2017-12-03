@@ -98,8 +98,8 @@ public class ChatActivity extends Activity {
             }
         });
 
-        addRandomProverb(listItems, adapter);
-        addRandomQuote(listItems, adapter);
+        addRandomProverb(context, listItems, adapter);
+        addRandomQuote(context, listItems, adapter);
         addRandomCuriosita(listItems, adapter);
 
         Button curiositaBtn = (Button) findViewById(R.id.curiosita_button);
@@ -114,7 +114,7 @@ public class ChatActivity extends Activity {
         citazioneBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                addRandomQuote(listItems, adapter);
+                addRandomQuote(context, listItems, adapter);
             }
         });
 
@@ -122,7 +122,7 @@ public class ChatActivity extends Activity {
         proverbBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                addRandomProverb(listItems, adapter);
+                addRandomProverb(context, listItems, adapter);
             }
         });
 
@@ -179,16 +179,23 @@ public class ChatActivity extends Activity {
         adapter.notifyDataSetChanged();
     }
 
-    private void addRandomProverb(ArrayList<String> listItems, ArrayAdapter<String> adapter) {
+    private void addRandomProverb(Context context, ArrayList<String> listItems, ArrayAdapter<String> adapter) {
         String randomItem = WikiProverbs.getRandomItem();
 
         //update list
         listItems.add(randomItem);
 
         adapter.notifyDataSetChanged();
+
+        try{
+            RetrieveGoogleTask task = new RetrieveGoogleTask(context, listItems, adapter, randomItem);
+            task.execute();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
-    private void addRandomQuote(ArrayList<String> listItems, ArrayAdapter<String> adapter) {
+    private void addRandomQuote(Context context, ArrayList<String> listItems, ArrayAdapter<String> adapter) {
 
         String randomItem = WikiQuotes.getRandomItem();
 
@@ -196,6 +203,13 @@ public class ChatActivity extends Activity {
         listItems.add(randomItem);
 
         adapter.notifyDataSetChanged();
+
+        try{
+            RetrieveGoogleTask task = new RetrieveGoogleTask(context, listItems, adapter, randomItem);
+            task.execute();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     public void manageMessage(Context context, EditText editBox){
