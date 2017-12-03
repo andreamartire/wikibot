@@ -3,12 +3,15 @@ package techbrain.wikibot;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -67,6 +70,23 @@ public class ChatActivity extends Activity {
                 android.R.layout.simple_list_item_1,
                 listItems);
         list.setAdapter(adapter);
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View v, int i, long l) {
+                //manage tap on audiobook list
+                String value = (String) adapterView.getItemAtPosition(i);
+
+                if(isValidUrl(value)){
+                    //open brower
+                    Intent browserIntent = new Intent(context, WebViewActivity.class);
+
+                    //pass data thought intent to another activity
+                    browserIntent.putExtra(WebViewActivity.URL, value);
+
+                    startActivity(browserIntent);
+                }
+            }
+        });
 
         addRandomProverb(listItems, adapter);
         addRandomQuote(listItems, adapter);
@@ -199,5 +219,15 @@ public class ChatActivity extends Activity {
     protected void onDestroy()
     {
         super.onDestroy();
+    }
+
+    public static boolean isValidUrl(String uri) {
+        final URL url;
+        try {
+            url = new URL(uri);
+        } catch (Exception e1) {
+            return false;
+        }
+        return "http".equals(url.getProtocol()) || "https".equals(url.getProtocol());
     }
 }

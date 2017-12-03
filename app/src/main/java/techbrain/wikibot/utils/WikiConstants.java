@@ -20,7 +20,15 @@ public class WikiConstants {
 		"Moto perpetuo",
 		"Ragogna",
 		"Oro di Yamashita",
-		"Atuk",
+        "Fenomeno delle voci elettroniche",
+        "Rimozione chirurgica della fistola anale di Luigi XIV",
+        "Swaffelen",
+        "Atuk",
+        "Azzurrina",
+        "Illusione uditiva",
+        "Riflessologia (medicina alternativa)",
+        "Junk science",
+        "Lottologia",
 		"Versoaln",
 		"Numero socievole",
 		"Personaggio tipo",
@@ -1320,7 +1328,7 @@ public class WikiConstants {
 
 	public static String getRandomItem() {
 		Collections.shuffle(wikipediaItems);
-		return WIKI_PREFIX + wikipediaItems.get(0);
+		return WIKI_PREFIX + wikipediaItems.get(0).replaceAll(" ","_");
 	}
 
 	public static String getRandomNonciclopedia(ArrayList<String> listItems, ArrayAdapter<String> adapter) {
