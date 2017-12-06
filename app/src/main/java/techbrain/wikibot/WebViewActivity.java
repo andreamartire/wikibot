@@ -10,10 +10,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ArrayAdapter;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
@@ -32,6 +35,11 @@ public class WebViewActivity extends AppCompatActivity {
     final static String URL = "URL";
 
     String currentUrl;
+
+    AlphaAnimation inAnimation;
+    AlphaAnimation outAnimation;
+
+    FrameLayout progressBarHolder;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -70,6 +78,13 @@ public class WebViewActivity extends AppCompatActivity {
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
+        inAnimation = new AlphaAnimation(0f, 1f);
+        inAnimation.setDuration(200);
+
+        progressBarHolder = (FrameLayout) findViewById(R.id.progressBarHolder);
+        progressBarHolder.setAnimation(inAnimation);
+        progressBarHolder.setVisibility(View.VISIBLE);
+
         final Context me = this;
 
         currentUrl = (String) getIntent().getSerializableExtra(URL);
@@ -89,6 +104,16 @@ public class WebViewActivity extends AppCompatActivity {
 
                     Toast.makeText(me, R.string.network_error, Toast.LENGTH_LONG).show();
                     ((Activity) me).finish();
+                }
+
+                @Override
+                public void onPageFinished(WebView view, String url) {
+                    outAnimation = new AlphaAnimation(1f, 0f);
+                    outAnimation.setDuration(200);
+                    progressBarHolder.setAnimation(outAnimation);
+                    progressBarHolder.setVisibility(View.GONE);
+
+                    super.onPageFinished(view,url);
                 }
             });
 
