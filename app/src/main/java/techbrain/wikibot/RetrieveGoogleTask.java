@@ -55,7 +55,7 @@ public class RetrieveGoogleTask extends AsyncTask<String, Void, String> {
                     String link=output.substring(output.indexOf("\"link\": \"")+("\"link\": \"").length(), output.indexOf("\","));
                     System.out.println(link);       //Will print the google search links
 
-                    if(firstLink == null && !link.contains("/Discussione:") && !link.contains("/Template:") && !link.contains("/Discussioni_utente:")){
+                    if(firstLink == null && !link.contains("/Discussione:")&& !link.contains("/Discussioni_utente")&& !link.contains("/Template:") && !link.contains("/Discussioni_utente:")){
                         firstLink = link;
                         //update list
                         listItems.add(firstLink);

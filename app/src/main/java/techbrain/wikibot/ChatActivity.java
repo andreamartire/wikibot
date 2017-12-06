@@ -6,8 +6,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
@@ -41,16 +45,64 @@ import techbrain.wikibot.utils.WikiQuotes;
  * Created by andrea on 18/10/17.
  */
 
-public class ChatActivity extends Activity {
+public class ChatActivity extends AppCompatActivity {
 
     ArrayList<String> listItems = new ArrayList<String>();
     ArrayAdapter<String> adapter;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        final Context me = this;
+
+        switch (item.getItemId()) {
+            case R.id.shareElement:
+                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                sharingIntent.setType("text/plain");
+
+                String shareBodyText = getResources().getString(R.string.share_message);
+
+                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT,"Subject here");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBodyText);
+                startActivity(Intent.createChooser(sharingIntent, "Shearing Option"));
+                return true;
+
+            case R.id.infoElement:
+                //Toast.makeText(me, "Tutti i contenuti audio e le immagini sono liberamente accessibili in rete e scaricati direttamente dai siti web dei rispettivi possessori dei diritti. Nessun contenuto è ospitato su server dell'applicazione", Toast.LENGTH_LONG).show();
+                AlertDialog.Builder builder = new AlertDialog.Builder(me);
+                builder.setMessage(R.string.info_message)
+                        .setTitle(R.string.info_title);
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
+                return true;
+
+            case R.id.contactElement:
+                String email = getResources().getString(R.string.contact_email);
+                Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto",email, null));
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Libro Parlante");
+                startActivity(Intent.createChooser(emailIntent, "Send email..."));
+
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_chat);
+
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
+        myToolbar.showOverflowMenu();
+        setSupportActionBar(myToolbar);
 
         MobileAds.initialize(this, "ca-app-pub-1872225169177247~8401929001");
 
@@ -61,19 +113,6 @@ public class ChatActivity extends Activity {
         final Context context = this;
 
         AppRater.app_launched(this);
-
-        ImageButton infoButton = (ImageButton) findViewById(R.id.infoButton);
-        infoButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                builder.setMessage(R.string.info_message)
-                        .setTitle(R.string.info_title);
-
-                AlertDialog dialog = builder.create();
-                dialog.show();
-            }
-        });
 
         final ListView list = (ListView) findViewById(R.id.listContents);
         adapter = new ArrayAdapter<String>(this,
