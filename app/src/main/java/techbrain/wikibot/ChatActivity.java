@@ -138,8 +138,8 @@ public class ChatActivity extends AppCompatActivity {
         });
 
         addRandomProverb(context, listItems, adapter);
-        addRandomQuote(context, listItems, adapter);
         addRandomCuriosita(listItems, adapter);
+        addRandomQuote(context, listItems, adapter);
 
         Button curiositaBtn = (Button) findViewById(R.id.curiosita_button);
         curiositaBtn.setOnClickListener(new View.OnClickListener() {

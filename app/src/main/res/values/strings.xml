@@ -11,4 +11,5 @@
     <string name="info_message">WikiRobot è un bot che ti invia interessanti spunti quotidiani. Per suggerimenti/segnalazioni: techbrain@autistici.org</string>
     <string name="share_message">Dai un\'occhiata a "Wiki RoBot"</string>
     <string name="contact_email">techbrain@autistici.org</string>
+    <string name="network_error">Errore di rete. Controlla la tua connesione a internet</string>
 </resources>
