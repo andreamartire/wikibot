@@ -57,7 +57,7 @@ public class RetrieveGoogleTask extends AsyncTask<String, Void, String> {
 
                     if(firstLink == null
                             && !link.contains("wiki/Discussione")
-                            && !link.contains("wiki/Discussioni_utente")
+                            && !link.contains("wiki/Discussioni_")
                             && !link.contains("wiki/Template")
                             && !link.contains("wiki/Wikipedia:Bar")
                             && !link.contains("wiki/File:")
@@ -65,6 +65,7 @@ public class RetrieveGoogleTask extends AsyncTask<String, Void, String> {
                         firstLink = link;
                         //update list
                         listItems.add(firstLink);
+                        ChatActivity.saveChat(context, listItems);
                     }
                 }
             }

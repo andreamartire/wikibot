@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,6 +22,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.SearchView;
 import android.widget.TextView;
 
 
@@ -28,15 +30,22 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.concurrent.ThreadPoolExecutor;
 
 import newtech.audiolibrary.R;
 import techbrain.wikibot.utils.AppRater;
+import techbrain.wikibot.utils.MyFileUtils;
 import techbrain.wikibot.utils.WikiConstants;
 import techbrain.wikibot.utils.WikiProverbs;
 import techbrain.wikibot.utils.WikiQuotes;
@@ -114,6 +123,8 @@ public class ChatActivity extends AppCompatActivity {
 
         AppRater.app_launched(this);
 
+        listItems = getSavedChat(context);
+
         final ListView list = (ListView) findViewById(R.id.listContents);
         adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1,
@@ -138,14 +149,14 @@ public class ChatActivity extends AppCompatActivity {
         });
 
         addRandomProverb(context, listItems, adapter);
-        addRandomCuriosita(listItems, adapter);
+        addRandomCuriosita(context, listItems, adapter);
         addRandomQuote(context, listItems, adapter);
 
         Button curiositaBtn = (Button) findViewById(R.id.curiosita_button);
         curiositaBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                addRandomCuriosita(listItems, adapter);
+                addRandomCuriosita(context, listItems, adapter);
             }
         });
 
@@ -173,22 +184,15 @@ public class ChatActivity extends AppCompatActivity {
             }
         });
 
-        final EditText ediBox = (EditText) findViewById(R.id.editBox);
+        final SearchView ediBox = (SearchView) findViewById(R.id.editBox);
+        ediBox.setQueryHint(getResources().getString(R.string.default_search_text));
+        ediBox.requestFocus();
         ediBox.setOnKeyListener(new View.OnKeyListener() {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 // If the event is a key-down event on the "enter" button
                 if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
                         (keyCode == KeyEvent.KEYCODE_ENTER)) {
                     // Perform action on key press
-                    manageMessage(context,  ediBox);
-                }
-                return false;
-            }
-        });
-        ediBox.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if (actionId == EditorInfo.IME_ACTION_DONE) {
                     manageMessage(context,  ediBox);
                 }
                 return false;
@@ -208,9 +212,10 @@ public class ChatActivity extends AppCompatActivity {
         WikiConstants.getRandomNonciclopedia(listItems, adapter);
     }
 
-    private void addRandomCuriosita(ArrayList<String> listItems, ArrayAdapter<String> adapter) {
+    private void addRandomCuriosita(Context context, ArrayList<String> listItems, ArrayAdapter<String> adapter) {
 
         String randomItem = WikiConstants.getRandomItem();
+        saveChat(context, listItems);
 
         //update list
         listItems.add(randomItem);
@@ -223,6 +228,7 @@ public class ChatActivity extends AppCompatActivity {
 
         //update list
         listItems.add(randomItem);
+        saveChat(context, listItems);
 
         adapter.notifyDataSetChanged();
 
@@ -240,6 +246,7 @@ public class ChatActivity extends AppCompatActivity {
 
         //update list
         listItems.add(randomItem);
+        saveChat(context, listItems);
 
         adapter.notifyDataSetChanged();
 
@@ -251,15 +258,15 @@ public class ChatActivity extends AppCompatActivity {
         }
     }
 
-    public void manageMessage(Context context, EditText editBox){
-        String message = editBox.getText().toString();
+    public void manageMessage(Context context, SearchView editBox){
+        String message = editBox.getQuery().toString();
 
         if(!message.isEmpty()){
             //update list
             listItems.add(message);
             adapter.notifyDataSetChanged();
             //clear edit box
-            editBox.setText("");
+            editBox.setQuery("", false);
 
             //hide keyboard
             InputMethodManager inputManager =
@@ -270,6 +277,7 @@ public class ChatActivity extends AppCompatActivity {
                     InputMethodManager.HIDE_NOT_ALWAYS);
 
             try{
+                saveChat(context, listItems);
                 RetrieveGoogleTask task = new RetrieveGoogleTask(context, listItems, adapter, message);
                 task.execute();
             }catch (Exception e){
@@ -292,5 +300,35 @@ public class ChatActivity extends AppCompatActivity {
             return false;
         }
         return "http".equals(url.getProtocol()) || "https".equals(url.getProtocol());
+    }
+
+    public static void saveChat(Context context, List<String> chats) {
+        String chatFilePath = context.getFilesDir().getAbsolutePath() + File.separator + "chats.dat";
+
+        MyFileUtils.deleteFileIfExists(chatFilePath);
+
+        try{
+            FileWriter fw = new FileWriter(chatFilePath);
+            fw.write(TextUtils.join("\n", chats));
+            fw.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public static ArrayList<String> getSavedChat(Context context){
+        String chatFilePath = context.getFilesDir().getAbsolutePath() + File.separator + "chats.dat";
+
+        ArrayList<String> list = new ArrayList<>();
+        try{
+            String fileContent = MyFileUtils.getStringFromFile(chatFilePath);
+
+            list = new ArrayList<String>(Arrays.asList(TextUtils.split(fileContent, "\n")));
+        }catch (Exception e){
+            //nothing
+            e.printStackTrace();
+        }
+
+        return list;
     }
 }
