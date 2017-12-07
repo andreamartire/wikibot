@@ -4,7 +4,11 @@ import android.widget.ArrayAdapter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 import techbrain.wikibot.RetrieveNonciclopediaTask;
 
@@ -220,7 +224,7 @@ public class WikiConstants {
 		"Trimetilarsina",
 		"Disastro di Marcinelle",
 		"Secondo intercalare",
-		"Foca di Bisanzio",
+		"Foca (imperatore)",
 		"2 Pallas",
 		"Clavicembalo elettrico",
 		"Cronometro di Loulié",
@@ -284,12 +288,11 @@ public class WikiConstants {
 		"Impronte degli dei",
 		"Escursione someggiata",
 		"Schmallenberg virus",
-		"Lista di paradossi",
+        "Fenomeno da baraccone",
 		"Giochi inaugurali dell\'anfiteatro Flavio",
 		"Dornier Do 335",
 		"Patafisica",
 		"Neko café",
-		"Province italiane in progetto",
 		"Spedizione Donner",
 		"Castellana di Vergi",
 		"Orgone",
@@ -297,7 +300,6 @@ public class WikiConstants {
 		"Linee temporanee",
 		"Casa Fenoglio-Lafleur",
 		"Hermetia illucens",
-		"Brfxxccxxmnpcccclllmmnprxvclmnckssqlbb11116",
 		"Uomo Assorbente",
 		"Cronologia del futuro lontano",
 		"Rabdomanzia",
@@ -330,7 +332,6 @@ public class WikiConstants {
 		"Hemp Body Car",
 		"Mummia di palude",
 		"Piccione fotografo",
-		"Pacific Trash Vortex",
 		"Afsluitdijk",
 		"Teorie alternative sulla morte di Napoleone Bonaparte",
 		"Gioco del cento",
@@ -371,7 +372,7 @@ public class WikiConstants {
 		"Disco protoplanetario",
 		"Ibrido grizzly-orso polare",
 		"Hello world",
-		"Lista di presunti avvistamenti UFO",
+		"Lista di avvistamenti UFO",
 		"Teoria del complotto",
 		"Lista di gadget nei film di James Bond",
 		"Strada delle 52 gallerie",
@@ -424,7 +425,7 @@ public class WikiConstants {
 		"Aka manto",
 		"Horace Wells",
 		"Cose che nessuno sa",
-		"Fare piedino",
+		"Piedino (sessualità)",
 		"Scitala",
 		"Erich Hartmann",
 		"Aeroplanino di carta",
@@ -581,7 +582,6 @@ public class WikiConstants {
 		"Monowi",
 		"Specchio (immaginario)",
 		"Operazione Tannenbaum",
-		"Avvistamenti di Elvis",
 		"Ordine del Bagno",
 		"Sceblasti",
 		"Violino a bastone",
@@ -630,7 +630,6 @@ public class WikiConstants {
 		"Solomon Northup",
 		"Ascensore spaziale",
 		"Georgia Guidestones",
-		"Kopi Luwak",
 		"Kepler-64 b",
 		"Buco della memoria",
 		"Mano della Gloria",
@@ -759,7 +758,6 @@ public class WikiConstants {
 		"Cinisca",
 		"Corpo grottesco",
 		"Bandiera terrestre",
-		"Repubblica di Molossia",
 		"Australia-Samoa Americane 31-0",
 		"Santo Prepuzio",
 		"Controversia di Praga",
@@ -835,7 +833,6 @@ public class WikiConstants {
 		"Teoria del complotto sull\'attacco di Pearl Harbor",
 		"Monte Testaccio",
 		"Pizzaiolo acrobatico",
-		"Movimento per la decrescita felice",
 		"Boeing X-43",
 		"Volo Aeroflot 593",
 		"2012 DA14",
@@ -1045,7 +1042,6 @@ public class WikiConstants {
 		"Ammasso aperto",
 		"Atlanta Nights",
 		"Pornocrazia",
-		"Comuni d\'Italia con uguale denominazione",
 		"Pokémon shock",
 		"Pseudoscienza",
 		"Vestito verde Versace di Jennifer Lopez",
@@ -1058,7 +1054,6 @@ public class WikiConstants {
 		"Elettrosensibilità",
 		"Brooks Agnew",
 		"Amenukal dei Kel Adagh",
-		"Scienziato Pazzo",
 		"The Vegetable Orchestra",
 		"SM U-118",
 		"Bubo bubo",
@@ -1159,9 +1154,8 @@ public class WikiConstants {
 		"Elettrotreno FS ETR 400",
 		"RRRrrrr!!!",
 		"L\'uomo che sconfisse il boogie",
-		"Lampade di Dendera",
+        "Lampade di Dendera",
 		"Agnello vegetale della Tartaria",
-		"Isola delle Rose (micronazione)",
 		"Bartitsu",
 		"Ecce Homo (Elías García Martínez)",
 		"Bendis",
@@ -1208,7 +1202,7 @@ public class WikiConstants {
 		"Utero artificiale",
 		"Fuente Magna",
 		"Alessandra Giliani",
-		"Teorie sulla morte di Giovanni Paolo I",
+		"Morte di Giovanni Paolo I",
 		"HD 80606 b",
 		"Tubo di Krasnikov",
 		"Daniel Estulin",
@@ -1311,6 +1305,7 @@ public class WikiConstants {
 		"Villa dei Misteri",
 		"Santa Nonna",
 		"Razzismo scientifico",
+        "Lingua romanza d'Africa",
 		"Labirinto di Meride",
 		"Ammasso della Chioma",
 		"Olivetti Elea 9003",
@@ -1323,8 +1318,184 @@ public class WikiConstants {
 		"Arco (lampada)",
 		"Lettera del Diavolo",
 		"Tabi",
-		"Minuto di 61 secondi"
-	));
+		"Minuto di 61 secondi",
+            "Kunsthaus Tacheles",
+            "The Brig",
+            " Lorem ipsum",
+            "Casu frazigu",
+            "Batracomiomachia",
+            "Ora del Garda",
+            "Frislanda",
+            "Pacific Trash Vortex",
+            "Giraffa dei Medici",
+            "Thomas Midgley",
+
+            "Alert",
+            "Coober Pedy",
+            "Cosmic latte",
+            "Metropolitan Life Insurance Company Tower",
+            "Battaglione \"Azad Hindoustan\"",
+            "Giuseppe Castiglione",
+            "Bouncing bomb",
+            "Teorema della scimmia instancabile",
+            "Berta filava",
+            "Love Canal",
+
+            "Il poeta mangiatore di leoni nel covo di pietra‎",
+            "Caccia parassita",
+            "Santi di ghiaccio",
+            "Kormoran (HSK 8)",
+            "Motivi geometrici islamici",
+            "Franz Reichelt",
+            "Séraphine de Senlis",
+            "La nona onda",
+            "Raggio verde",
+
+            "Organo del Boardwalk Hall Auditorium",
+            "King Camp Gillette",
+            "CG 36500",
+            "Fulmine globulare",
+            "Leelah Alcorn",
+            "Bottiglia Codd",
+            "Silbo gomero",
+            "Mummia di Manchester",
+            "Monte Stella (Milano)",
+            "Synsepalum dulcificum",
+            "Frank Lentini",
+            "Sindrome_di_Stendhal",
+            "Bomber stream",
+            "Macchine anatomiche",
+            "Ambasciatori (Holbein il Giovane)",
+            "Incidente di Gleiwitz",
+            "Operazione Chrome Dome",
+            "Ab anbar",
+            "Coseano",
+            "Clavier à lumières",
+            "Torre Guinigi",
+            "Guerra meteorologica (1940-1945)",
+            "Elephant walk",
+            "Jim Abbott",
+            "Dingo Fence",
+            "Fiat Mefistofele",
+            "D.B. Cooper",
+
+            "sindrome della mano aliena",
+            "Rappresentativa Calcistica Dipendenti Vaticani",
+            "Battaglia dell'Isola Ramree",
+            "Isola delle Rose (micronazione)",
+            "Kitty Genovese",
+            "Volto su Marte",
+            "Tumore facciale del diavolo",
+            "Pykrete",
+            "The Elements",
+            "Deflategate",
+            "Alfabeto Deseret",
+
+            "Strada del Karakorum",
+            "Tarzan Boy",
+            "Suolo poligonale",
+            "Digit ratio",
+            "Moresnet",
+            "Perito (astronomia)",
+            "Hákarl",
+            "Autoscatto del macaco",
+            "Elvavrålet",
+
+            "Repubblica di Cospaia",
+            "Aeroporto di Barra",
+            "Alan Smithee",
+            "Ambasciata Tenshō",
+            "Sinodo del cadavere",
+            "Centralia (Pennsylvania)",
+            "Citrus bizzarria",
+            "Calitri",
+            "Disco di Festo",
+
+            "588º Reggimento bombardamento notturno",
+            "Uomo di Tollund",
+            "Moretto fiumano",
+            "Balaeniceps rex",
+            "Isabella di Morra",
+            "Signora di Brassempouy",
+            "Psiconautica",
+            "Horsetail Fall",
+            "Avvelenamento di massa di Pont-Saint-Esprit",
+            "Casa sulle nuvole",
+            "Dreamachine",
+            "Otaku",
+            "Beffa della Dreadnought",
+            "War_of_the_Worlds_(programma_radiofonico)",
+            "Effetto Dunning-Kruger",
+
+            "Seawise Giant",
+            "Box junction",
+            "Vallone dei Mulini",
+            "Muretto di Alassio",
+            "B. Traven",
+            "Settembre eterno",
+            "Galleria dell'Eufrate",
+
+            "Panthera leo persica",
+            "Tyrrell P34",
+            "Pando (albero)",
+            "Alaska Railroad",
+            "Cunicoli di Claudio",
+            "Inter-Services and Dominions Rugby Championship",
+            "Bestia del Gévaudan",
+            "Off the Wall (album Michael Jackson)",
+
+            "80 cm K (E)",
+            "Victor Lustig",
+            "Linciaggio di Jesse Washington",
+            "Yanar Dag",
+            "Dickin Medal",
+            "Giorno del pi greco",
+            "Filatoio Rosso di Caraglio",
+
+            "Maddalena Ventura con il marito e il figlio",
+            "Bosio & Caratsch",
+            "Fortezza di San Nicolò",
+            "Seebad Prora",
+            "Khnumhotep e Niankhkhnum",
+
+            "Casa della Storia europea",
+            "Colle dell'Iseran",
+            "Ponte sullo stretto di Bering",
+            "Incidente ferroviario della stazione di Parigi Montparnasse",
+            "Diari di Hitler",
+            "Nannie Doss",
+            "XXV della campagna romana",
+            "Isola di North Sentinel",
+            "Nigella sativa",
+            "Vasa (galeone)",
+            "Kopi Luwak",
+            "João Lourenço",
+
+            "Teleferica Massaua-Asmara",
+            "Problema di Monty Hall",
+            "Marco Izzo",
+            "Pyramiden",
+            "Concessione italiana di Tientsin",
+            "problema di Monty Hall",
+            "Città murata di Kowloon",
+            "Sark",
+            "Francesco Foglia",
+            "Carlo Airoldi",
+
+            "YInMn Blue",
+            "Vegetarianismo di Adolf Hitler",
+            "Battaglia di Los Angeles",
+            "Silene stenophylla",
+            "Cacareco",
+            "Italica (nave)",
+            "Pianoforte_a_gatti",
+            "Eduard Bloch",
+            "Campo profughi di Latina",
+
+            "Paradosso dell'area scomparsa",
+            "Sonata per clavicembalo K. 30",
+            "Disastro di Balvano"
+    ));
 
 	public static String getRandomItem() {
 		Collections.shuffle(wikipediaItems);
@@ -1343,4 +1514,36 @@ public class WikiConstants {
 
 		return  item;
 	}
+
+	public static void main(String[] args){
+        System.out.println("Size: " + WikiConstants.wikipediaItems.size());
+        System.out.println("Duplicates: " + getDuplicate(WikiConstants.wikipediaItems));
+        System.out.println(generateLinks(WikiConstants.wikipediaItems));
+	}
+
+    private static String generateLinks(ArrayList<String> wikipediaItems) {
+        String output = "";
+        for (String el : wikipediaItems) {
+            output += "[[" + el + "]]\n";
+        }
+        return output;
+    }
+
+    public static <T> List getDuplicate(Collection<T> list) {
+
+        final List<T> duplicatedObjects = new ArrayList<T>();
+        Set<T> set = new HashSet<T>() {
+            @Override
+            public boolean add(T e) {
+                if (contains(e)) {
+                    duplicatedObjects.add(e);
+                }
+                return super.add(e);
+            }
+        };
+        for (T t : list) {
+            set.add(t);
+        }
+        return duplicatedObjects;
+    }
 };
