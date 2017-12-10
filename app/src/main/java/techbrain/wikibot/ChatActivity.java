@@ -15,6 +15,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SearchView;
 
@@ -36,6 +37,9 @@ import techbrain.wikibot.utils.ChatUtils;
  */
 
 public class ChatActivity extends AppCompatActivity {
+
+    private static String APP_TITLE = "";
+    private static String APP_URL = "";
 
     ArrayList<String> listItems = new ArrayList<String>();
     ElementAdapter adapter;
@@ -90,8 +94,12 @@ public class ChatActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_chat);
 
+        ChatActivity.APP_TITLE = getResources().getString(R.string.app_name);
+        ChatActivity.APP_URL = getResources().getString(R.string.app_url);
+
         Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
         myToolbar.showOverflowMenu();
+        myToolbar.setTitleTextColor(getResources().getColor(R.color.colorWhite));
         setSupportActionBar(myToolbar);
 
         MobileAds.initialize(this, "ca-app-pub-1872225169177247~8401929001");
@@ -110,22 +118,39 @@ public class ChatActivity extends AppCompatActivity {
 
         adapter = new ElementAdapter(getBaseContext(), R.layout.single_element, listItems);
         list.setAdapter(adapter);
-
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View v, int i, long l) {
-                //manage tap on audiobook list
-                String value = (String) adapterView.getItemAtPosition(i);
+            //manage tap on audiobook list
+            String value = (String) adapterView.getItemAtPosition(i);
 
-                if(isValidUrl(value)){
-                    //open brower
-                    Intent browserIntent = new Intent(context, WebViewActivity.class);
+            if(isValidUrl(value)){
+                //open brower
+                Intent browserIntent = new Intent(context, WebViewActivity.class);
 
-                    //pass data thought intent to another activity
-                    browserIntent.putExtra(WebViewActivity.URL, value);
+                //pass data thought intent to another activity
+                browserIntent.putExtra(WebViewActivity.URL, value);
 
-                    startActivity(browserIntent);
-                }
+                startActivity(browserIntent);
+            }
+            }
+        });
+
+        list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                //manage long press
+                String value = (String) parent.getItemAtPosition(position);
+
+                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                sharingIntent.setType("text/plain");
+
+                String message = value + " shared by \"" + APP_TITLE + "\" " + APP_URL;
+
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, message);
+                startActivity(Intent.createChooser(sharingIntent, "Sharing Option"));
+
+                return true;
             }
         });
 
@@ -165,8 +190,8 @@ public class ChatActivity extends AppCompatActivity {
             }
         });
 
-        final SearchView ediBox = (SearchView) findViewById(R.id.editBox);
-        ediBox.setQueryHint(getResources().getString(R.string.default_search_text));
+        final EditText ediBox = (EditText) findViewById(R.id.editBox);
+        //ediBox.setQueryHint(getResources().getString(R.string.default_search_text));
         ediBox.requestFocus();
         ediBox.setOnKeyListener(new View.OnKeyListener() {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
@@ -239,15 +264,15 @@ public class ChatActivity extends AppCompatActivity {
         }
     }
 
-    public void manageMessage(Context context, SearchView editBox){
-        String message = editBox.getQuery().toString();
+    public void manageMessage(Context context, EditText editBox){
+        String message = editBox.getText().toString();
 
         if(!message.isEmpty()){
             //update list
             listItems.add(message);
             adapter.notifyDataSetChanged();
             //clear edit box
-            editBox.setQuery("", false);
+            editBox.setText("");
 
             //hide keyboard
             InputMethodManager inputManager =

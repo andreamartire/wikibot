@@ -10,20 +10,24 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-/**
- * Created by andrea on 20/11/17.
- */
+import techbrain.wikibot.R;
 
 public class AppRater {
-    private final static String APP_TITLE = "Wiki RoBot";// App Name
-    private final static String APP_PNAME = "tech_brain.wiki_robot";// Package Name
 
+    private static String APP_TITLE = "";
+    private static String APP_PNAME = "";
     private final static int DAYS_UNTIL_PROMPT = 0;//Min number of days
     private final static int LAUNCHES_UNTIL_PROMPT = 3;//Min number of launches
 
     public static void app_launched(Context mContext) {
+
+        AppRater.APP_TITLE = mContext.getResources().getString(R.string.app_name);
+        AppRater.APP_PNAME = mContext.getPackageName();
+
         SharedPreferences prefs = mContext.getSharedPreferences("apprater", 0);
-        if (prefs.getBoolean("dontshowagain", false)) { return ; }
+        if (prefs.getBoolean("dontshowagain", false)) {
+            return ;
+        }
 
         SharedPreferences.Editor editor = prefs.edit();
 
@@ -37,8 +41,11 @@ public class AppRater {
             date_firstLaunch = System.currentTimeMillis();
             editor.putLong("date_firstlaunch", date_firstLaunch);
         }else{
-            editor.putBoolean("dontshowagain", false);
-            editor.commit();
+            if (!prefs.getBoolean("resetted_rater", false)){
+                editor.putBoolean("dontshowagain", false);
+                editor.putBoolean("resetted_rater", true);
+                editor.commit();
+            }
         }
 
         // Wait at least n days before opening
@@ -54,7 +61,7 @@ public class AppRater {
 
     public static void showRateDialog(final Context mContext, final SharedPreferences.Editor editor) {
         final Dialog dialog = new Dialog(mContext);
-        dialog.setTitle("Rate " + APP_TITLE);
+        dialog.setTitle("Valuta " + APP_TITLE);
 
         LinearLayout ll = new LinearLayout(mContext);
         ll.setOrientation(LinearLayout.VERTICAL);
@@ -62,6 +69,7 @@ public class AppRater {
         TextView tv = new TextView(mContext);
         tv.setText("Se ti piace quest'app, per favore lascia una recensione. Grazie per il tuo supporto!");
         tv.setWidth(240);
+        tv.setHeight(150);
         tv.setPadding(20, 20, 20, 20);
         ll.addView(tv);
 
@@ -76,6 +84,7 @@ public class AppRater {
             }
             if (editor != null) {
                 editor.putBoolean("dontshowagain", true);
+				editor.putBoolean("resetted_rater", true);
                 editor.commit();
             }
             dialog.dismiss();

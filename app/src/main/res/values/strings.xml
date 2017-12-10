@@ -13,4 +13,5 @@
     <string name = "contact_email">techbrain@autistici.org</string>
     <string name = "network_error">Network error. Check your internet connection</string>
     <string name = "default_search_text">Ask and it will be given</string>
+    <string name="app_url">testurl.it</string>
 </resources>

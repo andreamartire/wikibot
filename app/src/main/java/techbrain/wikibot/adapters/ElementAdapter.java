@@ -1,6 +1,8 @@
 package techbrain.wikibot.adapters;
 
 import android.content.Context;
+import android.os.PatternMatcher;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,7 +10,10 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
+import techbrain.wikibot.ChatActivity;
 import techbrain.wikibot.R;
 
 public class ElementAdapter extends ArrayAdapter<String> {
@@ -35,12 +40,23 @@ public class ElementAdapter extends ArrayAdapter<String> {
         if(position >= elements.size()){
             System.out.println("");
         }else{
-            final String link = elements.get(position);
+            final String value = elements.get(position);
 
-            if (link != null){
+            if (value != null){
+                TextView titleElement = (TextView) convertView.findViewById(R.id.titleView);
+                titleElement.setText(value);
 
-                TextView bookTitle = (TextView) convertView.findViewById(R.id.bookTitleView);
-                bookTitle.setText(link);
+                if(ChatActivity.isValidUrl(value)){
+                    TextView urlElement = (TextView) convertView.findViewById(R.id.urlView);
+                    urlElement.setText(value);
+
+                    titleElement.setGravity(Gravity.RIGHT);
+
+                    String[] splits = value.split("/wiki/");
+                    if(splits.length > 1){
+                        titleElement.setText(splits[1].replaceAll("_"," "));
+                    }
+                }
             }
         }
 
