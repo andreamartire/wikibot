@@ -18,7 +18,6 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SearchView;
 
-
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
@@ -27,12 +26,13 @@ import java.net.URL;
 import java.util.ArrayList;
 
 import newtech.audiolibrary.R;
-import techbrain.wikibot.delegates.RetrieveGoogleTask;
-import techbrain.wikibot.utils.AppRater;
-import techbrain.wikibot.utils.ChatUtils;
+import techbrain.wikibot.adapters.ElementAdapter;
 import techbrain.wikibot.constants.WikiConstants;
 import techbrain.wikibot.constants.WikiProverbs;
 import techbrain.wikibot.constants.WikiQuotes;
+import techbrain.wikibot.delegates.RetrieveGoogleTask;
+import techbrain.wikibot.utils.AppRater;
+import techbrain.wikibot.utils.ChatUtils;
 
 /**
  * Created by andrea on 18/10/17.
@@ -41,7 +41,7 @@ import techbrain.wikibot.constants.WikiQuotes;
 public class ChatActivity extends AppCompatActivity {
 
     ArrayList<String> listItems = new ArrayList<String>();
-    ArrayAdapter<String> adapter;
+    ElementAdapter adapter;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -58,6 +58,7 @@ public class ChatActivity extends AppCompatActivity {
                 Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
                 sharingIntent.setType("text/plain");
 
+                //TODO
                 String shareBodyText = getResources().getString(R.string.share_message);
 
                 sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBodyText);
@@ -109,10 +110,10 @@ public class ChatActivity extends AppCompatActivity {
         listItems = ChatUtils.getSavedChat(context);
 
         final ListView list = (ListView) findViewById(R.id.listContents);
-        adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1,
-                listItems);
+
+        adapter = new ElementAdapter(getBaseContext(), R.layout.single_element, listItems);
         list.setAdapter(adapter);
+
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View v, int i, long l) {
@@ -207,7 +208,7 @@ public class ChatActivity extends AppCompatActivity {
     }
 
     private void addRandomProverb(Context context, ArrayList<String> listItems, ArrayAdapter<String> adapter) {
-        String randomItem = WikiProverbs.getRandomItem();
+        String randomItem = WikiProverbs.getRandomItem(context);
 
         //update list
         listItems.add(randomItem);

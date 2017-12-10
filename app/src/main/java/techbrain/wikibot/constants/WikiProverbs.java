@@ -1,10 +1,15 @@
 package techbrain.wikibot.constants;
 
+import android.content.Context;
+import android.widget.ArrayAdapter;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
+
+import newtech.audiolibrary.R;
 
 public class WikiProverbs {
 
@@ -1158,8 +1163,14 @@ public class WikiProverbs {
 		"Vizio di natura, fino alla morte dura."
 	));
 
-	public static String getRandomItem() {
-		Collections.shuffle(proverbs);
-		return proverbs.get(0);
+	public static String getRandomItem(Context c) {
+		//Collections.shuffle(proverbs);
+		//return proverbs.get(0);
+
+		String[] mTestArray = c.getResources().getStringArray(R.array.proverbs);
+
+		ArrayList<String> proberbs = new ArrayList<>(Arrays.asList(mTestArray));
+		Collections.shuffle(proberbs);
+		return proberbs.get(0);
 	}
 }

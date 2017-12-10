@@ -1,0 +1,12 @@
+<resources>
+    <array name="proverbs">
+        <item>Italian proverb 1</item>
+        <item>Italian proverb 2</item>
+        <item>Italian proverb 3</item>
+    </array>
+    <array name="quotations">
+        <item>Italian quote 1</item>
+        <item>Italian quote 2</item>
+        <item>Italian quote 3</item>
+    </array>
+</resources>

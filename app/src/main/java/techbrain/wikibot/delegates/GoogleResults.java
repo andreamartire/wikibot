@@ -2,10 +2,6 @@ package techbrain.wikibot.delegates;
 
 import java.util.List;
 
-/**
- * Created by andrea on 02/12/17.
- */
-
 public class GoogleResults {
 
     private ResponseData responseData;

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Wiki RoBot</string>
+    <string name = "info_title">Información</string>
+
+    <string name = "label_curiosita">Curiosidad</string>
+    <string name = "label_citation">Cita</string>
+    <string name = "label_proverbio">Proverbio</string>
+    <string name = "label_nonciclopedia">InCiclopedia</string>
+    <string name = "label_send">Enviar</string>
+
+    <string name = "info_message">WikiRobot es un bot que te envía interesantes y cotidianos conocimientos. Para sugerencias / informes: techbrain@autistici.org</string>
+    <string name = "share_message">Eche un vistazo a "Wiki RoBot"</string>
+    <string name = "contact_email">techbrain@autistici.org </string>
+    <string name = "network_error">Error de red. Verifique su conexión a internet</string>
+    <string name = "default_search_text">Ask y se le dará</string>
+</resources>
