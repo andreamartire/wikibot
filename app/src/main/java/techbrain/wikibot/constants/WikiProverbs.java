@@ -1,4 +1,4 @@
-package techbrain.wikibot.utils;
+package techbrain.wikibot.constants;
 
 import java.util.ArrayList;
 import java.util.Arrays;

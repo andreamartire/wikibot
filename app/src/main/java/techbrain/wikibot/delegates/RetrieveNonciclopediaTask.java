@@ -1,4 +1,4 @@
-package techbrain.wikibot;
+package techbrain.wikibot.delegates;
 
 import android.os.AsyncTask;
 import android.widget.ArrayAdapter;
@@ -9,7 +9,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 
-import techbrain.wikibot.utils.WikiConstants;
+import techbrain.wikibot.constants.WikiConstants;
 
 /**
  * Created by andrea on 02/12/17.

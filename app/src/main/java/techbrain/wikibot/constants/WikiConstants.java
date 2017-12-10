@@ -1,4 +1,4 @@
-package techbrain.wikibot.utils;
+package techbrain.wikibot.constants;
 
 import android.widget.ArrayAdapter;
 
@@ -10,7 +10,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import techbrain.wikibot.RetrieveNonciclopediaTask;
+import techbrain.wikibot.delegates.RetrieveNonciclopediaTask;
 
 public class WikiConstants {
 

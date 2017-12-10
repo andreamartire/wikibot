@@ -1,4 +1,4 @@
-package techbrain.wikibot;
+package techbrain.wikibot.delegates;
 
 import java.util.List;
 

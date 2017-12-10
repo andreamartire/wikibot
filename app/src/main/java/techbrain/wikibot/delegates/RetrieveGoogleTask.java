@@ -1,4 +1,4 @@
-package techbrain.wikibot;
+package techbrain.wikibot.delegates;
 
 import android.app.Activity;
 import android.content.Context;
@@ -12,7 +12,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 
-import techbrain.wikibot.utils.WikiConstants;
+import techbrain.wikibot.utils.ChatUtils;
+import techbrain.wikibot.constants.WikiConstants;
 
 /**
  * Created by andrea on 02/12/17.
@@ -65,7 +66,7 @@ public class RetrieveGoogleTask extends AsyncTask<String, Void, String> {
                         firstLink = link;
                         //update list
                         listItems.add(firstLink);
-                        ChatActivity.saveChat(context, listItems);
+                        ChatUtils.saveChat(context, listItems);
                     }
                 }
             }

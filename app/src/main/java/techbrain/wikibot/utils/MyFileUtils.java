@@ -9,10 +9,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.channels.FileChannel;
 
-/**
- * Created by MartireAn on 31/08/2017.
- */
-
 public class MyFileUtils {
 
     public static void mkDir(String dirPath){
