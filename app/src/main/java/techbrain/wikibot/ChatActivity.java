@@ -1,7 +1,9 @@
 package techbrain.wikibot;
 
 import android.app.Activity;
+import android.app.AlarmManager;
 import android.app.AlertDialog;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -39,6 +41,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -277,7 +280,6 @@ public class ChatActivity extends AppCompatActivity {
                     InputMethodManager.HIDE_NOT_ALWAYS);
 
             try{
-                saveChat(context, listItems);
                 RetrieveGoogleTask task = new RetrieveGoogleTask(context, listItems, adapter, message);
                 task.execute();
             }catch (Exception e){
@@ -321,9 +323,10 @@ public class ChatActivity extends AppCompatActivity {
 
         ArrayList<String> list = new ArrayList<>();
         try{
-            String fileContent = MyFileUtils.getStringFromFile(chatFilePath);
-
-            list = new ArrayList<String>(Arrays.asList(TextUtils.split(fileContent, "\n")));
+            if(MyFileUtils.exists(chatFilePath)){
+                String fileContent = MyFileUtils.getStringFromFile(chatFilePath);
+                list = new ArrayList<String>(Arrays.asList(TextUtils.split(fileContent, "\n")));
+            }
         }catch (Exception e){
             //nothing
             e.printStackTrace();
