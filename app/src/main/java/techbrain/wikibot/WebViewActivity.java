@@ -22,9 +22,6 @@ import android.widget.Toast;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
-import java.util.ArrayList;
-
-import newtech.audiolibrary.R;
 
 /**
  * Created by andrea on 03/12/17.

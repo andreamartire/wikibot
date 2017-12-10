@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import newtech.audiolibrary.R;
+import techbrain.wikibot.R;
 
 public class ElementAdapter extends ArrayAdapter<String> {
 

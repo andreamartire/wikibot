@@ -1,5 +1,6 @@
-package techbrain.wikibot.constants;
+package techbrain.wikibot.delegates;
 
+import android.content.Context;
 import android.widget.ArrayAdapter;
 
 import java.util.ArrayList;
@@ -10,7 +11,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import techbrain.wikibot.delegates.RetrieveNonciclopediaTask;
+import techbrain.wikibot.R;
 
 public class WikiConstants {
 
@@ -1545,5 +1546,30 @@ public class WikiConstants {
             set.add(t);
         }
         return duplicatedObjects;
+    }
+
+    static ArrayList<String> proverbs;
+    static ArrayList<String> quotes;
+
+    public static String getRandomProverb(Context c) {
+        if(proverbs == null){
+            String[] mTestArray = c.getResources().getStringArray(R.array.proverbs);
+            proverbs = new ArrayList<>(Arrays.asList(mTestArray));
+        }
+
+        Collections.shuffle(proverbs);
+        return proverbs.get(0);
+    }
+
+
+    public static String getRandomQuote(Context c) {
+
+        if(quotes == null){
+            String[] mTestArray = c.getResources().getStringArray(R.array.quotations);
+            quotes = new ArrayList<>(Arrays.asList(mTestArray));
+        }
+
+        Collections.shuffle(quotes);
+        return quotes.get(0);
     }
 };

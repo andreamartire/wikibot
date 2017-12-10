@@ -25,11 +25,8 @@ import com.google.android.gms.ads.MobileAds;
 import java.net.URL;
 import java.util.ArrayList;
 
-import newtech.audiolibrary.R;
 import techbrain.wikibot.adapters.ElementAdapter;
-import techbrain.wikibot.constants.WikiConstants;
-import techbrain.wikibot.constants.WikiProverbs;
-import techbrain.wikibot.constants.WikiQuotes;
+import techbrain.wikibot.delegates.WikiConstants;
 import techbrain.wikibot.delegates.RetrieveGoogleTask;
 import techbrain.wikibot.utils.AppRater;
 import techbrain.wikibot.utils.ChatUtils;
@@ -208,7 +205,7 @@ public class ChatActivity extends AppCompatActivity {
     }
 
     private void addRandomProverb(Context context, ArrayList<String> listItems, ArrayAdapter<String> adapter) {
-        String randomItem = WikiProverbs.getRandomItem(context);
+        String randomItem = WikiConstants.getRandomProverb(context);
 
         //update list
         listItems.add(randomItem);
@@ -226,7 +223,7 @@ public class ChatActivity extends AppCompatActivity {
 
     private void addRandomQuote(Context context, ArrayList<String> listItems, ArrayAdapter<String> adapter) {
 
-        String randomItem = WikiQuotes.getRandomItem();
+        String randomItem = WikiConstants.getRandomQuote(context);
 
         //update list
         listItems.add(randomItem);
