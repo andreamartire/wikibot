@@ -25,7 +25,8 @@ public class ChatUtils {
 
         try{
             FileWriter fw = new FileWriter(chatFilePath);
-            fw.write(TextUtils.join("\n", chats));
+            String output = TextUtils.join("\n", chats);
+            fw.write(output);
             fw.close();
         }catch (Exception e){
             e.printStackTrace();
@@ -40,6 +41,13 @@ public class ChatUtils {
             if(MyFileUtils.exists(chatFilePath)){
                 String fileContent = MyFileUtils.getStringFromFile(chatFilePath);
                 list = new ArrayList<String>(Arrays.asList(TextUtils.split(fileContent, "\n")));
+
+                if(list.size() > 1){
+                    if("".equals(list.get(list.size()-1))){
+                        list.remove(list.size()-1);
+                    }
+                }
+
             }
         }catch (Exception e){
             //nothing
