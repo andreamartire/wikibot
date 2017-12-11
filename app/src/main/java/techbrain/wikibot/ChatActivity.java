@@ -166,19 +166,11 @@ public class ChatActivity extends AppCompatActivity {
             }
         });
 
-        Button citazioneBtn = (Button) findViewById(R.id.citazione_button);
-        citazioneBtn.setOnClickListener(new View.OnClickListener() {
+        Button proverbQuoteBtn = (Button) findViewById(R.id.proverb_quote_button);
+        proverbQuoteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                addRandomQuote(context, listItems, adapter);
-            }
-        });
-
-        Button proverbBtn = (Button) findViewById(R.id.proverb_button);
-        proverbBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                addRandomProverb(context, listItems, adapter);
+                addRandomQuoteOrProverb(context, listItems, adapter);
             }
         });
 
@@ -237,13 +229,6 @@ public class ChatActivity extends AppCompatActivity {
         ChatUtils.saveChat(context, listItems);
 
         adapter.notifyDataSetChanged();
-
-        try{
-            RetrieveGoogleTask task = new RetrieveGoogleTask(context, listItems, adapter, randomItem);
-            task.execute();
-        }catch (Exception e){
-            e.printStackTrace();
-        }
     }
 
     private void addRandomQuote(Context context, ArrayList<String> listItems, ArrayAdapter<String> adapter) {
@@ -255,13 +240,17 @@ public class ChatActivity extends AppCompatActivity {
         ChatUtils.saveChat(context, listItems);
 
         adapter.notifyDataSetChanged();
+    }
 
-        try{
-            RetrieveGoogleTask task = new RetrieveGoogleTask(context, listItems, adapter, randomItem);
-            task.execute();
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+    private void addRandomQuoteOrProverb(Context context, ArrayList<String> listItems, ArrayAdapter<String> adapter) {
+
+        String randomItem = WikiConstants.getRandomQuoteOrProverb(context);
+
+        //update list
+        listItems.add(randomItem);
+        ChatUtils.saveChat(context, listItems);
+
+        adapter.notifyDataSetChanged();
     }
 
     public void manageMessage(Context context, EditText editBox){
