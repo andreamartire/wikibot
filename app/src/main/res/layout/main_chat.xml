@@ -45,20 +45,20 @@
             android:layout_gravity="center_horizontal">
             <Button
                 android:layout_width="0dp"
-                android:layout_weight="0.5"
-                android:layout_height="50dp"
+                android:layout_weight="0.33"
+                android:layout_height="wrap_content"
                 android:text="@string/label_curiosita"
                 android:id="@+id/curiosita_button"/>
             <Button
                 android:layout_width="0dp"
-                android:layout_weight="0.5"
-                android:layout_height="50dp"
+                android:layout_weight="0.33"
+                android:layout_height="wrap_content"
                 android:text="@string/label_proverb_quote"
                 android:id="@+id/proverb_quote_button"/>
             <Button
                 android:layout_width="0dp"
-                android:layout_weight="0.5"
-                android:layout_height="50dp"
+                android:layout_weight="0.33"
+                android:layout_height="wrap_content"
                 android:text="@string/label_nonciclopedia"
                 android:id="@+id/nonciclopedia_button"/>
         </LinearLayout>
@@ -76,7 +76,7 @@
         <Button
             android:layout_width="0dp"
             android:layout_weight="0.2"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:id="@+id/sendButton"
             android:text="@string/label_send"/>
     </LinearLayout>

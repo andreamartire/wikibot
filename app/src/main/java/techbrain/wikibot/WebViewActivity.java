@@ -69,6 +69,7 @@ public class WebViewActivity extends AppCompatActivity {
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.webview_toolbar);
         myToolbar.showOverflowMenu();
+        myToolbar.setTitleTextColor(getResources().getColor(R.color.colorWhite));
         setSupportActionBar(myToolbar);
 
         AdView mAdView = (AdView) findViewById(R.id.webviewAdView);
