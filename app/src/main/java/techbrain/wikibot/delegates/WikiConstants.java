@@ -1489,13 +1489,24 @@ public class WikiConstants {
             "Silene stenophylla",
             "Cacareco",
             "Italica (nave)",
-            "Pianoforte_a_gatti",
+            "Pianoforte a gatti",
             "Eduard Bloch",
             "Campo profughi di Latina",
 
             "Paradosso dell'area scomparsa",
             "Sonata per clavicembalo K. 30",
-            "Disastro di Balvano"
+            "Disastro di Balvano",
+
+			"Meme",
+			"Tecnocrazia",
+			"Oclocrazia",
+			"Autocrazia",
+			"Androcrazia",
+			"Dispotismo illuminato",
+			"Gerontocrazia",
+			"Teocrazia",
+			"Stratocrazia"
+
     ));
 
 	public static String getRandomItem() {
