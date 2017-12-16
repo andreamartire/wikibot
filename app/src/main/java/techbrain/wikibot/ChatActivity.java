@@ -27,6 +27,7 @@ import java.net.URL;
 import java.util.ArrayList;
 
 import techbrain.wikibot.adapters.ElementAdapter;
+import techbrain.wikibot.delegates.WikiCommons;
 import techbrain.wikibot.delegates.WikiConstants;
 import techbrain.wikibot.delegates.RetrieveGoogleTask;
 import techbrain.wikibot.utils.AppRater;
@@ -155,6 +156,7 @@ public class ChatActivity extends AppCompatActivity {
         addRandomProverb(context, listItems, adapter);
         addRandomCuriosita(context, listItems, adapter);
         addRandomQuote(context, listItems, adapter);
+        WikiCommons.getImageOfDayUrl(this);
 
         Button curiositaBtn = (Button) findViewById(R.id.curiosita_button);
         curiositaBtn.setOnClickListener(new View.OnClickListener() {
