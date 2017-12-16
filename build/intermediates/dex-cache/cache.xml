@@ -16,7 +16,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
-        sha1="75cf3ab949c089fca7d633eca1a79de62d8f5a99">
+        sha1="66790b609c053d05ee6f7eb276df906fbd73041f">
         <dex dex="/home/andrea/AndroidStudioProjects/wikibot/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_5e23aa9626970c82d496b49f4ce7b73b3eee8220/classes.dex" />
     </item>
 

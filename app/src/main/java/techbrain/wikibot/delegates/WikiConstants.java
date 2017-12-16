@@ -1320,196 +1320,10 @@ public class WikiConstants {
 		"Lettera del Diavolo",
 		"Tabi",
 		"Minuto di 61 secondi",
-            "Kunsthaus Tacheles",
-            "The Brig",
-            " Lorem ipsum",
-            "Casu frazigu",
-            "Batracomiomachia",
-            "Ora del Garda",
-            "Frislanda",
-            "Pacific Trash Vortex",
-            "Giraffa dei Medici",
-            "Thomas Midgley",
-
-            "Alert",
-            "Coober Pedy",
-            "Cosmic latte",
-            "Metropolitan Life Insurance Company Tower",
-            "Battaglione \"Azad Hindoustan\"",
-            "Giuseppe Castiglione",
-            "Bouncing bomb",
-            "Teorema della scimmia instancabile",
-            "Berta filava",
-            "Love Canal",
-
-            "Il poeta mangiatore di leoni nel covo di pietra‎",
-            "Caccia parassita",
-            "Santi di ghiaccio",
-            "Kormoran (HSK 8)",
-            "Motivi geometrici islamici",
-            "Franz Reichelt",
-            "Séraphine de Senlis",
-            "La nona onda",
-            "Raggio verde",
-
-            "Organo del Boardwalk Hall Auditorium",
-            "King Camp Gillette",
-            "CG 36500",
-            "Fulmine globulare",
-            "Leelah Alcorn",
-            "Bottiglia Codd",
-            "Silbo gomero",
-            "Mummia di Manchester",
-            "Monte Stella (Milano)",
-            "Synsepalum dulcificum",
-            "Frank Lentini",
-            "Sindrome_di_Stendhal",
-            "Bomber stream",
-            "Macchine anatomiche",
-            "Ambasciatori (Holbein il Giovane)",
-            "Incidente di Gleiwitz",
-            "Operazione Chrome Dome",
-            "Ab anbar",
-            "Coseano",
-            "Clavier à lumières",
-            "Torre Guinigi",
-            "Guerra meteorologica (1940-1945)",
-            "Elephant walk",
-            "Jim Abbott",
-            "Dingo Fence",
-            "Fiat Mefistofele",
-            "D.B. Cooper",
-
-            "sindrome della mano aliena",
-            "Rappresentativa Calcistica Dipendenti Vaticani",
-            "Battaglia dell'Isola Ramree",
-            "Isola delle Rose (micronazione)",
-            "Kitty Genovese",
-            "Volto su Marte",
-            "Tumore facciale del diavolo",
-            "Pykrete",
-            "The Elements",
-            "Deflategate",
-            "Alfabeto Deseret",
-
-            "Strada del Karakorum",
-            "Tarzan Boy",
-            "Suolo poligonale",
-            "Digit ratio",
-            "Moresnet",
-            "Perito (astronomia)",
-            "Hákarl",
-            "Autoscatto del macaco",
-            "Elvavrålet",
-
-            "Repubblica di Cospaia",
-            "Aeroporto di Barra",
-            "Alan Smithee",
-            "Ambasciata Tenshō",
-            "Sinodo del cadavere",
-            "Centralia (Pennsylvania)",
-            "Citrus bizzarria",
-            "Calitri",
-            "Disco di Festo",
-
-            "588º Reggimento bombardamento notturno",
-            "Uomo di Tollund",
-            "Moretto fiumano",
-            "Balaeniceps rex",
-            "Isabella di Morra",
-            "Signora di Brassempouy",
-            "Psiconautica",
-            "Horsetail Fall",
-            "Avvelenamento di massa di Pont-Saint-Esprit",
-            "Casa sulle nuvole",
-            "Dreamachine",
-            "Otaku",
-            "Beffa della Dreadnought",
-            "War_of_the_Worlds_(programma_radiofonico)",
-            "Effetto Dunning-Kruger",
-
-            "Seawise Giant",
-            "Box junction",
-            "Vallone dei Mulini",
-            "Muretto di Alassio",
-            "B. Traven",
-            "Settembre eterno",
-            "Galleria dell'Eufrate",
-
-            "Panthera leo persica",
-            "Tyrrell P34",
-            "Pando (albero)",
-            "Alaska Railroad",
-            "Cunicoli di Claudio",
-            "Inter-Services and Dominions Rugby Championship",
-            "Bestia del Gévaudan",
-            "Off the Wall (album Michael Jackson)",
-
-            "80 cm K (E)",
-            "Victor Lustig",
-            "Linciaggio di Jesse Washington",
-            "Yanar Dag",
-            "Dickin Medal",
-            "Giorno del pi greco",
-            "Filatoio Rosso di Caraglio",
-
-            "Maddalena Ventura con il marito e il figlio",
-            "Bosio & Caratsch",
-            "Fortezza di San Nicolò",
-            "Seebad Prora",
-            "Khnumhotep e Niankhkhnum",
-
-            "Casa della Storia europea",
-            "Colle dell'Iseran",
-            "Ponte sullo stretto di Bering",
-            "Incidente ferroviario della stazione di Parigi Montparnasse",
-            "Diari di Hitler",
-            "Nannie Doss",
-            "XXV della campagna romana",
-            "Isola di North Sentinel",
-            "Nigella sativa",
-            "Vasa (galeone)",
-            "Kopi Luwak",
-            "João Lourenço",
-
-            "Teleferica Massaua-Asmara",
-            "Problema di Monty Hall",
-            "Marco Izzo",
-            "Pyramiden",
-            "Concessione italiana di Tientsin",
-            "problema di Monty Hall",
-            "Città murata di Kowloon",
-            "Sark",
-            "Francesco Foglia",
-            "Carlo Airoldi",
-
-            "YInMn Blue",
-            "Vegetarianismo di Adolf Hitler",
-            "Battaglia di Los Angeles",
-            "Silene stenophylla",
-            "Cacareco",
-            "Italica (nave)",
-            "Pianoforte a gatti",
-            "Eduard Bloch",
-            "Campo profughi di Latina",
-
-            "Paradosso dell'area scomparsa",
-            "Sonata per clavicembalo K. 30",
-            "Disastro di Balvano",
-
-			"Meme",
-			"Tecnocrazia",
-			"Oclocrazia",
-			"Autocrazia",
-			"Androcrazia",
-			"Dispotismo illuminato",
-			"Gerontocrazia",
-			"Teocrazia",
-			"Stratocrazia"
 
         "Kunsthaus Tacheles",
         "The Brig",
-        " Lorem ipsum",
+        "Lorem ipsum",
         "Casu frazigu",
         "Batracomiomachia",
         "Ora del Garda",
@@ -1662,22 +1476,20 @@ public class WikiConstants {
         "Silene stenophylla",
         "Cacareco",
         "Italica (nave)",
-        "Pianoforte_a_gatti",
         "Eduard Bloch",
         "Campo profughi di Latina",
-        "Fenomeno delle voci elettroniche",
-        "Rimozione chirurgica della fistola anale di Luigi XIV",
-        "Swaffelen",
-        "Atuk",
-        "Azzurrina",
-        "Illusione uditiva",
-        "Riflessologia (medicina alternativa)",
-        "Junk science",
-        "Lottologia",
         "Paradosso dell'area scomparsa",
         "Sonata per clavicembalo K. 30",
-        "Ponte di Einstein-Rosen",
-        "Vulcano di fango"
+        "Vulcano di fango",
+		"Meme",
+		"Tecnocrazia",
+		"Oclocrazia",
+		"Autocrazia",
+		"Androcrazia",
+		"Dispotismo illuminato",
+		"Gerontocrazia",
+		"Teocrazia",
+		"Stratocrazia"
     ));
 
 	public static String getRandomItem() {
@@ -1699,59 +1511,77 @@ public class WikiConstants {
 	}
 
 	public static void main(String[] args){
-        System.out.println("Size: " + WikiConstants.wikipediaItems.size());
-        System.out.println("Duplicates: " + getDuplicate(WikiConstants.wikipediaItems));
-        System.out.println(generateLinks(WikiConstants.wikipediaItems));
+		System.out.println("Size: " + WikiConstants.wikipediaItems.size());
+		System.out.println("Duplicates: " + getDuplicate(WikiConstants.wikipediaItems));
+		System.out.println(generateLinks(WikiConstants.wikipediaItems));
 	}
 
-    private static String generateLinks(ArrayList<String> wikipediaItems) {
-        String output = "";
-        for (String el : wikipediaItems) {
-            output += "[[" + el + "]]\n";
-        }
-        return output;
-    }
+	private static String generateLinks(ArrayList<String> wikipediaItems) {
+		String output = "";
+		for (String el : wikipediaItems) {
+			output += "[[" + el + "]]\n";
+		}
+		return output;
+	}
 
-    public static <T> List getDuplicate(Collection<T> list) {
+	public static <T> List getDuplicate(Collection<T> list) {
 
-        final List<T> duplicatedObjects = new ArrayList<T>();
-        Set<T> set = new HashSet<T>() {
-            @Override
-            public boolean add(T e) {
-                if (contains(e)) {
-                    duplicatedObjects.add(e);
-                }
-                return super.add(e);
-            }
-        };
-        for (T t : list) {
-            set.add(t);
-        }
-        return duplicatedObjects;
-    }
+		final List<T> duplicatedObjects = new ArrayList<T>();
+		Set<T> set = new HashSet<T>() {
+			@Override
+			public boolean add(T e) {
+				if (contains(e)) {
+					duplicatedObjects.add(e);
+				}
+				return super.add(e);
+			}
+		};
+		for (T t : list) {
+			set.add(t);
+		}
+		return duplicatedObjects;
+	}
 
-    static ArrayList<String> proverbs;
-    static ArrayList<String> quotes;
+	static ArrayList<String> proverbs;
+	static ArrayList<String> quotes;
 
-    public static String getRandomProverb(Context c) {
-        if(proverbs == null){
-            String[] mTestArray = c.getResources().getStringArray(R.array.proverbs);
-            proverbs = new ArrayList<>(Arrays.asList(mTestArray));
-        }
+	private static void initProverbs(Context c) {
+		if(proverbs == null){
+			String[] mTestArray = c.getResources().getStringArray(R.array.proverbs);
+			proverbs = new ArrayList<>(Arrays.asList(mTestArray));
+		}
+	}
 
-        Collections.shuffle(proverbs);
-        return proverbs.get(0);
-    }
+	private static void initQuotes(Context c) {
+		if(quotes == null){
+			String[] mTestArray = c.getResources().getStringArray(R.array.quotations);
+			quotes = new ArrayList<>(Arrays.asList(mTestArray));
+		}
+	}
 
+	public static String getRandomProverb(Context c) {
+		initProverbs(c);
 
-    public static String getRandomQuote(Context c) {
+		Collections.shuffle(proverbs);
+		return proverbs.get(0);
+	}
 
-        if(quotes == null){
-            String[] mTestArray = c.getResources().getStringArray(R.array.quotations);
-            quotes = new ArrayList<>(Arrays.asList(mTestArray));
-        }
+	public static String getRandomQuote(Context c) {
+		initQuotes(c);
 
-        Collections.shuffle(quotes);
-        return quotes.get(0);
-    }
+		Collections.shuffle(quotes);
+		return quotes.get(0);
+	}
+
+	public static String getRandomQuoteOrProverb(Context c) {
+		initQuotes(c);
+		initProverbs(c);
+
+		ArrayList<String> quotesAndProverbs = new ArrayList<>();
+		quotesAndProverbs.addAll(quotes);
+		quotesAndProverbs.addAll(proverbs);
+
+		Collections.shuffle(quotesAndProverbs);
+		return quotesAndProverbs.get(0);
+	}
 };
