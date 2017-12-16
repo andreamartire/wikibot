@@ -1,6 +1,7 @@
 package techbrain.wikibot.adapters;
 
 import android.content.Context;
+import android.net.Uri;
 import android.os.PatternMatcher;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -54,7 +55,9 @@ public class ElementAdapter extends ArrayAdapter<String> {
 
                     String[] splits = value.split("/wiki/");
                     if(splits.length > 1){
-                        titleElement.setText(splits[1].replaceAll("_"," "));
+                        String text = splits[1].replaceAll("_"," ");
+                        text = Uri.decode(text);
+                        titleElement.setText(text);
                     }
                 }
             }

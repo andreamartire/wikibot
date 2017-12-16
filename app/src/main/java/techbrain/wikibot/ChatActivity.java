@@ -89,8 +89,7 @@ public class ChatActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_chat);
 
@@ -99,7 +98,6 @@ public class ChatActivity extends AppCompatActivity {
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
         myToolbar.showOverflowMenu();
-        myToolbar.setTitleTextColor(getResources().getColor(R.color.colorWhite));
         setSupportActionBar(myToolbar);
 
         MobileAds.initialize(this, "ca-app-pub-1872225169177247~8401929001");
@@ -139,18 +137,18 @@ public class ChatActivity extends AppCompatActivity {
         list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                //manage long press
-                String value = (String) parent.getItemAtPosition(position);
+            //manage long press
+            String value = (String) parent.getItemAtPosition(position);
 
-                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
-                sharingIntent.setType("text/plain");
+            Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+            sharingIntent.setType("text/plain");
 
-                String message = value + " shared by \"" + APP_TITLE + "\" " + APP_URL;
+            String message = value + " shared by \"" + APP_TITLE + "\" " + APP_URL;
 
-                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, message);
-                startActivity(Intent.createChooser(sharingIntent, "Sharing Option"));
+            sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, message);
+            startActivity(Intent.createChooser(sharingIntent, "Sharing Option"));
 
-                return true;
+            return true;
             }
         });
 
@@ -162,7 +160,7 @@ public class ChatActivity extends AppCompatActivity {
         curiositaBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                addRandomCuriosita(context, listItems, adapter);
+            addRandomCuriosita(context, listItems, adapter);
             }
         });
 
@@ -170,7 +168,7 @@ public class ChatActivity extends AppCompatActivity {
         proverbQuoteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                addRandomQuoteOrProverb(context, listItems, adapter);
+            addRandomQuoteOrProverb(context, listItems, adapter);
             }
         });
 
@@ -178,22 +176,21 @@ public class ChatActivity extends AppCompatActivity {
         nonciclopediaBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                addRandomNonciclopedia(listItems, adapter);
+            addRandomNonciclopedia(listItems, adapter);
             }
         });
 
         final EditText ediBox = (EditText) findViewById(R.id.editBox);
         //ediBox.setQueryHint(getResources().getString(R.string.default_search_text));
-        ediBox.requestFocus();
         ediBox.setOnKeyListener(new View.OnKeyListener() {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
-                // If the event is a key-down event on the "enter" button
-                if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
-                        (keyCode == KeyEvent.KEYCODE_ENTER)) {
-                    // Perform action on key press
-                    manageMessage(context,  ediBox);
-                }
-                return false;
+            // If the event is a key-down event on the "enter" button
+            if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
+                    (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                // Perform action on key press
+                manageMessage(context,  ediBox);
+            }
+            return false;
             }
         });
 

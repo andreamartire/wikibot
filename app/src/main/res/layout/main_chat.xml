@@ -9,20 +9,9 @@
         android:minHeight="?attr/actionBarSize"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary">
+        android:theme="@style/ToolBarStyle">
 
     </android.support.v7.widget.Toolbar>
-
-    <com.google.android.gms.ads.AdView
-        xmlns:ads="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/mainChatAdView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentTop="true"
-        ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-1872225169177247/7420019822">
-    </com.google.android.gms.ads.AdView>
 
     <ListView
         android:layout_width="match_parent"
@@ -42,32 +31,46 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_gravity="center_horizontal">
+            android:layout_gravity="center_vertical">
             <Button
                 android:layout_width="0dp"
-                android:layout_weight="0.33"
-                android:layout_height="wrap_content"
+                android:layout_weight="0.32"
+                android:layout_height="match_parent"
                 android:text="@string/label_curiosita"
+                android:background="@drawable/rounded_buttons"
                 android:id="@+id/curiosita_button"/>
             <Button
                 android:layout_width="0dp"
-                android:layout_weight="0.33"
-                android:layout_height="wrap_content"
+                android:layout_weight="0.32"
+                android:layout_height="match_parent"
                 android:text="@string/label_proverb_quote"
+                android:background="@drawable/rounded_buttons"
                 android:id="@+id/proverb_quote_button"/>
             <Button
                 android:layout_width="0dp"
-                android:layout_weight="0.33"
-                android:layout_height="wrap_content"
+                android:layout_weight="0.32"
+                android:layout_height="match_parent"
                 android:text="@string/label_nonciclopedia"
+                android:background="@drawable/rounded_buttons"
                 android:id="@+id/nonciclopedia_button"/>
         </LinearLayout>
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/mainChatAdView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-1872225169177247/7420019822">
+        </com.google.android.gms.ads.AdView>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical">
         <EditText
             android:layout_width="0dp"
             android:layout_weight="0.8"
@@ -76,8 +79,9 @@
         <Button
             android:layout_width="0dp"
             android:layout_weight="0.2"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:id="@+id/sendButton"
+            android:background="@drawable/rounded_buttons"
             android:text="@string/label_send"/>
     </LinearLayout>
 </LinearLayout>

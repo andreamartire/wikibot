@@ -1489,7 +1489,11 @@ public class WikiConstants {
 		"Dispotismo illuminato",
 		"Gerontocrazia",
 		"Teocrazia",
-		"Stratocrazia"
+		"Stratocrazia",
+		"Teoria del complotto sugli UFO",
+		"Teoria del complotto sul piano Kalergi",
+		"Teoria del complotto giudaico",
+		"Revisionismo del Risorgimento"
     ));
 
 	public static String getRandomItem() {
