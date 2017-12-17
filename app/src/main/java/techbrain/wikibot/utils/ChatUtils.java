@@ -4,7 +4,9 @@ import android.content.Context;
 import android.text.TextUtils;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -16,16 +18,15 @@ import techbrain.wikibot.beans.MessageType;
 
 public class ChatUtils {
 
-    public static void saveChat(Context context, List<MessageElement> chats) {
+    public static void appendMessage(Context context, MessageElement messageElement) {
         String chatFilePath = context.getFilesDir().getAbsolutePath() + File.separator + "chats.dat";
 
-        MyFileUtils.deleteFileIfExists(chatFilePath);
-
         try{
-            FileWriter fw = new FileWriter(chatFilePath);
-            String output = TextUtils.join("\n", chats);
-            fw.write(output);
-            fw.close();
+            FileOutputStream fileinput = new FileOutputStream(new File(chatFilePath),true);
+            PrintStream printstream = new PrintStream(fileinput);
+            printstream.print(messageElement.getType().toString() + "|" + messageElement.getValue() + "\n");
+            fileinput.close();
+            printstream.close();
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -42,7 +43,7 @@ public class ChatUtils {
                 List<String> strList = Arrays.asList(TextUtils.split(fileContent, "\n"));
                 if(strList != null){
                     for(String row : strList){
-                        String columns[] = row.split("|");
+                        String columns[] = row.split("\\|");
                         if(columns != null && columns.length >= 2){
                             String type = columns[0];
                             String value = columns[1];

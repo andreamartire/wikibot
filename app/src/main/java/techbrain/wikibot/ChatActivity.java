@@ -181,7 +181,7 @@ public class ChatActivity extends AppCompatActivity {
         nonciclopediaBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            addRandomNonciclopedia(listItems, adapter);
+                addRandomNonciclopedia(context, listItems, adapter);
             }
         });
 
@@ -208,17 +208,17 @@ public class ChatActivity extends AppCompatActivity {
         });
     }
 
-    private void addRandomNonciclopedia(ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter) {
-        WikiConstants.getRandomNonciclopedia(listItems, adapter);
+    private void addRandomNonciclopedia(Context context, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter) {
+        WikiConstants.getRandomNonciclopedia(context, listItems, adapter);
     }
 
     private void addRandomCuriosita(Context context, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter) {
 
         String randomItem = WikiConstants.getRandomItem(context);
-        ChatUtils.saveChat(context, listItems);
 
-        //update list
-        listItems.add(new MessageElement(MessageType.URL, randomItem));
+        MessageElement element = new MessageElement(MessageType.URL, randomItem);
+        listItems.add(element);
+        ChatUtils.appendMessage(context, element);
 
         adapter.notifyDataSetChanged();
     }
@@ -227,8 +227,9 @@ public class ChatActivity extends AppCompatActivity {
         String randomItem = WikiConstants.getRandomProverb(context);
 
         //update list
-        listItems.add(new MessageElement(MessageType.PROVERB, randomItem));
-        ChatUtils.saveChat(context, listItems);
+        MessageElement element = new MessageElement(MessageType.PROVERB, randomItem);
+        listItems.add(element);
+        ChatUtils.appendMessage(context, element);
 
         adapter.notifyDataSetChanged();
     }
@@ -238,8 +239,9 @@ public class ChatActivity extends AppCompatActivity {
         String randomItem = WikiConstants.getRandomQuote(context);
 
         //update list
-        listItems.add(new MessageElement(MessageType.QUOTE, randomItem));
-        ChatUtils.saveChat(context, listItems);
+        MessageElement element = new MessageElement(MessageType.QUOTE, randomItem);
+        listItems.add(element);
+        ChatUtils.appendMessage(context, element);
 
         adapter.notifyDataSetChanged();
     }
@@ -258,8 +260,9 @@ public class ChatActivity extends AppCompatActivity {
             elementType = MessageType.QUOTE;
         }
 
-        listItems.add(new MessageElement(elementType, randomItem));
-        ChatUtils.saveChat(context, listItems);
+        MessageElement element = new MessageElement(elementType, randomItem);
+        listItems.add(element);
+        ChatUtils.appendMessage(context, element);
 
         adapter.notifyDataSetChanged();
     }

@@ -65,9 +65,10 @@ public class RetrieveGoogleTask extends AsyncTask<String, Void, String> {
                             && !link.contains("wiki/File:")
                             && !link.contains("wiki/Utente:")){
                         firstLink = link;
+                        MessageElement element = new MessageElement(MessageType.URL, firstLink);
                         //update list
-                        listItems.add(new MessageElement(MessageType.URL, firstLink));
-                        ChatUtils.saveChat(context, listItems);
+                        listItems.add(element);
+                        ChatUtils.appendMessage(context, element);
                     }
                 }
             }
@@ -78,8 +79,9 @@ public class RetrieveGoogleTask extends AsyncTask<String, Void, String> {
 
         if(firstLink == null){
             //update list
-            listItems.add(new MessageElement(MessageType.USERTEXT, ChatUtils.getRandomSmallTalk(context)));
-            ChatUtils.saveChat(context, listItems);
+            MessageElement element = new MessageElement(MessageType.USERTEXT, ChatUtils.getRandomSmallTalk(context));
+            listItems.add(element);
+            ChatUtils.appendMessage(context, element);
         }
 
         ((Activity) context).runOnUiThread(new Runnable() {
