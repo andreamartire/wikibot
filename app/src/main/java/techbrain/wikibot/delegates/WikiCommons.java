@@ -44,7 +44,9 @@ public class WikiCommons {
 						if(elements != null){
 							int size = elements.length;
 							for(String element : elements){
-								System.out.println(element);
+								String[] sections = element.split("\" class=\"image\"");
+								String[] links = sections[0].split("><a href=\"");
+								System.out.println(links[1]);
 							}
 						}
 					}
