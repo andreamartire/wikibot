@@ -1493,7 +1493,16 @@ public class WikiConstants {
 		"Teoria del complotto sugli UFO",
 		"Teoria del complotto sul piano Kalergi",
 		"Teoria del complotto giudaico",
-		"Revisionismo del Risorgimento"
+		"Revisionismo del Risorgimento",
+		"Casa di paglia",
+		"Toilette compostante",
+		"Flatulenza",
+		"Agricoltura sinergica",
+		"Maggese",
+		"Rotazione delle colture",
+		"Mnemotecnica",
+		"Poliglotta",
+		"Emil Krebs"
     ));
 
 	public static String getRandomItem() {
