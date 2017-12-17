@@ -211,7 +211,7 @@ public class ChatActivity extends AppCompatActivity {
 
     private void addRandomCuriosita(Context context, ArrayList<String> listItems, ArrayAdapter<String> adapter) {
 
-        String randomItem = WikiConstants.getRandomItem();
+        String randomItem = WikiConstants.getRandomItem(context);
         ChatUtils.saveChat(context, listItems);
 
         //update list

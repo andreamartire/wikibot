@@ -1,4 +1,7 @@
 <resources>
+    <array name="articles">
+        <item>Italia</item>
+    </array>
     <array name="proverbs">
         <item>Spanish proverb 1</item>
         <item>Spanish proverb 2</item>
