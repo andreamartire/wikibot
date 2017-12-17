@@ -12,6 +12,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 
+import techbrain.wikibot.beans.MessageElement;
+import techbrain.wikibot.beans.MessageType;
 import techbrain.wikibot.utils.ChatUtils;
 
 /**
@@ -21,11 +23,11 @@ import techbrain.wikibot.utils.ChatUtils;
 public class RetrieveGoogleTask extends AsyncTask<String, Void, String> {
 
     Context context;
-    ArrayList<String> listItems;
-    ArrayAdapter<String> adapter;
+    ArrayList<MessageElement> listItems;
+    ArrayAdapter<MessageElement> adapter;
     String message;
 
-    public RetrieveGoogleTask(Context context, ArrayList<String> listItems, ArrayAdapter<String> adapter, String message){
+    public RetrieveGoogleTask(Context context, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter, String message){
         this.context = context;
         this.listItems = listItems;
         this.adapter = adapter;
@@ -35,6 +37,7 @@ public class RetrieveGoogleTask extends AsyncTask<String, Void, String> {
     protected String doInBackground(String... urls) {
         InputStream is = null;
         String item = null;
+        String firstLink = null;
 
         try{
             URL url = new URL("https://www.googleapis.com/customsearch/v1?key="+WikiConstants.GAK+ "&cx=" +  WikiConstants.CX + "&q="+ message + "&alt=json");
@@ -48,7 +51,6 @@ public class RetrieveGoogleTask extends AsyncTask<String, Void, String> {
             String output;
             System.out.println("Output from Server .... \n");
 
-            String firstLink = null;
             while ((output = br.readLine()) != null) {
 
                 if(output.contains("\"link\": \"")){
@@ -64,7 +66,7 @@ public class RetrieveGoogleTask extends AsyncTask<String, Void, String> {
                             && !link.contains("wiki/Utente:")){
                         firstLink = link;
                         //update list
-                        listItems.add(firstLink);
+                        listItems.add(new MessageElement(MessageType.URL, firstLink));
                         ChatUtils.saveChat(context, listItems);
                     }
                 }
@@ -74,10 +76,16 @@ public class RetrieveGoogleTask extends AsyncTask<String, Void, String> {
             e.printStackTrace();
         }
 
+        if(firstLink == null){
+            //update list
+            listItems.add(new MessageElement(MessageType.USERTEXT, ChatUtils.getRandomSmallTalk(context)));
+            ChatUtils.saveChat(context, listItems);
+        }
+
         ((Activity) context).runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                adapter.notifyDataSetChanged();
+            adapter.notifyDataSetChanged();
             }
         });
 

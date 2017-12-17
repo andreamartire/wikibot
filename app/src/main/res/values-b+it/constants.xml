@@ -1482,6 +1482,14 @@
         <item>Poliglotta</item>
         <item>Emil Krebs</item>
     </array>
+    <array name="smalltalk">
+        <item>Non credo di aver capito...</item>
+        <item>Non mi va di rispondere</item>
+        <item>Perchè mi dici queste cose?</item>
+        <item>Ora sono occupato. Ti rispondo più tardi</item>
+        <item>Sono in riunione</item>
+        <item>Troppo complicato per me. Riprova tra un mese</item>
+    </array>
     <array name="proverbs">
         <item>A brigante brigante e mezzo.</item>
         <item>A buon cavalier non manca lancia.</item>
@@ -2706,7 +2714,7 @@
         <item>Se c\'è un rimedio, perché te la prendi? E se non c\'è un rimedio, perché te la prendi? (proverbio cinese)</item>
         <item>L\'uomo è l\'unico animale che arrossisce. O dovrebbe arrossire. (Mark Twain)</item>
         <item>Nessun uomo è un\'isola, completo in se stesso; ogni uomo è un pezzo del continente, una parte del tutto. Se anche solo una zolla venisse lavata via dal mare, l\'Europa ne sarebbe diminuita, come se le mancasse un promontorio, come se venisse a mancare una dimora di amici tuoi, o la tua stessa casa. La morte di qualsiasi uomo mi sminuisce, perché io sono parte dell\'umanità. E dunque non chiedere mai per chi suona la campana: suona per te. (John Donne)</item>
-        <item>Quando il viaggiatore si è seduto sulla sabbia della spiaggia e ha detto: \Non c\'è altro da vedere\ sapeva che non era vero. La fine di un viaggio è solo l\'inizio di un altro. Bisogna vedere quel che non si è visto, vedere di nuovo quel che si è già visto, vedere in primavera quel che si è visto in estate, vedere di giorno quel che si è visto di notte, con il sole dove la prima volta pioveva, vedere le messi verdi, il frutto maturo, la pietra che ha cambiato posto, l\'ombra che non c\'era. (José Saramago)</item>
+        <item>Quando il viaggiatore si è seduto sulla sabbia della spiaggia e ha detto: "Non c\'è altro da vedere" sapeva che non era vero. La fine di un viaggio è solo l\'inizio di un altro. Bisogna vedere quel che non si è visto, vedere di nuovo quel che si è già visto, vedere in primavera quel che si è visto in estate, vedere di giorno quel che si è visto di notte, con il sole dove la prima volta pioveva, vedere le messi verdi, il frutto maturo, la pietra che ha cambiato posto, l\'ombra che non c\'era. (José Saramago)</item>
         <item>Il genio è per l\'un per cento ispirazione e per il novantanove per cento sudore. (Thomas Edison)</item>
         <item>Ogni uomo porta l\'intera impronta della condizione umana. (Michel de Montaigne)</item>
         <item>Se potessi promettere qualcosa se potessi fidarmi di me stesso se di me non avessi anzi paura, padre, una cosa ti prometterei: di viver fortemente come te sacrificato agli altri come te e negandomi tutto come te, povero padre, per la fiera gioia di finir tristemente come te. (Camillo Sbarbaro)</item>
@@ -2795,7 +2803,7 @@
         <item>Il bene si fa, ma non si dice. E certe medaglie si appendono all\'anima, non alla giacca. (Gino Bartali)</item>
         <item>La virtù, la sanità fisica, ogni bene e la divinità sono armonia: perciò anche l\'universo è costituito secondo armonia. Anche l\'amicizia è uguaglianza armonica. (Pitagora)</item>
         <item>Non è una mia fantasia che la vista del cielo, delle nubi, della luna e delle stelle mi renda tranquilla e paziente. È una medicina migliore della valeriana o del bromuro. La natura mi rende umile e pronta ad affrontare valorosamente ogni avversità. (Anna Frank)</item>
-        <item>\È vero, principe, che lei una volta ha detto che la \'bellezza\' salverà il mondo? State a sentire, signori,\ gridò ad alta voce, rivolgendosi a tutti, \il principe sostiene che la bellezza salverà il mondo! E io sostengo che questi giocondi pensieri gli vengono in testa perché è innamorato. Signori, il principe è innamorato [...] Ma quale bellezza salverà il mondo? (Fëdor Dostoevskij, L\'idiota)</item>
+        <item>È vero, principe, che lei una volta ha detto che la \'bellezza\' salverà il mondo? State a sentire, signori, gridò ad alta voce, rivolgendosi a tutti, il principe sostiene che la bellezza salverà il mondo! E io sostengo che questi giocondi pensieri gli vengono in testa perché è innamorato. Signori, il principe è innamorato [...] Ma quale bellezza salverà il mondo? (Fëdor Dostoevskij, L\'idiota)</item>
         <item>Attraverso le asperità si giunge alle stelle. Per aspera sic itur ad astra. (attribuita a Lucio Anneo Seneca)</item>
         <item>L\'uomo ha ricordi, rimorsi e rancori che si accumulano dentro di lui come strati di polvere finché gli impediscono di ricevere la luce e la vita che discende dal cielo. Il creato, invece, si rinnova costantemente. Se il cielo si rannuvola, poi si rasserena. Il sole tramonta, ma ogni mattino rinasce. Le stelle o la luna non recano le tracce del tempo. La continuità del processo di creazione della natura non appare mai tanto ovvia come all\'alba, quando cade la rugiada, gli uccellini cinguettano, il fiume s\'infiamma, l\'erba è umida e fresca. Felice è l\'uomo che sa rinnovarsi insieme al creato. (Isaac Bashevis Singer)</item>
         <item>Ciò che turba gli uomini non sono le cose, ma le opinioni che essi hanno delle cose. (Epitteto)</item>
@@ -2826,7 +2834,7 @@
         <item>Il fatto che gli uomini non imparino molto dalla storia è la lezione più importante che la storia ci insegna. (Aldous Huxley)</item>
         <item>Il tempo che hai perso per la tua rosa è ciò che fa la tua rosa tanto importante. (Antoine de Saint-Exupéry)</item>
         <item>Non bisogna toccare gl\'idoli: la doratura ci rimane sulle dita. (Gustave Flaubert)</item>
-        <item>La cosiddetta \scienza\ di cui mi occupo, non è altro che l’espressione della Volontà Suprema, che mira ad avvicinare le persone tra loro al fine di aiutarli a capire meglio e a migliorare se stessi. (Guglielmo Marconi)</item>
+        <item>La cosiddetta scienza di cui mi occupo, non è altro che l’espressione della Volontà Suprema, che mira ad avvicinare le persone tra loro al fine di aiutarli a capire meglio e a migliorare se stessi. (Guglielmo Marconi)</item>
         <item>I campioni sono quelli che vogliono lasciare il loro sport in condizioni migliori rispetto a quando hanno iniziato a praticarlo. (Arthur Ashe)</item>
         <item>C\'è chi dice sia un esercito di cavalieri, c\'è chi dice sia un esercito di fanti, c\'è chi dice sia una flotta di navi, la cosa più bella sulla nera terra, io invece dico che è ciò che si ama. (Saffo)</item>
         <item>Siamo pronti a contraddire senza ostinazione, ed a lasciare, senza adirarci, che altri ci contraddica. (Marco Tullio Cicerone)</item>
@@ -2923,7 +2931,7 @@
         <item>Esperienza è il nome che ciascuno dà ai propri errori. (Oscar Wilde)</item>
         <item>Dopo millenni di odi e di guerre per lo meno dovremmo avere imparato questo: che il dolore non ha bandiera. (Dacia Maraini)</item>
         <item>Dei tiranni nessuno mai, dopo morto, è ritornato in vita, mentre molte città, anche dopo essere state rase al suolo, hanno riacquistato vigore e potenza. (Iperide)</item>
-        <item>E se la gente vede che sai suonare, be\ ti tocca suonare, per tutta la vita. (Edgar Lee Masters)</item>
+        <item>E se la gente vede che sai suonare, be\' ti tocca suonare, per tutta la vita. (Edgar Lee Masters)</item>
         <item>Partono tutti incendiari e fieri ma quando arrivano sono tutti pompieri. (Rino Gaetano)</item>
         <item>Se ho fatto qualcosa di buono, questo sarà il mio monumento; se no, a che scopo commissionare statue su statue a scalpellini che non valgono nulla? (ultime parole di Agesilao II)</item>
         <item>Chi ti loda, s\'incensa. (Camillo Sbarbaro)</item>

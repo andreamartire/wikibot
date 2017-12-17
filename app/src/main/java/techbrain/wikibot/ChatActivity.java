@@ -17,7 +17,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.SearchView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -27,6 +26,8 @@ import java.net.URL;
 import java.util.ArrayList;
 
 import techbrain.wikibot.adapters.ElementAdapter;
+import techbrain.wikibot.beans.MessageElement;
+import techbrain.wikibot.beans.MessageType;
 import techbrain.wikibot.delegates.WikiCommons;
 import techbrain.wikibot.delegates.WikiConstants;
 import techbrain.wikibot.delegates.RetrieveGoogleTask;
@@ -42,7 +43,7 @@ public class ChatActivity extends AppCompatActivity {
     private static String APP_TITLE = "";
     private static String APP_URL = "";
 
-    ArrayList<String> listItems = new ArrayList<String>();
+    ArrayList<MessageElement> listItems = new ArrayList<MessageElement>();
     ElementAdapter adapter;
 
     @Override
@@ -60,7 +61,7 @@ public class ChatActivity extends AppCompatActivity {
                 Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
                 sharingIntent.setType("text/plain");
 
-                //TODO
+                //TODO review message
                 String shareBodyText = getResources().getString(R.string.share_message);
 
                 sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBodyText);
@@ -121,16 +122,18 @@ public class ChatActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View v, int i, long l) {
             //manage tap on audiobook list
-            String value = (String) adapterView.getItemAtPosition(i);
+            MessageElement messageElement = (MessageElement) adapterView.getItemAtPosition(i);
 
-            if(isValidUrl(value)){
-                //open brower
-                Intent browserIntent = new Intent(context, WebViewActivity.class);
+            if(messageElement != null){
+                if(MessageType.URL.equals(messageElement.getType()) && isValidUrl(messageElement.getValue())){
+                    //open brower
+                    Intent browserIntent = new Intent(context, WebViewActivity.class);
 
-                //pass data thought intent to another activity
-                browserIntent.putExtra(WebViewActivity.URL, value);
+                    //pass data thought intent to another activity
+                    browserIntent.putExtra(WebViewActivity.URL, messageElement.getValue());
 
-                startActivity(browserIntent);
+                    startActivity(browserIntent);
+                }
             }
             }
         });
@@ -205,59 +208,68 @@ public class ChatActivity extends AppCompatActivity {
         });
     }
 
-    private void addRandomNonciclopedia(ArrayList<String> listItems, ArrayAdapter<String> adapter) {
+    private void addRandomNonciclopedia(ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter) {
         WikiConstants.getRandomNonciclopedia(listItems, adapter);
     }
 
-    private void addRandomCuriosita(Context context, ArrayList<String> listItems, ArrayAdapter<String> adapter) {
+    private void addRandomCuriosita(Context context, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter) {
 
         String randomItem = WikiConstants.getRandomItem(context);
         ChatUtils.saveChat(context, listItems);
 
         //update list
-        listItems.add(randomItem);
+        listItems.add(new MessageElement(MessageType.URL, randomItem));
 
         adapter.notifyDataSetChanged();
     }
 
-    private void addRandomProverb(Context context, ArrayList<String> listItems, ArrayAdapter<String> adapter) {
+    private void addRandomProverb(Context context, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter) {
         String randomItem = WikiConstants.getRandomProverb(context);
 
         //update list
-        listItems.add(randomItem);
+        listItems.add(new MessageElement(MessageType.PROVERB, randomItem));
         ChatUtils.saveChat(context, listItems);
 
         adapter.notifyDataSetChanged();
     }
 
-    private void addRandomQuote(Context context, ArrayList<String> listItems, ArrayAdapter<String> adapter) {
+    private void addRandomQuote(Context context, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter) {
 
         String randomItem = WikiConstants.getRandomQuote(context);
 
         //update list
-        listItems.add(randomItem);
+        listItems.add(new MessageElement(MessageType.QUOTE, randomItem));
         ChatUtils.saveChat(context, listItems);
 
         adapter.notifyDataSetChanged();
     }
 
-    private void addRandomQuoteOrProverb(Context context, ArrayList<String> listItems, ArrayAdapter<String> adapter) {
+    private void addRandomQuoteOrProverb(Context context, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter) {
 
-        String randomItem = WikiConstants.getRandomQuoteOrProverb(context);
+        String randomItem = "";
+        MessageType elementType;
 
-        //update list
-        listItems.add(randomItem);
+        if(Math.round(Math.random()) == 0){
+            randomItem = WikiConstants.getRandomProverb(context);
+            elementType = MessageType.PROVERB;
+        }
+        else{
+            randomItem = WikiConstants.getRandomQuote(context);
+            elementType = MessageType.QUOTE;
+        }
+
+        listItems.add(new MessageElement(elementType, randomItem));
         ChatUtils.saveChat(context, listItems);
 
         adapter.notifyDataSetChanged();
     }
 
     public void manageMessage(Context context, EditText editBox){
-        String message = editBox.getText().toString();
+        String message = editBox.getText().toString().trim();
 
         if(!message.isEmpty()){
             //update list
-            listItems.add(message);
+            listItems.add(new MessageElement(MessageType.USERTEXT, message));
             adapter.notifyDataSetChanged();
             //clear edit box
             editBox.setText("");

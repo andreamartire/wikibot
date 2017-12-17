@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Set;
 
 import techbrain.wikibot.R;
+import techbrain.wikibot.beans.MessageElement;
 
 public class WikiConstants {
 
@@ -21,7 +22,7 @@ public class WikiConstants {
 	public static String CX = "004001173590099652672:ls07lv3jtwm";
 	public static String GAK = "AIzaSyCf8GaliX65nWeelUq5so0dg5H14sYFv3c";
 
-	public static String getRandomNonciclopedia(ArrayList<String> listItems, ArrayAdapter<String> adapter) {
+	public static String getRandomNonciclopedia(ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter) {
 		String item = null;
 
 		try{
@@ -110,17 +111,5 @@ public class WikiConstants {
 
 		Collections.shuffle(quotes);
 		return quotes.get(0);
-	}
-
-	public static String getRandomQuoteOrProverb(Context c) {
-		initQuotes(c);
-		initProverbs(c);
-
-		ArrayList<String> quotesAndProverbs = new ArrayList<>();
-		quotesAndProverbs.addAll(quotes);
-		quotesAndProverbs.addAll(proverbs);
-
-		Collections.shuffle(quotesAndProverbs);
-		return quotesAndProverbs.get(0);
 	}
 };

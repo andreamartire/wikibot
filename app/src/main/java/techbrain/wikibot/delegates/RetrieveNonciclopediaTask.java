@@ -9,16 +9,19 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 
+import techbrain.wikibot.beans.MessageElement;
+import techbrain.wikibot.beans.MessageType;
+
 /**
  * Created by andrea on 02/12/17.
  */
 
 public class RetrieveNonciclopediaTask extends AsyncTask<String, Void, String> {
 
-    ArrayList<String> listItems;
-    ArrayAdapter<String> adapter;
+    ArrayList<MessageElement> listItems;
+    ArrayAdapter<MessageElement> adapter;
 
-    public RetrieveNonciclopediaTask(ArrayList<String> listItems, ArrayAdapter<String> adapter){
+    public RetrieveNonciclopediaTask(ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter){
         this.listItems = listItems;
         this.adapter = adapter;
     }
@@ -54,7 +57,7 @@ public class RetrieveNonciclopediaTask extends AsyncTask<String, Void, String> {
     protected void onPostExecute(String item) {
 
         //update list
-        listItems.add(item);
+        listItems.add(new MessageElement(MessageType.URL, item));
 
         adapter.notifyDataSetChanged();
     }
