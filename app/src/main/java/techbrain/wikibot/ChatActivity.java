@@ -1,10 +1,14 @@
 package techbrain.wikibot;
 
 import android.app.AlertDialog;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
@@ -22,6 +26,11 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.net.URL;
 import java.util.ArrayList;
 
@@ -142,10 +151,35 @@ public class ChatActivity extends AppCompatActivity {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
             //manage long press
-            String value = (String) parent.getItemAtPosition(position);
+            MessageElement messageElement = (MessageElement) parent.getItemAtPosition(position);
 
             Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
             sharingIntent.setType("text/plain");
+
+            String value = messageElement.getValue();
+
+                /*Bitmap icon = Bitmap.cre;
+                Intent share = new Intent(Intent.ACTION_SEND);
+                share.setType("image/jpeg");
+
+                ContentValues values = new ContentValues();
+                values.put(MediaStore.Images.Media.TITLE, "title");
+                values.put(MediaStore.Images.Media.MIME_TYPE, "image/jpeg");
+                Uri uri = getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
+                        values);
+
+
+                OutputStream outstream;
+                try {
+                    outstream = getContentResolver().openOutputStream(uri);
+                    icon.compress(Bitmap.CompressFormat.JPEG, 100, outstream);
+                    outstream.close();
+                } catch (Exception e) {
+                    System.err.println(e.toString());
+                }
+
+                share.putExtra(Intent.EXTRA_STREAM, uri);
+                startActivity(Intent.createChooser(share, "Share Image"));*/
 
             String message = value + " shared by \"" + APP_TITLE + "\" " + APP_URL;
 
@@ -156,10 +190,12 @@ public class ChatActivity extends AppCompatActivity {
             }
         });
 
+        WikiCommons.getImageOfDayUrl(this);
+
         addRandomProverb(context, listItems, adapter);
+        addRandomImage(context, listItems, adapter);
         addRandomCuriosita(context, listItems, adapter);
         addRandomQuote(context, listItems, adapter);
-        WikiCommons.getImageOfDayUrl(this);
 
         Button curiositaBtn = (Button) findViewById(R.id.curiosita_button);
         curiositaBtn.setOnClickListener(new View.OnClickListener() {
@@ -261,6 +297,17 @@ public class ChatActivity extends AppCompatActivity {
         }
 
         MessageElement element = new MessageElement(elementType, randomItem);
+        listItems.add(element);
+        ChatUtils.appendMessage(context, element);
+
+        adapter.notifyDataSetChanged();
+    }
+
+    private void addRandomImage(Context context, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter) {
+
+        String randomImageFilePath = WikiCommons.getRandomItem(context);
+
+        MessageElement element = new MessageElement(MessageType.IMAGE, randomImageFilePath);
         listItems.add(element);
         ChatUtils.appendMessage(context, element);
 

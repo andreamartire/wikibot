@@ -2,23 +2,28 @@ package techbrain.wikibot.delegates;
 
 import android.app.Activity;
 import android.content.Context;
+import android.os.AsyncTask;
+import android.os.PatternMatcher;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ArrayAdapter;
 
+import org.apache.commons.io.FileUtils;
+
+import java.io.File;
+import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLConnection;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.Random;
+import java.util.concurrent.Callable;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import techbrain.wikibot.R;
+import techbrain.wikibot.task.SimpleDownloadTask;
+import techbrain.wikibot.utils.ImageUtils;
 
 public class WikiCommons {
 
@@ -39,14 +44,44 @@ public class WikiCommons {
 					// process the html as needed by the app
 					System.out.println(content);
 
+					Pattern pattern = Pattern.compile("data-src=\"(.+)\" data-alt");
+
+					List<String> urlList = new LinkedList<>();
 					if(content != null){
 						String[] elements = content.split("headline");
 						if(elements != null){
 							int size = elements.length;
 							for(String element : elements){
-								//String[] sections = element.split("\" class=\"image\"");
-								//String[] links = sections[0].split("><a href=\"");
-								//System.out.println(links[1]);
+
+								//search images
+								Matcher matcherUrl = pattern.matcher(element);
+								if(matcherUrl.find()){
+									String url = matcherUrl.group(1);
+									System.out.println(url);
+									urlList.add(url);
+
+									String imageFileName = ImageUtils.getFileNameFromUrl(url);
+									String imageFilePath = myApp.getFilesDir().getAbsolutePath() + "/images/" + imageFileName;
+
+									if(!new File(imageFilePath).exists()){
+										//download file out of main thread
+										try {
+											SimpleDownloadTask sdt = new SimpleDownloadTask(myApp, new URL(url), imageFilePath, new Callable<Integer>() {
+                                                @Override
+                                                public Integer call() throws Exception {
+                                                    //TODO
+                                                    return 0;
+                                                }
+                                            });
+
+											sdt.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+										} catch (Exception e) {
+											e.printStackTrace();
+										}
+									}
+								}
+
+								System.out.println(element);
 							}
 						}
 					}
@@ -77,5 +112,14 @@ public class WikiCommons {
 		}
 
 		return imageUrl;
+	}
+
+	public static java.lang.String getRandomItem(Context context) {
+		String imagePath = context.getFilesDir().getAbsolutePath() + "/images/";
+
+		File[] files = new File(imagePath).listFiles();
+		File file = files[new Random().nextInt(files.length)];
+
+		return file.getAbsolutePath();
 	}
 };
