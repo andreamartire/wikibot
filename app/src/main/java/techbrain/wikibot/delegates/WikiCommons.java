@@ -3,16 +3,11 @@ package techbrain.wikibot.delegates;
 import android.app.Activity;
 import android.content.Context;
 import android.os.AsyncTask;
-import android.os.PatternMatcher;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.ArrayAdapter;
-
-import org.apache.commons.io.FileUtils;
 
 import java.io.File;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.LinkedList;
 import java.util.List;
@@ -22,7 +17,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import techbrain.wikibot.R;
-import techbrain.wikibot.task.SimpleDownloadTask;
+import techbrain.wikibot.task.DownloadImageTask;
 import techbrain.wikibot.utils.ImageUtils;
 
 public class WikiCommons {
@@ -66,7 +61,7 @@ public class WikiCommons {
 									if(!new File(imageFilePath).exists()){
 										//download file out of main thread
 										try {
-											SimpleDownloadTask sdt = new SimpleDownloadTask(myApp, new URL(url), imageFilePath, new Callable<Integer>() {
+											DownloadImageTask sdt = new DownloadImageTask(myApp, new URL(url), imageFilePath, new Callable<Integer>() {
                                                 @Override
                                                 public Integer call() throws Exception {
                                                     //TODO
@@ -117,9 +112,14 @@ public class WikiCommons {
 	public static java.lang.String getRandomItem(Context context) {
 		String imagePath = context.getFilesDir().getAbsolutePath() + "/images/";
 
-		File[] files = new File(imagePath).listFiles();
-		File file = files[new Random().nextInt(files.length)];
+		if(new File(imagePath).exists()){
+			File[] files = new File(imagePath).listFiles();
+			if(files != null && files.length > 0){
+				File file = files[new Random().nextInt(files.length)];
+				return file.getAbsolutePath();
+			}
+		}
 
-		return file.getAbsolutePath();
+		return null;
 	}
 };

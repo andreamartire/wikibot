@@ -20,6 +20,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.io.File;
 import java.util.ArrayList;
 
 import techbrain.wikibot.ChatActivity;
@@ -89,23 +90,27 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         break;
                     case IMAGE:
                         //select current image
-                        Drawable image = Drawable.createFromPath(value);
+                        BitmapFactory.Options bmOptions = new BitmapFactory.Options();
+                        Bitmap bitmap = BitmapFactory.decodeFile(value,bmOptions);
 
-                        if(image != null){
-                            Bitmap bmp = ImageUtils.drawableToBitmap(image);
-                            int w = image.getIntrinsicWidth();
-                            int h = image.getIntrinsicHeight();
+                        if(bitmap != null){
+                            int width = bitmap.getWidth();
+                            int height = bitmap.getHeight();
 
-                            float prop = h/(float)w;
+                            Drawable image = Drawable.createFromPath(value);
+                            if(image != null){
+                                float prop = height/(float)width;
 
-                            WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-                            Integer realWidth = ImageUtils.getRealWidthSize(wm);
-                            int customHeight = (int) (realWidth*prop);
+                                WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+                                Integer realWidth = ImageUtils.getRealWidthSize(wm);
+                                int customHeight = (int) (realWidth*prop);
 
-                            //select downloaded image
-                            imageElement.setImageDrawable(ImageUtils.scaleImage(context, image, realWidth, customHeight));
-                            imageElement.setVisibility(View.VISIBLE);
+                                //select downloaded image
+                                imageElement.setImageDrawable(ImageUtils.scaleImage(context, image, realWidth, customHeight));
+                                imageElement.setVisibility(View.VISIBLE);
+                            }
                         }
+
                         break;
                     case PROVERB:
                         SpannableString spanStringProv = new SpannableString(value);

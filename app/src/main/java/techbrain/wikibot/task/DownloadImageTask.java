@@ -27,14 +27,14 @@ import java.util.concurrent.Callable;
 import techbrain.wikibot.utils.ImageUtils;
 import techbrain.wikibot.utils.MyFileUtils;
 
-public class SimpleDownloadTask extends AsyncTask<String, Integer, String> {
+public class DownloadImageTask extends AsyncTask<String, Integer, String> {
 
     Context context;
     URL remoteFileURL;
     String localFilePath;
     Callable<Integer> callback;
 
-    public SimpleDownloadTask(Context context, URL remoteFileURL, String localFilePath, Callable<Integer> callback){
+    public DownloadImageTask(Context context, URL remoteFileURL, String localFilePath, Callable<Integer> callback){
         super();
         this.context = context;
         this.remoteFileURL = remoteFileURL;
@@ -77,13 +77,6 @@ public class SimpleDownloadTask extends AsyncTask<String, Integer, String> {
             //scale image for save space
             byte[] b = baf.toByteArray();
             Drawable image = new BitmapDrawable(context.getResources(), BitmapFactory.decodeByteArray(b, 0, b.length));
-            WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-            Integer realWidth = ImageUtils.getRealWidthSize(wm);
-
-            final int xSize = realWidth;
-            final int hSize = xSize*3/5;
-
-            image = ImageUtils.scaleImage(context, image, xSize, hSize);
 
             Bitmap bitmap = ((BitmapDrawable)image).getBitmap();
             ByteArrayOutputStream stream = new ByteArrayOutputStream();
