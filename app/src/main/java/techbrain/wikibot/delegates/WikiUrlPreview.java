@@ -2,8 +2,13 @@ package techbrain.wikibot.delegates;
 
 import android.app.Activity;
 import android.content.Context;
+import android.net.Uri;
 import android.os.AsyncTask;
+import android.text.Html;
 import android.widget.TextView;
+
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -16,9 +21,9 @@ public class WikiUrlPreview {
 
 	static String WIKI_SUMMARY_PREFIX = "https://it.wikipedia.org/api/rest_v1/page/summary/";
 
-	public void injectPreview(Context context, String article, TextView titleElement) {
+	public void injectPreview(Context context, String article, TextView titleElement, TextView descrElement) {
 		// call AsynTask to perform network operation on separate thread
-		new HttpAsyncTask(context, WIKI_SUMMARY_PREFIX + article, titleElement).execute();
+		new HttpAsyncTask(context, WIKI_SUMMARY_PREFIX + article, titleElement, descrElement).execute();
 	}
 
 	private class HttpAsyncTask extends AsyncTask<String, Void, String> {
@@ -26,12 +31,14 @@ public class WikiUrlPreview {
 		Context context;
 		String articleUrl;
 		TextView titleElement;
+		TextView descrElement;
 
-		public HttpAsyncTask(Context context, String article, TextView titleElement){
+		public HttpAsyncTask(Context context, String article, TextView titleElement, TextView descrElement){
 			super();
 			this.context = context;
 			this.articleUrl = article;
 			this.titleElement = titleElement;
+			this.descrElement = descrElement;
 		}
 
 		@Override
@@ -59,11 +66,23 @@ public class WikiUrlPreview {
 					((Activity)context).runOnUiThread(new Runnable() {
 						@Override
 						public void run() {
-							titleElement.setText(result.substring(0,100));
+							try {
+								final SummaryItWiki element = new Gson().fromJson(result, SummaryItWiki.class);
+
+								String extract = element.getExtract_html();
+
+								if (extract != null){
+									if (extract.contains("</p>")) {
+										extract = extract.split("</p>")[0];
+									}
+								}
+								descrElement.setText(Html.fromHtml(extract));
+							}catch (Throwable e){
+								e.printStackTrace();
+							}
 						}
 					});
 				}
-
 			} catch (Throwable e) {
 				e.printStackTrace();
 			}
