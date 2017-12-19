@@ -26,6 +26,7 @@ import java.util.ArrayList;
 import techbrain.wikibot.ChatActivity;
 import techbrain.wikibot.R;
 import techbrain.wikibot.beans.MessageElement;
+import techbrain.wikibot.delegates.WikiUrlPreview;
 import techbrain.wikibot.utils.ImageUtils;
 
 public class ElementAdapter extends ArrayAdapter<MessageElement> {
@@ -81,10 +82,23 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
 
                             String[] splits = value.split("/wiki/");
                             if(splits.length > 1){
-                                String text = splits[1].replaceAll("_"," ");
-                                text = Uri.decode(text);
-                                titleElement.setText(text);
+                                try{
+                                    //String text = splits[1].replaceAll("_"," ");
+                                    //text = Uri.decode(text);
+
+                                    String baseKey = splits[1];
+                                    String text = baseKey.replaceAll("_"," ");
+                                    text = Uri.decode(text);
+
+                                    titleElement.setText(text);
+
+                                    new WikiUrlPreview().injectPreview(context, baseKey, titleElement);
+                                }catch (Throwable e){
+                                    e.printStackTrace();
+                                }
                             }
+
+                            //https://it.wikipedia.org/api/rest_v1/page/summary/Italia
                         }
                         titleElement.setVisibility(View.VISIBLE);
                         break;
