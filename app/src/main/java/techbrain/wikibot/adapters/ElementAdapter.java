@@ -93,7 +93,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
 
                                     titleElement.setText(text);
 
-                                    new WikiUrlPreview().injectPreview(context, baseKey, titleElement, descrElement);
+                                    new WikiUrlPreview().injectPreview(context, baseKey, descrElement);
                                 }catch (Throwable e){
                                     e.printStackTrace();
                                 }
@@ -101,7 +101,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
 
                             //https://it.wikipedia.org/api/rest_v1/page/summary/Italia
                         }
-                        //titleElement.setVisibility(View.VISIBLE);
+                        titleElement.setVisibility(View.VISIBLE);
                         descrElement.setVisibility(View.VISIBLE);
                         break;
                     case IMAGE:

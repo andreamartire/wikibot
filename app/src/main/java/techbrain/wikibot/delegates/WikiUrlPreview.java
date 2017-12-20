@@ -21,23 +21,21 @@ public class WikiUrlPreview {
 
 	static String WIKI_SUMMARY_PREFIX = "https://it.wikipedia.org/api/rest_v1/page/summary/";
 
-	public void injectPreview(Context context, String article, TextView titleElement, TextView descrElement) {
+	public void injectPreview(Context context, String article, TextView descrElement) {
 		// call AsynTask to perform network operation on separate thread
-		new HttpAsyncTask(context, WIKI_SUMMARY_PREFIX + article, titleElement, descrElement).execute();
+		new HttpAsyncTask(context, WIKI_SUMMARY_PREFIX + article, descrElement).execute();
 	}
 
 	private class HttpAsyncTask extends AsyncTask<String, Void, String> {
 
 		Context context;
 		String articleUrl;
-		TextView titleElement;
 		TextView descrElement;
 
-		public HttpAsyncTask(Context context, String article, TextView titleElement, TextView descrElement){
+		public HttpAsyncTask(Context context, String article, TextView descrElement){
 			super();
 			this.context = context;
 			this.articleUrl = article;
-			this.titleElement = titleElement;
 			this.descrElement = descrElement;
 		}
 

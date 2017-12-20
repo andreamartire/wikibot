@@ -5,8 +5,13 @@ package techbrain.wikibot.beans;
  */
 
 public class MessageElement {
+
     MessageType type;
     String value;
+    String remoteImageUrl;
+    String localImageFilePath;
+    String previewText;
+    String previewTextHtml;
 
     public MessageElement(MessageType type, String value) {
         this.type = type;
@@ -27,5 +32,37 @@ public class MessageElement {
 
     public void setValue(String value) {
         this.value = value;
+    }
+
+    public String getRemoteImageUrl() {
+        return remoteImageUrl;
+    }
+
+    public void setRemoteImageUrl(String remoteImageUrl) {
+        this.remoteImageUrl = remoteImageUrl;
+    }
+
+    public String getLocalImageFilePath() {
+        return localImageFilePath;
+    }
+
+    public void setLocalImageFilePath(String localImageFilePath) {
+        this.localImageFilePath = localImageFilePath;
+    }
+
+    public String getPreviewText() {
+        return previewText;
+    }
+
+    public void setPreviewText(String previewText) {
+        this.previewText = previewText;
+    }
+
+    public String getPreviewTextHtml() {
+        return previewTextHtml;
+    }
+
+    public void setPreviewTextHtml(String previewTextHtml) {
+        this.previewTextHtml = previewTextHtml;
     }
 }
