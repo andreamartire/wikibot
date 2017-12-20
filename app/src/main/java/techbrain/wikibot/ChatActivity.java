@@ -116,20 +116,20 @@ public class ChatActivity extends AppCompatActivity {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View v, int i, long l) {
-            //manage tap on audiobook list
-            MessageElement messageElement = (MessageElement) adapterView.getItemAtPosition(i);
+                //manage tap
+                MessageElement messageElement = (MessageElement) adapterView.getItemAtPosition(i);
 
-            if(messageElement != null){
-                if(MessageType.URL.equals(messageElement.getMessageType()) && isValidUrl(messageElement.getMessageValue())){
-                    //open brower
-                    Intent browserIntent = new Intent(context, WebViewActivity.class);
+                if(messageElement != null){
+                    if(MessageType.URL.equals(messageElement.getMessageType()) && isValidUrl(messageElement.getMessageValue())){
+                        //open brower
+                        Intent browserIntent = new Intent(context, WebViewActivity.class);
 
-                    //pass data thought intent to another activity
-                    browserIntent.putExtra(WebViewActivity.URL, messageElement.getMessageValue());
+                        //pass data thought intent to another activity
+                        browserIntent.putExtra(WebViewActivity.URL, messageElement.getMessageValue());
 
-                    startActivity(browserIntent);
+                        startActivity(browserIntent);
+                    }
                 }
-            }
             }
         });
 

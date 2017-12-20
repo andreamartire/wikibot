@@ -5,6 +5,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.text.Html;
+import android.view.View;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -17,38 +18,51 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 
+import techbrain.wikibot.beans.MessageElement;
+import techbrain.wikibot.dao.MessageElementDao;
+
 public class WikiUrlPreview {
 
 	static String WIKI_SUMMARY_PREFIX = "https://it.wikipedia.org/api/rest_v1/page/summary/";
 
-	public void injectPreview(Context context, String article, TextView descrElement) {
+	public void injectPreview(Context context, MessageElement messageElement, TextView descrElement) {
 		// call AsynTask to perform network operation on separate thread
-		new HttpAsyncTask(context, WIKI_SUMMARY_PREFIX + article, descrElement).execute();
+		new HttpAsyncTask(context, messageElement, descrElement).execute();
 	}
 
 	private class HttpAsyncTask extends AsyncTask<String, Void, String> {
 
 		Context context;
-		String articleUrl;
+		MessageElement messageElement;
 		TextView descrElement;
 
-		public HttpAsyncTask(Context context, String article, TextView descrElement){
+		public HttpAsyncTask(Context context, MessageElement messageElement, TextView descrElement){
 			super();
 			this.context = context;
-			this.articleUrl = article;
+			this.messageElement = messageElement;
 			this.descrElement = descrElement;
 		}
 
 		@Override
 		protected String doInBackground(String... urls) {
+			String remoteUrl = messageElement.getMessageValue();
+            if(remoteUrl != null){
+                String[] splits = remoteUrl.split("/wiki/");
+                if(splits.length > 1) {
+                    String baseKey = splits[1];
+                    String text = baseKey.replaceAll("_", " ");
+                    baseKey = Uri.decode(text);
 
-			return GET(articleUrl);
+                    return GET(WIKI_SUMMARY_PREFIX + baseKey);
+                }
+            }
+
+			return "";
 		}
 
 		public String GET(String url){
 
 			try {
-
 				/* Open a connection to that URL. */
 				URLConnection ucon = new URL(url).openConnection();
 
@@ -64,20 +78,29 @@ public class WikiUrlPreview {
 					((Activity)context).runOnUiThread(new Runnable() {
 						@Override
 						public void run() {
-							try {
-								final SummaryItWiki element = new Gson().fromJson(result, SummaryItWiki.class);
+						try {
+							final SummaryItWiki element = new Gson().fromJson(result, SummaryItWiki.class);
 
-								String extract = element.getExtract_html();
+							if(element != null){
+								String extractHtml = element.getExtract_html();
 
-								if (extract != null){
-									if (extract.contains("</p>")) {
-										extract = extract.split("</p>")[0];
+								if (extractHtml != null){
+									if (extractHtml.contains("</p>")) {
+										extractHtml = extractHtml.split("</p>")[0];
 									}
 								}
-								descrElement.setText(Html.fromHtml(extract));
-							}catch (Throwable e){
-								e.printStackTrace();
+
+								messageElement.setPreviewText(element.getExtract());
+								messageElement.setPreviewTextHtml(extractHtml);
+
+								descrElement.setText(Html.fromHtml(extractHtml));
+								descrElement.setVisibility(View.VISIBLE);
+
+								MessageElementDao.getInstance((Activity)context).update(messageElement);
 							}
+						}catch (Throwable e){
+							e.printStackTrace();
+						}
 						}
 					});
 				}
@@ -97,7 +120,6 @@ public class WikiUrlPreview {
 
 			inputStream.close();
 			return result;
-
 		}
 	}
 };

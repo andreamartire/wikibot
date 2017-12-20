@@ -100,6 +100,24 @@ public class MessageElementDao extends SQLiteOpenHelper {
         return list;
     }
 
+    public void update(MessageElement messageElement) {
+        SQLiteDatabase db = getWritableDatabase();
+
+        // Create a new map of values, where column names are the keys
+        ContentValues values = new ContentValues();
+        values.put(MessageElementEntry.COLUMN_NAME_MESSAGE_TYPE, messageElement.getMessageType().toString());
+        values.put(MessageElementEntry.COLUMN_NAME_MESSAGE_VALUE, messageElement.getMessageValue());
+        values.put(MessageElementEntry.COLUMN_NAME_REMOTE_IMAGE_URL, messageElement.getRemoteImageUrl());
+        values.put(MessageElementEntry.COLUMN_NAME_LOCAL_IMAGE_FILE_PATH, messageElement.getLocalImageFilePath());
+        values.put(MessageElementEntry.COLUMN_NAME_PREVIEW_TEXT, messageElement.getPreviewText());
+        values.put(MessageElementEntry.COLUMN_NAME_PREVIEW_TEXT_HTML, messageElement.getPreviewTextHtml());
+
+        String[] where = {messageElement.getId()+""};
+
+        // update the row
+        db.update(MessageElementEntry.TABLE_NAME, values, " _id = ? ", where);
+    }
+
     private static final String SQL_CREATE_ENTRIES =
         "CREATE TABLE " + MessageElementEntry.TABLE_NAME + " (" +
             MessageElementEntry._ID + " INTEGER PRIMARY KEY," +

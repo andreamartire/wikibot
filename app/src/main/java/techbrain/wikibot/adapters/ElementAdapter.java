@@ -75,56 +75,47 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         titleElement.setVisibility(View.VISIBLE);
                         break;
                     case URL:
-                        if(ChatActivity.isValidUrl(value)){
-                            TextView urlElement = (TextView) convertView.findViewById(R.id.urlView);
-                            urlElement.setText(value);
+                        try{
+                            titleElement.setVisibility(View.VISIBLE);
+                            if(ChatActivity.isValidUrl(value)){
+                                titleElement.setGravity(Gravity.RIGHT);
 
-                            titleElement.setGravity(Gravity.RIGHT);
-
-                            String[] splits = value.split("/wiki/");
-                            if(splits.length > 1){
-                                try{
-                                    //String text = splits[1].replaceAll("_"," ");
-                                    //text = Uri.decode(text);
-
-                                    String baseKey = splits[1];
-                                    String text = baseKey.replaceAll("_"," ");
-                                    text = Uri.decode(text);
-
-                                    titleElement.setText(text);
-
-                                    new WikiUrlPreview().injectPreview(context, baseKey, descrElement);
-                                }catch (Throwable e){
-                                    e.printStackTrace();
+                                if(element.getPreviewTextHtml() != null){
+                                    descrElement.setText(element.getPreviewTextHtml());
+                                    descrElement.setVisibility(View.VISIBLE);
+                                }else{
+                                    new WikiUrlPreview().injectPreview(context, element, descrElement);
                                 }
                             }
-
-                            //https://it.wikipedia.org/api/rest_v1/page/summary/Italia
+                        }catch (Throwable e){
+                            e.printStackTrace();
                         }
-                        titleElement.setVisibility(View.VISIBLE);
-                        descrElement.setVisibility(View.VISIBLE);
                         break;
                     case IMAGE:
-                        //select current image
-                        BitmapFactory.Options bmOptions = new BitmapFactory.Options();
-                        Bitmap bitmap = BitmapFactory.decodeFile(value,bmOptions);
+                        try {
+                            //select current image
+                            BitmapFactory.Options bmOptions = new BitmapFactory.Options();
+                            Bitmap bitmap = BitmapFactory.decodeFile(value, bmOptions);
 
-                        if(bitmap != null){
-                            int width = bitmap.getWidth();
-                            int height = bitmap.getHeight();
+                            if (bitmap != null) {
+                                int width = bitmap.getWidth();
+                                int height = bitmap.getHeight();
 
-                            Drawable image = Drawable.createFromPath(value);
-                            if(image != null){
-                                float prop = height/(float)width;
+                                Drawable image = Drawable.createFromPath(value);
+                                if (image != null) {
+                                    float prop = height / (float) width;
 
-                                WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-                                Integer realWidth = ImageUtils.getRealWidthSize(wm);
-                                int customHeight = (int) (realWidth*prop);
+                                    WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+                                    Integer realWidth = ImageUtils.getRealWidthSize(wm);
+                                    int customHeight = (int) (realWidth * prop);
 
-                                //select downloaded image
-                                imageElement.setImageDrawable(ImageUtils.scaleImage(context, image, realWidth, customHeight));
-                                imageElement.setVisibility(View.VISIBLE);
+                                    //select downloaded image
+                                    imageElement.setImageDrawable(ImageUtils.scaleImage(context, image, realWidth, customHeight));
+                                    imageElement.setVisibility(View.VISIBLE);
+                                }
                             }
+                        }catch (Throwable e){
+                            e.printStackTrace();
                         }
 
                         break;
