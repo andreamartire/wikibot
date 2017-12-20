@@ -1,12 +1,8 @@
 package techbrain.wikibot;
 
 import android.app.AlertDialog;
-//import android.arch.persistence.room.Room;
-import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -28,23 +24,15 @@ import com.google.android.gms.ads.MobileAds;
 
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.List;
 
 import techbrain.wikibot.adapters.ElementAdapter;
 import techbrain.wikibot.beans.MessageElement;
 import techbrain.wikibot.beans.MessageType;
-//import techbrain.wikibot.db.AppDatabase;
-//import techbrain.wikibot.db.User;
-import techbrain.wikibot.db.FeedReaderContract;
-import techbrain.wikibot.db.FeedReaderDbHelper;
 import techbrain.wikibot.delegates.RetrieveGoogleTask;
 import techbrain.wikibot.delegates.WikiCommons;
 import techbrain.wikibot.delegates.WikiConstants;
+import techbrain.wikibot.dao.MessageElementDao;
 import techbrain.wikibot.utils.AppRater;
-import techbrain.wikibot.utils.ChatUtils;
-
-
-import techbrain.wikibot.db.FeedReaderContract.FeedEntry;
 
 public class ChatActivity extends AppCompatActivity {
 
@@ -112,8 +100,6 @@ public class ChatActivity extends AppCompatActivity {
 
         MobileAds.initialize(this, "ca-app-pub-1872225169177247~8401929001");
 
-        dbTest();
-
         AdView mAdView = (AdView) findViewById(R.id.mainChatAdView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
@@ -121,7 +107,7 @@ public class ChatActivity extends AppCompatActivity {
         AppRater.app_launched(this);
 
         final Context context = this;
-        listItems = ChatUtils.getSavedChat(context);
+        listItems = MessageElementDao.getInstance(this).findAll();
 
         final ListView list = (ListView) findViewById(R.id.listContents);
 
@@ -134,12 +120,12 @@ public class ChatActivity extends AppCompatActivity {
             MessageElement messageElement = (MessageElement) adapterView.getItemAtPosition(i);
 
             if(messageElement != null){
-                if(MessageType.URL.equals(messageElement.getType()) && isValidUrl(messageElement.getValue())){
+                if(MessageType.URL.equals(messageElement.getMessageType()) && isValidUrl(messageElement.getMessageValue())){
                     //open brower
                     Intent browserIntent = new Intent(context, WebViewActivity.class);
 
                     //pass data thought intent to another activity
-                    browserIntent.putExtra(WebViewActivity.URL, messageElement.getValue());
+                    browserIntent.putExtra(WebViewActivity.URL, messageElement.getMessageValue());
 
                     startActivity(browserIntent);
                 }
@@ -156,7 +142,7 @@ public class ChatActivity extends AppCompatActivity {
             Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
             sharingIntent.setType("text/plain");
 
-            String value = messageElement.getValue();
+            String value = messageElement.getMessageValue();
 
                 /*Bitmap icon = Bitmap.cre;
                 Intent share = new Intent(Intent.ACTION_SEND);
@@ -244,56 +230,6 @@ public class ChatActivity extends AppCompatActivity {
         });
     }
 
-    private void dbTest() {
-        // Gets the data repository in write mode
-        FeedReaderDbHelper mDbHelper = new FeedReaderDbHelper(this);
-        SQLiteDatabase db = mDbHelper.getWritableDatabase();
-
-        // Create a new map of values, where column names are the keys
-        ContentValues values = new ContentValues();
-        values.put(FeedEntry.COLUMN_NAME_TITLE, "My Title");
-        values.put(FeedEntry.COLUMN_NAME_SUBTITLE, "test subtitle");
-
-        // Insert the new row, returning the primary key value of the new row
-        long newRowId = db.insert(FeedEntry.TABLE_NAME, null, values);
-
-        //READ
-
-        // Define a projection that specifies which columns from the database
-        // you will actually use after this query.
-        String[] projection = {
-                FeedEntry._ID,
-                FeedEntry.COLUMN_NAME_TITLE,
-                FeedEntry.COLUMN_NAME_SUBTITLE
-        };
-
-        // Filter results WHERE "title" = 'My Title'
-        String selection = FeedEntry.COLUMN_NAME_TITLE + " = ?";
-        String[] selectionArgs = { "My Title" };
-
-        // How you want the results sorted in the resulting Cursor
-        String sortOrder =
-                FeedEntry.COLUMN_NAME_SUBTITLE + " DESC";
-
-        Cursor cursor = db.query(
-                FeedEntry.TABLE_NAME,                     // The table to query
-                projection,                               // The columns to return
-                selection,                                // The columns for the WHERE clause
-                selectionArgs,                            // The values for the WHERE clause
-                null,                                     // don't group the rows
-                null,                                     // don't filter by row groups
-                sortOrder                                 // The sort order
-        );
-
-        List itemIds = new ArrayList<>();
-        while(cursor.moveToNext()) {
-            long itemId = cursor.getLong(
-                    cursor.getColumnIndexOrThrow(FeedEntry._ID));
-            itemIds.add(itemId);
-        }
-        cursor.close();
-    }
-
     private void addRandomNonciclopedia(Context context, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter) {
         WikiConstants.getRandomNonciclopedia(context, listItems, adapter);
     }
@@ -306,7 +242,7 @@ public class ChatActivity extends AppCompatActivity {
         listItems.add(element);
         adapter.notifyDataSetChanged();
 
-        ChatUtils.appendMessage(context, element);
+        MessageElementDao.getInstance(this).save(element);
     }
 
     private void addRandomProverb(Context context, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter) {
@@ -317,7 +253,7 @@ public class ChatActivity extends AppCompatActivity {
         listItems.add(element);
         adapter.notifyDataSetChanged();
 
-        ChatUtils.appendMessage(context, element);
+        MessageElementDao.getInstance(this).save(element);
     }
 
     private void addRandomQuote(Context context, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter) {
@@ -329,7 +265,7 @@ public class ChatActivity extends AppCompatActivity {
         listItems.add(element);
         adapter.notifyDataSetChanged();
 
-        ChatUtils.appendMessage(context, element);
+        MessageElementDao.getInstance(this).save(element);
     }
 
     private void addRandomQuoteOrProverb(Context context, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter) {
@@ -351,7 +287,7 @@ public class ChatActivity extends AppCompatActivity {
         listItems.add(element);
         adapter.notifyDataSetChanged();
 
-        ChatUtils.appendMessage(context, element);
+        MessageElementDao.getInstance(this).save(element);
     }
 
     private void addRandomImage(Context context, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter) {
@@ -362,7 +298,7 @@ public class ChatActivity extends AppCompatActivity {
         listItems.add(element);
         adapter.notifyDataSetChanged();
 
-        ChatUtils.appendMessage(context, element);
+        MessageElementDao.getInstance(this).save(element);
     }
 
     public void manageMessage(Context context, EditText editBox){

@@ -1,37 +1,65 @@
 package techbrain.wikibot.beans;
 
-/**
- * Created by andrea on 17/12/17.
- */
+import android.provider.BaseColumns;
+
+import java.util.Date;
 
 public class MessageElement {
 
-    MessageType type;
-    String value;
+    Long id;
+
+    MessageType messageType;
+    String messageValue;
+    Date creationDate;
+
     String remoteImageUrl;
     String localImageFilePath;
     String previewText;
     String previewTextHtml;
 
-    public MessageElement(MessageType type, String value) {
-        this.type = type;
-        this.value = value;
+    /* Inner class that defines the table contents */
+    public static class MessageElementEntry implements BaseColumns {
+        public static final String TABLE_NAME = "message_element";
+        public static final String COLUMN_NAME_MESSAGE_TYPE = "message_type";
+        public static final String COLUMN_NAME_MESSAGE_VALUE = "message_value";
+        public static final String COLUMN_NAME_REMOTE_IMAGE_URL = "remote_image_url";
+        public static final String COLUMN_NAME_LOCAL_IMAGE_FILE_PATH = "local_image_file_path";
+        public static final String COLUMN_NAME_PREVIEW_TEXT = "preview_text";
+        public static final String COLUMN_NAME_PREVIEW_TEXT_HTML = "preview_text_html";
+        public static final String COLUMN_NAME_CREATION_DATE = "creation_date";
     }
 
-    public MessageType getType() {
-        return type;
+    public MessageElement(){
+
     }
 
-    public void setType(MessageType type) {
-        this.type = type;
+    public MessageElement(MessageType messageType, String messageValue) {
+        this.messageType = messageType;
+        this.messageValue = messageValue;
     }
 
-    public String getValue() {
-        return value;
+    public Long getId() {
+        return id;
     }
 
-    public void setValue(String value) {
-        this.value = value;
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public MessageType getMessageType() {
+        return messageType;
+    }
+
+    public void setMessageType(MessageType messageType) {
+        this.messageType = messageType;
+    }
+
+    public String getMessageValue() {
+        return messageValue;
+    }
+
+    public void setMessageValue(String messageValue) {
+        this.messageValue = messageValue;
     }
 
     public String getRemoteImageUrl() {

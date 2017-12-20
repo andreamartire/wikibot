@@ -61,9 +61,9 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                 TextView descrElement = (TextView) convertView.findViewById(R.id.descrView);
                 ImageView imageElement = (ImageView) convertView.findViewById(R.id.imageView);
 
-                String value = element.getValue();
+                String value = element.getMessageValue();
 
-                switch (element.getType()) {
+                switch (element.getMessageType()) {
                     case USERTEXT:
                         titleElement.setText(value);
                         titleElement.setGravity(Gravity.RIGHT);

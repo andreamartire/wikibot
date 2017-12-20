@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 import techbrain.wikibot.beans.MessageElement;
 import techbrain.wikibot.beans.MessageType;
-import techbrain.wikibot.utils.ChatUtils;
+import techbrain.wikibot.dao.MessageElementDao;
 
 /**
  * Created by andrea on 02/12/17.
@@ -68,7 +68,7 @@ public class RetrieveGoogleTask extends AsyncTask<String, Void, String> {
                         MessageElement element = new MessageElement(MessageType.URL, firstLink);
                         //update list
                         listItems.add(element);
-                        ChatUtils.appendMessage(context, element);
+                        MessageElementDao.getInstance((Activity) context).save(element);
                     }
                 }
             }
@@ -81,7 +81,7 @@ public class RetrieveGoogleTask extends AsyncTask<String, Void, String> {
             //update list
             MessageElement element = new MessageElement(MessageType.USERTEXT, ChatUtils.getRandomSmallTalk(context));
             listItems.add(element);
-            ChatUtils.appendMessage(context, element);
+            MessageElementDao.getInstance((Activity) context).save(element);
         }
 
         ((Activity) context).runOnUiThread(new Runnable() {

@@ -1,5 +1,6 @@
 package techbrain.wikibot.delegates;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.widget.ArrayAdapter;
@@ -12,7 +13,7 @@ import java.util.ArrayList;
 
 import techbrain.wikibot.beans.MessageElement;
 import techbrain.wikibot.beans.MessageType;
-import techbrain.wikibot.utils.ChatUtils;
+import techbrain.wikibot.dao.MessageElementDao;
 
 /**
  * Created by andrea on 02/12/17.
@@ -62,7 +63,7 @@ public class RetrieveNonciclopediaTask extends AsyncTask<String, Void, String> {
         //update list
         MessageElement element = new MessageElement(MessageType.URL, item);
         listItems.add(element);
-        ChatUtils.appendMessage(context, element);
+        MessageElementDao.getInstance((Activity) context).save(element);
 
         adapter.notifyDataSetChanged();
     }
