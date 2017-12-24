@@ -34,6 +34,7 @@ import techbrain.wikibot.delegates.RetrieveGoogleTask;
 import techbrain.wikibot.delegates.WikiCommons;
 import techbrain.wikibot.delegates.WikiConstants;
 import techbrain.wikibot.dao.MessageElementDao;
+import techbrain.wikibot.services.MyService;
 import techbrain.wikibot.utils.AppRater;
 
 public class ChatActivity extends AppCompatActivity {
@@ -112,6 +113,8 @@ public class ChatActivity extends AppCompatActivity {
         mAdView.loadAd(adRequest);
 
         AppRater.app_launched(this);
+
+        startService(new Intent(this, MyService.class));
 
         final Context context = this;
         listItems = MessageElementDao.getInstance(this).findAll();
