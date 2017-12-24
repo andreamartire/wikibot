@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.text.Html;
 import android.text.SpannableString;
 import android.text.style.StyleSpan;
 import android.text.style.UnderlineSpan;
@@ -81,7 +82,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                                 titleElement.setGravity(Gravity.RIGHT);
 
                                 if(element.getPreviewTextHtml() != null){
-                                    descrElement.setText(element.getPreviewTextHtml());
+                                    descrElement.setText(Html.fromHtml(element.getPreviewTextHtml()));
                                     descrElement.setVisibility(View.VISIBLE);
                                 }else{
                                     new WikiUrlPreview().injectPreview(context, element, descrElement);

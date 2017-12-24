@@ -78,29 +78,30 @@ public class WikiUrlPreview {
 					((Activity)context).runOnUiThread(new Runnable() {
 						@Override
 						public void run() {
-						try {
-							final SummaryItWiki element = new Gson().fromJson(result, SummaryItWiki.class);
+							try {
+								final SummaryItWiki element = new Gson().fromJson(result, SummaryItWiki.class);
 
-							if(element != null){
-								String extractHtml = element.getExtract_html();
+								if(element != null){
+									String extractHtml = element.getExtract_html();
 
-								if (extractHtml != null){
-									if (extractHtml.contains("</p>")) {
-										extractHtml = extractHtml.split("</p>")[0];
+									if (extractHtml != null){
+										if (extractHtml.contains("</p>")) {
+											extractHtml = extractHtml.split("</p>")[0];
+											extractHtml += "</p>";
+										}
 									}
+
+									messageElement.setPreviewText(element.getExtract());
+									messageElement.setPreviewTextHtml(extractHtml);
+
+									descrElement.setText(Html.fromHtml(extractHtml));
+									descrElement.setVisibility(View.VISIBLE);
+
+									MessageElementDao.getInstance((Activity)context).update(messageElement);
 								}
-
-								messageElement.setPreviewText(element.getExtract());
-								messageElement.setPreviewTextHtml(extractHtml);
-
-								descrElement.setText(Html.fromHtml(extractHtml));
-								descrElement.setVisibility(View.VISIBLE);
-
-								MessageElementDao.getInstance((Activity)context).update(messageElement);
+							}catch (Throwable e){
+								e.printStackTrace();
 							}
-						}catch (Throwable e){
-							e.printStackTrace();
-						}
 						}
 					});
 				}

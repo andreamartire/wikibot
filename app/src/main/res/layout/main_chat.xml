@@ -16,7 +16,7 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.8"
+        android:layout_weight="0.7"
         android:id="@+id/listContents"
         android:transcriptMode="alwaysScroll"
         android:stackFromBottom="true">
@@ -68,18 +68,21 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
         android:orientation="horizontal"
-        android:layout_gravity="center_vertical">
+        android:layout_gravity="bottom">
+
         <EditText
+            android:id="@+id/editBox"
             android:layout_width="0dp"
-            android:layout_weight="0.8"
             android:layout_height="wrap_content"
-            android:id="@+id/editBox"/>
+            android:layout_weight="0.8" />
+
         <Button
             android:layout_width="0dp"
             android:layout_weight="0.2"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/sendButton"
             android:background="@drawable/rounded_buttons"
             android:text="@string/label_send"/>
