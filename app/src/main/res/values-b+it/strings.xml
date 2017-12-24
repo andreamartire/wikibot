@@ -15,4 +15,8 @@
     <string name="default_search_text">Chiedi e ti sarà dato</string>
     <string name="label_proverb_quote">Citazione/Proverbio</string>
     <string name="today_label">OGGI</string>
+    <string name="share_label">Condividi</string>
+    <string name="clear_chat_label">Cancella Chat</string>
+    <string name="contact_us_label">Contattaci</string>
+    <string name="info_label">Info</string>
 </resources>

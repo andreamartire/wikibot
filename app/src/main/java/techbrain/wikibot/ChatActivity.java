@@ -66,6 +66,11 @@ public class ChatActivity extends AppCompatActivity {
                 startActivity(Intent.createChooser(sharingIntent, "Sharing Option"));
                 return true;
 
+            case R.id.clearChat:
+                MessageElementDao.getInstance(this).deleteAll();
+                adapter.notifyDataSetChanged();
+                return true;
+
             case R.id.infoElement:
                 //Toast.makeText(me, "Tutti i contenuti audio e le immagini sono liberamente accessibili in rete e scaricati direttamente dai siti web dei rispettivi possessori dei diritti. Nessun contenuto è ospitato su server dell'applicazione", Toast.LENGTH_LONG).show();
                 AlertDialog.Builder builder = new AlertDialog.Builder(me);

@@ -118,6 +118,18 @@ public class MessageElementDao extends SQLiteOpenHelper {
         db.update(MessageElementEntry.TABLE_NAME, values, " _id = ? ", where);
     }
 
+    public void deleteAll() {
+        SQLiteDatabase db = getWritableDatabase();
+
+        // Create a new map of values, where column names are the keys
+        ContentValues values = new ContentValues();
+
+        String[] el = new String[0];
+
+        // update the row
+        db.delete(MessageElementEntry.TABLE_NAME, "", el);
+    }
+
     private static final String SQL_CREATE_ENTRIES =
         "CREATE TABLE " + MessageElementEntry.TABLE_NAME + " (" +
             MessageElementEntry._ID + " INTEGER PRIMARY KEY," +
