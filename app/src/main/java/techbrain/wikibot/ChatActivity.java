@@ -131,6 +131,15 @@ public class ChatActivity extends AppCompatActivity {
 
                         startActivity(browserIntent);
                     }
+                    else if(MessageType.IMAGE.equals(messageElement.getMessageType()) && isValidUrl(messageElement.getRemoteImageUrl())){
+                        //open brower
+                        Intent browserIntent = new Intent(context, WebViewActivity.class);
+
+                        //pass data thought intent to another activity
+                        browserIntent.putExtra(WebViewActivity.URL, messageElement.getRemoteImageUrl());
+
+                        startActivity(browserIntent);
+                    }
                 }
             }
         });

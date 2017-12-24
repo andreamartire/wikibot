@@ -15,4 +15,5 @@
     <string name = "default_search_text">Ask and it will be given</string>
     <string name="app_url">testurl.it</string>
     <string name="label_proverb_quote">Quote/Proverb</string>
+    <string name="today_label">TODAY</string>
 </resources>

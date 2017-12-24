@@ -71,12 +71,14 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         titleElement.setText(value);
                         titleElement.setGravity(Gravity.RIGHT);
                         titleElement.setVisibility(View.VISIBLE);
+                        descrElement.setVisibility(View.GONE);
                         imageElement.setVisibility(View.GONE);
                         break;
                     case BOTTEXT:
                         titleElement.setText(value);
                         titleElement.setGravity(Gravity.LEFT);
                         titleElement.setVisibility(View.VISIBLE);
+                        descrElement.setVisibility(View.GONE);
                         imageElement.setVisibility(View.GONE);
                         break;
                     case URL:
@@ -84,6 +86,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                             titleElement.setText(WikiUrlPreview.getPreviewBaseBey(value));
                             titleElement.setVisibility(View.VISIBLE);
                             imageElement.setVisibility(View.GONE);
+                            descrElement.setVisibility(View.GONE);
                             if(ChatActivity.isValidUrl(value)){
                                 titleElement.setGravity(Gravity.RIGHT);
 
@@ -102,6 +105,8 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         break;
                     case IMAGE:
                         try {
+                            titleElement.setVisibility(View.GONE);
+                            descrElement.setVisibility(View.GONE);
                             //select current image
                             BitmapFactory.Options bmOptions = new BitmapFactory.Options();
                             Bitmap bitmap = BitmapFactory.decodeFile(value, bmOptions);
@@ -135,6 +140,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         titleElement.setText(spanStringProv);
                         titleElement.setVisibility(View.VISIBLE);
                         imageElement.setVisibility(View.GONE);
+                        descrElement.setVisibility(View.GONE);
                         break;
                     case QUOTE:
                         SpannableString spanStringQuote = new SpannableString(value);
@@ -142,6 +148,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         titleElement.setText(spanStringQuote);
                         titleElement.setVisibility(View.VISIBLE);
                         imageElement.setVisibility(View.GONE);
+                        descrElement.setVisibility(View.GONE);
                         break;
                     case DATE:
                         Calendar cal1 = Calendar.getInstance();
@@ -151,7 +158,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         String dayString = new SimpleDateFormat("dd MMMM yyyy").format(element.getCreationDate()).toUpperCase();
 
                         if(cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR)){
-                            dayString = "OGGI";
+                            dayString = context.getResources().getString(R.string.today_label);
                         }
 
                         titleElement.setText(dayString);
@@ -159,11 +166,13 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         titleElement.setGravity(Gravity.CENTER_HORIZONTAL);
                         titleElement.setVisibility(View.VISIBLE);
                         imageElement.setVisibility(View.GONE);
+                        descrElement.setVisibility(View.GONE);
                         break;
                     default:
                         titleElement.setText(value);
                         titleElement.setVisibility(View.VISIBLE);
                         imageElement.setVisibility(View.GONE);
+                        descrElement.setVisibility(View.GONE);
                         break;
                 }
             }
