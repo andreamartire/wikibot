@@ -24,6 +24,8 @@ import com.google.android.gms.ads.MobileAds;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 import techbrain.wikibot.adapters.ElementAdapter;
 import techbrain.wikibot.beans.MessageElement;
@@ -239,7 +241,7 @@ public class ChatActivity extends AppCompatActivity {
         String randomItem = WikiConstants.getRandomItem(context);
 
         MessageElement element = new MessageElement(MessageType.URL, randomItem);
-        listItems.add(element);
+        addMessage(listItems, element);
         adapter.notifyDataSetChanged();
 
         MessageElementDao.getInstance(this).save(element);
@@ -250,7 +252,7 @@ public class ChatActivity extends AppCompatActivity {
 
         //update list
         MessageElement element = new MessageElement(MessageType.PROVERB, randomItem);
-        listItems.add(element);
+        addMessage(listItems, element);
         adapter.notifyDataSetChanged();
 
         MessageElementDao.getInstance(this).save(element);
@@ -262,7 +264,7 @@ public class ChatActivity extends AppCompatActivity {
 
         //update list
         MessageElement element = new MessageElement(MessageType.QUOTE, randomItem);
-        listItems.add(element);
+        addMessage(listItems, element);
         adapter.notifyDataSetChanged();
 
         MessageElementDao.getInstance(this).save(element);
@@ -284,7 +286,7 @@ public class ChatActivity extends AppCompatActivity {
         }
 
         MessageElement element = new MessageElement(elementType, randomItem);
-        listItems.add(element);
+        addMessage(listItems, element);
         adapter.notifyDataSetChanged();
 
         MessageElementDao.getInstance(this).save(element);
@@ -295,10 +297,37 @@ public class ChatActivity extends AppCompatActivity {
         String randomImageFilePath = WikiCommons.getRandomItem(context);
 
         MessageElement element = new MessageElement(MessageType.IMAGE, randomImageFilePath);
-        listItems.add(element);
+
+        addMessage(listItems, element);
+
         adapter.notifyDataSetChanged();
 
         MessageElementDao.getInstance(this).save(element);
+    }
+
+    public static void addMessage(ArrayList<MessageElement> listItems, MessageElement element) {
+        if(listItems != null){
+            if(listItems.isEmpty()){
+                listItems.add(element);
+            }
+            else{
+                MessageElement lastElement = listItems.get(listItems.size()-1);
+
+                Calendar calendar = Calendar.getInstance();
+                calendar.setTime(lastElement.getCreationDate());
+                int lastDay = calendar.get(Calendar.DAY_OF_YEAR);
+
+                int today = Calendar.getInstance().get(Calendar.DAY_OF_YEAR);
+
+                if(lastDay != today){
+                    MessageElement dayElement = new MessageElement();
+                    dayElement.setMessageType(MessageType.DATE);
+                    listItems.add(dayElement);
+                }
+
+                listItems.add(element);
+            }
+        }
     }
 
     public void manageMessage(Context context, EditText editBox){
@@ -306,7 +335,7 @@ public class ChatActivity extends AppCompatActivity {
 
         if(!message.isEmpty()){
             //update list
-            listItems.add(new MessageElement(MessageType.USERTEXT, message));
+            addMessage(listItems, new MessageElement(MessageType.USERTEXT, message));
             adapter.notifyDataSetChanged();
             //clear edit box
             editBox.setText("");

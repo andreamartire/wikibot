@@ -25,21 +25,35 @@ public class WikiUrlPreview {
 
 	static String WIKI_SUMMARY_PREFIX = "https://it.wikipedia.org/api/rest_v1/page/summary/";
 
-	public void injectPreview(Context context, MessageElement messageElement, TextView descrElement) {
+	public void injectPreview(Context context, MessageElement messageElement, TextView titleElement, TextView descrElement) {
 		// call AsynTask to perform network operation on separate thread
-		new HttpAsyncTask(context, messageElement, descrElement).execute();
+		new HttpAsyncTask(context, messageElement, titleElement, descrElement).execute();
+	}
+
+	public static String getPreviewBaseBey(String remoteUrl){
+		String[] splits = remoteUrl.split("/wiki/");
+		if(splits.length > 1) {
+			String baseKey = splits[1];
+			String text = baseKey.replaceAll("_", " ");
+			baseKey = Uri.decode(text);
+
+			return baseKey;
+		}
+		return "";
 	}
 
 	private class HttpAsyncTask extends AsyncTask<String, Void, String> {
 
 		Context context;
 		MessageElement messageElement;
+		TextView titleElement;
 		TextView descrElement;
 
-		public HttpAsyncTask(Context context, MessageElement messageElement, TextView descrElement){
+		public HttpAsyncTask(Context context, MessageElement messageElement, TextView titleElement, TextView descrElement){
 			super();
 			this.context = context;
 			this.messageElement = messageElement;
+			this.titleElement = titleElement;
 			this.descrElement = descrElement;
 		}
 
@@ -49,11 +63,7 @@ public class WikiUrlPreview {
             if(remoteUrl != null){
                 String[] splits = remoteUrl.split("/wiki/");
                 if(splits.length > 1) {
-                    String baseKey = splits[1];
-                    String text = baseKey.replaceAll("_", " ");
-                    baseKey = Uri.decode(text);
-
-                    return GET(WIKI_SUMMARY_PREFIX + baseKey);
+                    return GET(WIKI_SUMMARY_PREFIX + getPreviewBaseBey(remoteUrl));
                 }
             }
 
@@ -96,6 +106,9 @@ public class WikiUrlPreview {
 
 									descrElement.setText(Html.fromHtml(extractHtml));
 									descrElement.setVisibility(View.VISIBLE);
+
+									titleElement.setText("");
+									titleElement.setVisibility(View.GONE);
 
 									MessageElementDao.getInstance((Activity)context).update(messageElement);
 								}

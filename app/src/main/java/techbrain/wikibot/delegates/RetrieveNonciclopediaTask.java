@@ -11,6 +11,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 
+import techbrain.wikibot.ChatActivity;
 import techbrain.wikibot.beans.MessageElement;
 import techbrain.wikibot.beans.MessageType;
 import techbrain.wikibot.dao.MessageElementDao;
@@ -62,7 +63,7 @@ public class RetrieveNonciclopediaTask extends AsyncTask<String, Void, String> {
     protected void onPostExecute(String item) {
         //update list
         MessageElement element = new MessageElement(MessageType.URL, item);
-        listItems.add(element);
+        ChatActivity.addMessage(listItems, element);
         MessageElementDao.getInstance((Activity) context).save(element);
 
         adapter.notifyDataSetChanged();

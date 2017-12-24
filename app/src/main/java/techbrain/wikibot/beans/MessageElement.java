@@ -2,6 +2,7 @@ package techbrain.wikibot.beans;
 
 import android.provider.BaseColumns;
 
+import java.util.Calendar;
 import java.util.Date;
 
 public class MessageElement {
@@ -30,12 +31,13 @@ public class MessageElement {
     }
 
     public MessageElement(){
-
+        this.creationDate = Calendar.getInstance().getTime();
     }
 
     public MessageElement(MessageType messageType, String messageValue) {
         this.messageType = messageType;
         this.messageValue = messageValue;
+        this.creationDate = Calendar.getInstance().getTime();
     }
 
     public Long getId() {
@@ -92,5 +94,13 @@ public class MessageElement {
 
     public void setPreviewTextHtml(String previewTextHtml) {
         this.previewTextHtml = previewTextHtml;
+    }
+
+    public Date getCreationDate() {
+        return creationDate;
+    }
+
+    public void setCreationDate(Date creationDate) {
+        this.creationDate = creationDate;
     }
 }

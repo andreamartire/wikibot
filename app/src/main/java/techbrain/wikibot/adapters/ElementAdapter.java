@@ -22,7 +22,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 import techbrain.wikibot.ChatActivity;
 import techbrain.wikibot.R;
@@ -46,10 +48,10 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
 
-        //if (convertView == null){
+        if (convertView == null){
             LayoutInflater vi = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = vi.inflate(R.layout.single_element, null);
-        //}
+        }
 
         if(position >= elements.size()){
             System.out.println("");
@@ -69,23 +71,29 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         titleElement.setText(value);
                         titleElement.setGravity(Gravity.RIGHT);
                         titleElement.setVisibility(View.VISIBLE);
+                        imageElement.setVisibility(View.GONE);
                         break;
                     case BOTTEXT:
                         titleElement.setText(value);
                         titleElement.setGravity(Gravity.LEFT);
                         titleElement.setVisibility(View.VISIBLE);
+                        imageElement.setVisibility(View.GONE);
                         break;
                     case URL:
                         try{
+                            titleElement.setText(WikiUrlPreview.getPreviewBaseBey(value));
                             titleElement.setVisibility(View.VISIBLE);
+                            imageElement.setVisibility(View.GONE);
                             if(ChatActivity.isValidUrl(value)){
                                 titleElement.setGravity(Gravity.RIGHT);
 
                                 if(element.getPreviewTextHtml() != null){
                                     descrElement.setText(Html.fromHtml(element.getPreviewTextHtml()));
                                     descrElement.setVisibility(View.VISIBLE);
+                                    titleElement.setVisibility(View.GONE);
+                                    imageElement.setVisibility(View.GONE);
                                 }else{
-                                    new WikiUrlPreview().injectPreview(context, element, descrElement);
+                                    new WikiUrlPreview().injectPreview(context, element, titleElement, descrElement);
                                 }
                             }
                         }catch (Throwable e){
@@ -126,21 +134,36 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         spanStringProv.setSpan(new StyleSpan(Typeface.BOLD), 0, spanStringProv.length(), 0);
                         titleElement.setText(spanStringProv);
                         titleElement.setVisibility(View.VISIBLE);
+                        imageElement.setVisibility(View.GONE);
                         break;
                     case QUOTE:
                         SpannableString spanStringQuote = new SpannableString(value);
                         spanStringQuote.setSpan(new StyleSpan(Typeface.ITALIC), 0, spanStringQuote.length(), 0);
                         titleElement.setText(spanStringQuote);
                         titleElement.setVisibility(View.VISIBLE);
+                        imageElement.setVisibility(View.GONE);
                         break;
                     case DATE:
-                        titleElement.setText(value);
+                        Calendar cal1 = Calendar.getInstance();
+                        Calendar cal2 = Calendar.getInstance();
+                        cal1.setTime(element.getCreationDate());
+
+                        String dayString = new SimpleDateFormat("dd MMMM yyyy").format(element.getCreationDate()).toUpperCase();
+
+                        if(cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR)){
+                            dayString = "OGGI";
+                        }
+
+                        titleElement.setText(dayString);
+
                         titleElement.setGravity(Gravity.CENTER_HORIZONTAL);
                         titleElement.setVisibility(View.VISIBLE);
+                        imageElement.setVisibility(View.GONE);
                         break;
                     default:
                         titleElement.setText(value);
                         titleElement.setVisibility(View.VISIBLE);
+                        imageElement.setVisibility(View.GONE);
                         break;
                 }
             }
