@@ -2,6 +2,7 @@ package techbrain.wikibot.adapters;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
@@ -22,6 +23,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.io.File;
+import java.lang.annotation.ElementType;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -29,6 +31,7 @@ import java.util.Calendar;
 import techbrain.wikibot.ChatActivity;
 import techbrain.wikibot.R;
 import techbrain.wikibot.beans.MessageElement;
+import techbrain.wikibot.beans.MessageType;
 import techbrain.wikibot.delegates.WikiUrlPreview;
 import techbrain.wikibot.utils.ImageUtils;
 
@@ -63,6 +66,43 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                 TextView titleElement = (TextView) convertView.findViewById(R.id.titleView);
                 TextView descrElement = (TextView) convertView.findViewById(R.id.descrView);
                 ImageView imageElement = (ImageView) convertView.findViewById(R.id.imageView);
+//                ShareElementButton shareButton = (ShareElementButton) convertView.findViewById(R.id.shareButton);
+//
+//                if(shareButton != null){
+//                    shareButton.setMessageElement(element);
+//                }
+
+                TextView shareButton = (TextView) convertView.findViewById(R.id.shareButton);
+                if(shareButton != null){
+                    shareButton.setTag(element);
+                }
+
+                shareButton.setVisibility(View.VISIBLE);
+
+                shareButton.setOnClickListener(new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View v) {
+                        //get the row the clicked button is in
+                        TextView shareButton = (TextView) v;
+
+                        MessageElement messageElement = (MessageElement) shareButton.getTag();
+
+                        if(messageElement != null){
+                            Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                            sharingIntent.setType("text/plain");
+
+                            //TODO review message
+                            String shareBodyText = messageElement.getMessageValue() + " " +
+                                    context.getResources().getString(R.string.shared_by_message) + " " +
+                                    context.getResources().getString(R.string.app_name) + " " +
+                                    context.getResources().getString(R.string.app_url);
+
+                            sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBodyText);
+                            context.startActivity(Intent.createChooser(sharingIntent, "Sharing Option"));
+                        }
+                    }
+                });
 
                 String value = element.getMessageValue();
 
@@ -167,6 +207,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         titleElement.setVisibility(View.VISIBLE);
                         imageElement.setVisibility(View.GONE);
                         descrElement.setVisibility(View.GONE);
+                        shareButton.setVisibility(View.GONE);
                         break;
                     default:
                         titleElement.setText(value);

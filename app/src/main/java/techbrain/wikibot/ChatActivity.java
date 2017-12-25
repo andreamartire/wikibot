@@ -1,6 +1,8 @@
 package techbrain.wikibot;
 
+import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -11,6 +13,7 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -36,6 +39,7 @@ import techbrain.wikibot.delegates.WikiConstants;
 import techbrain.wikibot.dao.MessageElementDao;
 import techbrain.wikibot.services.MyService;
 import techbrain.wikibot.utils.AppRater;
+import techbrain.wikibot.utils.MyFileUtils;
 
 public class ChatActivity extends AppCompatActivity {
 
@@ -53,7 +57,7 @@ public class ChatActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        final Context me = this;
+        final Activity me = this;
 
         switch (item.getItemId()) {
             case R.id.shareElement:
@@ -68,8 +72,34 @@ public class ChatActivity extends AppCompatActivity {
                 return true;
 
             case R.id.clearChat:
-                MessageElementDao.getInstance(this).deleteAll();
-                adapter.notifyDataSetChanged();
+
+                final Dialog dialog = new Dialog(this,R.style.CustomDialogTheme);
+                dialog.getWindow();
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dialog.setContentView(R.layout.confirm_clear);
+                dialog.setCancelable(true);
+
+                Button confirmBtn = (Button) dialog.findViewById(R.id.confirmClearBtn);
+                Button cancelBtn = (Button) dialog.findViewById(R.id.cancelClearBtn);
+
+                confirmBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View arg0) {
+                        dialog.dismiss();
+                        MessageElementDao.getInstance(me).deleteAll();
+                        listItems.clear();
+                        adapter.notifyDataSetChanged();
+                    }
+                });
+
+                cancelBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View arg0) {
+                        dialog.dismiss();
+                    }
+                });
+                dialog.show();
+
                 return true;
 
             case R.id.infoElement:
@@ -78,8 +108,8 @@ public class ChatActivity extends AppCompatActivity {
                 builder.setMessage(R.string.info_message)
                         .setTitle(R.string.info_title);
 
-                AlertDialog dialog = builder.create();
-                dialog.show();
+                AlertDialog dialogInfo = builder.create();
+                dialogInfo.show();
                 return true;
 
             case R.id.contactElement:
@@ -116,7 +146,7 @@ public class ChatActivity extends AppCompatActivity {
 
         startService(new Intent(this, MyService.class));
 
-        final Context context = this;
+        final Activity activity = this;
         listItems = MessageElementDao.getInstance(this).findAll();
 
         final ListView list = (ListView) findViewById(R.id.listContents);
@@ -132,7 +162,7 @@ public class ChatActivity extends AppCompatActivity {
                 if(messageElement != null){
                     if(MessageType.URL.equals(messageElement.getMessageType()) && isValidUrl(messageElement.getMessageValue())){
                         //open brower
-                        Intent browserIntent = new Intent(context, WebViewActivity.class);
+                        Intent browserIntent = new Intent(activity, WebViewActivity.class);
 
                         //pass data thought intent to another activity
                         browserIntent.putExtra(WebViewActivity.URL, messageElement.getMessageValue());
@@ -141,7 +171,7 @@ public class ChatActivity extends AppCompatActivity {
                     }
                     else if(MessageType.IMAGE.equals(messageElement.getMessageType()) && isValidUrl(messageElement.getRemoteImageUrl())){
                         //open brower
-                        Intent browserIntent = new Intent(context, WebViewActivity.class);
+                        Intent browserIntent = new Intent(activity, WebViewActivity.class);
 
                         //pass data thought intent to another activity
                         browserIntent.putExtra(WebViewActivity.URL, messageElement.getRemoteImageUrl());
@@ -197,16 +227,16 @@ public class ChatActivity extends AppCompatActivity {
 
         WikiCommons.getImageOfDayUrl(this);
 
-        addRandomProverb(context, listItems, adapter);
-        addRandomImage(context, listItems, adapter);
-        addRandomCuriosita(context, listItems, adapter);
-        addRandomQuote(context, listItems, adapter);
+        addRandomProverb(activity, listItems, adapter);
+        addRandomImage(activity, listItems, adapter);
+        addRandomCuriosita(activity, listItems, adapter);
+        addRandomQuote(activity, listItems, adapter);
 
         Button curiositaBtn = (Button) findViewById(R.id.curiosita_button);
         curiositaBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            addRandomCuriosita(context, listItems, adapter);
+            addRandomCuriosita(activity, listItems, adapter);
             }
         });
 
@@ -214,7 +244,7 @@ public class ChatActivity extends AppCompatActivity {
         proverbQuoteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            addRandomQuoteOrProverb(context, listItems, adapter);
+            addRandomQuoteOrProverb(activity, listItems, adapter);
             }
         });
 
@@ -222,7 +252,7 @@ public class ChatActivity extends AppCompatActivity {
         nonciclopediaBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                addRandomNonciclopedia(context, listItems, adapter);
+                addRandomNonciclopedia(activity, listItems, adapter);
             }
         });
 
@@ -234,7 +264,7 @@ public class ChatActivity extends AppCompatActivity {
             if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
                     (keyCode == KeyEvent.KEYCODE_ENTER)) {
                 // Perform action on key press
-                manageMessage(context,  ediBox);
+                manageMessage(activity,  ediBox);
             }
             return false;
             }
@@ -244,13 +274,13 @@ public class ChatActivity extends AppCompatActivity {
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                manageMessage(context, ediBox);
+                manageMessage(activity, ediBox);
             }
         });
     }
 
-    private void addRandomNonciclopedia(Context context, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter) {
-        WikiConstants.getRandomNonciclopedia(context, listItems, adapter);
+    private void addRandomNonciclopedia(Activity activity, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter) {
+        WikiConstants.getRandomNonciclopedia(activity, listItems, adapter);
     }
 
     private void addRandomCuriosita(Context context, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter) {
@@ -258,7 +288,7 @@ public class ChatActivity extends AppCompatActivity {
         String randomItem = WikiConstants.getRandomItem(context);
 
         MessageElement element = new MessageElement(MessageType.URL, randomItem);
-        addMessage(listItems, element);
+        addMessage(this, listItems, element);
         adapter.notifyDataSetChanged();
 
         MessageElementDao.getInstance(this).save(element);
@@ -269,7 +299,7 @@ public class ChatActivity extends AppCompatActivity {
 
         //update list
         MessageElement element = new MessageElement(MessageType.PROVERB, randomItem);
-        addMessage(listItems, element);
+        addMessage(this, listItems, element);
         adapter.notifyDataSetChanged();
 
         MessageElementDao.getInstance(this).save(element);
@@ -281,7 +311,7 @@ public class ChatActivity extends AppCompatActivity {
 
         //update list
         MessageElement element = new MessageElement(MessageType.QUOTE, randomItem);
-        addMessage(listItems, element);
+        addMessage(this, listItems, element);
         adapter.notifyDataSetChanged();
 
         MessageElementDao.getInstance(this).save(element);
@@ -303,7 +333,7 @@ public class ChatActivity extends AppCompatActivity {
         }
 
         MessageElement element = new MessageElement(elementType, randomItem);
-        addMessage(listItems, element);
+        addMessage(this, listItems, element);
         adapter.notifyDataSetChanged();
 
         MessageElementDao.getInstance(this).save(element);
@@ -315,14 +345,14 @@ public class ChatActivity extends AppCompatActivity {
 
         MessageElement element = new MessageElement(MessageType.IMAGE, randomImageFilePath);
 
-        addMessage(listItems, element);
+        addMessage(this, listItems, element);
 
         adapter.notifyDataSetChanged();
 
         MessageElementDao.getInstance(this).save(element);
     }
 
-    public static void addMessage(ArrayList<MessageElement> listItems, MessageElement element) {
+    public static void addMessage(Activity activity, ArrayList<MessageElement> listItems, MessageElement element) {
         if(listItems != null){
             if(listItems.isEmpty()){
                 listItems.add(element);
@@ -340,6 +370,7 @@ public class ChatActivity extends AppCompatActivity {
                     MessageElement dayElement = new MessageElement();
                     dayElement.setMessageType(MessageType.DATE);
                     listItems.add(dayElement);
+                    MessageElementDao.getInstance(activity).save(dayElement);
                 }
 
                 listItems.add(element);
@@ -352,7 +383,7 @@ public class ChatActivity extends AppCompatActivity {
 
         if(!message.isEmpty()){
             //update list
-            addMessage(listItems, new MessageElement(MessageType.USERTEXT, message));
+            addMessage(this, listItems, new MessageElement(MessageType.USERTEXT, message));
             adapter.notifyDataSetChanged();
             //clear edit box
             editBox.setText("");

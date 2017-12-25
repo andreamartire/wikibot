@@ -24,12 +24,12 @@ public class RetrieveNonciclopediaTask extends AsyncTask<String, Void, String> {
 
     ArrayList<MessageElement> listItems;
     ArrayAdapter<MessageElement> adapter;
-    Context context;
+    Activity activity;
 
-    public RetrieveNonciclopediaTask(Context context, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter){
+    public RetrieveNonciclopediaTask(Activity activity, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter){
         this.listItems = listItems;
         this.adapter = adapter;
-        this.context = context;
+        this.activity = activity;
     }
 
     protected String doInBackground(String... urls) {
@@ -63,8 +63,8 @@ public class RetrieveNonciclopediaTask extends AsyncTask<String, Void, String> {
     protected void onPostExecute(String item) {
         //update list
         MessageElement element = new MessageElement(MessageType.URL, item);
-        ChatActivity.addMessage(listItems, element);
-        MessageElementDao.getInstance((Activity) context).save(element);
+        ChatActivity.addMessage(activity, listItems, element);
+        MessageElementDao.getInstance(activity).save(element);
 
         adapter.notifyDataSetChanged();
     }

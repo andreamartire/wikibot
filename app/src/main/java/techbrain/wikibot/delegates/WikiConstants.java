@@ -1,5 +1,6 @@
 package techbrain.wikibot.delegates;
 
+import android.app.Activity;
 import android.content.Context;
 import android.widget.ArrayAdapter;
 
@@ -22,11 +23,11 @@ public class WikiConstants {
 	public static String CX = "004001173590099652672:ls07lv3jtwm";
 	public static String GAK = "AIzaSyCf8GaliX65nWeelUq5so0dg5H14sYFv3c";
 
-	public static String getRandomNonciclopedia(Context context, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter) {
+	public static String getRandomNonciclopedia(Activity activity, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter) {
 		String item = null;
 
 		try{
-			RetrieveNonciclopediaTask task = new RetrieveNonciclopediaTask(context, listItems, adapter);
+			RetrieveNonciclopediaTask task = new RetrieveNonciclopediaTask(activity, listItems, adapter);
 			task.execute();
 		}catch (Exception e){
 			e.printStackTrace();
