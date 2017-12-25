@@ -22,9 +22,9 @@ public class MessageElementDao extends SQLiteOpenHelper {
 
     public static MessageElementDao messageElementDbHelper;
 
-    public static MessageElementDao getInstance(Activity me){
+    public static MessageElementDao getInstance(Context context){
         if(messageElementDbHelper == null){
-            messageElementDbHelper = new MessageElementDao(me);
+            messageElementDbHelper = new MessageElementDao(context);
         }
         return messageElementDbHelper;
     }

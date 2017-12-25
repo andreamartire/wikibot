@@ -23,7 +23,7 @@
 
         <!-- Include the AdActivity configChanges and theme. -->
 
-        <service android:name=".services.MyService"/>
+        <service android:name=".services.NotificationService"/>
         <receiver android:name=".services.AutoStart">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />

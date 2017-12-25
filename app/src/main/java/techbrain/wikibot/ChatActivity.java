@@ -28,7 +28,6 @@ import com.google.android.gms.ads.MobileAds;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 
 import techbrain.wikibot.adapters.ElementAdapter;
 import techbrain.wikibot.beans.MessageElement;
@@ -37,9 +36,8 @@ import techbrain.wikibot.delegates.RetrieveGoogleTask;
 import techbrain.wikibot.delegates.WikiCommons;
 import techbrain.wikibot.delegates.WikiConstants;
 import techbrain.wikibot.dao.MessageElementDao;
-import techbrain.wikibot.services.MyService;
+import techbrain.wikibot.services.NotificationService;
 import techbrain.wikibot.utils.AppRater;
-import techbrain.wikibot.utils.MyFileUtils;
 
 public class ChatActivity extends AppCompatActivity {
 
@@ -64,8 +62,9 @@ public class ChatActivity extends AppCompatActivity {
                 Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
                 sharingIntent.setType("text/plain");
 
-                //TODO review message
-                String shareBodyText = getResources().getString(R.string.share_message);
+                String shareBodyText = getResources().getString(R.string.share_message) +
+                        " \"" + getResources().getString(R.string.app_name) + "\" "
+                        + getResources().getString(R.string.app_url);
 
                 sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBodyText);
                 startActivity(Intent.createChooser(sharingIntent, "Sharing Option"));
@@ -144,7 +143,7 @@ public class ChatActivity extends AppCompatActivity {
 
         AppRater.app_launched(this);
 
-        startService(new Intent(this, MyService.class));
+        startService(new Intent(this, NotificationService.class));
 
         final Activity activity = this;
         listItems = MessageElementDao.getInstance(this).findAll();
@@ -283,15 +282,17 @@ public class ChatActivity extends AppCompatActivity {
         WikiConstants.getRandomNonciclopedia(activity, listItems, adapter);
     }
 
-    private void addRandomCuriosita(Context context, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter) {
+    public static MessageElement addRandomCuriosita(Context context, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter) {
 
         String randomItem = WikiConstants.getRandomItem(context);
 
         MessageElement element = new MessageElement(MessageType.URL, randomItem);
-        addMessage(this, listItems, element);
-        adapter.notifyDataSetChanged();
+        addMessage(context, listItems, element);
+        if(adapter != null){
+            adapter.notifyDataSetChanged();
+        }
 
-        MessageElementDao.getInstance(this).save(element);
+        return element;
     }
 
     private void addRandomProverb(Context context, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter) {
@@ -352,30 +353,30 @@ public class ChatActivity extends AppCompatActivity {
         MessageElementDao.getInstance(this).save(element);
     }
 
-    public static void addMessage(Activity activity, ArrayList<MessageElement> listItems, MessageElement element) {
-        if(listItems != null){
-            if(listItems.isEmpty()){
-                listItems.add(element);
-            }
-            else{
-                MessageElement lastElement = listItems.get(listItems.size()-1);
+    public static void addMessage(Context context, ArrayList<MessageElement> listItems, MessageElement element) {
+        if(listItems != null && !listItems.isEmpty()){
+            //check day message
+            MessageElement lastElement = listItems.get(listItems.size()-1);
 
-                Calendar calendar = Calendar.getInstance();
-                calendar.setTime(lastElement.getCreationDate());
-                int lastDay = calendar.get(Calendar.DAY_OF_YEAR);
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(lastElement.getCreationDate());
+            int lastDay = calendar.get(Calendar.DAY_OF_YEAR);
 
-                int today = Calendar.getInstance().get(Calendar.DAY_OF_YEAR);
+            int today = Calendar.getInstance().get(Calendar.DAY_OF_YEAR);
 
-                if(lastDay != today){
-                    MessageElement dayElement = new MessageElement();
-                    dayElement.setMessageType(MessageType.DATE);
-                    listItems.add(dayElement);
-                    MessageElementDao.getInstance(activity).save(dayElement);
-                }
-
-                listItems.add(element);
+            if(lastDay != today){
+                MessageElement dayElement = new MessageElement();
+                dayElement.setMessageType(MessageType.DATE);
+                listItems.add(dayElement);
+                MessageElementDao.getInstance(context).save(dayElement);
             }
         }
+
+        if(listItems != null){
+            listItems.add(element);
+        }
+
+        MessageElementDao.getInstance(context).save(element);
     }
 
     public void manageMessage(Context context, EditText editBox){

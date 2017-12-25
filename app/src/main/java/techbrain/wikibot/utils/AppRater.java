@@ -17,7 +17,7 @@ public class AppRater {
     private static String APP_TITLE = "";
     private static String APP_PNAME = "";
     private final static int DAYS_UNTIL_PROMPT = 0;//Min number of days
-    private final static int LAUNCHES_UNTIL_PROMPT = 3;//Min number of launches
+    private final static int LAUNCHES_UNTIL_PROMPT = 5;//Min number of launches
 
     public static void app_launched(Context mContext) {
 
@@ -41,11 +41,11 @@ public class AppRater {
             date_firstLaunch = System.currentTimeMillis();
             editor.putLong("date_firstlaunch", date_firstLaunch);
         }else{
-            if (!prefs.getBoolean("resetted_rater", false)){
+            //if (!prefs.getBoolean("resetted_rater", false)){
                 editor.putBoolean("dontshowagain", false);
-                editor.putBoolean("resetted_rater", true);
+                //editor.putBoolean("resetted_rater", true);
                 editor.commit();
-            }
+            //}
         }
 
         // Wait at least n days before opening
