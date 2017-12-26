@@ -113,4 +113,28 @@ public class WikiConstants {
 		Collections.shuffle(quotes);
 		return quotes.get(0);
 	}
+
+	public static ArrayList<String> getProverbs() {
+		return proverbs;
+	}
+
+	public static void setProverbs(ArrayList<String> proverbs) {
+		WikiConstants.proverbs = proverbs;
+	}
+
+	public static ArrayList<String> getQuotes() {
+		return quotes;
+	}
+
+	public static void setQuotes(ArrayList<String> quotes) {
+		WikiConstants.quotes = quotes;
+	}
+
+	public static ArrayList<String> getArticles() {
+		return articles;
+	}
+
+	public static void setArticles(ArrayList<String> articles) {
+		WikiConstants.articles = articles;
+	}
 };

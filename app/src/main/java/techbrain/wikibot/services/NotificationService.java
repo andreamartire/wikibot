@@ -10,6 +10,7 @@ import android.support.v4.app.NotificationCompat;
 
 import techbrain.wikibot.ChatActivity;
 import techbrain.wikibot.R;
+import techbrain.wikibot.WebViewActivity;
 import techbrain.wikibot.beans.MessageElement;
 import techbrain.wikibot.delegates.WikiUrlPreview;
 
@@ -37,14 +38,21 @@ public class NotificationService extends Service {
 
         MessageElement me = ChatActivity.addRandomCuriosita(this, null, null);
 
+        NotificationCompat.InboxStyle inboxStyle = new NotificationCompat.InboxStyle();
+        inboxStyle.setBigContentTitle("Event tracker details:");
+        inboxStyle.addLine(me.getPreviewText());
+
         NotificationCompat.Builder mBuilder =
             new NotificationCompat.Builder(this)
                 .setSmallIcon(R.drawable.ic_audiotrack_dark)
                 .setContentTitle(WikiUrlPreview.getPreviewBaseBey(me.getMessageValue()))
                 .setContentText(me.getPreviewText())
-            .setAutoCancel(true);
+                .setStyle(inboxStyle)
+                .setAutoCancel(true);
 
-        Intent resultIntent = new Intent(this, ChatActivity.class);
+        Intent resultIntent = new Intent(this, WebViewActivity.class);
+        //pass data thought intent to another activity
+        resultIntent.putExtra(WebViewActivity.URL, me.getMessageValue());
 
         PendingIntent resultPendingIntent =
             PendingIntent.getActivity(
@@ -74,7 +82,7 @@ public class NotificationService extends Service {
         AlarmManager alarm = (AlarmManager)getSystemService(ALARM_SERVICE);
         alarm.set(
             alarm.RTC_WAKEUP,
-            System.currentTimeMillis() + (1000 * 60 * 60),//1 HOUR
+            System.currentTimeMillis() + (1000 * 5),//1 HOUR
             PendingIntent.getService(this, 0, new Intent(this, NotificationService.class), 0)
         );
     }

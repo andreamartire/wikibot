@@ -22,6 +22,11 @@ import android.widget.Toast;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
+import java.util.ArrayList;
+
+import techbrain.wikibot.beans.Article;
+import techbrain.wikibot.dao.ArticleDao;
+
 
 /**
  * Created by andrea on 03/12/17.
@@ -29,7 +34,7 @@ import com.google.android.gms.ads.AdView;
 
 public class WebViewActivity extends AppCompatActivity {
 
-    final static String URL = "URL";
+    public final static String URL = "URL";
 
     String currentUrl;
 

@@ -276,6 +276,17 @@ public class ChatActivity extends AppCompatActivity {
                 manageMessage(activity, ediBox);
             }
         });
+
+        String currentUrl = (String) getIntent().getSerializableExtra(WebViewActivity.URL);
+        if(currentUrl != null && !currentUrl.isEmpty()){
+            //open brower
+            Intent browserIntent = new Intent(activity, WebViewActivity.class);
+
+            //pass data thought intent to another activity
+            browserIntent.putExtra(WebViewActivity.URL, currentUrl);
+
+            startActivity(browserIntent);
+        }
     }
 
     private void addRandomNonciclopedia(Activity activity, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter) {
