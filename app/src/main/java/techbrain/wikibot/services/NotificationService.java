@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.support.v4.app.NotificationCompat;
 
+import java.util.Calendar;
+
 import techbrain.wikibot.ChatActivity;
 import techbrain.wikibot.R;
 import techbrain.wikibot.WebViewActivity;
@@ -78,11 +80,18 @@ public class NotificationService extends Service {
 
     @Override
     public void onDestroy() {
+
+        Calendar tomorrow = Calendar.getInstance();
+        tomorrow.add(Calendar.DATE, 1);
+        tomorrow.set(Calendar.HOUR_OF_DAY, 7);
+        tomorrow.set(Calendar.MINUTE, 0);
+        tomorrow.set(Calendar.SECOND, 0);
+
         // I want to restart this service again in one hour
         AlarmManager alarm = (AlarmManager)getSystemService(ALARM_SERVICE);
         alarm.set(
             alarm.RTC_WAKEUP,
-            System.currentTimeMillis() + (1000 * 5),//1 HOUR
+            tomorrow.getTimeInMillis(),
             PendingIntent.getService(this, 0, new Intent(this, NotificationService.class), 0)
         );
     }

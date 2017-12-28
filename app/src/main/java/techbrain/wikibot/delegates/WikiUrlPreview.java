@@ -18,14 +18,17 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 
+import techbrain.wikibot.adapters.ElementAdapter;
 import techbrain.wikibot.beans.MessageElement;
 import techbrain.wikibot.dao.MessageElementDao;
 
 public class WikiUrlPreview {
 
 	static String WIKI_SUMMARY_PREFIX = "https://it.wikipedia.org/api/rest_v1/page/summary/";
+	private ElementAdapter elementAdapter;
 
-	public void injectPreview(Context context, MessageElement messageElement, TextView titleElement, TextView descrElement) {
+	public void injectPreview(Context context, ElementAdapter elementAdapter, MessageElement messageElement, TextView titleElement, TextView descrElement) {
+		this.elementAdapter = elementAdapter;
 		// call AsynTask to perform network operation on separate thread
 		new HttpAsyncTask(context, messageElement, titleElement, descrElement).execute();
 	}
@@ -109,6 +112,8 @@ public class WikiUrlPreview {
 
 									titleElement.setText("");
 									titleElement.setVisibility(View.GONE);
+
+									elementAdapter.notifyDataSetChanged();
 
 									MessageElementDao.getInstance((Activity)context).update(messageElement);
 								}

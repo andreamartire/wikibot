@@ -155,29 +155,30 @@ public class ChatActivity extends AppCompatActivity {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View v, int i, long l) {
-                //manage tap
-                MessageElement messageElement = (MessageElement) adapterView.getItemAtPosition(i);
+            //manage tap
+            MessageElement messageElement = (MessageElement) adapterView.getItemAtPosition(i);
 
-                if(messageElement != null){
-                    if(MessageType.URL.equals(messageElement.getMessageType()) && isValidUrl(messageElement.getMessageValue())){
-                        //open brower
-                        Intent browserIntent = new Intent(activity, WebViewActivity.class);
+            if(messageElement != null){
+                if((MessageType.WIKIURL.equals(messageElement.getMessageType()) || MessageType.NOCYLEURL.equals(messageElement.getMessageType()))
+                        && isValidUrl(messageElement.getMessageValue())){
+                    //open brower
+                    Intent browserIntent = new Intent(activity, WebViewActivity.class);
 
-                        //pass data thought intent to another activity
-                        browserIntent.putExtra(WebViewActivity.URL, messageElement.getMessageValue());
+                    //pass data thought intent to another activity
+                    browserIntent.putExtra(WebViewActivity.URL, messageElement.getMessageValue());
 
-                        startActivity(browserIntent);
-                    }
-                    else if(MessageType.IMAGE.equals(messageElement.getMessageType()) && isValidUrl(messageElement.getRemoteImageUrl())){
-                        //open brower
-                        Intent browserIntent = new Intent(activity, WebViewActivity.class);
-
-                        //pass data thought intent to another activity
-                        browserIntent.putExtra(WebViewActivity.URL, messageElement.getRemoteImageUrl());
-
-                        startActivity(browserIntent);
-                    }
+                    startActivity(browserIntent);
                 }
+                else if(MessageType.IMAGE.equals(messageElement.getMessageType()) && isValidUrl(messageElement.getRemoteImageUrl())){
+                    //open brower
+                    Intent browserIntent = new Intent(activity, WebViewActivity.class);
+
+                    //pass data thought intent to another activity
+                    browserIntent.putExtra(WebViewActivity.URL, messageElement.getRemoteImageUrl());
+
+                    startActivity(browserIntent);
+                }
+            }
             }
         });
 
@@ -297,7 +298,7 @@ public class ChatActivity extends AppCompatActivity {
 
         String randomItem = WikiConstants.getRandomItem(context);
 
-        MessageElement element = new MessageElement(MessageType.URL, randomItem);
+        MessageElement element = new MessageElement(MessageType.WIKIURL, randomItem);
         addMessage(context, listItems, element);
         if(adapter != null){
             adapter.notifyDataSetChanged();

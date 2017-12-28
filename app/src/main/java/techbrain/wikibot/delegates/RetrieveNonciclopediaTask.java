@@ -62,7 +62,7 @@ public class RetrieveNonciclopediaTask extends AsyncTask<String, Void, String> {
 
     protected void onPostExecute(String item) {
         //update list
-        MessageElement element = new MessageElement(MessageType.URL, item);
+        MessageElement element = new MessageElement(MessageType.NOCYLEURL, item);
         ChatActivity.addMessage(activity, listItems, element);
         MessageElementDao.getInstance(activity).save(element);
 

@@ -65,7 +65,7 @@ public class RetrieveGoogleTask extends AsyncTask<String, Void, String> {
                             && !link.contains("wiki/File:")
                             && !link.contains("wiki/Utente:")){
                         firstLink = link;
-                        MessageElement element = new MessageElement(MessageType.URL, firstLink);
+                        MessageElement element = new MessageElement(MessageType.WIKIURL, firstLink);
                         //update list
                         listItems.add(element);
                         MessageElementDao.getInstance((Activity) context).save(element);

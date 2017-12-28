@@ -7,7 +7,8 @@ package techbrain.wikibot.beans;
 public enum MessageType {
     USERTEXT,
     BOTTEXT,
-    URL,
+    WIKIURL,
+    NOCYLEURL,
     IMAGE,
     QUOTE,
     PROVERB,

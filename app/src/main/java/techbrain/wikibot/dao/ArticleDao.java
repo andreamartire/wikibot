@@ -34,7 +34,7 @@ public class ArticleDao extends SQLiteOpenHelper {
 
         // Create a new map of values, where column names are the keys
         ContentValues values = new ContentValues();
-        values.put(Article.ArticleEntry.COLUMN_NAME_URL, article.getUrl());
+        values.put(Article.ArticleEntry.COLUMN_NAME_URL, article.getUrlIta());
 
         values.put(Article.ArticleEntry.COLUMN_NAME_PREVIEW_TEXT, article.getPreviewText());
         values.put(Article.ArticleEntry.COLUMN_NAME_PREVIEW_TEXT_HTML, article.getPreviewTextHtml());
@@ -93,7 +93,7 @@ public class ArticleDao extends SQLiteOpenHelper {
 
             Article me = new Article();
             me.setId(itemId);
-            me.setUrl(url);
+            me.setUrlIta(url);
             me.setPreviewText(previewText);
             me.setPreviewTextHtml(previewTextHtml);
             me.setRemoteImageUrl(remoteImageUrl);
@@ -111,7 +111,7 @@ public class ArticleDao extends SQLiteOpenHelper {
 
         // Create a new map of values, where column names are the keys
         ContentValues values = new ContentValues();
-        values.put(Article.ArticleEntry.COLUMN_NAME_URL, article.getUrl());
+        values.put(Article.ArticleEntry.COLUMN_NAME_URL, article.getUrlIta());
         values.put(Article.ArticleEntry.COLUMN_NAME_PREVIEW_TEXT, article.getPreviewText());
         values.put(Article.ArticleEntry.COLUMN_NAME_PREVIEW_TEXT_HTML, article.getPreviewTextHtml());
         values.put(Article.ArticleEntry.COLUMN_NAME_REMOTE_IMAGE_URL, article.getRemoteImageUrl());
@@ -158,7 +158,7 @@ public class ArticleDao extends SQLiteOpenHelper {
         if(articles != null){
             for(String articleUrl : articles){
                 Article article = new Article();
-                article.setUrl(articleUrl);
+                article.setUrlIta(articleUrl);
                 save(article);
             }
         }
@@ -167,11 +167,11 @@ public class ArticleDao extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // This database is only a cache for online data, so its upgrade policy is
         // to simply to discard the data and start over
-        //db.execSQL(SQL_DELETE_ENTRIES);
-        //onCreate(db);
+        // db.execSQL(SQL_DELETE_ENTRIES);
+        onCreate(db);
     }
 
     public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        //onUpgrade(db, oldVersion, newVersion);
+        onUpgrade(db, oldVersion, newVersion);
     }
 }

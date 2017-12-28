@@ -121,7 +121,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         descrElement.setVisibility(View.GONE);
                         imageElement.setVisibility(View.GONE);
                         break;
-                    case URL:
+                    case WIKIURL:
                         try{
                             titleElement.setText(WikiUrlPreview.getPreviewBaseBey(value));
                             titleElement.setVisibility(View.VISIBLE);
@@ -136,9 +136,19 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                                     titleElement.setVisibility(View.GONE);
                                     imageElement.setVisibility(View.GONE);
                                 }else{
-                                    new WikiUrlPreview().injectPreview(context, element, titleElement, descrElement);
+                                    new WikiUrlPreview().injectPreview(context, this, element, titleElement, descrElement);
                                 }
                             }
+                        }catch (Throwable e){
+                            e.printStackTrace();
+                        }
+                        break;
+                    case NOCYLEURL:
+                        try{
+                            titleElement.setText(WikiUrlPreview.getPreviewBaseBey(value));
+                            titleElement.setVisibility(View.VISIBLE);
+                            imageElement.setVisibility(View.GONE);
+                            descrElement.setVisibility(View.GONE);
                         }catch (Throwable e){
                             e.printStackTrace();
                         }

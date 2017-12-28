@@ -9,7 +9,7 @@ public class Article {
 
     Long id;
 
-    String url;
+    String urlIta;
 
     String previewText;
     String previewTextHtml;
@@ -42,12 +42,12 @@ public class Article {
         this.id = id;
     }
 
-    public String getUrl() {
-        return url;
+    public String getUrlIta() {
+        return urlIta;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setUrlIta(String urlIta) {
+        this.urlIta = urlIta;
     }
 
     public String getPreviewText() {
