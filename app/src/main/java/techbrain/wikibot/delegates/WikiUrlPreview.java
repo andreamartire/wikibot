@@ -98,27 +98,29 @@ public class WikiUrlPreview {
 								if(element != null){
 									String extractHtml = element.getExtract_html();
 
-									if (extractHtml != null){
+									if (extractHtml != null && extractHtml.trim().length()>0){
 										if (extractHtml.contains("</p>")) {
-											extractHtml = extractHtml.split("</p>")[0];
-											extractHtml += "</p>";
+											if(extractHtml.split("</p>")[0].length() > 50){
+												extractHtml = extractHtml.split("</p>")[0];
+												extractHtml += "</p>";
+											}
 										}
+
+										messageElement.setPreviewText(element.getExtract());
+										messageElement.setPreviewTextHtml(extractHtml);
+
+										descrElement.setText(Html.fromHtml(extractHtml));
+										descrElement.setVisibility(View.VISIBLE);
+
+										titleElement.setText("");
+										titleElement.setVisibility(View.GONE);
+
+										if(scrollDown){
+											elementAdapter.notifyDataSetChanged();
+										}
+
+										MessageElementDao.getInstance((Activity)context).update(messageElement);
 									}
-
-									messageElement.setPreviewText(element.getExtract());
-									messageElement.setPreviewTextHtml(extractHtml);
-
-									descrElement.setText(Html.fromHtml(extractHtml));
-									descrElement.setVisibility(View.VISIBLE);
-
-									titleElement.setText("");
-									titleElement.setVisibility(View.GONE);
-
-                                    if(scrollDown){
-                                        elementAdapter.notifyDataSetChanged();
-                                    }
-
-									MessageElementDao.getInstance((Activity)context).update(messageElement);
 								}
 							}catch (Throwable e){
 								e.printStackTrace();

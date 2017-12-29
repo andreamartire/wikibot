@@ -113,6 +113,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         titleElement.setVisibility(View.VISIBLE);
                         descrElement.setVisibility(View.GONE);
                         imageElement.setVisibility(View.GONE);
+                        shareButton.setVisibility(View.GONE);
                         break;
                     case BOTTEXT:
                         titleElement.setText(value);

@@ -41,7 +41,6 @@ public class NotificationService extends Service {
         MessageElement me = ChatActivity.addRandomCuriosita(this, null, null);
 
         NotificationCompat.InboxStyle inboxStyle = new NotificationCompat.InboxStyle();
-        inboxStyle.setBigContentTitle("Event tracker details:");
         inboxStyle.addLine(me.getPreviewText());
 
         NotificationCompat.Builder mBuilder =
