@@ -112,10 +112,10 @@ public class MessageElementDao extends SQLiteOpenHelper {
         values.put(MessageElementEntry.COLUMN_NAME_PREVIEW_TEXT, messageElement.getPreviewText());
         values.put(MessageElementEntry.COLUMN_NAME_PREVIEW_TEXT_HTML, messageElement.getPreviewTextHtml());
 
-        String[] where = {messageElement.getId()+""};
-
         // update the row
-        db.update(MessageElementEntry.TABLE_NAME, values, " _id = ? ", where);
+        int output = db.update(MessageElementEntry.TABLE_NAME, values, " _id = " + messageElement.getId(), null);
+
+        return;
     }
 
     public void deleteAll() {

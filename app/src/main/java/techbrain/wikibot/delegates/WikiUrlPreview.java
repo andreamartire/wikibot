@@ -27,10 +27,10 @@ public class WikiUrlPreview {
 	static String WIKI_SUMMARY_PREFIX = "https://it.wikipedia.org/api/rest_v1/page/summary/";
 	private ElementAdapter elementAdapter;
 
-	public void injectPreview(Context context, ElementAdapter elementAdapter, MessageElement messageElement, TextView titleElement, TextView descrElement) {
+	public void injectPreview(Context context, ElementAdapter elementAdapter, MessageElement messageElement, TextView titleElement, TextView descrElement, boolean scrollDown) {
 		this.elementAdapter = elementAdapter;
 		// call AsynTask to perform network operation on separate thread
-		new HttpAsyncTask(context, messageElement, titleElement, descrElement).execute();
+		new HttpAsyncTask(context, messageElement, titleElement, descrElement, scrollDown).execute();
 	}
 
 	public static String getPreviewBaseBey(String remoteUrl){
@@ -51,13 +51,14 @@ public class WikiUrlPreview {
 		MessageElement messageElement;
 		TextView titleElement;
 		TextView descrElement;
+        boolean scrollDown;
 
-		public HttpAsyncTask(Context context, MessageElement messageElement, TextView titleElement, TextView descrElement){
-			super();
+		public HttpAsyncTask(Context context, MessageElement messageElement, TextView titleElement, TextView descrElement, boolean scrollDown){			super();
 			this.context = context;
 			this.messageElement = messageElement;
 			this.titleElement = titleElement;
 			this.descrElement = descrElement;
+            this.scrollDown = scrollDown;
 		}
 
 		@Override
@@ -113,7 +114,9 @@ public class WikiUrlPreview {
 									titleElement.setText("");
 									titleElement.setVisibility(View.GONE);
 
-									elementAdapter.notifyDataSetChanged();
+                                    if(scrollDown){
+                                        elementAdapter.notifyDataSetChanged();
+                                    }
 
 									MessageElementDao.getInstance((Activity)context).update(messageElement);
 								}

@@ -130,13 +130,14 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                             if(ChatActivity.isValidUrl(value)){
                                 titleElement.setGravity(Gravity.RIGHT);
 
-                                if(element.getPreviewTextHtml() != null){
+                                if(element.getPreviewTextHtml() != null && element.getPreviewTextHtml().trim().length()>0){
                                     descrElement.setText(Html.fromHtml(element.getPreviewTextHtml()));
                                     descrElement.setVisibility(View.VISIBLE);
                                     titleElement.setVisibility(View.GONE);
-                                    imageElement.setVisibility(View.GONE);
                                 }else{
-                                    new WikiUrlPreview().injectPreview(context, this, element, titleElement, descrElement);
+                                    boolean scrollDown = position >= elements.size()-1;
+
+                                    new WikiUrlPreview().injectPreview(context, this, element, titleElement, descrElement, scrollDown);
                                 }
                             }
                         }catch (Throwable e){
