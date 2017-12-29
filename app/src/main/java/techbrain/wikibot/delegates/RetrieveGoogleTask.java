@@ -2,6 +2,7 @@ package techbrain.wikibot.delegates;
 
 import android.app.Activity;
 import android.content.Context;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.widget.ArrayAdapter;
 
@@ -40,7 +41,7 @@ public class RetrieveGoogleTask extends AsyncTask<String, Void, String> {
         String firstLink = null;
 
         try{
-            URL url = new URL("https://www.googleapis.com/customsearch/v1?key="+WikiConstants.GAK+ "&cx=" +  WikiConstants.CX + "&q="+ message + "&alt=json");
+            URL url = new URL("https://www.googleapis.com/customsearch/v1?key="+WikiConstants.GAK+ "&cx=" +  WikiConstants.CX + "&q="+ Uri.encode(message) + "&alt=json");
 
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
