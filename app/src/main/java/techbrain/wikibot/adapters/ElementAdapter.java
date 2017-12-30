@@ -136,7 +136,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                                     descrElement.setVisibility(View.VISIBLE);
                                     titleElement.setVisibility(View.GONE);
                                 }else{
-                                    boolean scrollDown = position >= elements.size()-1;
+                                    boolean scrollDown = position >= elements.size()-2;
 
                                     new WikiUrlPreview().injectPreview(context, this, element, titleElement, descrElement, scrollDown);
                                 }

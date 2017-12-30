@@ -80,17 +80,19 @@ public class NotificationService extends Service {
     @Override
     public void onDestroy() {
 
-        Calendar tomorrow = Calendar.getInstance();
-        tomorrow.add(Calendar.DATE, 1);
-        tomorrow.set(Calendar.HOUR_OF_DAY, 7);
-        tomorrow.set(Calendar.MINUTE, 0);
-        tomorrow.set(Calendar.SECOND, 0);
+        Calendar tomorrowMorning = Calendar.getInstance();
+        //tomorrow.add(Calendar.DATE, 1);
+        tomorrowMorning.set(Calendar.HOUR, 18);
+        tomorrowMorning.set(Calendar.MINUTE, 3);
+        tomorrowMorning.set(Calendar.SECOND, 0);
+
+        long tomorrowSameHour = System.currentTimeMillis() + 1000 * 60 * 60 * 24;
 
         // I want to restart this service again in one hour
         AlarmManager alarm = (AlarmManager)getSystemService(ALARM_SERVICE);
         alarm.set(
             alarm.RTC_WAKEUP,
-            tomorrow.getTimeInMillis(),
+                tomorrowSameHour,
             PendingIntent.getService(this, 0, new Intent(this, NotificationService.class), 0)
         );
     }

@@ -137,11 +137,11 @@ public class ChatActivity extends AppCompatActivity {
 
         MobileAds.initialize(this, "ca-app-pub-1872225169177247~8401929001");
 
-        AdView mAdView = (AdView) findViewById(R.id.mainChatAdView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+//        AdView mAdView = (AdView) findViewById(R.id.mainChatAdView);
+//        AdRequest adRequest = new AdRequest.Builder().build();
+//        mAdView.loadAd(adRequest);
 
-        AppRater.app_launched(this);
+        //AppRater.app_launched(this);
 
         startService(new Intent(this, NotificationService.class));
 
@@ -236,7 +236,7 @@ public class ChatActivity extends AppCompatActivity {
         curiositaBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            addRandomCuriosita(activity, listItems, adapter);
+                addRandomCuriosita(activity, listItems, adapter);
             }
         });
 
@@ -244,7 +244,7 @@ public class ChatActivity extends AppCompatActivity {
         proverbQuoteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            addRandomQuoteOrProverb(activity, listItems, adapter);
+                addRandomQuoteOrProverb(activity, listItems, adapter);
             }
         });
 
@@ -260,13 +260,13 @@ public class ChatActivity extends AppCompatActivity {
         //ediBox.setQueryHint(getResources().getString(R.string.default_search_text));
         ediBox.setOnKeyListener(new View.OnKeyListener() {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
-            // If the event is a key-down event on the "enter" button
-            if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
-                    (keyCode == KeyEvent.KEYCODE_ENTER)) {
-                // Perform action on key press
-                manageMessage(activity,  ediBox);
-            }
-            return false;
+                // If the event is a key-down event on the "enter" button
+                if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
+                        (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                    // Perform action on key press
+                    manageMessage(activity,  ediBox);
+                }
+                return false;
             }
         });
 
@@ -314,8 +314,6 @@ public class ChatActivity extends AppCompatActivity {
         MessageElement element = new MessageElement(MessageType.PROVERB, randomItem);
         addMessage(this, listItems, element);
         adapter.notifyDataSetChanged();
-
-        MessageElementDao.getInstance(this).save(element);
     }
 
     private void addRandomQuote(Context context, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter) {
@@ -326,8 +324,6 @@ public class ChatActivity extends AppCompatActivity {
         MessageElement element = new MessageElement(MessageType.QUOTE, randomItem);
         addMessage(this, listItems, element);
         adapter.notifyDataSetChanged();
-
-        MessageElementDao.getInstance(this).save(element);
     }
 
     private void addRandomQuoteOrProverb(Context context, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter) {
@@ -348,8 +344,6 @@ public class ChatActivity extends AppCompatActivity {
         MessageElement element = new MessageElement(elementType, randomItem);
         addMessage(this, listItems, element);
         adapter.notifyDataSetChanged();
-
-        MessageElementDao.getInstance(this).save(element);
     }
 
     private void addRandomImage(Context context, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter) {
@@ -361,8 +355,6 @@ public class ChatActivity extends AppCompatActivity {
         addMessage(this, listItems, element);
 
         adapter.notifyDataSetChanged();
-
-        MessageElementDao.getInstance(this).save(element);
     }
 
     public static void addMessage(Context context, ArrayList<MessageElement> listItems, MessageElement element) {

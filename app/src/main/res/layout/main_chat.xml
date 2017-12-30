@@ -16,7 +16,7 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.7"
+        android:layout_weight="0.8"
         android:id="@+id/listContents"
         android:transcriptMode="alwaysScroll"
         android:stackFromBottom="true">
@@ -25,7 +25,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.2"
+        android:layout_weight="0.1"
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
@@ -54,16 +54,18 @@
                 android:background="@drawable/rounded_buttons"
                 android:id="@+id/nonciclopedia_button"/>
         </LinearLayout>
-        <com.google.android.gms.ads.AdView
-            xmlns:ads="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/mainChatAdView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentTop="true"
-            ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-1872225169177247/7420019822">
-        </com.google.android.gms.ads.AdView>
+
+        <!--<com.google.android.gms.ads.AdView-->
+            <!--xmlns:ads="http://schemas.android.com/apk/res-auto"-->
+            <!--android:id="@+id/mainChatAdView"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--ads:adSize="BANNER"-->
+            <!--ads:adUnitId="ca-app-pub-1872225169177247/7420019822">-->
+        <!--</com.google.android.gms.ads.AdView>-->
+
     </LinearLayout>
 
     <LinearLayout

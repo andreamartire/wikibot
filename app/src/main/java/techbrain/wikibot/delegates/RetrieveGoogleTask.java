@@ -5,6 +5,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.widget.ArrayAdapter;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -13,6 +14,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 
+import techbrain.wikibot.R;
 import techbrain.wikibot.beans.MessageElement;
 import techbrain.wikibot.beans.MessageType;
 import techbrain.wikibot.dao.MessageElementDao;
@@ -74,23 +76,35 @@ public class RetrieveGoogleTask extends AsyncTask<String, Void, String> {
                 }
             }
             conn.disconnect();
+
+            if(firstLink == null){
+                //update list
+                MessageElement element = new MessageElement(MessageType.USERTEXT, ChatUtils.getRandomSmallTalk(context));
+                listItems.add(element);
+                MessageElementDao.getInstance((Activity) context).save(element);
+            }
+
+            ((Activity) context).runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    adapter.notifyDataSetChanged();
+                }
+            });
         }catch (Exception e){
             e.printStackTrace();
-        }
 
-        if(firstLink == null){
-            //update list
-            MessageElement element = new MessageElement(MessageType.USERTEXT, ChatUtils.getRandomSmallTalk(context));
-            listItems.add(element);
-            MessageElementDao.getInstance((Activity) context).save(element);
-        }
-
-        ((Activity) context).runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-            adapter.notifyDataSetChanged();
+            try{
+                ((Activity) context).runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(context, context.getResources().getString(R.string.network_error), Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
-        });
+            catch (Exception ex){
+                ex.printStackTrace();
+            }
+        }
 
         return item;
     }
