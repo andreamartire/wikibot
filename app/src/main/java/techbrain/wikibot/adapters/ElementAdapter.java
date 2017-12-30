@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -111,6 +112,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         titleElement.setText(value);
                         titleElement.setGravity(Gravity.RIGHT);
                         titleElement.setVisibility(View.VISIBLE);
+                        titleElement.setBackgroundColor(context.getResources().getColor(R.color.colorGreenChat));
                         descrElement.setVisibility(View.GONE);
                         imageElement.setVisibility(View.GONE);
                         shareButton.setVisibility(View.GONE);
@@ -119,6 +121,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         titleElement.setText(value);
                         titleElement.setGravity(Gravity.LEFT);
                         titleElement.setVisibility(View.VISIBLE);
+                        titleElement.setBackgroundColor(Color.WHITE);
                         descrElement.setVisibility(View.GONE);
                         imageElement.setVisibility(View.GONE);
                         break;
@@ -126,14 +129,17 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         try{
                             titleElement.setText(WikiUrlPreview.getPreviewBaseBey(value));
                             titleElement.setVisibility(View.VISIBLE);
+                            titleElement.setBackgroundColor(Color.WHITE);
                             imageElement.setVisibility(View.GONE);
                             descrElement.setVisibility(View.GONE);
+                            descrElement.setBackgroundColor(Color.WHITE);
                             if(ChatActivity.isValidUrl(value)){
                                 titleElement.setGravity(Gravity.RIGHT);
 
                                 if(element.getPreviewTextHtml() != null && element.getPreviewTextHtml().trim().length()>0){
                                     descrElement.setText(Html.fromHtml(element.getPreviewTextHtml()));
                                     descrElement.setVisibility(View.VISIBLE);
+                                    descrElement.setBackgroundColor(Color.WHITE);
                                     titleElement.setVisibility(View.GONE);
                                 }else{
                                     boolean scrollDown = position >= elements.size()-2;
@@ -149,6 +155,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         try{
                             titleElement.setText(WikiUrlPreview.getPreviewBaseBey(value));
                             titleElement.setVisibility(View.VISIBLE);
+                            titleElement.setBackgroundColor(Color.WHITE);
                             imageElement.setVisibility(View.GONE);
                             descrElement.setVisibility(View.GONE);
                         }catch (Throwable e){
@@ -191,6 +198,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         spanStringProv.setSpan(new StyleSpan(Typeface.BOLD), 0, spanStringProv.length(), 0);
                         titleElement.setText(spanStringProv);
                         titleElement.setVisibility(View.VISIBLE);
+                        titleElement.setBackgroundColor(Color.WHITE);
                         imageElement.setVisibility(View.GONE);
                         descrElement.setVisibility(View.GONE);
                         break;
@@ -199,6 +207,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         spanStringQuote.setSpan(new StyleSpan(Typeface.ITALIC), 0, spanStringQuote.length(), 0);
                         titleElement.setText(spanStringQuote);
                         titleElement.setVisibility(View.VISIBLE);
+                        titleElement.setBackgroundColor(Color.WHITE);
                         imageElement.setVisibility(View.GONE);
                         descrElement.setVisibility(View.GONE);
                         break;
@@ -217,6 +226,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
 
                         titleElement.setGravity(Gravity.CENTER_HORIZONTAL);
                         titleElement.setVisibility(View.VISIBLE);
+                        titleElement.setBackgroundColor(Color.WHITE);
                         imageElement.setVisibility(View.GONE);
                         descrElement.setVisibility(View.GONE);
                         shareButton.setVisibility(View.GONE);
@@ -224,6 +234,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                     default:
                         titleElement.setText(value);
                         titleElement.setVisibility(View.VISIBLE);
+                        titleElement.setBackgroundColor(Color.WHITE);
                         imageElement.setVisibility(View.GONE);
                         descrElement.setVisibility(View.GONE);
                         break;

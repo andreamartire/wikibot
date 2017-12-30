@@ -19,7 +19,8 @@
         android:layout_weight="0.8"
         android:id="@+id/listContents"
         android:transcriptMode="alwaysScroll"
-        android:stackFromBottom="true">
+        android:stackFromBottom="true"
+        android:background="@drawable/books_25">
 
     </ListView>
     <LinearLayout
