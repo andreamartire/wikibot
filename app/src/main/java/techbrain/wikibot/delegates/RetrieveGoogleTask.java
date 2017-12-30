@@ -79,7 +79,7 @@ public class RetrieveGoogleTask extends AsyncTask<String, Void, String> {
 
             if(firstLink == null){
                 //update list
-                MessageElement element = new MessageElement(MessageType.USERTEXT, ChatUtils.getRandomSmallTalk(context));
+                MessageElement element = new MessageElement(MessageType.BOTTEXT, ChatUtils.getRandomSmallTalk(context));
                 listItems.add(element);
                 MessageElementDao.getInstance((Activity) context).save(element);
             }
