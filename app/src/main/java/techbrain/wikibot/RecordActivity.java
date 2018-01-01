@@ -45,6 +45,8 @@ public class RecordActivity extends ActionBarActivity {
     boolean mStartRecording = true;
     boolean mStartPlaying = true;
 
+    //https://github.com/katchsvartanian/voiceRecognition/blob/master/VoiceRecognition/src/com/example/voicerecognition/MainActivity.java
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Wiki RoBot</string>
+    <string name="app_url">https://goo.gl/AEmzrq</string>
     <string name="info_title">Informazioni</string>
 
     <string name="label_curiosita">Curiosità</string>

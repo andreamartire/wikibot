@@ -137,11 +137,12 @@ public class ChatActivity extends AppCompatActivity {
 
         MobileAds.initialize(this, "ca-app-pub-1872225169177247~8401929001");
 
+//        TODO
 //        AdView mAdView = (AdView) findViewById(R.id.mainChatAdView);
 //        AdRequest adRequest = new AdRequest.Builder().build();
 //        mAdView.loadAd(adRequest);
 
-        //AppRater.app_launched(this);
+        //TODO AppRater.app_launched(this);
 
         startService(new Intent(this, NotificationService.class));
 
@@ -193,7 +194,8 @@ public class ChatActivity extends AppCompatActivity {
 
             String value = messageElement.getMessageValue();
 
-                /*Bitmap icon = Bitmap.cre;
+                /* TODO
+                Bitmap icon = Bitmap.cre;
                 Intent share = new Intent(Intent.ACTION_SEND);
                 share.setType("image/jpeg");
 

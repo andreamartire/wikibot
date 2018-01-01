@@ -34,7 +34,7 @@
         </receiver>
 
         <activity
-            android:name="techbrain.wikibot.RecordActivity"
+            android:name="techbrain.wikibot.ChatActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustPan"
