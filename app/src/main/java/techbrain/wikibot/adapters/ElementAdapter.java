@@ -21,6 +21,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.io.File;
@@ -64,8 +65,11 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
 
             if (element != null){
 
+                LinearLayout previewView = (LinearLayout) convertView.findViewById(R.id.previewView);
+                TextView userTextElement = (TextView) convertView.findViewById(R.id.userTextView);
                 TextView titleElement = (TextView) convertView.findViewById(R.id.titleView);
                 TextView descrElement = (TextView) convertView.findViewById(R.id.descrView);
+                TextView sourceElement = (TextView) convertView.findViewById(R.id.sourceView);
                 ImageView imageElement = (ImageView) convertView.findViewById(R.id.imageView);
 //                ShareElementButton shareButton = (ShareElementButton) convertView.findViewById(R.id.shareButton);
 //
@@ -84,24 +88,24 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
 
                     @Override
                     public void onClick(View v) {
-                        //get the row the clicked button is in
-                        TextView shareButton = (TextView) v;
+                    //get the row the clicked button is in
+                    TextView shareButton = (TextView) v;
 
-                        MessageElement messageElement = (MessageElement) shareButton.getTag();
+                    MessageElement messageElement = (MessageElement) shareButton.getTag();
 
-                        if(messageElement != null){
-                            Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
-                            sharingIntent.setType("text/plain");
+                    if(messageElement != null){
+                        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                        sharingIntent.setType("text/plain");
 
-                            //TODO review message
-                            String shareBodyText = messageElement.getMessageValue() + " " +
-                                    context.getResources().getString(R.string.shared_by_message) + " " +
-                                    context.getResources().getString(R.string.app_name) + " " +
-                                    context.getResources().getString(R.string.app_url);
+                        //TODO review message
+                        String shareBodyText = messageElement.getMessageValue() + " " +
+                                context.getResources().getString(R.string.shared_by_message) + " " +
+                                context.getResources().getString(R.string.app_name) + " " +
+                                context.getResources().getString(R.string.app_url);
 
-                            sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBodyText);
-                            context.startActivity(Intent.createChooser(sharingIntent, "Sharing Option"));
-                        }
+                        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBodyText);
+                        context.startActivity(Intent.createChooser(sharingIntent, "Sharing Option"));
+                    }
                     }
                 });
 
@@ -109,11 +113,12 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
 
                 switch (element.getMessageType()) {
                     case USERTEXT:
-                        titleElement.setText(value);
-                        titleElement.setGravity(Gravity.RIGHT);
-                        titleElement.setVisibility(View.VISIBLE);
-                        titleElement.setBackgroundColor(context.getResources().getColor(R.color.colorGreenChat));
+                        userTextElement.setText(value);
+                        userTextElement.setVisibility(View.VISIBLE);
+                        previewView.setBackgroundResource(R.drawable.usertext_element_rounded);
+                        titleElement.setVisibility(View.GONE);
                         descrElement.setVisibility(View.GONE);
+                        sourceElement.setVisibility(View.GONE);
                         imageElement.setVisibility(View.GONE);
                         shareButton.setVisibility(View.GONE);
                         break;
@@ -121,18 +126,23 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         titleElement.setText(value);
                         titleElement.setGravity(Gravity.LEFT);
                         titleElement.setVisibility(View.VISIBLE);
-                        titleElement.setBackgroundColor(Color.WHITE);
+                        previewView.setBackgroundResource(R.drawable.descr_element_rounded);
+                        userTextElement.setVisibility(View.GONE);
                         descrElement.setVisibility(View.GONE);
+                        sourceElement.setVisibility(View.GONE);
                         imageElement.setVisibility(View.GONE);
                         break;
                     case WIKIURL:
                         try{
                             titleElement.setText(WikiUrlPreview.getPreviewBaseBey(value));
                             titleElement.setVisibility(View.VISIBLE);
-                            titleElement.setBackgroundColor(Color.WHITE);
+                            previewView.setBackgroundResource(R.drawable.descr_element_rounded);
+                            userTextElement.setVisibility(View.GONE);
                             imageElement.setVisibility(View.GONE);
                             descrElement.setVisibility(View.GONE);
                             descrElement.setBackgroundColor(Color.WHITE);
+                            sourceElement.setVisibility(View.VISIBLE);
+                            sourceElement.setText(WikiUrlPreview.getPreviewDomain(value));
                             if(ChatActivity.isValidUrl(value)){
                                 titleElement.setGravity(Gravity.RIGHT);
 
@@ -155,17 +165,23 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         try{
                             titleElement.setText(WikiUrlPreview.getPreviewBaseBey(value));
                             titleElement.setVisibility(View.VISIBLE);
-                            titleElement.setBackgroundColor(Color.WHITE);
+                            previewView.setBackgroundResource(R.drawable.descr_element_rounded);
+                            userTextElement.setVisibility(View.GONE);
                             imageElement.setVisibility(View.GONE);
                             descrElement.setVisibility(View.GONE);
+                            sourceElement.setVisibility(View.VISIBLE);
+                            sourceElement.setText(WikiUrlPreview.getPreviewDomain(value));
                         }catch (Throwable e){
                             e.printStackTrace();
                         }
                         break;
                     case IMAGE:
                         try {
+                            previewView.setBackgroundResource(R.drawable.descr_element_rounded);
+                            userTextElement.setVisibility(View.GONE);
                             titleElement.setVisibility(View.GONE);
                             descrElement.setVisibility(View.GONE);
+                            sourceElement.setVisibility(View.GONE);
                             //select current image
                             BitmapFactory.Options bmOptions = new BitmapFactory.Options();
                             Bitmap bitmap = BitmapFactory.decodeFile(value, bmOptions);
@@ -198,18 +214,22 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         spanStringProv.setSpan(new StyleSpan(Typeface.BOLD), 0, spanStringProv.length(), 0);
                         titleElement.setText(spanStringProv);
                         titleElement.setVisibility(View.VISIBLE);
-                        titleElement.setBackgroundColor(Color.WHITE);
+                        userTextElement.setVisibility(View.GONE);
+                        previewView.setBackgroundResource(R.drawable.descr_element_rounded);
                         imageElement.setVisibility(View.GONE);
                         descrElement.setVisibility(View.GONE);
+                        sourceElement.setVisibility(View.GONE);
                         break;
                     case QUOTE:
                         SpannableString spanStringQuote = new SpannableString(value);
                         spanStringQuote.setSpan(new StyleSpan(Typeface.ITALIC), 0, spanStringQuote.length(), 0);
                         titleElement.setText(spanStringQuote);
                         titleElement.setVisibility(View.VISIBLE);
-                        titleElement.setBackgroundColor(Color.WHITE);
+                        previewView.setBackgroundResource(R.drawable.descr_element_rounded);
+                        userTextElement.setVisibility(View.GONE);
                         imageElement.setVisibility(View.GONE);
                         descrElement.setVisibility(View.GONE);
+                        sourceElement.setVisibility(View.GONE);
                         break;
                     case DATE:
                         Calendar cal1 = Calendar.getInstance();
@@ -226,17 +246,20 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
 
                         titleElement.setGravity(Gravity.CENTER_HORIZONTAL);
                         titleElement.setVisibility(View.VISIBLE);
-                        titleElement.setBackgroundColor(Color.WHITE);
+                        previewView.setBackgroundResource(R.drawable.descr_element_rounded);
+                        userTextElement.setVisibility(View.GONE);
                         imageElement.setVisibility(View.GONE);
                         descrElement.setVisibility(View.GONE);
+                        sourceElement.setVisibility(View.GONE);
                         shareButton.setVisibility(View.GONE);
                         break;
                     default:
                         titleElement.setText(value);
                         titleElement.setVisibility(View.VISIBLE);
-                        titleElement.setBackgroundColor(Color.WHITE);
+                        userTextElement.setVisibility(View.GONE);
                         imageElement.setVisibility(View.GONE);
                         descrElement.setVisibility(View.GONE);
+                        sourceElement.setVisibility(View.GONE);
                         break;
                 }
             }

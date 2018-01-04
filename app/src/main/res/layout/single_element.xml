@@ -3,6 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
+    android:padding="10dp"
     android:id="@+id/elementView">
 
     <ImageView
@@ -14,12 +15,10 @@
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/previewView"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@drawable/descr_element_rounded">
 
         <TextView
             android:id="@+id/titleView"
@@ -28,8 +27,20 @@
             android:paddingTop="10dip"
             android:paddingRight="10dip"
             android:paddingLeft="10dip"
-            android:textSize="20dip"
+            android:textSize="15dip"
             android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/userTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dip"
+            android:paddingRight="10dip"
+            android:paddingLeft="10dip"
+            android:textSize="12dip"
+            android:visibility="gone"
+            android:layout_gravity="end"
+            android:textAlignment="viewEnd" />
 
         <TextView
             android:id="@+id/descrView"
@@ -39,6 +50,18 @@
             android:paddingRight="10dip"
             android:paddingLeft="10dip"
             android:textSize="15dip"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/sourceView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingBottom="10dip"
+            android:textSize="10dip"
+            android:layout_gravity="end"
+            android:textAlignment="center"
             android:visibility="gone" />
 
         <TextView

@@ -45,7 +45,20 @@ public class WikiUrlPreview {
 		return "";
 	}
 
-	private class HttpAsyncTask extends AsyncTask<String, Void, String> {
+    public static String getPreviewDomain(String remoteUrl) {
+        String[] splits = remoteUrl.split("//");
+        if(splits.length > 1) {
+            String baseKey = splits[1];
+            String[] elements = splits[1].split("/");
+            //String text = baseKey.replaceAll("_", " ");
+            baseKey = Uri.decode(elements[0]);
+
+            return baseKey;
+        }
+        return "";
+    }
+
+    private class HttpAsyncTask extends AsyncTask<String, Void, String> {
 
 		Context context;
 		MessageElement messageElement;

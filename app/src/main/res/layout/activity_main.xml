@@ -39,7 +39,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginTop="1dp"
-                    android:src="@drawable/slidearrow" />
+                    />
 
                 <TextView
                     android:id="@+id/slideToCancelTextView"
@@ -64,7 +64,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginTop="1dp"
-                    android:src="@drawable/rec" />
+                    />
 
                 <TextView
                     android:id="@+id/recording_time_text"
@@ -87,7 +87,7 @@
             android:enabled="false"
             android:paddingRight="4dp"
             android:scaleType="centerInside"
-            android:src="@drawable/mic_button_states" />
+            />
 
 
     </RelativeLayout>
