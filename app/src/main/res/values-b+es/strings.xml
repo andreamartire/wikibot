@@ -1,18 +1,27 @@
 <resources>
     <string name="app_name">Wiki RoBot</string>
     <string name="app_url">https://goo.gl/AEmzrq</string>
-    <string name = "info_title">Información</string>
+    <string name="info_title">Informazioni</string>
 
-    <string name = "label_curiosita">Curiosidad</string>
-    <string name = "label_citation">Cita</string>
-    <string name = "label_proverbio">Proverbio</string>
-    <string name = "label_nonciclopedia">InCiclopedia</string>
-    <string name = "label_send">Enviar</string>
+    <string name="label_curiosita">Curiosità</string>
+    <string name="label_citazione">Citazione</string>
+    <string name="label_proverbio">Proverbio</string>
+    <string name="label_nonciclopedia">NonCiclopedia</string>
+    <string name="label_send">Invia</string>
 
-    <string name = "info_message">WikiRobot es un bot que te envía interesantes y cotidianos conocimientos. Para sugerencias / informes: techbrain@autistici.org</string>
-    <string name = "share_message">Eche un vistazo a "Wiki RoBot"</string>
-    <string name = "contact_email">techbrain@autistici.org </string>
-    <string name = "network_error">Error de red. Verifique su conexión a internet</string>
-    <string name = "default_search_text">Ask y se le dará</string>
-    <string name="label_proverb_quote">Cita/Proverbio</string>
+    <string name="info_message">WikiRobot è un bot che ti invia interessanti spunti quotidiani. Per suggerimenti/segnalazioni: techbrain@autistici.org</string>
+    <string name="share_message">Dai un\'occhiata a</string>
+    <string name="contact_email">techbrain@autistici.org</string>
+    <string name="network_error">Errore di rete. Controlla la tua connessione a internet</string>
+    <string name="default_search_text">Chiedi e ti sarà dato</string>
+    <string name="label_proverb_quote">Citazione/Proverbio</string>
+    <string name="today_label">OGGI</string>
+    <string name="share_label">Condividi</string>
+    <string name="clear_chat_label">Cancella Chat</string>
+    <string name="contact_us_label">Contattaci</string>
+    <string name="info_label">Info</string>
+    <string name="shared_by_message">condiviso da</string>
+    <string name="label_confirm_clear">Sei sicuro/a di voler cancellare la chat?</string>
+    <string name="label_yes">Si</string>
+    <string name="label_cancel">Annulla</string>
 </resources>
