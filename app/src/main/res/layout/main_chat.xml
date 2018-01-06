@@ -20,6 +20,8 @@
         android:id="@+id/listContents"
         android:transcriptMode="alwaysScroll"
         android:stackFromBottom="true"
+        android:divider="@null"
+        android:dividerHeight="0dp"
         android:background="@drawable/books_25">
 
     </ListView>

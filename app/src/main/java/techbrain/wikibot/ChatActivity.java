@@ -144,6 +144,8 @@ public class ChatActivity extends AppCompatActivity {
 
         //TODO AppRater.app_launched(this);
 
+        final Activity me = this;
+
         startService(new Intent(this, NotificationService.class));
 
         final Activity activity = this;
@@ -168,7 +170,7 @@ public class ChatActivity extends AppCompatActivity {
                     //pass data thought intent to another activity
                     browserIntent.putExtra(WebViewActivity.URL, messageElement.getMessageValue());
 
-                    startActivity(browserIntent);
+                    me.startActivity(browserIntent);
                 }
                 else if(MessageType.IMAGE.equals(messageElement.getMessageType()) && isValidUrl(messageElement.getRemoteImageUrl())){
                     //open brower
@@ -177,7 +179,7 @@ public class ChatActivity extends AppCompatActivity {
                     //pass data thought intent to another activity
                     browserIntent.putExtra(WebViewActivity.URL, messageElement.getRemoteImageUrl());
 
-                    startActivity(browserIntent);
+                    me.startActivity(browserIntent);
                 }
             }
             }
@@ -229,11 +231,11 @@ public class ChatActivity extends AppCompatActivity {
 
         WikiCommons.getImageOfDayUrl(this);
 
-        addRandomProverb(activity, listItems, adapter);
+        /*addRandomProverb(activity, listItems, adapter);
         addRandomImage(activity, listItems, adapter);
         addRandomCuriosita(activity, listItems, adapter);
         addRandomQuote(activity, listItems, adapter);
-
+*/
         Button curiositaBtn = (Button) findViewById(R.id.curiosita_button);
         curiositaBtn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -84,6 +84,10 @@ public class MessageElementDao extends SQLiteOpenHelper {
             String localImageFilePath = cursor.getString(cursor.getColumnIndexOrThrow(MessageElementEntry.COLUMN_NAME_LOCAL_IMAGE_FILE_PATH));
             String previewText = cursor.getString(cursor.getColumnIndexOrThrow(MessageElementEntry.COLUMN_NAME_PREVIEW_TEXT));
             String previewTextHtml = cursor.getString(cursor.getColumnIndexOrThrow(MessageElementEntry.COLUMN_NAME_PREVIEW_TEXT_HTML));
+            String creationDate = cursor.getString(cursor.getColumnIndexOrThrow(MessageElementEntry.COLUMN_NAME_CREATION_DATE));
+
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTimeInMillis(Long.parseLong(creationDate));
 
             MessageElement me = new MessageElement();
             me.setId(itemId);
@@ -92,7 +96,7 @@ public class MessageElementDao extends SQLiteOpenHelper {
             me.setRemoteImageUrl(remoteImageUrl);
             me.setLocalImageFilePath(localImageFilePath);
             me.setPreviewText(previewText);
-            me.setPreviewTextHtml(previewTextHtml);
+            me.setCreationDate(calendar.getTime());
             list.add(me);
         }
         cursor.close();
