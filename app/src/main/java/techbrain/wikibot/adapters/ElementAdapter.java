@@ -71,6 +71,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                 TextView descrElement = (TextView) convertView.findViewById(R.id.descrView);
                 TextView sourceElement = (TextView) convertView.findViewById(R.id.sourceView);
                 ImageView imageElement = (ImageView) convertView.findViewById(R.id.imageView);
+                ImageView previewImageElement = (ImageView) convertView.findViewById(R.id.previewImageView);
 //                ShareElementButton shareButton = (ShareElementButton) convertView.findViewById(R.id.shareButton);
 //
 //                if(shareButton != null){
@@ -121,6 +122,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         sourceElement.setVisibility(View.GONE);
                         imageElement.setVisibility(View.GONE);
                         shareButton.setVisibility(View.GONE);
+                        previewImageElement.setVisibility(View.GONE);
                         break;
                     case BOTTEXT:
                         titleElement.setText(value);
@@ -131,6 +133,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         descrElement.setVisibility(View.GONE);
                         sourceElement.setVisibility(View.GONE);
                         imageElement.setVisibility(View.GONE);
+                        previewImageElement.setVisibility(View.GONE);
                         break;
                     case WIKIURL:
                         try{
@@ -143,6 +146,35 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                             descrElement.setBackgroundColor(Color.WHITE);
                             sourceElement.setVisibility(View.VISIBLE);
                             sourceElement.setText(WikiUrlPreview.getPreviewDomain(value));
+                            previewImageElement.setVisibility(View.GONE);
+                            previewImageElement.setImageDrawable(null);
+
+                            if(element.getLocalImageFilePath() != null){
+                                previewImageElement.setVisibility(View.VISIBLE);
+
+                                //select current image
+                                BitmapFactory.Options bmOptions = new BitmapFactory.Options();
+                                Bitmap bitmap = BitmapFactory.decodeFile(element.getLocalImageFilePath(), bmOptions);
+
+                                if (bitmap != null) {
+                                    int width = bitmap.getWidth();
+                                    int height = bitmap.getHeight();
+
+                                    Drawable image = Drawable.createFromPath(element.getLocalImageFilePath());
+                                    if (image != null) {
+                                        float prop = height / (float) width;
+
+                                        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+                                        Integer realWidth = new Float(ImageUtils.getRealWidthSize(wm) / (float) 3).intValue();
+                                        int customHeight = (int) (realWidth * prop);
+
+                                        //select downloaded image
+                                        previewImageElement.setImageDrawable(ImageUtils.scaleImage(context, image, realWidth, customHeight));
+                                        previewImageElement.setVisibility(View.VISIBLE);
+                                    }
+                                }
+                            }
+
                             if(ChatActivity.isValidUrl(value)){
                                 titleElement.setGravity(Gravity.RIGHT);
 
@@ -171,6 +203,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                             descrElement.setVisibility(View.GONE);
                             sourceElement.setVisibility(View.VISIBLE);
                             sourceElement.setText(WikiUrlPreview.getPreviewDomain(value));
+                            previewImageElement.setVisibility(View.GONE);
                         }catch (Throwable e){
                             e.printStackTrace();
                         }
@@ -182,6 +215,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                             titleElement.setVisibility(View.GONE);
                             descrElement.setVisibility(View.GONE);
                             sourceElement.setVisibility(View.GONE);
+                            previewImageElement.setVisibility(View.GONE);
                             //select current image
                             BitmapFactory.Options bmOptions = new BitmapFactory.Options();
                             Bitmap bitmap = BitmapFactory.decodeFile(value, bmOptions);
@@ -219,6 +253,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         imageElement.setVisibility(View.GONE);
                         descrElement.setVisibility(View.GONE);
                         sourceElement.setVisibility(View.GONE);
+                        previewImageElement.setVisibility(View.GONE);
                         break;
                     case QUOTE:
                         SpannableString spanStringQuote = new SpannableString(value);
@@ -230,6 +265,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         imageElement.setVisibility(View.GONE);
                         descrElement.setVisibility(View.GONE);
                         sourceElement.setVisibility(View.GONE);
+                        previewImageElement.setVisibility(View.GONE);
                         break;
                     case DATE:
                         Calendar cal1 = Calendar.getInstance();
@@ -252,6 +288,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         descrElement.setVisibility(View.GONE);
                         sourceElement.setVisibility(View.GONE);
                         shareButton.setVisibility(View.GONE);
+                        previewImageElement.setVisibility(View.GONE);
                         break;
                     default:
                         titleElement.setText(value);
@@ -260,6 +297,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         imageElement.setVisibility(View.GONE);
                         descrElement.setVisibility(View.GONE);
                         sourceElement.setVisibility(View.GONE);
+                        previewImageElement.setVisibility(View.GONE);
                         break;
                 }
             }

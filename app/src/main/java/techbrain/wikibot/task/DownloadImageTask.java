@@ -43,7 +43,7 @@ public class DownloadImageTask extends AsyncTask<String, Integer, String> {
     }
 
     @Override
-    protected String doInBackground(String... params) {
+    public String doInBackground(String... params) {
         try {
             File file = new File(localFilePath);
 

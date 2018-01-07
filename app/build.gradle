@@ -7,8 +7,8 @@ android {
         applicationId "tech_brain.wikibot"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
+        versionCode 4
+        versionName "4.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

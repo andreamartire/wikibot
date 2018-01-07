@@ -16,8 +16,34 @@ public class SummaryItWiki {
     String timestamp;
     String description;
 
-    public SummaryItWiki(){
+    Thumbnail thumbnail;
 
+    public class Thumbnail {
+        String source;
+
+        public Thumbnail(){
+
+        }
+
+        public String getSource() {
+            return source;
+        }
+
+        public void setSource(String source) {
+            this.source = source;
+        }
+    }
+
+    public SummaryItWiki(){
+        this.thumbnail = new Thumbnail();
+    }
+
+    public Thumbnail getThumbnail() {
+        return thumbnail;
+    }
+
+    public void setThumbnail(Thumbnail thumbnail) {
+        this.thumbnail = thumbnail;
     }
 
     public String getTitle() {

@@ -96,6 +96,7 @@ public class MessageElementDao extends SQLiteOpenHelper {
             me.setRemoteImageUrl(remoteImageUrl);
             me.setLocalImageFilePath(localImageFilePath);
             me.setPreviewText(previewText);
+            me.setPreviewTextHtml(previewTextHtml);
             me.setCreationDate(calendar.getTime());
             list.add(me);
         }

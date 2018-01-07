@@ -12,15 +12,19 @@ import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.concurrent.Callable;
 
 import techbrain.wikibot.adapters.ElementAdapter;
 import techbrain.wikibot.beans.MessageElement;
 import techbrain.wikibot.dao.MessageElementDao;
+import techbrain.wikibot.task.DownloadImageTask;
+import techbrain.wikibot.utils.ImageUtils;
 
 public class WikiUrlPreview {
 
@@ -102,41 +106,74 @@ public class WikiUrlPreview {
 				if(inputStream != null) {
 					final String result = convertInputStreamToString(inputStream);
 
+					final SummaryItWiki element = new Gson().fromJson(result, SummaryItWiki.class);
+
+					String extractHtml = null;
+
+					if(element != null) {
+						String imageUrl = element.getThumbnail().getSource();
+						if (imageUrl != null) {
+							String imageFileName = ImageUtils.getFileNameFromUrl(imageUrl);
+							String imageFilePath = context.getFilesDir().getAbsolutePath() + "/preview/" + imageFileName;
+
+							if (!new File(imageFilePath).exists()) {
+								try {
+									DownloadImageTask sdt = new DownloadImageTask(context, new URL(imageUrl), imageFilePath, null);
+									sdt.doInBackground(null);
+
+									messageElement.setLocalImageFilePath(imageFilePath);
+								} catch (Exception e) {
+									e.printStackTrace();
+								}
+							}
+
+							extractHtml = element.getExtract_html();
+
+							if (extractHtml != null && extractHtml.trim().length() > 0) {
+
+								int limit = 210;
+								if (extractHtml.contains("</p>")) {
+									if (extractHtml.split("</p>")[0].length() > limit) {
+										extractHtml = extractHtml.split("</p>")[0];
+										/*extractHtml += "</p>";*/
+
+										extractHtml = extractHtml.substring(0, limit) + " [..]</p>";
+									}
+								} else {
+									if (extractHtml.length() > limit) {
+										extractHtml = extractHtml.substring(0, limit) + " [..]</p>";
+									}
+								}
+							}
+						}
+					}
+
+					final String valueExtractHtml = extractHtml;
+
 					((Activity)context).runOnUiThread(new Runnable() {
 						@Override
 						public void run() {
 							try {
-								final SummaryItWiki element = new Gson().fromJson(result, SummaryItWiki.class);
 
-								if(element != null){
-									String extractHtml = element.getExtract_html();
+								messageElement.setPreviewText(element.getExtract());
+								messageElement.setPreviewTextHtml(valueExtractHtml);
 
-									if (extractHtml != null && extractHtml.trim().length()>0){
-										if (extractHtml.contains("</p>")) {
-											if(extractHtml.split("</p>")[0].length() > 50){
-												extractHtml = extractHtml.split("</p>")[0];
-												extractHtml += "</p>";
-											}
-										}
-
-										messageElement.setPreviewText(element.getExtract());
-										messageElement.setPreviewTextHtml(extractHtml);
-
-										descrElement.setText(Html.fromHtml(extractHtml));
-										descrElement.setVisibility(View.VISIBLE);
-
-										titleElement.setText("");
-										titleElement.setVisibility(View.GONE);
-
-										if(scrollDown){
-											elementAdapter.notifyDataSetChanged();
-										}
-
-										MessageElementDao.getInstance((Activity)context).update(messageElement);
-									}
+								if(valueExtractHtml != null){
+									descrElement.setText(Html.fromHtml(valueExtractHtml));
 								}
-							}catch (Throwable e){
-								e.printStackTrace();
+								descrElement.setVisibility(View.VISIBLE);
+
+								titleElement.setText("");
+								titleElement.setVisibility(View.GONE);
+
+								if (scrollDown) {
+									elementAdapter.notifyDataSetChanged();
+								}
+
+								MessageElementDao.getInstance((Activity) context).update(messageElement);
+
+							} catch (Throwable ex){
+								ex.printStackTrace();
 							}
 						}
 					});
