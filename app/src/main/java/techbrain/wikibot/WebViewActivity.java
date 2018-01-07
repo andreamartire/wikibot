@@ -58,8 +58,13 @@ public class WebViewActivity extends AppCompatActivity {
                 Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
                 sharingIntent.setType("text/plain");
 
+                String appName = getResources().getString(R.string.app_name);
+                String appUrl = getResources().getString(R.string.app_url);
+                String sharedBy = getResources().getString(R.string.shared_by_message);
+                String shareBodyText = currentUrl + " " + sharedBy + " " + appName + " " + appUrl;
+
                 sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT,"Subject here");
-                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, currentUrl);
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBodyText);
                 startActivity(Intent.createChooser(sharingIntent, "Shearing Option"));
                 return true;
             default:

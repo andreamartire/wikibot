@@ -142,7 +142,7 @@ public class ChatActivity extends AppCompatActivity {
 //        AdRequest adRequest = new AdRequest.Builder().build();
 //        mAdView.loadAd(adRequest);
 
-        //TODO AppRater.app_launched(this);
+        AppRater.app_launched(this);
 
         final Activity me = this;
 
