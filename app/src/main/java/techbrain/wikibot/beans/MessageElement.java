@@ -18,6 +18,8 @@ public class MessageElement {
     String previewText;
     String previewTextHtml;
 
+    boolean previewDone;
+
     /* Inner class that defines the table contents */
     public static class MessageElementEntry implements BaseColumns {
         public static final String TABLE_NAME = "message_element";
@@ -27,6 +29,7 @@ public class MessageElement {
         public static final String COLUMN_NAME_LOCAL_IMAGE_FILE_PATH = "local_image_file_path";
         public static final String COLUMN_NAME_PREVIEW_TEXT = "preview_text";
         public static final String COLUMN_NAME_PREVIEW_TEXT_HTML = "preview_text_html";
+        public static final String COLUMN_NAME_PREVIEW_DONE = "preview_done";
         public static final String COLUMN_NAME_CREATION_DATE = "creation_date";
     }
 
@@ -46,6 +49,14 @@ public class MessageElement {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public boolean getPreviewDone() {
+        return previewDone;
+    }
+
+    public void setPreviewDone(boolean previewDone) {
+        this.previewDone = previewDone;
     }
 
     public MessageType getMessageType() {

@@ -44,6 +44,8 @@ public class ChatActivity extends AppCompatActivity {
     private static String APP_TITLE = "";
     private static String APP_URL = "";
 
+    public static final String URL = "URL";
+
     ArrayList<MessageElement> listItems = new ArrayList<MessageElement>();
     ElementAdapter adapter;
 
@@ -289,6 +291,18 @@ public class ChatActivity extends AppCompatActivity {
 
             //pass data thought intent to another activity
             browserIntent.putExtra(WebViewActivity.URL, currentUrl);
+
+            startActivity(browserIntent);
+        }
+
+        String notifyUrl = (String) getIntent().getSerializableExtra(URL);
+
+        if(notifyUrl != null && notifyUrl.length() > 0){
+            //open brower
+            Intent browserIntent = new Intent(activity, WebViewActivity.class);
+
+            //pass data thought intent to another activity
+            browserIntent.putExtra(WebViewActivity.URL, notifyUrl);
 
             startActivity(browserIntent);
         }

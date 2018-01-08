@@ -67,11 +67,13 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
 
                 LinearLayout previewView = (LinearLayout) convertView.findViewById(R.id.previewView);
                 TextView userTextElement = (TextView) convertView.findViewById(R.id.userTextView);
+                TextView dayElement = (TextView) convertView.findViewById(R.id.dayView);
                 TextView titleElement = (TextView) convertView.findViewById(R.id.titleView);
                 TextView descrElement = (TextView) convertView.findViewById(R.id.descrView);
                 TextView sourceElement = (TextView) convertView.findViewById(R.id.sourceView);
                 ImageView imageElement = (ImageView) convertView.findViewById(R.id.imageView);
                 ImageView previewImageElement = (ImageView) convertView.findViewById(R.id.previewImageView);
+
 //                ShareElementButton shareButton = (ShareElementButton) convertView.findViewById(R.id.shareButton);
 //
 //                if(shareButton != null){
@@ -123,6 +125,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         imageElement.setVisibility(View.GONE);
                         shareButton.setVisibility(View.GONE);
                         previewImageElement.setVisibility(View.GONE);
+                        dayElement.setVisibility(View.GONE);
                         break;
                     case BOTTEXT:
                         titleElement.setText(value);
@@ -134,6 +137,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         sourceElement.setVisibility(View.GONE);
                         imageElement.setVisibility(View.GONE);
                         previewImageElement.setVisibility(View.GONE);
+                        dayElement.setVisibility(View.GONE);
                         break;
                     case WIKIURL:
                         try{
@@ -145,9 +149,10 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                             descrElement.setVisibility(View.GONE);
                             descrElement.setBackgroundColor(Color.WHITE);
                             sourceElement.setVisibility(View.VISIBLE);
-                            sourceElement.setText(WikiUrlPreview.getPreviewDomain(value));
+                            sourceElement.setText(WikiUrlPreview.getPreviewDomain(value).toUpperCase());
                             previewImageElement.setVisibility(View.GONE);
                             previewImageElement.setImageDrawable(null);
+                            dayElement.setVisibility(View.GONE);
 
                             if(element.getLocalImageFilePath() != null){
                                 previewImageElement.setVisibility(View.VISIBLE);
@@ -174,8 +179,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                                     }
                                 }
                             }
-
-                            if(ChatActivity.isValidUrl(value)){
+                            else if(ChatActivity.isValidUrl(value)){
                                 titleElement.setGravity(Gravity.RIGHT);
 
                                 if(element.getPreviewTextHtml() != null && element.getPreviewTextHtml().trim().length()>0){
@@ -184,9 +188,11 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                                     descrElement.setBackgroundColor(Color.WHITE);
                                     titleElement.setVisibility(View.GONE);
                                 }else{
-                                    boolean scrollDown = position >= elements.size()-2;
+                                    if(!element.getPreviewDone()){
+                                        boolean scrollDown = position >= elements.size()-2;
 
-                                    new WikiUrlPreview().injectPreview(context, this, element, titleElement, descrElement, scrollDown);
+                                        new WikiUrlPreview().injectPreview(context, this, element, titleElement, descrElement, scrollDown);
+                                    }
                                 }
                             }
                         }catch (Throwable e){
@@ -204,6 +210,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                             sourceElement.setVisibility(View.VISIBLE);
                             sourceElement.setText(WikiUrlPreview.getPreviewDomain(value));
                             previewImageElement.setVisibility(View.GONE);
+                            dayElement.setVisibility(View.GONE);
                         }catch (Throwable e){
                             e.printStackTrace();
                         }
@@ -216,6 +223,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                             descrElement.setVisibility(View.GONE);
                             sourceElement.setVisibility(View.GONE);
                             previewImageElement.setVisibility(View.GONE);
+                            dayElement.setVisibility(View.GONE);
                             //select current image
                             BitmapFactory.Options bmOptions = new BitmapFactory.Options();
                             Bitmap bitmap = BitmapFactory.decodeFile(value, bmOptions);
@@ -254,6 +262,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         descrElement.setVisibility(View.GONE);
                         sourceElement.setVisibility(View.GONE);
                         previewImageElement.setVisibility(View.GONE);
+                        dayElement.setVisibility(View.GONE);
                         break;
                     case QUOTE:
                         SpannableString spanStringQuote = new SpannableString(value);
@@ -266,6 +275,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         descrElement.setVisibility(View.GONE);
                         sourceElement.setVisibility(View.GONE);
                         previewImageElement.setVisibility(View.GONE);
+                        dayElement.setVisibility(View.GONE);
                         break;
                     case DATE:
                         Calendar cal1 = Calendar.getInstance();
@@ -278,10 +288,10 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                             dayString = context.getResources().getString(R.string.today_label);
                         }
 
-                        titleElement.setText(dayString);
+                        dayElement.setText(dayString);
+                        dayElement.setVisibility(View.VISIBLE);
 
-                        titleElement.setGravity(Gravity.CENTER_HORIZONTAL);
-                        titleElement.setVisibility(View.VISIBLE);
+                        titleElement.setVisibility(View.GONE);
                         previewView.setBackgroundResource(R.drawable.descr_element_rounded);
                         userTextElement.setVisibility(View.GONE);
                         imageElement.setVisibility(View.GONE);
@@ -298,6 +308,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         descrElement.setVisibility(View.GONE);
                         sourceElement.setVisibility(View.GONE);
                         previewImageElement.setVisibility(View.GONE);
+                        dayElement.setVisibility(View.GONE);
                         break;
                 }
             }

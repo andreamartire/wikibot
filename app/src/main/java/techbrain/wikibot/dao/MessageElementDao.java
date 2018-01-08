@@ -17,7 +17,7 @@ import java.util.Calendar;
 public class MessageElementDao extends SQLiteOpenHelper {
 
     // If you change the database schema, you must increment the database version.
-    public static final int DATABASE_VERSION = 1;
+    public static final int DATABASE_VERSION = 2;
     public static final String DATABASE_NAME = "wikibot.db";
 
     public static MessageElementDao messageElementDbHelper;
@@ -60,6 +60,7 @@ public class MessageElementDao extends SQLiteOpenHelper {
             MessageElementEntry.COLUMN_NAME_LOCAL_IMAGE_FILE_PATH,
             MessageElementEntry.COLUMN_NAME_PREVIEW_TEXT,
             MessageElementEntry.COLUMN_NAME_PREVIEW_TEXT_HTML,
+            MessageElementEntry.COLUMN_NAME_PREVIEW_DONE,
             MessageElementEntry.COLUMN_NAME_CREATION_DATE
         };
 
@@ -116,6 +117,7 @@ public class MessageElementDao extends SQLiteOpenHelper {
         values.put(MessageElementEntry.COLUMN_NAME_LOCAL_IMAGE_FILE_PATH, messageElement.getLocalImageFilePath());
         values.put(MessageElementEntry.COLUMN_NAME_PREVIEW_TEXT, messageElement.getPreviewText());
         values.put(MessageElementEntry.COLUMN_NAME_PREVIEW_TEXT_HTML, messageElement.getPreviewTextHtml());
+        values.put(MessageElementEntry.COLUMN_NAME_PREVIEW_DONE, messageElement.getPreviewDone());
 
         // update the row
         int output = db.update(MessageElementEntry.TABLE_NAME, values, " _id = " + messageElement.getId(), null);
@@ -144,9 +146,10 @@ public class MessageElementDao extends SQLiteOpenHelper {
             MessageElementEntry.COLUMN_NAME_LOCAL_IMAGE_FILE_PATH + " TEXT," +
             MessageElementEntry.COLUMN_NAME_PREVIEW_TEXT + " TEXT," +
             MessageElementEntry.COLUMN_NAME_PREVIEW_TEXT_HTML + " TEXT," +
+            MessageElementEntry.COLUMN_NAME_PREVIEW_DONE + " INTEGER," +
             MessageElementEntry.COLUMN_NAME_CREATION_DATE + " INTEGER)";
 
-    //private static final String SQL_DELETE_ENTRIES = "DROP TABLE IF EXISTS " + MessageElementEntry.TABLE_NAME;
+    private static final String SQL_DELETE_ENTRIES = "DROP TABLE IF EXISTS " + MessageElementEntry.TABLE_NAME;
 
     public MessageElementDao(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -159,8 +162,8 @@ public class MessageElementDao extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // This database is only a cache for online data, so its upgrade policy is
         // to simply to discard the data and start over
-        //db.execSQL(SQL_DELETE_ENTRIES);
-        //onCreate(db);
+        db.execSQL(SQL_DELETE_ENTRIES);
+        onCreate(db);
     }
 
     public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {

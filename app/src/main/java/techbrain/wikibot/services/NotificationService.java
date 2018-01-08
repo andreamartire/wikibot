@@ -53,7 +53,7 @@ public class NotificationService extends Service {
 
         Intent resultIntent = new Intent(this, WebViewActivity.class);
         //pass data thought intent to another activity
-        resultIntent.putExtra(WebViewActivity.URL, me.getMessageValue());
+        resultIntent.putExtra(ChatActivity.URL, me.getMessageValue());
 
         PendingIntent resultPendingIntent =
             PendingIntent.getActivity(

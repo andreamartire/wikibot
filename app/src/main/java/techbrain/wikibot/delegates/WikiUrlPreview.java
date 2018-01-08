@@ -157,6 +157,7 @@ public class WikiUrlPreview {
 
 								messageElement.setPreviewText(element.getExtract());
 								messageElement.setPreviewTextHtml(valueExtractHtml);
+								messageElement.setPreviewDone(true);
 
 								if(valueExtractHtml != null){
 									descrElement.setText(Html.fromHtml(valueExtractHtml));

@@ -18,6 +18,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:textAlignment="center"
         android:background="@drawable/descr_element_rounded">
 
         <ImageView
@@ -41,6 +43,17 @@
                 android:layout_height="wrap_content"
                 android:padding="10dip"
                 android:textSize="15dip"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/dayView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:textSize="12dip"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:background="@drawable/day_element_rounded"
                 android:visibility="gone" />
 
             <TextView
@@ -85,6 +98,7 @@
                 android:text="@string/share_label"
                 android:paddingBottom="10dp"
                 android:paddingRight="10dp"
+                android:paddingLeft="10dp"
                 android:textSize="20dp"
                 android:textStyle="bold|italic"
                 android:textColor="@color/colorPrimary"/>
