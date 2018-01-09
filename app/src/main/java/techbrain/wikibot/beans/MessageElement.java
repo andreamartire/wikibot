@@ -18,7 +18,7 @@ public class MessageElement {
     String previewText;
     String previewTextHtml;
 
-    boolean previewDone;
+    int previewDone;
 
     /* Inner class that defines the table contents */
     public static class MessageElementEntry implements BaseColumns {
@@ -51,11 +51,11 @@ public class MessageElement {
         this.id = id;
     }
 
-    public boolean getPreviewDone() {
+    public int getPreviewDone() {
         return previewDone;
     }
 
-    public void setPreviewDone(boolean previewDone) {
+    public void setPreviewDone(int previewDone) {
         this.previewDone = previewDone;
     }
 

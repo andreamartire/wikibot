@@ -150,13 +150,9 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                             descrElement.setBackgroundColor(Color.WHITE);
                             sourceElement.setVisibility(View.VISIBLE);
                             sourceElement.setText(WikiUrlPreview.getPreviewDomain(value).toUpperCase());
-                            previewImageElement.setVisibility(View.GONE);
-                            previewImageElement.setImageDrawable(null);
                             dayElement.setVisibility(View.GONE);
 
                             if(element.getLocalImageFilePath() != null){
-                                previewImageElement.setVisibility(View.VISIBLE);
-
                                 //select current image
                                 BitmapFactory.Options bmOptions = new BitmapFactory.Options();
                                 Bitmap bitmap = BitmapFactory.decodeFile(element.getLocalImageFilePath(), bmOptions);
@@ -178,8 +174,12 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                                         previewImageElement.setVisibility(View.VISIBLE);
                                     }
                                 }
+                            } else {
+                                previewImageElement.setVisibility(View.GONE);
+                                previewImageElement.setImageDrawable(null);
                             }
-                            else if(ChatActivity.isValidUrl(value)){
+
+                            if(ChatActivity.isValidUrl(value)){
                                 titleElement.setGravity(Gravity.RIGHT);
 
                                 if(element.getPreviewTextHtml() != null && element.getPreviewTextHtml().trim().length()>0){
@@ -187,13 +187,13 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                                     descrElement.setVisibility(View.VISIBLE);
                                     descrElement.setBackgroundColor(Color.WHITE);
                                     titleElement.setVisibility(View.GONE);
-                                }else{
-                                    if(!element.getPreviewDone()){
-                                        boolean scrollDown = position >= elements.size()-2;
-
-                                        new WikiUrlPreview().injectPreview(context, this, element, titleElement, descrElement, scrollDown);
-                                    }
                                 }
+                            }
+
+                            if(element.getPreviewDone() == 0){
+                                boolean scrollDown = position >= elements.size()-2;
+
+                                new WikiUrlPreview().injectPreview(context, this, element, titleElement, descrElement, scrollDown);
                             }
                         }catch (Throwable e){
                             e.printStackTrace();

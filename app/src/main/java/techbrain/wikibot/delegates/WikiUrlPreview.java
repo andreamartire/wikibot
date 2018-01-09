@@ -109,34 +109,35 @@ public class WikiUrlPreview {
 					final SummaryItWiki element = new Gson().fromJson(result, SummaryItWiki.class);
 
 					String extractHtml = null;
+                    String extractText = null;
+					String imageFilePath = null;
 
 					if(element != null) {
 						String imageUrl = element.getThumbnail().getSource();
 						if (imageUrl != null) {
 							String imageFileName = ImageUtils.getFileNameFromUrl(imageUrl);
-							String imageFilePath = context.getFilesDir().getAbsolutePath() + "/preview/" + imageFileName;
+							imageFilePath = context.getFilesDir().getAbsolutePath() + "/preview/" + imageFileName;
 
 							if (!new File(imageFilePath).exists()) {
 								try {
 									DownloadImageTask sdt = new DownloadImageTask(context, new URL(imageUrl), imageFilePath, null);
 									sdt.doInBackground(null);
-
-									messageElement.setLocalImageFilePath(imageFilePath);
 								} catch (Exception e) {
 									e.printStackTrace();
 								}
 							}
 
 							extractHtml = element.getExtract_html();
+                            extractText = element.getExtract();
+
+                            int limit = 210;
 
 							if (extractHtml != null && extractHtml.trim().length() > 0) {
-
-								int limit = 210;
 								if (extractHtml.contains("</p>")) {
-									if (extractHtml.split("</p>")[0].length() > limit) {
-										extractHtml = extractHtml.split("</p>")[0];
-										/*extractHtml += "</p>";*/
 
+									extractHtml = extractHtml.split("</p>")[0];
+
+									if (extractHtml.split("</p>")[0].length() > limit) {
 										extractHtml = extractHtml.substring(0, limit) + " [..]</p>";
 									}
 								} else {
@@ -145,19 +146,26 @@ public class WikiUrlPreview {
 									}
 								}
 							}
+
+                            if (extractText != null && extractText.trim().length() > limit) {
+                                extractText = extractText.substring(0, limit) + " [..]";
+                            }
 						}
 					}
 
 					final String valueExtractHtml = extractHtml;
+                    final String valueExtractText = extractText;
+					final String valueImageFilePath = imageFilePath;
 
 					((Activity)context).runOnUiThread(new Runnable() {
 						@Override
 						public void run() {
 							try {
 
-								messageElement.setPreviewText(element.getExtract());
+								messageElement.setLocalImageFilePath(valueImageFilePath);
+								messageElement.setPreviewText(valueExtractText);
 								messageElement.setPreviewTextHtml(valueExtractHtml);
-								messageElement.setPreviewDone(true);
+								messageElement.setPreviewDone(1);
 
 								if(valueExtractHtml != null){
 									descrElement.setText(Html.fromHtml(valueExtractHtml));

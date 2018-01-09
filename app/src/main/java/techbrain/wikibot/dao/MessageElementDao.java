@@ -17,7 +17,7 @@ import java.util.Calendar;
 public class MessageElementDao extends SQLiteOpenHelper {
 
     // If you change the database schema, you must increment the database version.
-    public static final int DATABASE_VERSION = 2;
+    public static final int DATABASE_VERSION = 3;
     public static final String DATABASE_NAME = "wikibot.db";
 
     public static MessageElementDao messageElementDbHelper;
@@ -127,14 +127,7 @@ public class MessageElementDao extends SQLiteOpenHelper {
 
     public void deleteAll() {
         SQLiteDatabase db = getWritableDatabase();
-
-        // Create a new map of values, where column names are the keys
-        ContentValues values = new ContentValues();
-
-        String[] el = new String[0];
-
-        // update the row
-        db.delete(MessageElementEntry.TABLE_NAME, "", el);
+        db.delete(MessageElementEntry.TABLE_NAME, "", new String[0]);
     }
 
     private static final String SQL_CREATE_ENTRIES =
@@ -146,7 +139,7 @@ public class MessageElementDao extends SQLiteOpenHelper {
             MessageElementEntry.COLUMN_NAME_LOCAL_IMAGE_FILE_PATH + " TEXT," +
             MessageElementEntry.COLUMN_NAME_PREVIEW_TEXT + " TEXT," +
             MessageElementEntry.COLUMN_NAME_PREVIEW_TEXT_HTML + " TEXT," +
-            MessageElementEntry.COLUMN_NAME_PREVIEW_DONE + " INTEGER," +
+            MessageElementEntry.COLUMN_NAME_PREVIEW_DONE + " INTEGER DEFAULT 0," +
             MessageElementEntry.COLUMN_NAME_CREATION_DATE + " INTEGER)";
 
     private static final String SQL_DELETE_ENTRIES = "DROP TABLE IF EXISTS " + MessageElementEntry.TABLE_NAME;
