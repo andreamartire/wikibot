@@ -233,11 +233,11 @@ public class ChatActivity extends AppCompatActivity {
 
         WikiCommons.getImageOfDayUrl(this);
 
-        /*addRandomProverb(activity, listItems, adapter);
+        addRandomProverb(activity, listItems, adapter);
         addRandomImage(activity, listItems, adapter);
         addRandomCuriosita(activity, listItems, adapter);
         addRandomQuote(activity, listItems, adapter);
-*/
+
         Button curiositaBtn = (Button) findViewById(R.id.curiosita_button);
         curiositaBtn.setOnClickListener(new View.OnClickListener() {
             @Override

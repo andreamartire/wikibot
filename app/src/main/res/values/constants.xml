@@ -1289,7 +1289,6 @@
         <item>Lettera del Diavolo</item>
         <item>Tabi</item>
         <item>Minuto di 61 secondi</item>
-        <item></item>
         <item>Kunsthaus Tacheles</item>
         <item>The Brig</item>
         <item>Lorem ipsum</item>
@@ -1483,6 +1482,9 @@
         <item>Spiral Island e Joyxee Island</item>
         <item>Spedizione romana alle fonti del Nilo</item>
         <item>Spedizione Thornton</item>
+        <item>Falso documentario</item>
+        <item>Falso storico</item>
+        <item>Bufala</item>
     </array>
     <array name="smalltalk">
         <item>Non credo di aver capito...</item>
