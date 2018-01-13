@@ -1,5 +1,6 @@
 <resources>
     <array name="articles">
+        <item>Glass_House</item>
         <item>Moto perpetuo</item>
         <item>Ragogna</item>
         <item>Oro di Yamashita</item>
@@ -33,7 +34,6 @@
         <item>Rospodotto</item>
         <item>Mars One</item>
         <item>Matto dell\'imbecille</item>
-        <item>Glass House</item>
         <item>DeLorean (macchina del tempo)</item>
         <item>Bibbia Poliglotta di Walton</item>
         <item>Asparagi di Rommel</item>
