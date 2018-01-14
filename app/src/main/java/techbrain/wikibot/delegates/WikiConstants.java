@@ -17,17 +17,19 @@ import techbrain.wikibot.beans.MessageElement;
 
 public class WikiConstants {
 
-	static String WIKI_PREFIX = "https://it.wikipedia.org/wiki/";
-	public static String NONCICLOPEDIA_URL = "http://nonciclopedia.wikia.com/wiki/Speciale:PaginaCasuale";
+	public static String NONCICLOPEDIA_URL_IT = "http://nonciclopedia.wikia.com/wiki/Speciale:PaginaCasuale";
+    public static String NONCICLOPEDIA_URL_EN = "http://uncyclopedia.wikia.com/wiki/Special:Random/";
 
-	public static String CX = "004001173590099652672:ls07lv3jtwm";
+	public static String CX_it = "004001173590099652672:ls07lv3jtwm";
+	public static String CX_en = "004001173590099652672:publ9tlipuc";
+
 	public static String GAK = "AIzaSyCf8GaliX65nWeelUq5so0dg5H14sYFv3c";
 
-	public static String getRandomNonciclopedia(Activity activity, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter) {
+	public static String getRandomNonciclopedia(Activity activity, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter, WikiLangEnum lang) {
 		String item = null;
 
 		try{
-			RetrieveNonciclopediaTask task = new RetrieveNonciclopediaTask(activity, listItems, adapter);
+			RetrieveNonciclopediaTask task = new RetrieveNonciclopediaTask(activity, listItems, adapter, lang);
 			task.execute();
 		}catch (Exception e){
 			e.printStackTrace();
@@ -76,7 +78,7 @@ public class WikiConstants {
 	public static String getRandomItem(Context c) {
 		initArticles(c);
 		Collections.shuffle(articles);
-		return WIKI_PREFIX + articles.get(0).replaceAll(" ","_");
+		return articles.get(0).replaceAll(" ","_");
 	}
 
 	private static void initArticles(Context c) {
@@ -136,5 +138,29 @@ public class WikiConstants {
 
 	public static void setArticles(ArrayList<String> articles) {
 		WikiConstants.articles = articles;
+	}
+
+	public static String getCxByLang(WikiLangEnum lang) {
+		if(lang != null){
+			if(lang.equals(WikiLangEnum.IT)){
+				return CX_it;
+			}
+			if(lang.equals(WikiLangEnum.EN)){
+				return CX_en;
+			}
+		}
+		return null;
+	}
+
+	public static String getUnCiclopediaUrlByLang(WikiLangEnum lang) {
+		if(lang != null){
+			if(lang.equals(WikiLangEnum.IT)){
+				return NONCICLOPEDIA_URL_IT;
+			}
+			if(lang.equals(WikiLangEnum.EN)){
+				return NONCICLOPEDIA_URL_EN;
+			}
+		}
+		return null;
 	}
 };

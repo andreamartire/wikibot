@@ -30,11 +30,14 @@ public class RetrieveGoogleTask extends AsyncTask<String, Void, String> {
     ArrayAdapter<MessageElement> adapter;
     String message;
 
-    public RetrieveGoogleTask(Context context, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter, String message){
+    WikiLangEnum lang;
+
+    public RetrieveGoogleTask(Context context, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter, String message, WikiLangEnum lang){
         this.context = context;
         this.listItems = listItems;
         this.adapter = adapter;
         this.message = message;
+        this.lang = lang;
     }
 
     protected String doInBackground(String... urls) {
@@ -43,7 +46,7 @@ public class RetrieveGoogleTask extends AsyncTask<String, Void, String> {
         String firstLink = null;
 
         try{
-            URL url = new URL("https://www.googleapis.com/customsearch/v1?key="+WikiConstants.GAK+ "&cx=" +  WikiConstants.CX + "&q="+ Uri.encode(message) + "&alt=json");
+            URL url = new URL("https://www.googleapis.com/customsearch/v1?key="+WikiConstants.GAK+ "&cx=" +  WikiConstants.getCxByLang(lang) + "&q="+ Uri.encode(message) + "&alt=json");
 
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
