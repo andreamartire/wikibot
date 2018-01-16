@@ -138,17 +138,17 @@ public class WikiUrlPreview {
 									extractHtml = extractHtml.split("</p>")[0];
 
 									if (extractHtml.split("</p>")[0].length() > limit) {
-										extractHtml = extractHtml.substring(0, limit) + " [..]</p>";
+										extractHtml = extractHtml.substring(0, limit) + "...</p>";
 									}
 								} else {
 									if (extractHtml.length() > limit) {
-										extractHtml = extractHtml.substring(0, limit) + " [..]</p>";
+										extractHtml = extractHtml.substring(0, limit) + "...</p>";
 									}
 								}
 							}
 
                             if (extractText != null && extractText.trim().length() > limit) {
-                                extractText = extractText.substring(0, limit) + " [..]";
+                                extractText = extractText.substring(0, limit) + "...";
                             }
 						}
 					}
