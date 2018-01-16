@@ -25,11 +25,13 @@ public class RetrieveNonciclopediaTask extends AsyncTask<String, Void, String> {
     ArrayList<MessageElement> listItems;
     ArrayAdapter<MessageElement> adapter;
     Activity activity;
+    WikiLangEnum lang;
 
-    public RetrieveNonciclopediaTask(Activity activity, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter){
+    public RetrieveNonciclopediaTask(Activity activity, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter, WikiLangEnum lang){
         this.listItems = listItems;
         this.adapter = adapter;
         this.activity = activity;
+        this.lang = lang;
     }
 
     protected String doInBackground(String... urls) {
@@ -37,7 +39,7 @@ public class RetrieveNonciclopediaTask extends AsyncTask<String, Void, String> {
         String item = null;
 
         try {
-            URLConnection con = new URL(WikiConstants.NONCICLOPEDIA_URL ).openConnection();
+            URLConnection con = new URL(WikiConstants.getUnCiclopediaUrlByLang(lang)).openConnection();
             System.out.println( "orignal url: " + con.getURL() );
             con.connect();
             System.out.println( "connected url: " + con.getURL() );

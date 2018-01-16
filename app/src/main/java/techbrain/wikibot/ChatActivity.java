@@ -28,6 +28,7 @@ import com.google.android.gms.ads.MobileAds;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Locale;
 
 import techbrain.wikibot.adapters.ElementAdapter;
 import techbrain.wikibot.beans.MessageElement;
@@ -36,6 +37,7 @@ import techbrain.wikibot.delegates.RetrieveGoogleTask;
 import techbrain.wikibot.delegates.WikiCommons;
 import techbrain.wikibot.delegates.WikiConstants;
 import techbrain.wikibot.dao.MessageElementDao;
+import techbrain.wikibot.delegates.WikiLangEnum;
 import techbrain.wikibot.services.NotificationService;
 import techbrain.wikibot.utils.AppRater;
 
@@ -48,6 +50,7 @@ public class ChatActivity extends AppCompatActivity {
 
     ArrayList<MessageElement> listItems = new ArrayList<MessageElement>();
     ElementAdapter adapter;
+    WikiLangEnum currLang;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -129,6 +132,11 @@ public class ChatActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_chat);
+
+        currLang = WikiLangEnum.EN;
+        if(Locale.getDefault().getDisplayLanguage().equalsIgnoreCase("IT")){
+            currLang = WikiLangEnum.IT;
+        }
 
         ChatActivity.APP_TITLE = getResources().getString(R.string.app_name);
         ChatActivity.APP_URL = getResources().getString(R.string.app_url);
@@ -258,7 +266,7 @@ public class ChatActivity extends AppCompatActivity {
         nonciclopediaBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                addRandomNonciclopedia(activity, listItems, adapter);
+                addRandomNonciclopedia(activity, listItems, adapter, currLang);
             }
         });
 
@@ -308,8 +316,8 @@ public class ChatActivity extends AppCompatActivity {
         }
     }
 
-    private void addRandomNonciclopedia(Activity activity, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter) {
-        WikiConstants.getRandomNonciclopedia(activity, listItems, adapter);
+    private void addRandomNonciclopedia(Activity activity, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter, WikiLangEnum lang) {
+        WikiConstants.getRandomNonciclopedia(activity, listItems, adapter, lang);
     }
 
     public static MessageElement addRandomCuriosita(Context context, ArrayList<MessageElement> listItems, ArrayAdapter<MessageElement> adapter) {
@@ -420,7 +428,7 @@ public class ChatActivity extends AppCompatActivity {
                     InputMethodManager.HIDE_NOT_ALWAYS);
 
             try{
-                RetrieveGoogleTask task = new RetrieveGoogleTask(context, listItems, adapter, message);
+                RetrieveGoogleTask task = new RetrieveGoogleTask(context, listItems, adapter, message, currLang);
                 task.execute();
             }catch (Exception e){
                 e.printStackTrace();

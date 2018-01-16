@@ -1,1488 +1,1489 @@
 <resources>
     <array name="articles">
-        <item>Glass_House</item>
-        <item>Moto perpetuo</item>
-        <item>Ragogna</item>
-        <item>Oro di Yamashita</item>
-        <item>Fenomeno delle voci elettroniche</item>
-        <item>Rimozione chirurgica della fistola anale di Luigi XIV</item>
-        <item>Swaffelen</item>
-        <item>Atuk</item>
-        <item>Azzurrina</item>
-        <item>Illusione uditiva</item>
-        <item>Riflessologia (medicina alternativa)</item>
-        <item>Junk science</item>
-        <item>Lottologia</item>
-        <item>Versoaln</item>
-        <item>Numero socievole</item>
-        <item>Personaggio tipo</item>
-        <item>Progesterex</item>
-        <item>Decrescita</item>
-        <item>Lancio di vipere da elicotteri</item>
-        <item>Fantastiliardo</item>
-        <item>Servetta trace</item>
-        <item>Prima donne e bambini</item>
-        <item>Mirmecofilia</item>
-        <item>Zombie</item>
-        <item>Morgellons</item>
-        <item>Kodama (spirito)</item>
-        <item>Problema dei filosofi a cena</item>
-        <item>Fenomeno celeste di Norimberga</item>
-        <item>Gamba de legn</item>
-        <item>Sindrome della mano aliena</item>
-        <item>Incidente del passo Djatlov</item>
-        <item>Rospodotto</item>
-        <item>Mars One</item>
-        <item>Matto dell\'imbecille</item>
-        <item>DeLorean (macchina del tempo)</item>
-        <item>Bibbia Poliglotta di Walton</item>
-        <item>Asparagi di Rommel</item>
-        <item>St. Paul\'s Survives</item>
-        <item>Reframing</item>
-        <item>Palmanova</item>
-        <item>Giovanni Battista Lulli</item>
-        <item>Disastro di Monongah</item>
-        <item>Trattamenti alternativi contro il cancro</item>
-        <item>Pensare all\'immortalità del granchio</item>
-        <item>Teoria della melanina</item>
-        <item>Simbolo della pace</item>
-        <item>Esecuzione postuma</item>
-        <item>Confusione e diffusione</item>
-        <item>Apparecchiature incamiciate</item>
-        <item>Tapis roulant cosmico</item>
-        <item>Elizabeth Odio Benito</item>
-        <item>Labirinto a bracci radiali</item>
-        <item>Campo di distorsione della realtà</item>
-        <item>Custode della genesi</item>
-        <item>!!!</item>
-        <item>Ingegner Cane</item>
-        <item>Data di nascita di Gesù</item>
-        <item>Maledizione del Colonnello</item>
-        <item>Elena Lucrezia Cornaro</item>
-        <item>Sfere metalliche di Klerksdorp</item>
-        <item>Idillio di Sigfrido</item>
-        <item>La tomba perduta di Gesù</item>
-        <item>La fabbrica del terrore</item>
-        <item>Palla eh!</item>
-        <item>Santo prepuzio</item>
-        <item>Teatro di verzura</item>
-        <item>Copyleft</item>
-        <item>Inter</item>
-        <item>Scienza di confine</item>
-        <item>Grotta Verde</item>
-        <item>Senegambia</item>
-        <item>Chiesa di San Giacomo a Scossacavalli</item>
-        <item>Grolla</item>
-        <item>Preparato 500</item>
-        <item>Teorie del complotto su Jonestown</item>
-        <item>Phoneutria nigriventer</item>
-        <item>Antievoluzionismo</item>
-        <item>Il poeta mangiatore di leoni nel covo di pietra</item>
-        <item>Dose equivalente a una banana</item>
-        <item>Scopatori Segreti</item>
-        <item>Ho visto cose che voi umani</item>
-        <item>London Transport Museum</item>
-        <item>Polvere di simpatia</item>
-        <item>Zar (carro armato)</item>
-        <item>Voyager Golden Record</item>
-        <item>Campane dell\'arcidiocesi di Milano</item>
-        <item>Bikini metallico della principessa Leila</item>
-        <item>Gioiello di Vicenza</item>
-        <item>Meditazione trascendentale</item>
-        <item>Eudosso di Cizico</item>
-        <item>Tribù dal Cuore Cornuto</item>
-        <item>Mary had a little lamb</item>
-        <item>La risposta alla domanda fondamentale sulla vita, l\'universo e tutto quanto</item>
-        <item>1 Night in Paris</item>
-        <item>Music for Supermarkets</item>
-        <item>Autostrada dei Laghi</item>
-        <item>Difesa Chewbacca</item>
-        <item>Brethariano</item>
-        <item>Criptozoologia</item>
-        <item>Ummo</item>
-        <item>Portale (immaginario)</item>
-        <item>Mare della Pečora</item>
-        <item>Ucronia</item>
-        <item>Reprua</item>
-        <item>Tizio, Caio e Sempronio</item>
-        <item>Arturo Osio (banchiere)</item>
-        <item>Halobates</item>
-        <item>Brigitta Bulgari</item>
-        <item>Preadamiti</item>
-        <item>Corona imperiale di stato</item>
-        <item>Reperti archeologici della metropolitana di Napoli</item>
-        <item>Phineas Gage</item>
-        <item>Eviternità</item>
-        <item>Jonestown (Guyana)</item>
-        <item>Triangolo delle Bermude</item>
-        <item>Rasoio di Hanlon</item>
-        <item>Foresta ubriaca</item>
-        <item>Controilluminazione</item>
-        <item>Magazzini del governo</item>
-        <item>Spaghetti code</item>
-        <item>Grotta di Altamira</item>
-        <item>Segnale Wow!</item>
-        <item>Teorie del complotto sull\'attentato al Pentagono dell\'11 settembre 2001</item>
-        <item>Scacchi esagonali</item>
-        <item>Elenco analitico dei cornuti</item>
-        <item>Sezione aurea</item>
-        <item>Bombardamento di Bari</item>
-        <item>Via Vittorio Emanuele III</item>
-        <item>Grande puzza</item>
-        <item>Storia culturale dei glutei</item>
-        <item>Puff, the Magic Dragon</item>
-        <item>Balabiótt</item>
-        <item>Sindrome locked-in</item>
-        <item>International Cometary Explorer</item>
-        <item>Chief Mouser to the Cabinet Office</item>
-        <item>Death café</item>
-        <item>Culoz</item>
-        <item>2+2=5</item>
-        <item>Pigasus Award</item>
-        <item>Nepenthes bicalcarata</item>
-        <item>Fuoco di Sant\'Elmo</item>
-        <item>Caccola</item>
-        <item>Raggio della morte</item>
-        <item>Concilio in Trullo</item>
-        <item>Coppa di Licurgo</item>
-        <item>Lettura del biglietto</item>
-        <item>Enciclopedia Galattica</item>
-        <item>IP over Avian Carriers</item>
-        <item>Reductio ad Hitlerum</item>
-        <item>Nuova cronologia</item>
-        <item>Realismo isterico</item>
-        <item>Gotto Esplosivo Pangalattico</item>
-        <item>Monte Loffa</item>
-        <item>Teorie del complotto sul riscaldamento globale</item>
-        <item>Puzzone di Moena</item>
-        <item>Black Holes and Time Warps</item>
-        <item>Fonte Q</item>
-        <item>Gloomy Sunday</item>
-        <item>Malato di calcio</item>
-        <item>Mirin Dajo</item>
-        <item>Dodecateismo</item>
-        <item>Giro di Viso</item>
-        <item>Finta guerra</item>
-        <item>Stazioni dell\'arte</item>
-        <item>Leggende metropolitane giapponesi</item>
-        <item>Pallio di San Lorenzo</item>
-        <item>Cravatta di Sherman</item>
-        <item>Savignano a Mare</item>
-        <item>Piazza della Passera</item>
-        <item>Aokigahara</item>
-        <item>Scaled Composites SpaceShipTwo</item>
-        <item>Geobiologia</item>
-        <item>Articoli nei quali si passano in rassegna gli abusi che sono stati corretti</item>
-        <item>Nibiru (Sitchin)</item>
-        <item>Fortean Society</item>
-        <item>Bacio della pantofola</item>
-        <item>Epitaffio di Sicilo</item>
-        <item>Clamoroso al Cibali!</item>
-        <item>49 Pales</item>
-        <item>Pyrococcus furiosus</item>
-        <item>Giovanni Aldini</item>
-        <item>Euthanasia Coaster</item>
-        <item>Teschio di cristallo</item>
-        <item>Composto di gas nobili</item>
-        <item>Ciarlatano</item>
-        <item>Massacro della Zong</item>
-        <item>Casa Scaccabarozzi</item>
-        <item>Kilroy</item>
-        <item>Labirinto di Porsenna</item>
-        <item>RTFM</item>
-        <item>Castello di Guédelon</item>
-        <item>Brainfuck</item>
-        <item>Parco degli Acquedotti</item>
-        <item>Bibliopegia antropodermica</item>
-        <item>Q33 NY</item>
-        <item>Luci Yehudi</item>
-        <item>Arsenal Firearms AF2011A1</item>
-        <item>Locomotiva C&amp;O M-1</item>
-        <item>Ordine dei byte</item>
-        <item>Trimetilarsina</item>
-        <item>Disastro di Marcinelle</item>
-        <item>Secondo intercalare</item>
-        <item>Foca (imperatore)</item>
-        <item>2 Pallas</item>
-        <item>Clavicembalo elettrico</item>
-        <item>Cronometro di Loulié</item>
-        <item>El Corte Inglés</item>
-        <item>Glocalizzazione editoriale</item>
-        <item>Ansible</item>
-        <item>Hashima (isola)</item>
-        <item>Generale Sherman</item>
-        <item>Matcha</item>
-        <item>Raising the Flag on Iwo Jima</item>
-        <item>Árpád Weisz</item>
-        <item>Arbegnuoc</item>
-        <item>Flakturm</item>
-        <item>Kim Peek</item>
-        <item>Teoria delle finestre rotte</item>
-        <item>Storia della Geromina</item>
-        <item>Persocom</item>
-        <item>Agricoltura biodinamica</item>
-        <item>Api anti-bomba</item>
-        <item>There Is No Alternative</item>
-        <item>Mawangdui</item>
-        <item>Scacchi tridimensionali</item>
-        <item>Teorema della pizza</item>
-        <item>Esame del carbonio 14 sulla Sindone</item>
-        <item>Idillio infranto</item>
-        <item>Lukla</item>
-        <item>Cartellate</item>
-        <item>Arduino (hardware)</item>
-        <item>Gorsafawddacha\'idraigodanheddogleddollônpenrhynareurdraethceredigion</item>
-        <item>Carta igienica</item>
-        <item>Centrale termoelettrica di Trbovlje</item>
-        <item>Bananadina</item>
-        <item>OOPArt</item>
-        <item>Maso chiuso</item>
-        <item>Ferrovia_sospesa</item>
-        <item>Nanotecnologia nella fantascienza</item>
-        <item>Nella vecchia fattoria</item>
-        <item>Metodo del tubo di gomma</item>
-        <item>Trasferimento della mente</item>
-        <item>Antenna radio di Varsavia</item>
-        <item>Santuario di Itsukushima</item>
-        <item>Scienziato pazzo</item>
-        <item>Coral Castle</item>
-        <item>La persecuzione e l\'assassinio di Jean-Paul Marat, rappresentato dalla compagnia filodrammatica dell\'ospizio di Charenton sotto la guida del marchese de Sade</item>
-        <item>Progetto Montauk</item>
-        <item>Emirates Air Line (cabinovia)</item>
-        <item>Harukichi Shimoi</item>
-        <item>Premio Ig Nobel</item>
-        <item>Robots.txt</item>
-        <item>Ferrofluido</item>
-        <item>Viaggio nel tempo</item>
-        <item>Cucchiaino nello spumante</item>
-        <item>Volta (danza)</item>
-        <item>Museo fallologico islandese</item>
-        <item>Cifrario di Cesare</item>
-        <item>durian</item>
-        <item>Gun (lampada)</item>
-        <item>Cappella di San Luigi a Capezzolo</item>
-        <item>Salto di Tiberio</item>
-        <item>Honorificabilitudinitatibus</item>
-        <item>Impronte degli dei</item>
-        <item>Escursione someggiata</item>
-        <item>Schmallenberg virus</item>
-        <item>Fenomeno da baraccone</item>
-        <item>Giochi inaugurali dell\'anfiteatro Flavio</item>
-        <item>Dornier Do 335</item>
-        <item>Patafisica</item>
-        <item>Neko café</item>
-        <item>Spedizione Donner</item>
-        <item>Castellana di Vergi</item>
-        <item>Orgone</item>
-        <item>Nasser Al-Attiyah</item>
-        <item>Linee temporanee</item>
-        <item>Casa Fenoglio-Lafleur</item>
-        <item>Hermetia illucens</item>
-        <item>Uomo Assorbente</item>
-        <item>Cronologia del futuro lontano</item>
-        <item>Rabdomanzia</item>
-        <item>Memoria dell\'acqua</item>
-        <item>Impero aericano</item>
-        <item>Feng shui</item>
-        <item>All your base are belong to us</item>
-        <item>Starchild</item>
-        <item>Eruzione Coca-Cola Light e Mentos</item>
-        <item>Dominio del mondo</item>
-        <item>Ippogallo</item>
-        <item>Piaggio Vespa 150 TAP</item>
-        <item>Troll (internet)</item>
-        <item>Porta dell\'inferno</item>
-        <item>Disastro del Maracanã</item>
-        <item>Motore magnetico Perendev</item>
-        <item>Deinococcus radiodurans</item>
-        <item>Baciatico</item>
-        <item>Fantasma Formaggino</item>
-        <item>Scrittura corsiva romana</item>
-        <item>Eppur si muove</item>
-        <item>Evento di Tunguska</item>
-        <item>The Hands Resist Him</item>
-        <item>Lupo mangia-frutta</item>
-        <item>Felicità interna lorda</item>
-        <item>Dama bianca (spirito)</item>
-        <item>Fallen Astronaut</item>
-        <item>Ipotesi alternative sull\'AIDS</item>
-        <item>MT e MN</item>
-        <item>Hemp Body Car</item>
-        <item>Mummia di palude</item>
-        <item>Piccione fotografo</item>
-        <item>Afsluitdijk</item>
-        <item>Teorie alternative sulla morte di Napoleone Bonaparte</item>
-        <item>Gioco del cento</item>
-        <item>Mu (continente)</item>
-        <item>Lohengrin (opera)</item>
-        <item>Quadrato_del_Sator</item>
-        <item>Galassie Antenne</item>
-        <item>Acquacheta</item>
-        <item>Veicolo spaziale Sojuz</item>
-        <item>Freedom House</item>
-        <item>Forza Odica</item>
-        <item>Tuta distillante</item>
-        <item>Kuchisake-onna</item>
-        <item>Processo zombie</item>
-        <item>Bibbia Cattiva</item>
-        <item>Pompone</item>
-        <item>Pianeta oceano</item>
-        <item>Eurabia</item>
-        <item>High Frequency Active Auroral Research Program</item>
-        <item>Artemisia I</item>
-        <item>Numero primo illegale</item>
-        <item>Teiera di Russell</item>
-        <item>Wilhelm von Gloeden</item>
-        <item>Nonno di Panopoli</item>
-        <item>Ernesto Teodoro Moneta</item>
-        <item>Han Shot First</item>
-        <item>Censura nella Repubblica Democratica Tedesca</item>
-        <item>Sony timer</item>
-        <item>Cappello di carta stagnola</item>
-        <item>Merda d\'artista</item>
-        <item>UFO nazisti</item>
-        <item>Black Ivory</item>
-        <item>Leonarda Cianciulli</item>
-        <item>Pierre Virion</item>
-        <item>Tesoro dell\'Esquilino</item>
-        <item>Cristiano Augusto di Schleswig-Holstein-Sonderburg-Augustenburg (1768-1810)</item>
-        <item>Viaggiatori extratemporali</item>
-        <item>Disco protoplanetario</item>
-        <item>Ibrido grizzly-orso polare</item>
-        <item>Hello world</item>
-        <item>Lista di avvistamenti UFO</item>
-        <item>Teoria del complotto</item>
-        <item>Lista di gadget nei film di James Bond</item>
-        <item>Strada delle 52 gallerie</item>
-        <item>Metamodello</item>
-        <item>Llanhyfryddawelllehynafolybarcudprindanfygythiadtrienusyrhafnauole</item>
-        <item>The Beatles</item>
-        <item>Pericolo giallo</item>
-        <item>Benjaman Kyle</item>
-        <item>Guerra del calcio</item>
-        <item>Osculum infame</item>
-        <item>Effetto Pauli</item>
-        <item>Il Dio fumoso</item>
-        <item>Pianeta di carbonio</item>
-        <item>Erettore del pelo</item>
-        <item>Alto tedesco medio</item>
-        <item>Nakagin Capsule Tower</item>
-        <item>Chupacabra</item>
-        <item>Teoria del complotto sulle scie chimiche</item>
-        <item>Irredentismo italiano a Nizza</item>
-        <item>Marcello Truzzi</item>
-        <item>Discordianesimo</item>
-        <item>Frenologia</item>
-        <item>Debunker</item>
-        <item>The Boy Bands Have Won</item>
-        <item>Occulto</item>
-        <item>Guerra di Corea</item>
-        <item>Affare XYZ</item>
-        <item>Difficile lectu</item>
-        <item>Hibernia ed Impero Romano</item>
-        <item>Darwin Awards</item>
-        <item>Cryptex</item>
-        <item>Pelo libero</item>
-        <item>Teorie del complotto sul signoraggio</item>
-        <item>Paradosso del nonno</item>
-        <item>Grotta Son Doong</item>
-        <item>Zecche scozzesi</item>
-        <item>Cacatio matutina est tamquam medicina</item>
-        <item>John Taylor</item>
-        <item>Powers That Be</item>
-        <item>Iscrizione di Pilato</item>
-        <item>Bicicletta in bambù</item>
-        <item>Robert la Bambola</item>
-        <item>Promontorio dell\'Argentario</item>
-        <item>Detto, fatto!</item>
-        <item>Fiocco di neve di Koch</item>
-        <item>Legge di Jante</item>
-        <item>Programmazione neuro linguistica</item>
-        <item>Portsmouth Sinfonia</item>
-        <item>Rongorongo</item>
-        <item>Aka manto</item>
-        <item>Horace Wells</item>
-        <item>Cose che nessuno sa</item>
-        <item>Piedino (sessualità)</item>
-        <item>Scitala</item>
-        <item>Erich Hartmann</item>
-        <item>Aeroplanino di carta</item>
-        <item>Colonizzazione italiana delle Americhe</item>
-        <item>Mercurio rosso</item>
-        <item>Spostamento verso il rosso</item>
-        <item>Scomunica ai comunisti</item>
-        <item>Nemesis</item>
-        <item>Effetto Tetris</item>
-        <item>Congettura di protezione cronologica</item>
-        <item>Fucking</item>
-        <item>Italia-Francia (1910)</item>
-        <item>Magia</item>
-        <item>Piazza Umberto I (Capri)</item>
-        <item>Holocron</item>
-        <item>Burning Man</item>
-        <item>Linea di sangue di Gesù</item>
-        <item>NF-Board</item>
-        <item>Lucio Anneo Cornuto</item>
-        <item>Il mistero del Sacro Graal</item>
-        <item>Massa critica (ciclismo)</item>
-        <item>Spoonerismo</item>
-        <item>Lampadina centenaria</item>
-        <item>Legge di Murphy</item>
-        <item>Roberto Oros di Bartini</item>
-        <item>Maledizione delle risorse</item>
-        <item>Isola dei Fagiani</item>
-        <item>Facite ammuina</item>
-        <item>Leonid Rogozov</item>
-        <item>Fuoco greco</item>
-        <item>Code talker</item>
-        <item>Cher Ami</item>
-        <item>Eclissi solare del 20 marzo 2015</item>
-        <item>Tarzanide</item>
-        <item>Tex Winter</item>
-        <item>Tong zi dan</item>
-        <item>Fattoria dei corpi</item>
-        <item>Risposta alla domanda fondamentale sulla vita, l\'universo e tutto quanto</item>
-        <item>Bomba atomica da zaino</item>
-        <item>Jenny Haniver</item>
-        <item>Abito del medico della peste</item>
-        <item>Linguaggio degli SMS</item>
-        <item>Aeroporto di Courchevel</item>
-        <item>Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo</item>
-        <item>Ostrichetrancidipescesalatocagnoligattuccipezzidicefaloinsalsapiccantesilfiooliomieletordimerlicolombaccicolombellegallettilodolearrostocutrettolepiccioniselvaticilepricottenelvinocroccanticantuccini</item>
-        <item>Storia della frontiera sul Monte Bianco</item>
-        <item>Sorpresa!</item>
-        <item>Shoefiti</item>
-        <item>Peter Iredale</item>
-        <item>Olympias</item>
-        <item>Parelio</item>
-        <item>Flat Earth Society</item>
-        <item>Pseudostoria</item>
-        <item>La Zisa</item>
-        <item>Macchina di Anticitera</item>
-        <item>Bordello del campo di concentramento</item>
-        <item>Teoria di Olduvai</item>
-        <item>Mitologia Gong</item>
-        <item>Progetto Habakkuk</item>
-        <item>Repubblica rossa di Caulonia</item>
-        <item>I nove sconosciuti</item>
-        <item>Babbo Natale</item>
-        <item>Kakka</item>
-        <item>Tudor City</item>
-        <item>Tassa kosher</item>
-        <item>Cimatica</item>
-        <item>Mary Shelley</item>
-        <item>Saggio alla fiamma</item>
-        <item>Banana blu</item>
-        <item>Frattura del pene</item>
-        <item>Saint Kilda</item>
-        <item>Convegno dell\'hotel Parco dei Principi</item>
-        <item>Castello di Brissac</item>
-        <item>Licantropo</item>
-        <item>Anteo Zamboni</item>
-        <item>Messaggio di Arecibo</item>
-        <item>Cimitero monumentale di Messina</item>
-        <item>Fnord</item>
-        <item>Wolbachia</item>
-        <item>Calibro 89</item>
-        <item>Sepoltura da vivo</item>
-        <item>Polpo Paul</item>
-        <item>Stazioni fantasma della metropolitana di Berlino</item>
-        <item>Congetture del 1421 e del 1434</item>
-        <item>Cronovela</item>
-        <item>Confine tra il Regno Unito e la Spagna</item>
-        <item>Bordighera</item>
-        <item>Teoria ingenua degli insiemi</item>
-        <item>Allghoi Khorhoi</item>
-        <item>Raggio traente</item>
-        <item>Quasigruppo</item>
-        <item>Bohemian Grove</item>
-        <item>Denominazioni alleate dei velivoli giapponesi</item>
-        <item>Cooping</item>
-        <item>Rocco Petrone</item>
-        <item>Locomotiva Bayard</item>
-        <item>Letters of last resort</item>
-        <item>Tacchino induttivista</item>
-        <item>Hughes H-4 Hercules</item>
-        <item>chitarra acustica</item>
-        <item>Kitsune no Yomeiri</item>
-        <item>Dodo</item>
-        <item>Aginter Press</item>
-        <item>Bradley Manning</item>
-        <item>Passera scopaiola</item>
-        <item>Bufo bufo</item>
-        <item>Assiani (soldati mercenari)</item>
-        <item>Magic Roundabout</item>
-        <item>Oggetti non stellari nella costellazione di Cassiopea</item>
-        <item>Macchina dei Miracoli</item>
-        <item>Jack Churchill</item>
-        <item>Ho ho ho</item>
-        <item>Cappella Sansevero</item>
-        <item>Genocidio armeno</item>
-        <item>Cane Nero magna bella persica</item>
-        <item>Sfruttamento del 10% del cervello</item>
-        <item>Scatola Madre</item>
-        <item>Operazione Chaos</item>
-        <item>Tesoro di Hoxne</item>
-        <item>Polybius (videogioco)</item>
-        <item>Abbracci gratis</item>
-        <item>James while John had had had had had had had had had had had a better effect on the teacher</item>
-        <item>Uncanny valley</item>
-        <item>Hueyatlaco</item>
-        <item>Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu</item>
-        <item>Esperimento di Filadelfia</item>
-        <item>Big Hole</item>
-        <item>Gruppo Rondoi-Baranci</item>
-        <item>Cesare Lombroso</item>
-        <item>Oggetto sottomarino non identificato</item>
-        <item>Mutuno Tutuno</item>
-        <item>Cartello Phoebus</item>
-        <item>31 febbraio</item>
-        <item>Fernando Leoni</item>
-        <item>Tonoscopio</item>
-        <item>Unità 731</item>
-        <item>De situ Britanniae</item>
-        <item>Teorie del complotto sulla SARS</item>
-        <item>Elefante della Bastiglia</item>
-        <item>Postumo (Lucio Battisti)</item>
-        <item>Buco di Viso</item>
-        <item>Rapporto La Guardia</item>
-        <item>Movimento per l\'estinzione umana volontaria</item>
-        <item>Ipotesi del tempo fantasma</item>
-        <item>Potešnye vojska</item>
-        <item>Futuro della Terra</item>
-        <item>Abuso rituale satanico</item>
-        <item>Tregua di Natale</item>
-        <item>Pietro Camedda</item>
-        <item>Tuttomondo</item>
-        <item>Monowi</item>
-        <item>Specchio (immaginario)</item>
-        <item>Operazione Tannenbaum</item>
-        <item>Ordine del Bagno</item>
-        <item>Sceblasti</item>
-        <item>Violino a bastone</item>
-        <item>Virgola mobile</item>
-        <item>Incidente stradale di Bridget Driscoll</item>
-        <item>Munaciello</item>
-        <item>Maledizione di Superman</item>
-        <item>Longplayer</item>
-        <item>Uccello di Saqqara</item>
-        <item>Labirinto di Barnes</item>
-        <item>La Luisona</item>
-        <item>Curva spaziotemporale chiusa di tipo tempo</item>
-        <item>Gerbilling</item>
-        <item>Numeri pseudo-casuali</item>
-        <item>Chrysler Norseman</item>
-        <item>Tailleur rosa Chanel di Jacqueline Bouvier Kennedy</item>
-        <item>Teatro della Concordia (Monte Castello di Vibio)</item>
-        <item>Canal du Midi</item>
-        <item>Scala per pesci</item>
-        <item>Giovanni Gasti</item>
-        <item>Motoruota</item>
-        <item>The First Team</item>
-        <item>Paradosso temporale</item>
-        <item>Sergio Scaglietti</item>
-        <item>Die Glocke</item>
-        <item>Operazione Ruthless</item>
-        <item>Crinoidea</item>
-        <item>Turritopsis nutricula</item>
-        <item>Papiro Edwin Smith</item>
-        <item>Hégésippe Simon</item>
-        <item>Caso Taman Shud</item>
-        <item>Ragni fritti</item>
-        <item>Willis Tower</item>
-        <item>Elisabeth Freeman</item>
-        <item>Fortezze marittime Maunsell</item>
-        <item>Federazione Ginnastica d\'Italia</item>
-        <item>The quick brown fox jumps over the lazy dog</item>
-        <item>Fiori di Bach</item>
-        <item>Italiana 5 birilli</item>
-        <item>Neocreazionismo</item>
-        <item>Avventura testuale</item>
-        <item>Locomotiva DB 184</item>
-        <item>Fattoide</item>
-        <item>Quarto Reich</item>
-        <item>Dagen H</item>
-        <item>Solomon Northup</item>
-        <item>Ascensore spaziale</item>
-        <item>Georgia Guidestones</item>
-        <item>Kepler-64 b</item>
-        <item>Buco della memoria</item>
-        <item>Mano della Gloria</item>
-        <item>Guerra degli emù</item>
-        <item>Violino piccolo</item>
-        <item>Accordo di tredicesima</item>
-        <item>Fred Ott\'s Sneeze</item>
-        <item>Organ²/ASLSP</item>
-        <item>L\'arcobaleno</item>
-        <item>Teoria del complotto del Nuovo ordine mondiale</item>
-        <item>Pranoterapia</item>
-        <item>Premio Oscar</item>
-        <item>Rivarossi</item>
-        <item>Schiacciamento da elefante</item>
-        <item>Unione degli Atei e degli Agnostici Razionalisti</item>
-        <item>Pietra runica di Kensington</item>
-        <item>Charles Fort</item>
-        <item>Materia strana</item>
-        <item>d3o</item>
-        <item>69º Gran Premio Indianopolis</item>
-        <item>Alimentazione medievale</item>
-        <item>Aerodrome A</item>
-        <item>USS Arizona (BB-39)</item>
-        <item>Flibbiddydibbiddydob</item>
-        <item>Teoria degli antichi astronauti</item>
-        <item>Magia bianca</item>
-        <item>RealDoll</item>
-        <item>Pierino (barzellette)</item>
-        <item>Messaggio subliminale</item>
-        <item>Zercone</item>
-        <item>Gol fantasma</item>
-        <item>Nautilus (Verne)</item>
-        <item>Manifesto della cucina futurista</item>
-        <item>Macchina dei sogni</item>
-        <item>Serafino (tifoso)</item>
-        <item>The Skeptic\'s Dictionary</item>
-        <item>Matrice del comando</item>
-        <item>Idrocolonterapia</item>
-        <item>Bestiarius</item>
-        <item>Mayday</item>
-        <item>Il cancro è un fungo</item>
-        <item>Raid di Tondern</item>
-        <item>Pollice verso</item>
-        <item>Milizia Tradizionale di Calasca</item>
-        <item>Guerrillero Heroico</item>
-        <item>Limite K-T</item>
-        <item>Viola organista</item>
-        <item>Serie UP</item>
-        <item>Associazione Calcio Perugia 1978-1979</item>
-        <item>Eterocromia</item>
-        <item>Ruota degli esposti</item>
-        <item>Teoria del pazzo</item>
-        <item>Guerra anglo-zanzibariana</item>
-        <item>Colonizzazione curlandese delle Americhe</item>
-        <item>Morbo di Pompe</item>
-        <item>Patriottismo insetticida</item>
-        <item>Lettera di Bixby</item>
-        <item>Uomo selvatico</item>
-        <item>Tal der Ahnungslosen</item>
-        <item>Sistema ticonico</item>
-        <item>Lonesome George</item>
-        <item>Maledizione del Bambino</item>
-        <item>Aura (medicina)</item>
-        <item>Nuraghe</item>
-        <item>Razza ariana</item>
-        <item>Alieni nordici</item>
-        <item>Morris Jessup</item>
-        <item>Quasi-guerra</item>
-        <item>London Beer Flood</item>
-        <item>Didi Senft</item>
-        <item>Cervellato</item>
-        <item>Iridologia</item>
-        <item>Pegaso (mitologia)</item>
-        <item>Morte di Diana Spencer</item>
-        <item>Eva Klotz</item>
-        <item>Bull-baiting</item>
-        <item>Amuleto</item>
-        <item>Sassi di Matera</item>
-        <item>Pietro Conti (1796-1856)</item>
-        <item>Labirinto della Masone</item>
-        <item>Bruce Lipton</item>
-        <item>Corvi della Torre di Londra</item>
-        <item>Psiconeuroendocrinoimmunologia</item>
-        <item>Casalinga di Voghera</item>
-        <item>Rrröööaaarrr</item>
-        <item>Spigolamento abusivo</item>
-        <item>Gigante di Cardiff</item>
-        <item>Re Davide (leggenda)</item>
-        <item>Studio sulla sifilide di Tuskegee</item>
-        <item>Lista_dei_più_grandi_pezzi_di_artiglieria_per_calibro</item>
-        <item>Ronald Mallett</item>
-        <item>Girolamo Ortis</item>
-        <item>Equus quagga quagga</item>
-        <item>Teorema spettrale</item>
-        <item>Autoalveare</item>
-        <item>Gulo gulo</item>
-        <item>L\'arrivo di un treno alla stazione di La Ciotat</item>
-        <item>Pino sulla Sponda del Lago Maggiore</item>
-        <item>Provincia di Batman</item>
-        <item>Botte volante</item>
-        <item>Protocolli dei Savi di Sion</item>
-        <item>Ed Alonzo</item>
-        <item>Cultura dei telefoni cellulari in Giappone</item>
-        <item>Invisibile Unicorno Rosa</item>
-        <item>Canto delle dame</item>
-        <item>Ripetizione dilazionata</item>
-        <item>Catenano</item>
-        <item>Bentley State Limousine</item>
-        <item>Destino ultimo dell\'universo</item>
-        <item>Fate di Cottingley</item>
-        <item>Giapeto</item>
-        <item>Nido di rondine</item>
-        <item>Drapetomania</item>
-        <item>Cane cinese Chongqing</item>
-        <item>Bomba Zar</item>
-        <item>Bardenas Reales</item>
-        <item>Operazione Chastise</item>
-        <item>Christopher McCandless</item>
-        <item>Leggenda della morte di Paul McCartney</item>
-        <item>Surf sulla folla</item>
-        <item>Museo delle anime del Purgatorio</item>
-        <item>Mark Boyle</item>
-        <item>Stemma di Siena</item>
-        <item>Ma con gran pena le reca giù</item>
-        <item>Cinisca</item>
-        <item>Corpo grottesco</item>
-        <item>Bandiera terrestre</item>
-        <item>Australia-Samoa Americane 31-0</item>
-        <item>Santo Prepuzio</item>
-        <item>Controversia di Praga</item>
-        <item>Cappellone degli Spagnoli</item>
-        <item>Macchia fredda nella radiazione cosmica di fondo</item>
-        <item>TARDIS</item>
-        <item>Sudicio Rinverdito</item>
-        <item>Glicone</item>
-        <item>Fine del mondo</item>
-        <item>Punto di Feynman</item>
-        <item>Cospirazione della General Motors</item>
-        <item>Leggenda nera dell\'Inquisizione</item>
-        <item>Grande Macchia Rossa</item>
-        <item>Digivice</item>
-        <item>Petalismo</item>
-        <item>Cacopedia</item>
-        <item>Porta Alchemica</item>
-        <item>Negazionismo dell\'Olocausto</item>
-        <item>Principato di Sealand</item>
-        <item>NESARA</item>
-        <item>CHE/COSA/TE/NE/FAI/DI/UN/TITOLO</item>
-        <item>Les Fastes de la grande et ancienne Mxnxstrxndxsx</item>
-        <item>Gata Carogna</item>
-        <item>Gödel, Escher, Bach: un\'eterna ghirlanda brillante</item>
-        <item>Ancoraggio (PNL)</item>
-        <item>Architettura di un processore basato su registri generali</item>
-        <item>Alice Prin</item>
-        <item>Autoleone</item>
-        <item>Stati per consumo di birra pro capite</item>
-        <item>Kolinahr</item>
-        <item>Blakennomion</item>
-        <item>Gallerie del monte Soratte</item>
-        <item>Stadium</item>
-        <item>Moto di puro rotolamento</item>
-        <item>Emerenzia</item>
-        <item>Optofono</item>
-        <item>Penis captivus</item>
-        <item>Aelia Laelia Crispis</item>
-        <item>Technobabble</item>
-        <item>I cancelli del cielo</item>
-        <item>Museum of Bad Art</item>
-        <item>Specie aliena</item>
-        <item>Craniopagus parasiticus</item>
-        <item>Vincenzo Tiberio</item>
-        <item>Vuvuzela</item>
-        <item>Kalakukko</item>
-        <item>Cioccolato delle forze armate statunitensi</item>
-        <item>Orologio dell\'apocalisse</item>
-        <item>Porta del Tempo</item>
-        <item>Varietà invariante</item>
-        <item>Toilette in Giappone</item>
-        <item>Archeologia misteriosa</item>
-        <item>Beffa del monossido di diidrogeno</item>
-        <item>Piede da trincea</item>
-        <item>Nottolino browniano</item>
-        <item>Irukandji</item>
-        <item>Pionieri mormoni con carretto a mano</item>
-        <item>Ferrovia della Jungfrau</item>
-        <item>Roar (nome)</item>
-        <item>Rolfing</item>
-        <item>Cosmonauti perduti</item>
-        <item>Coppa del mondo VIVA</item>
-        <item>Isola Budelli</item>
-        <item>Ambystoma mexicanum</item>
-        <item>Labirinto di Cnosso</item>
-        <item>Uovo con gallina</item>
-        <item>Profezie sul 21 dicembre 2012</item>
-        <item>Sindrome di Parigi</item>
-        <item>Adam Kadmon (personaggio)</item>
-        <item>Carlo Urbani</item>
-        <item>Teoria del complotto sull\'attacco di Pearl Harbor</item>
-        <item>Monte Testaccio</item>
-        <item>Pizzaiolo acrobatico</item>
-        <item>Boeing X-43</item>
-        <item>Volo Aeroflot 593</item>
-        <item>2012 DA14</item>
-        <item>Villa Mocenigo (Marocco)</item>
-        <item>RoboCup</item>
-        <item>Ilse Koch</item>
-        <item>Laboratorio di Zetetica</item>
-        <item>Interzato in grembo appuntato</item>
-        <item>Cleptocrazia</item>
-        <item>Friendly Floatees</item>
-        <item>Ipotesi sull\'elezione papale di Giuseppe Siri</item>
-        <item>Diamante del fabbricante di cucchiai</item>
-        <item>Chiasmodon niger</item>
-        <item>Dita a V</item>
-        <item>Malarioterapia</item>
-        <item>La prigione (opera teatrale)</item>
-        <item>Hexakosioihexekontahexafobia</item>
-        <item>Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch</item>
-        <item>Fantawestern</item>
-        <item>Satelliti naturali di Marte</item>
-        <item>Città di transizione</item>
-        <item>Borghi putridi</item>
-        <item>Derweze</item>
-        <item>Stronzate. Un saggio filosofico</item>
-        <item>Jack il saltatore</item>
-        <item>Cross (album)</item>
-        <item>Effetto Holtzman</item>
-        <item>Pianoforte a gatti</item>
-        <item>Getto blu</item>
-        <item>Lingua della suocera</item>
-        <item>Paradosso del mentitore</item>
-        <item>Meretrix</item>
-        <item>Piramidologia</item>
-        <item>Sindrome di Fregoli</item>
-        <item>Antigravità</item>
-        <item>Idroscalo di Torino</item>
-        <item>Viaggio immaginario</item>
-        <item>Cropsey</item>
-        <item>Sbarramento Pian dei Morti</item>
-        <item>La nave e il faro (leggenda metropolitana)</item>
-        <item>Jon Frum</item>
-        <item>Watch the K Foundation Burn a Million Quid</item>
-        <item>Vergine di Norimberga</item>
-        <item>Pioggia di animali</item>
-        <item>L\'opera da tre soldi</item>
-        <item>Donaudampfschiffahrtselektrizitätenhauptbetriebswerkbauunterbeamtengesellschaft</item>
-        <item>Corpus Clock</item>
-        <item>Toussaint Louverture</item>
-        <item>...4..3..2..1...morte</item>
-        <item>Bella \'mbriana</item>
-        <item>Vaso di Dorchester</item>
-        <item>Traduttore universale</item>
-        <item>Criosollevamento</item>
-        <item>Sismoscopio di Zhang Heng</item>
-        <item>Raimondo di Sangro</item>
-        <item>Boomdotto</item>
-        <item>Razzie Award alla peggior sceneggiatura</item>
-        <item>Monastero di Santa Caterina (Egitto)</item>
-        <item>Paradosso della predestinazione</item>
-        <item>Scazzamurrieddhru</item>
-        <item>Mil Mi-12</item>
-        <item>Il naufragio del Titan</item>
-        <item>Emicrania da gelato</item>
-        <item>Agloe</item>
-        <item>Eric Moussambani</item>
-        <item>Uomo falena</item>
-        <item>Chicken tikka masala</item>
-        <item>Bullshit!</item>
-        <item>Pioggia rossa in Kerala</item>
-        <item>Globus Cassus</item>
-        <item>Calendario sexy</item>
-        <item>Lingua artificiale</item>
-        <item>Satellite KEO</item>
-        <item>Clinica Burzynski</item>
-        <item>Genio del male</item>
-        <item>Armonica a bicchieri</item>
-        <item>Riordino dei musei del Castello Sforzesco</item>
-        <item>SS Schenectady</item>
-        <item>Cervello positronico</item>
-        <item>Sacrario militare di Redipuglia</item>
-        <item>Domenico Mastini</item>
-        <item>Teoria del complotto lunare</item>
-        <item>Tafazzi</item>
-        <item>Servizio P</item>
-        <item>Gropecunt Lane</item>
-        <item>Pascalina</item>
-        <item>Fontana delle tette</item>
-        <item>Abraham de Moivre</item>
-        <item>Buonadonna</item>
-        <item>Noetica (pseudoscienza)</item>
-        <item>Acámbaro</item>
-        <item>Affinità-divergenze fra il compagno Togliatti e noi - Del conseguimento della maggiore età</item>
-        <item>Per Euxenippo</item>
-        <item>Labirinto acquatico di Morris</item>
-        <item>Albero del Ténéré</item>
-        <item>Principio di autoconsistenza di Novikov</item>
-        <item>Strada guidata</item>
-        <item>Yonaguni</item>
-        <item>Bo (nome)</item>
-        <item>Leo Pardi</item>
-        <item>Interpretazione a molti mondi</item>
-        <item>Inugami</item>
-        <item>Respirazione olotropica</item>
-        <item>Moltiplicatore monetario</item>
-        <item>Altrove (fumetto)</item>
-        <item>Aeroporto di Lukla</item>
-        <item>Carrozza_Centoporte</item>
-        <item>Paga quello che vuoi</item>
-        <item>Prescienza</item>
-        <item>Club 27</item>
-        <item>Pietre di Ica</item>
-        <item>Contessina Selvaggia Serbelloni Mazzanti Viendalmare</item>
-        <item>Linda Burfield Hazzard</item>
-        <item>Mona (nome)</item>
-        <item>Canguro fantasma</item>
-        <item>Lago di Ha! Ha!</item>
-        <item>Lingerie Football League</item>
-        <item>Morte da ventilatore</item>
-        <item>Da Atlantide alla Sfinge</item>
-        <item>Ponte di Einstein-Rosen</item>
-        <item>30 febbraio</item>
-        <item>Effetto Leidenfrost</item>
-        <item>Architettura eoliana</item>
-        <item>Spada dell\'Islam</item>
-        <item>274301 Wikipedia</item>
-        <item>Sinarchia</item>
-        <item>Miracolo eucaristico di Lanciano</item>
-        <item>Frontiera dei portafogli</item>
-        <item>Cimitero delle 366 Fosse</item>
-        <item>Baldwin Street</item>
-        <item>Guerra dei trecentotrentacinque anni</item>
-        <item>Ittioterapia</item>
-        <item>Scemo del villaggio</item>
-        <item>Fotografie post mortem</item>
-        <item>Antonov An-225 Mriya</item>
-        <item>Googol</item>
-        <item>Accoppiamento vibronico</item>
-        <item>Tarrare</item>
-        <item>Sperrbrecher</item>
-        <item>Emmy Noether</item>
-        <item>Joseph Pujol</item>
-        <item>Intervista a Marco Travaglio a Satyricon</item>
-        <item>Messaggio in bottiglia</item>
-        <item>Procedimenti giudiziari a carico di Oscar Wilde</item>
-        <item>Numero di Erdős</item>
-        <item>Pianta mangia-uomini</item>
-        <item>Imperial Camel Corps</item>
-        <item>Edgar Cayce</item>
-        <item>Labirinto di Lemno</item>
-        <item>Immondo corruttore</item>
-        <item>Orbitale di Banks</item>
-        <item>Viola pomposa</item>
-        <item>2160p</item>
-        <item>Aci Trezza</item>
-        <item>Manhattanhenge</item>
-        <item>Arrocco Pam-Krabbé</item>
-        <item>Pianeti immaginari</item>
-        <item>Acciaio effervescente</item>
-        <item>Margherita Teresa d\'Asburgo</item>
-        <item>Great Blue Hole</item>
-        <item>Pierre Plantard</item>
-        <item>Time ball</item>
-        <item>Kaman K-MAX</item>
-        <item>Sepolcro di Matteo Ferrillo</item>
-        <item>Bambini indaco</item>
-        <item>Automobile a vapore</item>
-        <item>Assedio di Waco</item>
-        <item>2M1207 b</item>
-        <item>Cerro Torre</item>
-        <item>Aquila delle Scimmie</item>
-        <item>Helltown</item>
-        <item>Labirinto di siepi</item>
-        <item>Balena 52-hertz</item>
-        <item>Parco dei Mostri</item>
-        <item>Fahrenheit 451</item>
-        <item>Uomo dei Miracoli</item>
-        <item>ISBN</item>
-        <item>Nazireato</item>
-        <item>William Windsor (capra)</item>
-        <item>Leggenda metropolitana</item>
-        <item>Supercazzora</item>
-        <item>Leggenda sulle coincidenze Lincoln-Kennedy</item>
-        <item>Mike il pollo senza testa</item>
-        <item>Paradosso del formaggio coi buchi</item>
-        <item>Batteria di Baghdad</item>
-        <item>Guerra degli scimpanzé del Gombe</item>
-        <item>Chiese di Chiloé</item>
-        <item>Punto triplo</item>
-        <item>Piaga del Ballo</item>
-        <item>Passaggio per pesci</item>
-        <item>Ryugyong Hotel</item>
-        <item>Schwäbische Hausfrau</item>
-        <item>Chesley Bonestell</item>
-        <item>Segnaletica e allestimento della Metropolitana Milanese</item>
-        <item>Team Hoyt</item>
-        <item>Ada Lovelace</item>
-        <item>Dalton Highway</item>
-        <item>Sfera di Dyson</item>
-        <item>Il Club Bilderberg</item>
-        <item>Guardia corsa papale</item>
-        <item>English as She Is Spoke</item>
-        <item>Base 211</item>
-        <item>Alfa Centauri Bb</item>
-        <item>Vista dalla finestra a Le Gras</item>
-        <item>Superleggera (sedia)</item>
-        <item>Ammasso aperto</item>
-        <item>Atlanta Nights</item>
-        <item>Pornocrazia</item>
-        <item>Pokémon shock</item>
-        <item>Pseudoscienza</item>
-        <item>Vestito verde Versace di Jennifer Lopez</item>
-        <item>Albero di Jesse</item>
-        <item>Oscar (gatto)</item>
-        <item>Secondo Pollo</item>
-        <item>Test di Turing</item>
-        <item>Scudo deflettore</item>
-        <item>Bunga bunga</item>
-        <item>Elettrosensibilità</item>
-        <item>Brooks Agnew</item>
-        <item>Amenukal dei Kel Adagh</item>
-        <item>The Vegetable Orchestra</item>
-        <item>SM U-118</item>
-        <item>Bubo bubo</item>
-        <item>Nano cervello</item>
-        <item>Oro nazista</item>
-        <item>Alligatori nelle fogne</item>
-        <item>Demon core</item>
-        <item>Ayahuasca</item>
-        <item>Carlos Castaneda</item>
-        <item>Bigfoot</item>
-        <item>Vadim Aleksandrovič Černobrov</item>
-        <item>Vagina dentata</item>
-        <item>Trotula de Ruggiero</item>
-        <item>Pianeta artificiale</item>
-        <item>Finocchiona</item>
-        <item>Charles-André Merda</item>
-        <item>Agopuntura</item>
-        <item>Isole della Delusione</item>
-        <item>Women Airforce Service Pilots</item>
-        <item>Il santo Graal (saggio)</item>
-        <item>Rotolamento di uova</item>
-        <item>Effetto Kulešov</item>
-        <item>Esperimento Rosenhan</item>
-        <item>Dogon</item>
-        <item>ICEHOTEL</item>
-        <item>Bosco Verticale</item>
-        <item>Sagittarius A*</item>
-        <item>Piccola Scala</item>
-        <item>Fluorizzazione dell\'acqua</item>
-        <item>Minareto di Fasano</item>
-        <item>Osservatorio astronomico Sphinx</item>
-        <item>Chiesa di San Giovanni (Cerreto Sannita)</item>
-        <item>Stati Uniti d\'Europa</item>
-        <item>Bart Sibrel</item>
-        <item>Concursante</item>
-        <item>Skull and Bones</item>
-        <item>Hoverboard</item>
-        <item>Raid Roma-Tokyo</item>
-        <item>Anno_senza_estate</item>
-        <item>Football Club Internazionale Milano</item>
-        <item>Allevamento di schiavi negli Stati Uniti</item>
-        <item>Citrus aurantium bizzarria</item>
-        <item>Cicceide</item>
-        <item>Stazioni fantasma della metropolitana di Parigi</item>
-        <item>Fuga geografica</item>
-        <item>Misticismo quantico</item>
-        <item>Caproni Ca.60 Transaereo</item>
-        <item>Cavallo islandese</item>
-        <item>Ponte delle Tette</item>
-        <item>Principessa Mafalda</item>
-        <item>Fionda gravitazionale</item>
-        <item>Salto di Bidone</item>
-        <item>Combattimento con le uova</item>
-        <item>Rinascimento cesenate</item>
-        <item>Casu marzu</item>
-        <item>Concordia (Antartide)</item>
-        <item>Obsolescenza programmata</item>
-        <item>Up Up Up Up Up Up</item>
-        <item>Bobobo-bo Bo-bobo</item>
-        <item>Snopes</item>
-        <item>Primo cubano</item>
-        <item>Durlindana</item>
-        <item>In girum imus nocte et consumimur igni</item>
-        <item>Glossario delle frasi fatte</item>
-        <item>Paperone de\' Paperoni</item>
-        <item>Moschetto Balilla</item>
-        <item>Paradosso del gatto imburrato</item>
-        <item>Forme uniche della continuità nello spazio</item>
-        <item>Palazzo Cheval</item>
-        <item>Fiat N.3</item>
-        <item>Paradosso di Achille e la tartaruga</item>
-        <item>cobra di Pugačëv</item>
-        <item>Museo archeologico virtuale</item>
-        <item>Costanti di accoppiamento</item>
-        <item>Teatro all\'italiana</item>
-        <item>Dilemma del prigioniero</item>
-        <item>Zuffa tra Pompeiani e Nocerini</item>
-        <item>Piramidi bosniache</item>
-        <item>Faro di Tiberio</item>
-        <item>Stuxnet</item>
-        <item>Central-Mid levels escalator</item>
-        <item>Scala di Scoville</item>
-        <item>Enneagramma della personalità</item>
-        <item>Joshua A. Norton</item>
-        <item>P♡P</item>
-        <item>Sindrome respiratoria mediorientale da Coronavirus</item>
-        <item>San Lucifero</item>
-        <item>Siege Perilous (fumetto)</item>
-        <item>Anomalia dell\'Ararat</item>
-        <item>Fiat Tagliero</item>
-        <item>Pila a combustibile ad acqua di Stanley Meyer</item>
-        <item>Satis elucet maiorem habere vim ad discendum liberam curiositatem quam meticulosam necessitatem</item>
-        <item>Battaglione sacro</item>
-        <item>I segreti perduti della tecnologia nazista</item>
-        <item>Canale della Mona</item>
-        <item>Wikipedia:Clausola della palla di neve</item>
-        <item>Sindrome di Alice nel Paese delle Meraviglie</item>
-        <item>Elettrotreno FS ETR 400</item>
-        <item>RRRrrrr!!!</item>
-        <item>L\'uomo che sconfisse il boogie</item>
-        <item>Lampade di Dendera</item>
-        <item>Agnello vegetale della Tartaria</item>
-        <item>Bartitsu</item>
-        <item>Ecce Homo (Elías García Martínez)</item>
-        <item>Bendis</item>
-        <item>Monte Athos</item>
-        <item>Benandanti</item>
-        <item>Bücherverbrennungen</item>
-        <item>Vestito di carne di Lady Gaga</item>
-        <item>Controversia sulla remissione della scomunica al vescovo Richard Williamson</item>
-        <item>Elefante da guerra</item>
-        <item>Memoria del mondo</item>
-        <item>Satellite Black Knight</item>
-        <item>Tormentone estivo</item>
-        <item>NIAI RK-I</item>
-        <item>Terapia di conversione</item>
-        <item>Charles Domery</item>
-        <item>Maneki neko</item>
-        <item>Paradosso del barbiere</item>
-        <item>Teteun</item>
-        <item>Guglielmo Braccio di Ferro</item>
-        <item>Microchip (impianto umano)</item>
-        <item>Miodesopsie</item>
-        <item>Piezonucleare</item>
-        <item>Sepoltura dei videogiochi Atari</item>
-        <item>VY Canis Majoris</item>
-        <item>Sol Invictus</item>
-        <item>Fetus in fetu</item>
-        <item>Piccola era glaciale</item>
-        <item>Pastafarianesimo</item>
-        <item>Tartaruga delle Galapagos</item>
-        <item>Argentinosaurus huinculensis</item>
-        <item>Percorso del cavallo</item>
-        <item>Sci estremo</item>
-        <item>Viktoria Savs</item>
-        <item>Effetto Streisand</item>
-        <item>Cronovisore</item>
-        <item>Armiamoci e partite</item>
-        <item>Hameau de la Reine</item>
-        <item>NORAD Tracks Santa</item>
-        <item>UVB-76</item>
-        <item>Tûranor PlanetSolar</item>
-        <item>Anopticon</item>
-        <item>Rapport</item>
-        <item>Colonna di Ferro</item>
-        <item>Utero artificiale</item>
-        <item>Fuente Magna</item>
-        <item>Alessandra Giliani</item>
-        <item>Morte di Giovanni Paolo I</item>
-        <item>HD 80606 b</item>
-        <item>Tubo di Krasnikov</item>
-        <item>Operazione Highjump</item>
-        <item>Salita in discesa</item>
-        <item>Qualunquone</item>
-        <item>Rinoceronte (Dürer)</item>
-        <item>Teorie del complotto sull\'attentato al World Trade Center dell\'11 settembre 2001</item>
-        <item>Bosco dell\'Alevé</item>
-        <item>Clairvius Narcisse</item>
-        <item>Tardigrada</item>
-        <item>Sindrome itai-itai</item>
-        <item>Bixi</item>
-        <item>D\'oh!</item>
-        <item>Transnistria</item>
-        <item>Analogo solare</item>
-        <item>Boom sonico</item>
-        <item>Giufà</item>
-        <item>Aron Ralston</item>
-        <item>Cioccolismo</item>
-        <item>St. Mary\'s (metropolitana di Londra)</item>
-        <item>Chiesa di Santa Passera</item>
-        <item>Bushismo</item>
-        <item>Come farsi una cultura mostruosa</item>
-        <item>Begich Towers Condominium</item>
-        <item>Allium ascalonicum</item>
-        <item>Jona 10</item>
-        <item>Chemurgia</item>
-        <item>Battaglioni femminili della morte</item>
-        <item>Urban Legends</item>
-        <item>Diritto reale di godimento</item>
-        <item>Sciovinismo del carbonio</item>
-        <item>Cospirazione della sorpresa d\'ottobre</item>
-        <item>Sale himalayano</item>
-        <item>Effetto Mozart</item>
-        <item>Radioso maggio</item>
-        <item>Savinien Cyrano de Bergerac</item>
-        <item>La Scarzuola</item>
-        <item>Gruppo Bilderberg</item>
-        <item>Piramidi di Pantiacolla</item>
-        <item>Geode di Coso</item>
-        <item>Precipitevolissimevolmente</item>
-        <item>La linea di sangue del Santo Graal</item>
-        <item>Dahu</item>
-        <item>Placca dei Pioneer</item>
-        <item>Sorelle della Perpetua Indulgenza</item>
-        <item>Porta Palatina</item>
-        <item>Digosville</item>
-        <item>Bioritmo</item>
-        <item>Steorn</item>
-        <item>Paradosso del gatto di Schrödinger</item>
-        <item>Muro marocchino</item>
-        <item>Monastero di Santa Caterina</item>
-        <item>Dispositivo di occultamento</item>
-        <item>Fontana (Duchamp)</item>
-        <item>Elvis\' Greatest Shit</item>
-        <item>I vitelli dei romani sono belli</item>
-        <item>Eruttazione</item>
-        <item>Acquedotto Carolino</item>
-        <item>Temporale di neve</item>
-        <item>Headington Shark</item>
-        <item>Esplosione della carcassa di un cetaceo</item>
-        <item>Supercalifragilistichespiralidoso</item>
-        <item>Miracolina</item>
-        <item>Elepoli</item>
-        <item>John Titor</item>
-        <item>San Guinefort</item>
-        <item>Macchina che legge e che scrive</item>
-        <item>Linothorax</item>
-        <item>Testa di Oliver Cromwell</item>
-        <item>Cacciavite sonico</item>
-        <item>Regola dei cinque secondi</item>
-        <item>Teoria della Terra cava</item>
-        <item>HE 1523-0901</item>
-        <item>Sarchiapone</item>
-        <item>Arcobaleno lunare</item>
-        <item>Giovanni Antonio Amedeo Plana</item>
-        <item>Fabbriche di Careggine</item>
-        <item>Hahaha</item>
-        <item>Coleottero bombardiere</item>
-        <item>Physalia physalis</item>
-        <item>Una struttura di archivio, per l\'insieme, per il cambiamento e per l\'indeterminato</item>
-        <item>Nido dell\'Aquila</item>
-        <item>Putsch di Monaco</item>
-        <item>Lingua artistica</item>
-        <item>Air guitar</item>
-        <item>Madonna del manganello</item>
-        <item>Mary Toft</item>
-        <item>Pipetta Pasteur</item>
-        <item>Tromba marina (strumento musicale)</item>
-        <item>Priorato di Sion</item>
-        <item>H.L._Hunley</item>
-        <item>Toire no Hanako-san (folclore)</item>
-        <item>Blue Star Acid</item>
-        <item>Consonno</item>
-        <item>Scimmia Skunk</item>
-        <item>Cimitero delle Fontanelle</item>
-        <item>The Company of Undertakers</item>
-        <item>Teletrasporto</item>
-        <item>Villa dei Misteri</item>
-        <item>Santa Nonna</item>
-        <item>Razzismo scientifico</item>
-        <item>Lingua romanza d\'Africa</item>
-        <item>Labirinto di Meride</item>
-        <item>Ammasso della Chioma</item>
-        <item>Olivetti Elea 9003</item>
-        <item>Religione Jedi nei censimenti</item>
-        <item>Le due Babilonie</item>
-        <item>Escopetarra</item>
-        <item>Pantalica</item>
-        <item>Treno turbogetto</item>
-        <item>Sei gradi di separazione</item>
-        <item>Arco (lampada)</item>
-        <item>Lettera del Diavolo</item>
-        <item>Tabi</item>
-        <item>Minuto di 61 secondi</item>
-        <item></item>
-        <item>Kunsthaus Tacheles</item>
-        <item>The Brig</item>
-        <item>Lorem ipsum</item>
-        <item>Casu frazigu</item>
-        <item>Batracomiomachia</item>
-        <item>Ora del Garda</item>
-        <item>Frislanda</item>
-        <item>Pacific Trash Vortex</item>
-        <item>Giraffa dei Medici</item>
-        <item>Thomas Midgley</item>
-        <item>Alert</item>
-        <item>Coober Pedy</item>
-        <item>Cosmic latte</item>
-        <item>Metropolitan Life Insurance Company Tower</item>
-        <item>Battaglione \"Azad Hindoustan\"</item>
-        <item>Giuseppe Castiglione</item>
-        <item>Bouncing bomb</item>
-        <item>Teorema della scimmia instancabile</item>
-        <item>Berta filava</item>
-        <item>Love Canal</item>
-        <item>Il poeta mangiatore di leoni nel covo di pietra‎</item>
-        <item>Caccia parassita</item>
-        <item>Santi di ghiaccio</item>
-        <item>Kormoran (HSK 8)</item>
-        <item>Motivi geometrici islamici</item>
-        <item>Franz Reichelt</item>
-        <item>Séraphine de Senlis</item>
-        <item>La nona onda</item>
-        <item>Raggio verde</item>
-        <item>Organo del Boardwalk Hall Auditorium</item>
-        <item>King Camp Gillette</item>
-        <item>CG 36500</item>
-        <item>Fulmine globulare</item>
-        <item>Leelah Alcorn</item>
-        <item>Bottiglia Codd</item>
-        <item>Silbo gomero</item>
-        <item>Mummia di Manchester</item>
-        <item>Monte Stella (Milano)</item>
-        <item>Synsepalum dulcificum</item>
-        <item>Frank Lentini</item>
-        <item>Sindrome_di_Stendhal</item>
-        <item>Bomber stream</item>
-        <item>Macchine anatomiche</item>
-        <item>Ambasciatori (Holbein il Giovane)</item>
-        <item>Incidente di Gleiwitz</item>
-        <item>Operazione Chrome Dome</item>
-        <item>Ab anbar</item>
-        <item>Coseano</item>
-        <item>Clavier à lumières</item>
-        <item>Torre Guinigi</item>
-        <item>Guerra meteorologica (1940-1945)</item>
-        <item>Elephant walk</item>
-        <item>Jim Abbott</item>
-        <item>Dingo Fence</item>
-        <item>Fiat Mefistofele</item>
-        <item>D.B. Cooper</item>
-        <item>sindrome della mano aliena</item>
-        <item>Rappresentativa Calcistica Dipendenti Vaticani</item>
-        <item>Battaglia dell\'Isola Ramree</item>
-        <item>Isola delle Rose (micronazione)</item>
-        <item>Kitty Genovese</item>
-        <item>Volto su Marte</item>
-        <item>Tumore facciale del diavolo</item>
-        <item>Pykrete</item>
-        <item>The Elements</item>
-        <item>Deflategate</item>
-        <item>Alfabeto Deseret</item>
-        <item>Strada del Karakorum</item>
-        <item>Tarzan Boy</item>
-        <item>Suolo poligonale</item>
-        <item>Digit ratio</item>
-        <item>Moresnet</item>
-        <item>Perito (astronomia)</item>
-        <item>Hákarl</item>
-        <item>Autoscatto del macaco</item>
-        <item>Elvavrålet</item>
-        <item>Repubblica di Cospaia</item>
-        <item>Aeroporto di Barra</item>
-        <item>Alan Smithee</item>
-        <item>Ambasciata Tenshō</item>
-        <item>Sinodo del cadavere</item>
-        <item>Centralia (Pennsylvania)</item>
-        <item>Citrus bizzarria</item>
-        <item>Calitri</item>
-        <item>Disco di Festo</item>
-        <item>588º Reggimento bombardamento notturno</item>
-        <item>Uomo di Tollund</item>
-        <item>Moretto fiumano</item>
-        <item>Balaeniceps rex</item>
-        <item>Isabella di Morra</item>
-        <item>Signora di Brassempouy</item>
-        <item>Psiconautica</item>
-        <item>Horsetail Fall</item>
-        <item>Avvelenamento di massa di Pont-Saint-Esprit</item>
-        <item>Casa sulle nuvole</item>
-        <item>Dreamachine</item>
-        <item>Otaku</item>
-        <item>Beffa della Dreadnought</item>
-        <item>War_of_the_Worlds_(programma_radiofonico)</item>
-        <item>Effetto Dunning-Kruger</item>
-        <item>Seawise Giant</item>
-        <item>Box junction</item>
-        <item>Vallone dei Mulini</item>
-        <item>Muretto di Alassio</item>
-        <item>B. Traven</item>
-        <item>Settembre eterno</item>
-        <item>Galleria dell\'Eufrate</item>
-        <item>Panthera leo persica</item>
-        <item>Tyrrell P34</item>
-        <item>Pando (albero)</item>
-        <item>Alaska Railroad</item>
-        <item>Cunicoli di Claudio</item>
-        <item>Inter-Services and Dominions Rugby Championship</item>
-        <item>Bestia del Gévaudan</item>
-        <item>Off the Wall (album Michael Jackson)</item>
-        <item>80 cm K (E)</item>
-        <item>Victor Lustig</item>
-        <item>Linciaggio di Jesse Washington</item>
-        <item>Yanar Dag</item>
-        <item>Dickin Medal</item>
-        <item>Giorno del pi greco</item>
-        <item>Filatoio Rosso di Caraglio</item>
-        <item>Maddalena Ventura con il marito e il figlio</item>
-        <item>Bosio &amp; Caratsch</item>
-        <item>Fortezza di San Nicolò</item>
-        <item>Seebad Prora</item>
-        <item>Khnumhotep e Niankhkhnum</item>
-        <item>Casa della Storia europea</item>
-        <item>Colle dell\'Iseran</item>
-        <item>Ponte sullo stretto di Bering</item>
-        <item>Incidente ferroviario della stazione di Parigi Montparnasse</item>
-        <item>Diari di Hitler</item>
-        <item>Nannie Doss</item>
-        <item>XXV della campagna romana</item>
-        <item>Isola di North Sentinel</item>
-        <item>Nigella sativa</item>
-        <item>Vasa (galeone)</item>
-        <item>Kopi Luwak</item>
-        <item>João Lourenço</item>
-        <item>Teleferica Massaua-Asmara</item>
-        <item>Problema di Monty Hall</item>
-        <item>Pyramiden</item>
-        <item>Concessione italiana di Tientsin</item>
-        <item>problema di Monty Hall</item>
-        <item>Città murata di Kowloon</item>
-        <item>Sark</item>
-        <item>Francesco Foglia</item>
-        <item>Carlo Airoldi</item>
-        <item>YInMn Blue</item>
-        <item>Vegetarianismo di Adolf Hitler</item>
-        <item>Battaglia di Los Angeles</item>
-        <item>Silene stenophylla</item>
-        <item>Cacareco</item>
-        <item>Italica (nave)</item>
-        <item>Eduard Bloch</item>
-        <item>Campo profughi di Latina</item>
-        <item>Paradosso dell\'area scomparsa</item>
-        <item>Sonata per clavicembalo K. 30</item>
-        <item>Vulcano di fango</item>
-        <item>Meme</item>
-        <item>Tecnocrazia</item>
-        <item>Oclocrazia</item>
-        <item>Autocrazia</item>
-        <item>Androcrazia</item>
-        <item>Dispotismo illuminato</item>
-        <item>Gerontocrazia</item>
-        <item>Teocrazia</item>
-        <item>Stratocrazia</item>
-        <item>Teoria del complotto sugli UFO</item>
-        <item>Teoria del complotto sul piano Kalergi</item>
-        <item>Teoria del complotto giudaico</item>
-        <item>Revisionismo del Risorgimento</item>
-        <item>Casa di paglia</item>
-        <item>Toilette compostante</item>
-        <item>Flatulenza</item>
-        <item>Agricoltura sinergica</item>
-        <item>Maggese</item>
-        <item>Rotazione delle colture</item>
-        <item>Mnemotecnica</item>
-        <item>Poliglotta</item>
-        <item>Emil Krebs</item>
-        <item>Eptacaidecafobia</item>
-        <item>Chiesetta di Piedigrotta</item>
-        <item>Criptovaluta</item>
-        <item>Bitcoin</item>
-        <item>Terremoto di Argenta del 1624</item>
-        <item>Insonnia familiare fatale</item>
-        <item>Compagnia barracellare</item>
-        <item>Margherita Kaiser Parodi</item>
-        <item>Alto papavero</item>
-        <item>Spiral Island e Joyxee Island</item>
-        <item>Spedizione romana alle fonti del Nilo</item>
-        <item>Spedizione Thornton</item>
+        <item>https://it.wikipedia.org/wiki/Moto perpetuo</item>
+        <item>https://it.wikipedia.org/wiki/Ragogna</item>
+        <item>https://it.wikipedia.org/wiki/Oro di Yamashita</item>
+        <item>https://it.wikipedia.org/wiki/Fenomeno delle voci elettroniche</item>
+        <item>https://it.wikipedia.org/wiki/Rimozione chirurgica della fistola anale di Luigi XIV</item>
+        <item>https://it.wikipedia.org/wiki/Swaffelen</item>
+        <item>https://it.wikipedia.org/wiki/Atuk</item>
+        <item>https://it.wikipedia.org/wiki/Azzurrina</item>
+        <item>https://it.wikipedia.org/wiki/Illusione uditiva</item>
+        <item>https://it.wikipedia.org/wiki/Riflessologia (medicina alternativa)</item>
+        <item>https://it.wikipedia.org/wiki/Junk science</item>
+        <item>https://it.wikipedia.org/wiki/Lottologia</item>
+        <item>https://it.wikipedia.org/wiki/Versoaln</item>
+        <item>https://it.wikipedia.org/wiki/Numero socievole</item>
+        <item>https://it.wikipedia.org/wiki/Personaggio tipo</item>
+        <item>https://it.wikipedia.org/wiki/Progesterex</item>
+        <item>https://it.wikipedia.org/wiki/Decrescita</item>
+        <item>https://it.wikipedia.org/wiki/Lancio di vipere da elicotteri</item>
+        <item>https://it.wikipedia.org/wiki/Fantastiliardo</item>
+        <item>https://it.wikipedia.org/wiki/Servetta trace</item>
+        <item>https://it.wikipedia.org/wiki/Prima donne e bambini</item>
+        <item>https://it.wikipedia.org/wiki/Mirmecofilia</item>
+        <item>https://it.wikipedia.org/wiki/Zombie</item>
+        <item>https://it.wikipedia.org/wiki/Morgellons</item>
+        <item>https://it.wikipedia.org/wiki/Kodama (spirito)</item>
+        <item>https://it.wikipedia.org/wiki/Problema dei filosofi a cena</item>
+        <item>https://it.wikipedia.org/wiki/Fenomeno celeste di Norimberga</item>
+        <item>https://it.wikipedia.org/wiki/Gamba de legn</item>
+        <item>https://it.wikipedia.org/wiki/Sindrome della mano aliena</item>
+        <item>https://it.wikipedia.org/wiki/Incidente del passo Djatlov</item>
+        <item>https://it.wikipedia.org/wiki/Rospodotto</item>
+        <item>https://it.wikipedia.org/wiki/Mars One</item>
+        <item>https://it.wikipedia.org/wiki/Matto dell\'imbecille</item>
+        <item>https://it.wikipedia.org/wiki/Glass House</item>
+        <item>https://it.wikipedia.org/wiki/DeLorean (macchina del tempo)</item>
+        <item>https://it.wikipedia.org/wiki/Bibbia Poliglotta di Walton</item>
+        <item>https://it.wikipedia.org/wiki/Asparagi di Rommel</item>
+        <item>https://it.wikipedia.org/wiki/St. Paul\'s Survives</item>
+        <item>https://it.wikipedia.org/wiki/Reframing</item>
+        <item>https://it.wikipedia.org/wiki/Palmanova</item>
+        <item>https://it.wikipedia.org/wiki/Giovanni Battista Lulli</item>
+        <item>https://it.wikipedia.org/wiki/Disastro di Monongah</item>
+        <item>https://it.wikipedia.org/wiki/Trattamenti alternativi contro il cancro</item>
+        <item>https://it.wikipedia.org/wiki/Pensare all\'immortalità del granchio</item>
+        <item>https://it.wikipedia.org/wiki/Teoria della melanina</item>
+        <item>https://it.wikipedia.org/wiki/Simbolo della pace</item>
+        <item>https://it.wikipedia.org/wiki/Esecuzione postuma</item>
+        <item>https://it.wikipedia.org/wiki/Confusione e diffusione</item>
+        <item>https://it.wikipedia.org/wiki/Apparecchiature incamiciate</item>
+        <item>https://it.wikipedia.org/wiki/Tapis roulant cosmico</item>
+        <item>https://it.wikipedia.org/wiki/Elizabeth Odio Benito</item>
+        <item>https://it.wikipedia.org/wiki/Labirinto a bracci radiali</item>
+        <item>https://it.wikipedia.org/wiki/Campo di distorsione della realtà</item>
+        <item>https://it.wikipedia.org/wiki/Custode della genesi</item>
+        <item>https://it.wikipedia.org/wiki/!!!</item>
+        <item>https://it.wikipedia.org/wiki/Ingegner Cane</item>
+        <item>https://it.wikipedia.org/wiki/Data di nascita di Gesù</item>
+        <item>https://it.wikipedia.org/wiki/Maledizione del Colonnello</item>
+        <item>https://it.wikipedia.org/wiki/Elena Lucrezia Cornaro</item>
+        <item>https://it.wikipedia.org/wiki/Sfere metalliche di Klerksdorp</item>
+        <item>https://it.wikipedia.org/wiki/Idillio di Sigfrido</item>
+        <item>https://it.wikipedia.org/wiki/La tomba perduta di Gesù</item>
+        <item>https://it.wikipedia.org/wiki/La fabbrica del terrore</item>
+        <item>https://it.wikipedia.org/wiki/Palla eh!</item>
+        <item>https://it.wikipedia.org/wiki/Santo prepuzio</item>
+        <item>https://it.wikipedia.org/wiki/Teatro di verzura</item>
+        <item>https://it.wikipedia.org/wiki/Copyleft</item>
+        <item>https://it.wikipedia.org/wiki/Inter</item>
+        <item>https://it.wikipedia.org/wiki/Scienza di confine</item>
+        <item>https://it.wikipedia.org/wiki/Grotta Verde</item>
+        <item>https://it.wikipedia.org/wiki/Senegambia</item>
+        <item>https://it.wikipedia.org/wiki/Chiesa di San Giacomo a Scossacavalli</item>
+        <item>https://it.wikipedia.org/wiki/Grolla</item>
+        <item>https://it.wikipedia.org/wiki/Preparato 500</item>
+        <item>https://it.wikipedia.org/wiki/Teorie del complotto su Jonestown</item>
+        <item>https://it.wikipedia.org/wiki/Phoneutria nigriventer</item>
+        <item>https://it.wikipedia.org/wiki/Antievoluzionismo</item>
+        <item>https://it.wikipedia.org/wiki/Il poeta mangiatore di leoni nel covo di pietra</item>
+        <item>https://it.wikipedia.org/wiki/Dose equivalente a una banana</item>
+        <item>https://it.wikipedia.org/wiki/Scopatori Segreti</item>
+        <item>https://it.wikipedia.org/wiki/Ho visto cose che voi umani</item>
+        <item>https://it.wikipedia.org/wiki/London Transport Museum</item>
+        <item>https://it.wikipedia.org/wiki/Polvere di simpatia</item>
+        <item>https://it.wikipedia.org/wiki/Zar (carro armato)</item>
+        <item>https://it.wikipedia.org/wiki/Voyager Golden Record</item>
+        <item>https://it.wikipedia.org/wiki/Campane dell\'arcidiocesi di Milano</item>
+        <item>https://it.wikipedia.org/wiki/Bikini metallico della principessa Leila</item>
+        <item>https://it.wikipedia.org/wiki/Gioiello di Vicenza</item>
+        <item>https://it.wikipedia.org/wiki/Meditazione trascendentale</item>
+        <item>https://it.wikipedia.org/wiki/Eudosso di Cizico</item>
+        <item>https://it.wikipedia.org/wiki/Tribù dal Cuore Cornuto</item>
+        <item>https://it.wikipedia.org/wiki/Mary had a little lamb</item>
+        <item>https://it.wikipedia.org/wiki/La risposta alla domanda fondamentale sulla vita, l\'universo e tutto quanto</item>
+        <item>https://it.wikipedia.org/wiki/1 Night in Paris</item>
+        <item>https://it.wikipedia.org/wiki/Music for Supermarkets</item>
+        <item>https://it.wikipedia.org/wiki/Autostrada dei Laghi</item>
+        <item>https://it.wikipedia.org/wiki/Difesa Chewbacca</item>
+        <item>https://it.wikipedia.org/wiki/Brethariano</item>
+        <item>https://it.wikipedia.org/wiki/Criptozoologia</item>
+        <item>https://it.wikipedia.org/wiki/Ummo</item>
+        <item>https://it.wikipedia.org/wiki/Portale (immaginario)</item>
+        <item>https://it.wikipedia.org/wiki/Mare della Pečora</item>
+        <item>https://it.wikipedia.org/wiki/Ucronia</item>
+        <item>https://it.wikipedia.org/wiki/Reprua</item>
+        <item>https://it.wikipedia.org/wiki/Tizio, Caio e Sempronio</item>
+        <item>https://it.wikipedia.org/wiki/Arturo Osio (banchiere)</item>
+        <item>https://it.wikipedia.org/wiki/Halobates</item>
+        <item>https://it.wikipedia.org/wiki/Brigitta Bulgari</item>
+        <item>https://it.wikipedia.org/wiki/Preadamiti</item>
+        <item>https://it.wikipedia.org/wiki/Corona imperiale di stato</item>
+        <item>https://it.wikipedia.org/wiki/Reperti archeologici della metropolitana di Napoli</item>
+        <item>https://it.wikipedia.org/wiki/Phineas Gage</item>
+        <item>https://it.wikipedia.org/wiki/Eviternità</item>
+        <item>https://it.wikipedia.org/wiki/Jonestown (Guyana)</item>
+        <item>https://it.wikipedia.org/wiki/Triangolo delle Bermude</item>
+        <item>https://it.wikipedia.org/wiki/Rasoio di Hanlon</item>
+        <item>https://it.wikipedia.org/wiki/Foresta ubriaca</item>
+        <item>https://it.wikipedia.org/wiki/Controilluminazione</item>
+        <item>https://it.wikipedia.org/wiki/Magazzini del governo</item>
+        <item>https://it.wikipedia.org/wiki/Spaghetti code</item>
+        <item>https://it.wikipedia.org/wiki/Grotta di Altamira</item>
+        <item>https://it.wikipedia.org/wiki/Segnale Wow!</item>
+        <item>https://it.wikipedia.org/wiki/Teorie del complotto sull\'attentato al Pentagono dell\'11 settembre 2001</item>
+        <item>https://it.wikipedia.org/wiki/Scacchi esagonali</item>
+        <item>https://it.wikipedia.org/wiki/Elenco analitico dei cornuti</item>
+        <item>https://it.wikipedia.org/wiki/Sezione aurea</item>
+        <item>https://it.wikipedia.org/wiki/Bombardamento di Bari</item>
+        <item>https://it.wikipedia.org/wiki/Via Vittorio Emanuele III</item>
+        <item>https://it.wikipedia.org/wiki/Grande puzza</item>
+        <item>https://it.wikipedia.org/wiki/Storia culturale dei glutei</item>
+        <item>https://it.wikipedia.org/wiki/Puff, the Magic Dragon</item>
+        <item>https://it.wikipedia.org/wiki/Balabiótt</item>
+        <item>https://it.wikipedia.org/wiki/Sindrome locked-in</item>
+        <item>https://it.wikipedia.org/wiki/International Cometary Explorer</item>
+        <item>https://it.wikipedia.org/wiki/Chief Mouser to the Cabinet Office</item>
+        <item>https://it.wikipedia.org/wiki/Death café</item>
+        <item>https://it.wikipedia.org/wiki/Culoz</item>
+        <item>https://it.wikipedia.org/wiki/2+2=5</item>
+        <item>https://it.wikipedia.org/wiki/Pigasus Award</item>
+        <item>https://it.wikipedia.org/wiki/Nepenthes bicalcarata</item>
+        <item>https://it.wikipedia.org/wiki/Fuoco di Sant\'Elmo</item>
+        <item>https://it.wikipedia.org/wiki/Caccola</item>
+        <item>https://it.wikipedia.org/wiki/Raggio della morte</item>
+        <item>https://it.wikipedia.org/wiki/Concilio in Trullo</item>
+        <item>https://it.wikipedia.org/wiki/Coppa di Licurgo</item>
+        <item>https://it.wikipedia.org/wiki/Lettura del biglietto</item>
+        <item>https://it.wikipedia.org/wiki/Enciclopedia Galattica</item>
+        <item>https://it.wikipedia.org/wiki/IP over Avian Carriers</item>
+        <item>https://it.wikipedia.org/wiki/Reductio ad Hitlerum</item>
+        <item>https://it.wikipedia.org/wiki/Nuova cronologia</item>
+        <item>https://it.wikipedia.org/wiki/Realismo isterico</item>
+        <item>https://it.wikipedia.org/wiki/Gotto Esplosivo Pangalattico</item>
+        <item>https://it.wikipedia.org/wiki/Monte Loffa</item>
+        <item>https://it.wikipedia.org/wiki/Teorie del complotto sul riscaldamento globale</item>
+        <item>https://it.wikipedia.org/wiki/Puzzone di Moena</item>
+        <item>https://it.wikipedia.org/wiki/Black Holes and Time Warps</item>
+        <item>https://it.wikipedia.org/wiki/Fonte Q</item>
+        <item>https://it.wikipedia.org/wiki/Gloomy Sunday</item>
+        <item>https://it.wikipedia.org/wiki/Malato di calcio</item>
+        <item>https://it.wikipedia.org/wiki/Mirin Dajo</item>
+        <item>https://it.wikipedia.org/wiki/Dodecateismo</item>
+        <item>https://it.wikipedia.org/wiki/Giro di Viso</item>
+        <item>https://it.wikipedia.org/wiki/Finta guerra</item>
+        <item>https://it.wikipedia.org/wiki/Stazioni dell\'arte</item>
+        <item>https://it.wikipedia.org/wiki/Leggende metropolitane giapponesi</item>
+        <item>https://it.wikipedia.org/wiki/Pallio di San Lorenzo</item>
+        <item>https://it.wikipedia.org/wiki/Cravatta di Sherman</item>
+        <item>https://it.wikipedia.org/wiki/Savignano a Mare</item>
+        <item>https://it.wikipedia.org/wiki/Piazza della Passera</item>
+        <item>https://it.wikipedia.org/wiki/Aokigahara</item>
+        <item>https://it.wikipedia.org/wiki/Scaled Composites SpaceShipTwo</item>
+        <item>https://it.wikipedia.org/wiki/Geobiologia</item>
+        <item>https://it.wikipedia.org/wiki/Articoli nei quali si passano in rassegna gli abusi che sono stati corretti</item>
+        <item>https://it.wikipedia.org/wiki/Nibiru (Sitchin)</item>
+        <item>https://it.wikipedia.org/wiki/Fortean Society</item>
+        <item>https://it.wikipedia.org/wiki/Bacio della pantofola</item>
+        <item>https://it.wikipedia.org/wiki/Epitaffio di Sicilo</item>
+        <item>https://it.wikipedia.org/wiki/Clamoroso al Cibali!</item>
+        <item>https://it.wikipedia.org/wiki/49 Pales</item>
+        <item>https://it.wikipedia.org/wiki/Pyrococcus furiosus</item>
+        <item>https://it.wikipedia.org/wiki/Giovanni Aldini</item>
+        <item>https://it.wikipedia.org/wiki/Euthanasia Coaster</item>
+        <item>https://it.wikipedia.org/wiki/Teschio di cristallo</item>
+        <item>https://it.wikipedia.org/wiki/Composto di gas nobili</item>
+        <item>https://it.wikipedia.org/wiki/Ciarlatano</item>
+        <item>https://it.wikipedia.org/wiki/Massacro della Zong</item>
+        <item>https://it.wikipedia.org/wiki/Casa Scaccabarozzi</item>
+        <item>https://it.wikipedia.org/wiki/Kilroy</item>
+        <item>https://it.wikipedia.org/wiki/Labirinto di Porsenna</item>
+        <item>https://it.wikipedia.org/wiki/RTFM</item>
+        <item>https://it.wikipedia.org/wiki/Castello di Guédelon</item>
+        <item>https://it.wikipedia.org/wiki/Brainfuck</item>
+        <item>https://it.wikipedia.org/wiki/Parco degli Acquedotti</item>
+        <item>https://it.wikipedia.org/wiki/Bibliopegia antropodermica</item>
+        <item>https://it.wikipedia.org/wiki/Q33 NY</item>
+        <item>https://it.wikipedia.org/wiki/Luci Yehudi</item>
+        <item>https://it.wikipedia.org/wiki/Locomotiva C&amp;O M-1</item>
+        <item>https://it.wikipedia.org/wiki/Ordine dei byte</item>
+        <item>https://it.wikipedia.org/wiki/Trimetilarsina</item>
+        <item>https://it.wikipedia.org/wiki/Disastro di Marcinelle</item>
+        <item>https://it.wikipedia.org/wiki/Secondo intercalare</item>
+        <item>https://it.wikipedia.org/wiki/Foca (imperatore)</item>
+        <item>https://it.wikipedia.org/wiki/2 Pallas</item>
+        <item>https://it.wikipedia.org/wiki/Clavicembalo elettrico</item>
+        <item>https://it.wikipedia.org/wiki/Cronometro di Loulié</item>
+        <item>https://it.wikipedia.org/wiki/El Corte Inglés</item>
+        <item>https://it.wikipedia.org/wiki/Glocalizzazione editoriale</item>
+        <item>https://it.wikipedia.org/wiki/Ansible</item>
+        <item>https://it.wikipedia.org/wiki/Hashima (isola)</item>
+        <item>https://it.wikipedia.org/wiki/Generale Sherman</item>
+        <item>https://it.wikipedia.org/wiki/Matcha</item>
+        <item>https://it.wikipedia.org/wiki/Raising the Flag on Iwo Jima</item>
+        <item>https://it.wikipedia.org/wiki/Árpád Weisz</item>
+        <item>https://it.wikipedia.org/wiki/Arbegnuoc</item>
+        <item>https://it.wikipedia.org/wiki/Flakturm</item>
+        <item>https://it.wikipedia.org/wiki/Kim Peek</item>
+        <item>https://it.wikipedia.org/wiki/Teoria delle finestre rotte</item>
+        <item>https://it.wikipedia.org/wiki/Storia della Geromina</item>
+        <item>https://it.wikipedia.org/wiki/Persocom</item>
+        <item>https://it.wikipedia.org/wiki/Agricoltura biodinamica</item>
+        <item>https://it.wikipedia.org/wiki/Api anti-bomba</item>
+        <item>https://it.wikipedia.org/wiki/There Is No Alternative</item>
+        <item>https://it.wikipedia.org/wiki/Mawangdui</item>
+        <item>https://it.wikipedia.org/wiki/Scacchi tridimensionali</item>
+        <item>https://it.wikipedia.org/wiki/Teorema della pizza</item>
+        <item>https://it.wikipedia.org/wiki/Esame del carbonio 14 sulla Sindone</item>
+        <item>https://it.wikipedia.org/wiki/Idillio infranto</item>
+        <item>https://it.wikipedia.org/wiki/Lukla</item>
+        <item>https://it.wikipedia.org/wiki/Cartellate</item>
+        <item>https://it.wikipedia.org/wiki/Arduino (hardware)</item>
+        <item>https://it.wikipedia.org/wiki/Gorsafawddacha\'idraigodanheddogleddollônpenrhynareurdraethceredigion</item>
+        <item>https://it.wikipedia.org/wiki/Carta igienica</item>
+        <item>https://it.wikipedia.org/wiki/Centrale termoelettrica di Trbovlje</item>
+        <item>https://it.wikipedia.org/wiki/Bananadina</item>
+        <item>https://it.wikipedia.org/wiki/OOPArt</item>
+        <item>https://it.wikipedia.org/wiki/Maso chiuso</item>
+        <item>https://it.wikipedia.org/wiki/Ferrovia_sospesa</item>
+        <item>https://it.wikipedia.org/wiki/Nanotecnologia nella fantascienza</item>
+        <item>https://it.wikipedia.org/wiki/Nella vecchia fattoria</item>
+        <item>https://it.wikipedia.org/wiki/Metodo del tubo di gomma</item>
+        <item>https://it.wikipedia.org/wiki/Trasferimento della mente</item>
+        <item>https://it.wikipedia.org/wiki/Antenna radio di Varsavia</item>
+        <item>https://it.wikipedia.org/wiki/Santuario di Itsukushima</item>
+        <item>https://it.wikipedia.org/wiki/Scienziato pazzo</item>
+        <item>https://it.wikipedia.org/wiki/Coral Castle</item>
+        <item>https://it.wikipedia.org/wiki/La persecuzione e l\'assassinio di Jean-Paul Marat, rappresentato dalla compagnia filodrammatica dell\'ospizio di Charenton sotto la guida del marchese de Sade</item>
+        <item>https://it.wikipedia.org/wiki/Progetto Montauk</item>
+        <item>https://it.wikipedia.org/wiki/Emirates Air Line (cabinovia)</item>
+        <item>https://it.wikipedia.org/wiki/Harukichi Shimoi</item>
+        <item>https://it.wikipedia.org/wiki/Premio Ig Nobel</item>
+        <item>https://it.wikipedia.org/wiki/Robots.txt</item>
+        <item>https://it.wikipedia.org/wiki/Ferrofluido</item>
+        <item>https://it.wikipedia.org/wiki/Viaggio nel tempo</item>
+        <item>https://it.wikipedia.org/wiki/Cucchiaino nello spumante</item>
+        <item>https://it.wikipedia.org/wiki/Volta (danza)</item>
+        <item>https://it.wikipedia.org/wiki/Museo fallologico islandese</item>
+        <item>https://it.wikipedia.org/wiki/Cifrario di Cesare</item>
+        <item>https://it.wikipedia.org/wiki/durian</item>
+        <item>https://it.wikipedia.org/wiki/Gun (lampada)</item>
+        <item>https://it.wikipedia.org/wiki/Cappella di San Luigi a Capezzolo</item>
+        <item>https://it.wikipedia.org/wiki/Salto di Tiberio</item>
+        <item>https://it.wikipedia.org/wiki/Honorificabilitudinitatibus</item>
+        <item>https://it.wikipedia.org/wiki/Impronte degli dei</item>
+        <item>https://it.wikipedia.org/wiki/Escursione someggiata</item>
+        <item>https://it.wikipedia.org/wiki/Schmallenberg virus</item>
+        <item>https://it.wikipedia.org/wiki/Fenomeno da baraccone</item>
+        <item>https://it.wikipedia.org/wiki/Giochi inaugurali dell\'anfiteatro Flavio</item>
+        <item>https://it.wikipedia.org/wiki/Dornier Do 335</item>
+        <item>https://it.wikipedia.org/wiki/Patafisica</item>
+        <item>https://it.wikipedia.org/wiki/Neko café</item>
+        <item>https://it.wikipedia.org/wiki/Spedizione Donner</item>
+        <item>https://it.wikipedia.org/wiki/Castellana di Vergi</item>
+        <item>https://it.wikipedia.org/wiki/Orgone</item>
+        <item>https://it.wikipedia.org/wiki/Nasser Al-Attiyah</item>
+        <item>https://it.wikipedia.org/wiki/Linee temporanee</item>
+        <item>https://it.wikipedia.org/wiki/Casa Fenoglio-Lafleur</item>
+        <item>https://it.wikipedia.org/wiki/Hermetia illucens</item>
+        <item>https://it.wikipedia.org/wiki/Uomo Assorbente</item>
+        <item>https://it.wikipedia.org/wiki/Cronologia del futuro lontano</item>
+        <item>https://it.wikipedia.org/wiki/Rabdomanzia</item>
+        <item>https://it.wikipedia.org/wiki/Memoria dell\'acqua</item>
+        <item>https://it.wikipedia.org/wiki/Impero aericano</item>
+        <item>https://it.wikipedia.org/wiki/Feng shui</item>
+        <item>https://it.wikipedia.org/wiki/All your base are belong to us</item>
+        <item>https://it.wikipedia.org/wiki/Starchild</item>
+        <item>https://it.wikipedia.org/wiki/Eruzione Coca-Cola Light e Mentos</item>
+        <item>https://it.wikipedia.org/wiki/Dominio del mondo</item>
+        <item>https://it.wikipedia.org/wiki/Ippogallo</item>
+        <item>https://it.wikipedia.org/wiki/Piaggio Vespa 150 TAP</item>
+        <item>https://it.wikipedia.org/wiki/Troll (internet)</item>
+        <item>https://it.wikipedia.org/wiki/Porta dell\'inferno</item>
+        <item>https://it.wikipedia.org/wiki/Disastro del Maracanã</item>
+        <item>https://it.wikipedia.org/wiki/Motore magnetico Perendev</item>
+        <item>https://it.wikipedia.org/wiki/Deinococcus radiodurans</item>
+        <item>https://it.wikipedia.org/wiki/Baciatico</item>
+        <item>https://it.wikipedia.org/wiki/Fantasma Formaggino</item>
+        <item>https://it.wikipedia.org/wiki/Scrittura corsiva romana</item>
+        <item>https://it.wikipedia.org/wiki/Eppur si muove</item>
+        <item>https://it.wikipedia.org/wiki/Evento di Tunguska</item>
+        <item>https://it.wikipedia.org/wiki/The Hands Resist Him</item>
+        <item>https://it.wikipedia.org/wiki/Lupo mangia-frutta</item>
+        <item>https://it.wikipedia.org/wiki/Felicità interna lorda</item>
+        <item>https://it.wikipedia.org/wiki/Dama bianca (spirito)</item>
+        <item>https://it.wikipedia.org/wiki/Fallen Astronaut</item>
+        <item>https://it.wikipedia.org/wiki/Ipotesi alternative sull\'AIDS</item>
+        <item>https://it.wikipedia.org/wiki/MT e MN</item>
+        <item>https://it.wikipedia.org/wiki/Hemp Body Car</item>
+        <item>https://it.wikipedia.org/wiki/Mummia di palude</item>
+        <item>https://it.wikipedia.org/wiki/Piccione fotografo</item>
+        <item>https://it.wikipedia.org/wiki/Afsluitdijk</item>
+        <item>https://it.wikipedia.org/wiki/Teorie alternative sulla morte di Napoleone Bonaparte</item>
+        <item>https://it.wikipedia.org/wiki/Gioco del cento</item>
+        <item>https://it.wikipedia.org/wiki/Mu (continente)</item>
+        <item>https://it.wikipedia.org/wiki/Lohengrin (opera)</item>
+        <item>https://it.wikipedia.org/wiki/Quadrato_del_Sator</item>
+        <item>https://it.wikipedia.org/wiki/Galassie Antenne</item>
+        <item>https://it.wikipedia.org/wiki/Acquacheta</item>
+        <item>https://it.wikipedia.org/wiki/Veicolo spaziale Sojuz</item>
+        <item>https://it.wikipedia.org/wiki/Freedom House</item>
+        <item>https://it.wikipedia.org/wiki/Forza Odica</item>
+        <item>https://it.wikipedia.org/wiki/Tuta distillante</item>
+        <item>https://it.wikipedia.org/wiki/Kuchisake-onna</item>
+        <item>https://it.wikipedia.org/wiki/Processo zombie</item>
+        <item>https://it.wikipedia.org/wiki/Bibbia Cattiva</item>
+        <item>https://it.wikipedia.org/wiki/Pompone</item>
+        <item>https://it.wikipedia.org/wiki/Pianeta oceano</item>
+        <item>https://it.wikipedia.org/wiki/Eurabia</item>
+        <item>https://it.wikipedia.org/wiki/High Frequency Active Auroral Research Program</item>
+        <item>https://it.wikipedia.org/wiki/Artemisia I</item>
+        <item>https://it.wikipedia.org/wiki/Numero primo illegale</item>
+        <item>https://it.wikipedia.org/wiki/Teiera di Russell</item>
+        <item>https://it.wikipedia.org/wiki/Wilhelm von Gloeden</item>
+        <item>https://it.wikipedia.org/wiki/Nonno di Panopoli</item>
+        <item>https://it.wikipedia.org/wiki/Ernesto Teodoro Moneta</item>
+        <item>https://it.wikipedia.org/wiki/Han Shot First</item>
+        <item>https://it.wikipedia.org/wiki/Censura nella Repubblica Democratica Tedesca</item>
+        <item>https://it.wikipedia.org/wiki/Sony timer</item>
+        <item>https://it.wikipedia.org/wiki/Cappello di carta stagnola</item>
+        <item>https://it.wikipedia.org/wiki/Merda d\'artista</item>
+        <item>https://it.wikipedia.org/wiki/UFO nazisti</item>
+        <item>https://it.wikipedia.org/wiki/Black Ivory</item>
+        <item>https://it.wikipedia.org/wiki/Leonarda Cianciulli</item>
+        <item>https://it.wikipedia.org/wiki/Pierre Virion</item>
+        <item>https://it.wikipedia.org/wiki/Tesoro dell\'Esquilino</item>
+        <item>https://it.wikipedia.org/wiki/Cristiano Augusto di Schleswig-Holstein-Sonderburg-Augustenburg (1768-1810)</item>
+        <item>https://it.wikipedia.org/wiki/Viaggiatori extratemporali</item>
+        <item>https://it.wikipedia.org/wiki/Disco protoplanetario</item>
+        <item>https://it.wikipedia.org/wiki/Ibrido grizzly-orso polare</item>
+        <item>https://it.wikipedia.org/wiki/Hello world</item>
+        <item>https://it.wikipedia.org/wiki/Lista di avvistamenti UFO</item>
+        <item>https://it.wikipedia.org/wiki/Teoria del complotto</item>
+        <item>https://it.wikipedia.org/wiki/Lista di gadget nei film di James Bond</item>
+        <item>https://it.wikipedia.org/wiki/Strada delle 52 gallerie</item>
+        <item>https://it.wikipedia.org/wiki/Metamodello</item>
+        <item>https://it.wikipedia.org/wiki/Llanhyfryddawelllehynafolybarcudprindanfygythiadtrienusyrhafnauole</item>
+        <item>https://it.wikipedia.org/wiki/The Beatles</item>
+        <item>https://it.wikipedia.org/wiki/Pericolo giallo</item>
+        <item>https://it.wikipedia.org/wiki/Benjaman Kyle</item>
+        <item>https://it.wikipedia.org/wiki/Guerra del calcio</item>
+        <item>https://it.wikipedia.org/wiki/Osculum infame</item>
+        <item>https://it.wikipedia.org/wiki/Effetto Pauli</item>
+        <item>https://it.wikipedia.org/wiki/Il Dio fumoso</item>
+        <item>https://it.wikipedia.org/wiki/Pianeta di carbonio</item>
+        <item>https://it.wikipedia.org/wiki/Erettore del pelo</item>
+        <item>https://it.wikipedia.org/wiki/Alto tedesco medio</item>
+        <item>https://it.wikipedia.org/wiki/Nakagin Capsule Tower</item>
+        <item>https://it.wikipedia.org/wiki/Chupacabra</item>
+        <item>https://it.wikipedia.org/wiki/Teoria del complotto sulle scie chimiche</item>
+        <item>https://it.wikipedia.org/wiki/Irredentismo italiano a Nizza</item>
+        <item>https://it.wikipedia.org/wiki/Marcello Truzzi</item>
+        <item>https://it.wikipedia.org/wiki/Discordianesimo</item>
+        <item>https://it.wikipedia.org/wiki/Frenologia</item>
+        <item>https://it.wikipedia.org/wiki/Debunker</item>
+        <item>https://it.wikipedia.org/wiki/The Boy Bands Have Won</item>
+        <item>https://it.wikipedia.org/wiki/Occulto</item>
+        <item>https://it.wikipedia.org/wiki/Guerra di Corea</item>
+        <item>https://it.wikipedia.org/wiki/Affare XYZ</item>
+        <item>https://it.wikipedia.org/wiki/Difficile lectu</item>
+        <item>https://it.wikipedia.org/wiki/Hibernia ed Impero Romano</item>
+        <item>https://it.wikipedia.org/wiki/Darwin Awards</item>
+        <item>https://it.wikipedia.org/wiki/Cryptex</item>
+        <item>https://it.wikipedia.org/wiki/Pelo libero</item>
+        <item>https://it.wikipedia.org/wiki/Teorie del complotto sul signoraggio</item>
+        <item>https://it.wikipedia.org/wiki/Paradosso del nonno</item>
+        <item>https://it.wikipedia.org/wiki/Grotta Son Doong</item>
+        <item>https://it.wikipedia.org/wiki/Zecche scozzesi</item>
+        <item>https://it.wikipedia.org/wiki/Cacatio matutina est tamquam medicina</item>
+        <item>https://it.wikipedia.org/wiki/John Taylor</item>
+        <item>https://it.wikipedia.org/wiki/Powers That Be</item>
+        <item>https://it.wikipedia.org/wiki/Iscrizione di Pilato</item>
+        <item>https://it.wikipedia.org/wiki/Bicicletta in bambù</item>
+        <item>https://it.wikipedia.org/wiki/Robert la Bambola</item>
+        <item>https://it.wikipedia.org/wiki/Promontorio dell\'Argentario</item>
+        <item>https://it.wikipedia.org/wiki/Detto, fatto!</item>
+        <item>https://it.wikipedia.org/wiki/Fiocco di neve di Koch</item>
+        <item>https://it.wikipedia.org/wiki/Legge di Jante</item>
+        <item>https://it.wikipedia.org/wiki/Programmazione neuro linguistica</item>
+        <item>https://it.wikipedia.org/wiki/Portsmouth Sinfonia</item>
+        <item>https://it.wikipedia.org/wiki/Rongorongo</item>
+        <item>https://it.wikipedia.org/wiki/Aka manto</item>
+        <item>https://it.wikipedia.org/wiki/Horace Wells</item>
+        <item>https://it.wikipedia.org/wiki/Cose che nessuno sa</item>
+        <item>https://it.wikipedia.org/wiki/Piedino (sessualità)</item>
+        <item>https://it.wikipedia.org/wiki/Scitala</item>
+        <item>https://it.wikipedia.org/wiki/Erich Hartmann</item>
+        <item>https://it.wikipedia.org/wiki/Aeroplanino di carta</item>
+        <item>https://it.wikipedia.org/wiki/Colonizzazione italiana delle Americhe</item>
+        <item>https://it.wikipedia.org/wiki/Mercurio rosso</item>
+        <item>https://it.wikipedia.org/wiki/Spostamento verso il rosso</item>
+        <item>https://it.wikipedia.org/wiki/Scomunica ai comunisti</item>
+        <item>https://it.wikipedia.org/wiki/Nemesis</item>
+        <item>https://it.wikipedia.org/wiki/Effetto Tetris</item>
+        <item>https://it.wikipedia.org/wiki/Congettura di protezione cronologica</item>
+        <item>https://it.wikipedia.org/wiki/Fucking</item>
+        <item>https://it.wikipedia.org/wiki/Italia-Francia (1910)</item>
+        <item>https://it.wikipedia.org/wiki/Magia</item>
+        <item>https://it.wikipedia.org/wiki/Piazza Umberto I (Capri)</item>
+        <item>https://it.wikipedia.org/wiki/Holocron</item>
+        <item>https://it.wikipedia.org/wiki/Burning Man</item>
+        <item>https://it.wikipedia.org/wiki/Linea di sangue di Gesù</item>
+        <item>https://it.wikipedia.org/wiki/NF-Board</item>
+        <item>https://it.wikipedia.org/wiki/Lucio Anneo Cornuto</item>
+        <item>https://it.wikipedia.org/wiki/Il mistero del Sacro Graal</item>
+        <item>https://it.wikipedia.org/wiki/Massa critica (ciclismo)</item>
+        <item>https://it.wikipedia.org/wiki/Spoonerismo</item>
+        <item>https://it.wikipedia.org/wiki/Lampadina centenaria</item>
+        <item>https://it.wikipedia.org/wiki/Legge di Murphy</item>
+        <item>https://it.wikipedia.org/wiki/Roberto Oros di Bartini</item>
+        <item>https://it.wikipedia.org/wiki/Maledizione delle risorse</item>
+        <item>https://it.wikipedia.org/wiki/Isola dei Fagiani</item>
+        <item>https://it.wikipedia.org/wiki/Facite ammuina</item>
+        <item>https://it.wikipedia.org/wiki/Leonid Rogozov</item>
+        <item>https://it.wikipedia.org/wiki/Fuoco greco</item>
+        <item>https://it.wikipedia.org/wiki/Code talker</item>
+        <item>https://it.wikipedia.org/wiki/Cher Ami</item>
+        <item>https://it.wikipedia.org/wiki/Eclissi solare del 20 marzo 2015</item>
+        <item>https://it.wikipedia.org/wiki/Tarzanide</item>
+        <item>https://it.wikipedia.org/wiki/Tex Winter</item>
+        <item>https://it.wikipedia.org/wiki/Tong zi dan</item>
+        <item>https://it.wikipedia.org/wiki/Fattoria dei corpi</item>
+        <item>https://it.wikipedia.org/wiki/Risposta alla domanda fondamentale sulla vita, l\'universo e tutto quanto</item>
+        <item>https://it.wikipedia.org/wiki/Bomba atomica da zaino</item>
+        <item>https://it.wikipedia.org/wiki/Jenny Haniver</item>
+        <item>https://it.wikipedia.org/wiki/Abito del medico della peste</item>
+        <item>https://it.wikipedia.org/wiki/Linguaggio degli SMS</item>
+        <item>https://it.wikipedia.org/wiki/Aeroporto di Courchevel</item>
+        <item>https://it.wikipedia.org/wiki/Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo</item>
+        <item>https://it.wikipedia.org/wiki/Ostrichetrancidipescesalatocagnoligattuccipezzidicefaloinsalsapiccantesilfiooliomieletordimerlicolombaccicolombellegallettilodolearrostocutrettolepiccioniselvaticilepricottenelvinocroccanticantuccini</item>
+        <item>https://it.wikipedia.org/wiki/Storia della frontiera sul Monte Bianco</item>
+        <item>https://it.wikipedia.org/wiki/Sorpresa!</item>
+        <item>https://it.wikipedia.org/wiki/Shoefiti</item>
+        <item>https://it.wikipedia.org/wiki/Peter Iredale</item>
+        <item>https://it.wikipedia.org/wiki/Olympias</item>
+        <item>https://it.wikipedia.org/wiki/Parelio</item>
+        <item>https://it.wikipedia.org/wiki/Flat Earth Society</item>
+        <item>https://it.wikipedia.org/wiki/Pseudostoria</item>
+        <item>https://it.wikipedia.org/wiki/La Zisa</item>
+        <item>https://it.wikipedia.org/wiki/Macchina di Anticitera</item>
+        <item>https://it.wikipedia.org/wiki/Bordello del campo di concentramento</item>
+        <item>https://it.wikipedia.org/wiki/Teoria di Olduvai</item>
+        <item>https://it.wikipedia.org/wiki/Mitologia Gong</item>
+        <item>https://it.wikipedia.org/wiki/Progetto Habakkuk</item>
+        <item>https://it.wikipedia.org/wiki/Repubblica rossa di Caulonia</item>
+        <item>https://it.wikipedia.org/wiki/I nove sconosciuti</item>
+        <item>https://it.wikipedia.org/wiki/Babbo Natale</item>
+        <item>https://it.wikipedia.org/wiki/Kakka</item>
+        <item>https://it.wikipedia.org/wiki/Tudor City</item>
+        <item>https://it.wikipedia.org/wiki/Tassa kosher</item>
+        <item>https://it.wikipedia.org/wiki/Cimatica</item>
+        <item>https://it.wikipedia.org/wiki/Mary Shelley</item>
+        <item>https://it.wikipedia.org/wiki/Saggio alla fiamma</item>
+        <item>https://it.wikipedia.org/wiki/Banana blu</item>
+        <item>https://it.wikipedia.org/wiki/Frattura del pene</item>
+        <item>https://it.wikipedia.org/wiki/Saint Kilda</item>
+        <item>https://it.wikipedia.org/wiki/Convegno dell\'hotel Parco dei Principi</item>
+        <item>https://it.wikipedia.org/wiki/Castello di Brissac</item>
+        <item>https://it.wikipedia.org/wiki/Licantropo</item>
+        <item>https://it.wikipedia.org/wiki/Anteo Zamboni</item>
+        <item>https://it.wikipedia.org/wiki/Messaggio di Arecibo</item>
+        <item>https://it.wikipedia.org/wiki/Cimitero monumentale di Messina</item>
+        <item>https://it.wikipedia.org/wiki/Fnord</item>
+        <item>https://it.wikipedia.org/wiki/Wolbachia</item>
+        <item>https://it.wikipedia.org/wiki/Calibro 89</item>
+        <item>https://it.wikipedia.org/wiki/Sepoltura da vivo</item>
+        <item>https://it.wikipedia.org/wiki/Polpo Paul</item>
+        <item>https://it.wikipedia.org/wiki/Stazioni fantasma della metropolitana di Berlino</item>
+        <item>https://it.wikipedia.org/wiki/Congetture del 1421 e del 1434</item>
+        <item>https://it.wikipedia.org/wiki/Cronovela</item>
+        <item>https://it.wikipedia.org/wiki/Confine tra il Regno Unito e la Spagna</item>
+        <item>https://it.wikipedia.org/wiki/Bordighera</item>
+        <item>https://it.wikipedia.org/wiki/Teoria ingenua degli insiemi</item>
+        <item>https://it.wikipedia.org/wiki/Allghoi Khorhoi</item>
+        <item>https://it.wikipedia.org/wiki/Raggio traente</item>
+        <item>https://it.wikipedia.org/wiki/Quasigruppo</item>
+        <item>https://it.wikipedia.org/wiki/Bohemian Grove</item>
+        <item>https://it.wikipedia.org/wiki/Denominazioni alleate dei velivoli giapponesi</item>
+        <item>https://it.wikipedia.org/wiki/Cooping</item>
+        <item>https://it.wikipedia.org/wiki/Rocco Petrone</item>
+        <item>https://it.wikipedia.org/wiki/Locomotiva Bayard</item>
+        <item>https://it.wikipedia.org/wiki/Letters of last resort</item>
+        <item>https://it.wikipedia.org/wiki/Tacchino induttivista</item>
+        <item>https://it.wikipedia.org/wiki/Hughes H-4 Hercules</item>
+        <item>https://it.wikipedia.org/wiki/chitarra acustica</item>
+        <item>https://it.wikipedia.org/wiki/Kitsune no Yomeiri</item>
+        <item>https://it.wikipedia.org/wiki/Dodo</item>
+        <item>https://it.wikipedia.org/wiki/Aginter Press</item>
+        <item>https://it.wikipedia.org/wiki/Bradley Manning</item>
+        <item>https://it.wikipedia.org/wiki/Passera scopaiola</item>
+        <item>https://it.wikipedia.org/wiki/Bufo bufo</item>
+        <item>https://it.wikipedia.org/wiki/Assiani (soldati mercenari)</item>
+        <item>https://it.wikipedia.org/wiki/Magic Roundabout</item>
+        <item>https://it.wikipedia.org/wiki/Oggetti non stellari nella costellazione di Cassiopea</item>
+        <item>https://it.wikipedia.org/wiki/Macchina dei Miracoli</item>
+        <item>https://it.wikipedia.org/wiki/Jack Churchill</item>
+        <item>https://it.wikipedia.org/wiki/Ho ho ho</item>
+        <item>https://it.wikipedia.org/wiki/Cappella Sansevero</item>
+        <item>https://it.wikipedia.org/wiki/Genocidio armeno</item>
+        <item>https://it.wikipedia.org/wiki/Cane Nero magna bella persica</item>
+        <item>https://it.wikipedia.org/wiki/Sfruttamento del 10% del cervello</item>
+        <item>https://it.wikipedia.org/wiki/Scatola Madre</item>
+        <item>https://it.wikipedia.org/wiki/Operazione Chaos</item>
+        <item>https://it.wikipedia.org/wiki/Tesoro di Hoxne</item>
+        <item>https://it.wikipedia.org/wiki/Polybius (videogioco)</item>
+        <item>https://it.wikipedia.org/wiki/Abbracci gratis</item>
+        <item>https://it.wikipedia.org/wiki/James while John had had had had had had had had had had had a better effect on the teacher</item>
+        <item>https://it.wikipedia.org/wiki/Uncanny valley</item>
+        <item>https://it.wikipedia.org/wiki/Hueyatlaco</item>
+        <item>https://it.wikipedia.org/wiki/Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu</item>
+        <item>https://it.wikipedia.org/wiki/Esperimento di Filadelfia</item>
+        <item>https://it.wikipedia.org/wiki/Big Hole</item>
+        <item>https://it.wikipedia.org/wiki/Gruppo Rondoi-Baranci</item>
+        <item>https://it.wikipedia.org/wiki/Cesare Lombroso</item>
+        <item>https://it.wikipedia.org/wiki/Oggetto sottomarino non identificato</item>
+        <item>https://it.wikipedia.org/wiki/Mutuno Tutuno</item>
+        <item>https://it.wikipedia.org/wiki/Cartello Phoebus</item>
+        <item>https://it.wikipedia.org/wiki/31 febbraio</item>
+        <item>https://it.wikipedia.org/wiki/Fernando Leoni</item>
+        <item>https://it.wikipedia.org/wiki/Tonoscopio</item>
+        <item>https://it.wikipedia.org/wiki/Unità 731</item>
+        <item>https://it.wikipedia.org/wiki/De situ Britanniae</item>
+        <item>https://it.wikipedia.org/wiki/Teorie del complotto sulla SARS</item>
+        <item>https://it.wikipedia.org/wiki/Elefante della Bastiglia</item>
+        <item>https://it.wikipedia.org/wiki/Postumo (Lucio Battisti)</item>
+        <item>https://it.wikipedia.org/wiki/Buco di Viso</item>
+        <item>https://it.wikipedia.org/wiki/Rapporto La Guardia</item>
+        <item>https://it.wikipedia.org/wiki/Movimento per l\'estinzione umana volontaria</item>
+        <item>https://it.wikipedia.org/wiki/Ipotesi del tempo fantasma</item>
+        <item>https://it.wikipedia.org/wiki/Potešnye vojska</item>
+        <item>https://it.wikipedia.org/wiki/Futuro della Terra</item>
+        <item>https://it.wikipedia.org/wiki/Abuso rituale satanico</item>
+        <item>https://it.wikipedia.org/wiki/Tregua di Natale</item>
+        <item>https://it.wikipedia.org/wiki/Pietro Camedda</item>
+        <item>https://it.wikipedia.org/wiki/Tuttomondo</item>
+        <item>https://it.wikipedia.org/wiki/Monowi</item>
+        <item>https://it.wikipedia.org/wiki/Specchio (immaginario)</item>
+        <item>https://it.wikipedia.org/wiki/Operazione Tannenbaum</item>
+        <item>https://it.wikipedia.org/wiki/Ordine del Bagno</item>
+        <item>https://it.wikipedia.org/wiki/Sceblasti</item>
+        <item>https://it.wikipedia.org/wiki/Violino a bastone</item>
+        <item>https://it.wikipedia.org/wiki/Virgola mobile</item>
+        <item>https://it.wikipedia.org/wiki/Incidente stradale di Bridget Driscoll</item>
+        <item>https://it.wikipedia.org/wiki/Munaciello</item>
+        <item>https://it.wikipedia.org/wiki/Maledizione di Superman</item>
+        <item>https://it.wikipedia.org/wiki/Longplayer</item>
+        <item>https://it.wikipedia.org/wiki/Uccello di Saqqara</item>
+        <item>https://it.wikipedia.org/wiki/Labirinto di Barnes</item>
+        <item>https://it.wikipedia.org/wiki/La Luisona</item>
+        <item>https://it.wikipedia.org/wiki/Curva spaziotemporale chiusa di tipo tempo</item>
+        <item>https://it.wikipedia.org/wiki/Gerbilling</item>
+        <item>https://it.wikipedia.org/wiki/Numeri pseudo-casuali</item>
+        <item>https://it.wikipedia.org/wiki/Chrysler Norseman</item>
+        <item>https://it.wikipedia.org/wiki/Tailleur rosa Chanel di Jacqueline Bouvier Kennedy</item>
+        <item>https://it.wikipedia.org/wiki/Teatro della Concordia (Monte Castello di Vibio)</item>
+        <item>https://it.wikipedia.org/wiki/Canal du Midi</item>
+        <item>https://it.wikipedia.org/wiki/Scala per pesci</item>
+        <item>https://it.wikipedia.org/wiki/Giovanni Gasti</item>
+        <item>https://it.wikipedia.org/wiki/Motoruota</item>
+        <item>https://it.wikipedia.org/wiki/The First Team</item>
+        <item>https://it.wikipedia.org/wiki/Paradosso temporale</item>
+        <item>https://it.wikipedia.org/wiki/Sergio Scaglietti</item>
+        <item>https://it.wikipedia.org/wiki/Die Glocke</item>
+        <item>https://it.wikipedia.org/wiki/Operazione Ruthless</item>
+        <item>https://it.wikipedia.org/wiki/Crinoidea</item>
+        <item>https://it.wikipedia.org/wiki/Turritopsis nutricula</item>
+        <item>https://it.wikipedia.org/wiki/Papiro Edwin Smith</item>
+        <item>https://it.wikipedia.org/wiki/Hégésippe Simon</item>
+        <item>https://it.wikipedia.org/wiki/Caso Taman Shud</item>
+        <item>https://it.wikipedia.org/wiki/Ragni fritti</item>
+        <item>https://it.wikipedia.org/wiki/Willis Tower</item>
+        <item>https://it.wikipedia.org/wiki/Elisabeth Freeman</item>
+        <item>https://it.wikipedia.org/wiki/Fortezze marittime Maunsell</item>
+        <item>https://it.wikipedia.org/wiki/Federazione Ginnastica d\'Italia</item>
+        <item>https://it.wikipedia.org/wiki/The quick brown fox jumps over the lazy dog</item>
+        <item>https://it.wikipedia.org/wiki/Fiori di Bach</item>
+        <item>https://it.wikipedia.org/wiki/Italiana 5 birilli</item>
+        <item>https://it.wikipedia.org/wiki/Neocreazionismo</item>
+        <item>https://it.wikipedia.org/wiki/Avventura testuale</item>
+        <item>https://it.wikipedia.org/wiki/Locomotiva DB 184</item>
+        <item>https://it.wikipedia.org/wiki/Fattoide</item>
+        <item>https://it.wikipedia.org/wiki/Quarto Reich</item>
+        <item>https://it.wikipedia.org/wiki/Dagen H</item>
+        <item>https://it.wikipedia.org/wiki/Solomon Northup</item>
+        <item>https://it.wikipedia.org/wiki/Ascensore spaziale</item>
+        <item>https://it.wikipedia.org/wiki/Georgia Guidestones</item>
+        <item>https://it.wikipedia.org/wiki/Kepler-64 b</item>
+        <item>https://it.wikipedia.org/wiki/Buco della memoria</item>
+        <item>https://it.wikipedia.org/wiki/Mano della Gloria</item>
+        <item>https://it.wikipedia.org/wiki/Guerra degli emù</item>
+        <item>https://it.wikipedia.org/wiki/Violino piccolo</item>
+        <item>https://it.wikipedia.org/wiki/Accordo di tredicesima</item>
+        <item>https://it.wikipedia.org/wiki/Fred Ott\'s Sneeze</item>
+        <item>https://it.wikipedia.org/wiki/Organ²/ASLSP</item>
+        <item>https://it.wikipedia.org/wiki/L\'arcobaleno</item>
+        <item>https://it.wikipedia.org/wiki/Teoria del complotto del Nuovo ordine mondiale</item>
+        <item>https://it.wikipedia.org/wiki/Pranoterapia</item>
+        <item>https://it.wikipedia.org/wiki/Premio Oscar</item>
+        <item>https://it.wikipedia.org/wiki/Rivarossi</item>
+        <item>https://it.wikipedia.org/wiki/Schiacciamento da elefante</item>
+        <item>https://it.wikipedia.org/wiki/Unione degli Atei e degli Agnostici Razionalisti</item>
+        <item>https://it.wikipedia.org/wiki/Pietra runica di Kensington</item>
+        <item>https://it.wikipedia.org/wiki/Charles Fort</item>
+        <item>https://it.wikipedia.org/wiki/Materia strana</item>
+        <item>https://it.wikipedia.org/wiki/d3o</item>
+        <item>https://it.wikipedia.org/wiki/69º Gran Premio Indianopolis</item>
+        <item>https://it.wikipedia.org/wiki/Alimentazione medievale</item>
+        <item>https://it.wikipedia.org/wiki/Aerodrome A</item>
+        <item>https://it.wikipedia.org/wiki/USS Arizona (BB-39)</item>
+        <item>https://it.wikipedia.org/wiki/Flibbiddydibbiddydob</item>
+        <item>https://it.wikipedia.org/wiki/Teoria degli antichi astronauti</item>
+        <item>https://it.wikipedia.org/wiki/Magia bianca</item>
+        <item>https://it.wikipedia.org/wiki/RealDoll</item>
+        <item>https://it.wikipedia.org/wiki/Pierino (barzellette)</item>
+        <item>https://it.wikipedia.org/wiki/Messaggio subliminale</item>
+        <item>https://it.wikipedia.org/wiki/Zercone</item>
+        <item>https://it.wikipedia.org/wiki/Gol fantasma</item>
+        <item>https://it.wikipedia.org/wiki/Nautilus (Verne)</item>
+        <item>https://it.wikipedia.org/wiki/Manifesto della cucina futurista</item>
+        <item>https://it.wikipedia.org/wiki/Macchina dei sogni</item>
+        <item>https://it.wikipedia.org/wiki/Serafino (tifoso)</item>
+        <item>https://it.wikipedia.org/wiki/The Skeptic\'s Dictionary</item>
+        <item>https://it.wikipedia.org/wiki/Matrice del comando</item>
+        <item>https://it.wikipedia.org/wiki/Idrocolonterapia</item>
+        <item>https://it.wikipedia.org/wiki/Bestiarius</item>
+        <item>https://it.wikipedia.org/wiki/Mayday</item>
+        <item>https://it.wikipedia.org/wiki/Il cancro è un fungo</item>
+        <item>https://it.wikipedia.org/wiki/Raid di Tondern</item>
+        <item>https://it.wikipedia.org/wiki/Pollice verso</item>
+        <item>https://it.wikipedia.org/wiki/Milizia Tradizionale di Calasca</item>
+        <item>https://it.wikipedia.org/wiki/Guerrillero Heroico</item>
+        <item>https://it.wikipedia.org/wiki/Limite K-T</item>
+        <item>https://it.wikipedia.org/wiki/Viola organista</item>
+        <item>https://it.wikipedia.org/wiki/Serie UP</item>
+        <item>https://it.wikipedia.org/wiki/Associazione Calcio Perugia 1978-1979</item>
+        <item>https://it.wikipedia.org/wiki/Eterocromia</item>
+        <item>https://it.wikipedia.org/wiki/Ruota degli esposti</item>
+        <item>https://it.wikipedia.org/wiki/Teoria del pazzo</item>
+        <item>https://it.wikipedia.org/wiki/Guerra anglo-zanzibariana</item>
+        <item>https://it.wikipedia.org/wiki/Colonizzazione curlandese delle Americhe</item>
+        <item>https://it.wikipedia.org/wiki/Morbo di Pompe</item>
+        <item>https://it.wikipedia.org/wiki/Patriottismo insetticida</item>
+        <item>https://it.wikipedia.org/wiki/Lettera di Bixby</item>
+        <item>https://it.wikipedia.org/wiki/Uomo selvatico</item>
+        <item>https://it.wikipedia.org/wiki/Tal der Ahnungslosen</item>
+        <item>https://it.wikipedia.org/wiki/Sistema ticonico</item>
+        <item>https://it.wikipedia.org/wiki/Lonesome George</item>
+        <item>https://it.wikipedia.org/wiki/Maledizione del Bambino</item>
+        <item>https://it.wikipedia.org/wiki/Aura (medicina)</item>
+        <item>https://it.wikipedia.org/wiki/Nuraghe</item>
+        <item>https://it.wikipedia.org/wiki/Razza ariana</item>
+        <item>https://it.wikipedia.org/wiki/Alieni nordici</item>
+        <item>https://it.wikipedia.org/wiki/Morris Jessup</item>
+        <item>https://it.wikipedia.org/wiki/Quasi-guerra</item>
+        <item>https://it.wikipedia.org/wiki/London Beer Flood</item>
+        <item>https://it.wikipedia.org/wiki/Didi Senft</item>
+        <item>https://it.wikipedia.org/wiki/Cervellato</item>
+        <item>https://it.wikipedia.org/wiki/Iridologia</item>
+        <item>https://it.wikipedia.org/wiki/Pegaso (mitologia)</item>
+        <item>https://it.wikipedia.org/wiki/Morte di Diana Spencer</item>
+        <item>https://it.wikipedia.org/wiki/Eva Klotz</item>
+        <item>https://it.wikipedia.org/wiki/Bull-baiting</item>
+        <item>https://it.wikipedia.org/wiki/Amuleto</item>
+        <item>https://it.wikipedia.org/wiki/Sassi di Matera</item>
+        <item>https://it.wikipedia.org/wiki/Pietro Conti (1796-1856)</item>
+        <item>https://it.wikipedia.org/wiki/Labirinto della Masone</item>
+        <item>https://it.wikipedia.org/wiki/Bruce Lipton</item>
+        <item>https://it.wikipedia.org/wiki/Corvi della Torre di Londra</item>
+        <item>https://it.wikipedia.org/wiki/Psiconeuroendocrinoimmunologia</item>
+        <item>https://it.wikipedia.org/wiki/Casalinga di Voghera</item>
+        <item>https://it.wikipedia.org/wiki/Rrröööaaarrr</item>
+        <item>https://it.wikipedia.org/wiki/Spigolamento abusivo</item>
+        <item>https://it.wikipedia.org/wiki/Gigante di Cardiff</item>
+        <item>https://it.wikipedia.org/wiki/Re Davide (leggenda)</item>
+        <item>https://it.wikipedia.org/wiki/Studio sulla sifilide di Tuskegee</item>
+        <item>https://it.wikipedia.org/wiki/Lista_dei_più_grandi_pezzi_di_artiglieria_per_calibro</item>
+        <item>https://it.wikipedia.org/wiki/Ronald Mallett</item>
+        <item>https://it.wikipedia.org/wiki/Girolamo Ortis</item>
+        <item>https://it.wikipedia.org/wiki/Equus quagga quagga</item>
+        <item>https://it.wikipedia.org/wiki/Teorema spettrale</item>
+        <item>https://it.wikipedia.org/wiki/Autoalveare</item>
+        <item>https://it.wikipedia.org/wiki/Gulo gulo</item>
+        <item>https://it.wikipedia.org/wiki/L\'arrivo di un treno alla stazione di La Ciotat</item>
+        <item>https://it.wikipedia.org/wiki/Pino sulla Sponda del Lago Maggiore</item>
+        <item>https://it.wikipedia.org/wiki/Provincia di Batman</item>
+        <item>https://it.wikipedia.org/wiki/Botte volante</item>
+        <item>https://it.wikipedia.org/wiki/Protocolli dei Savi di Sion</item>
+        <item>https://it.wikipedia.org/wiki/Ed Alonzo</item>
+        <item>https://it.wikipedia.org/wiki/Cultura dei telefoni cellulari in Giappone</item>
+        <item>https://it.wikipedia.org/wiki/Invisibile Unicorno Rosa</item>
+        <item>https://it.wikipedia.org/wiki/Canto delle dame</item>
+        <item>https://it.wikipedia.org/wiki/Ripetizione dilazionata</item>
+        <item>https://it.wikipedia.org/wiki/Catenano</item>
+        <item>https://it.wikipedia.org/wiki/Bentley State Limousine</item>
+        <item>https://it.wikipedia.org/wiki/Destino ultimo dell\'universo</item>
+        <item>https://it.wikipedia.org/wiki/Fate di Cottingley</item>
+        <item>https://it.wikipedia.org/wiki/Giapeto</item>
+        <item>https://it.wikipedia.org/wiki/Nido di rondine</item>
+        <item>https://it.wikipedia.org/wiki/Drapetomania</item>
+        <item>https://it.wikipedia.org/wiki/Cane cinese Chongqing</item>
+        <item>https://it.wikipedia.org/wiki/Bomba Zar</item>
+        <item>https://it.wikipedia.org/wiki/Bardenas Reales</item>
+        <item>https://it.wikipedia.org/wiki/Operazione Chastise</item>
+        <item>https://it.wikipedia.org/wiki/Christopher McCandless</item>
+        <item>https://it.wikipedia.org/wiki/Leggenda della morte di Paul McCartney</item>
+        <item>https://it.wikipedia.org/wiki/Surf sulla folla</item>
+        <item>https://it.wikipedia.org/wiki/Museo delle anime del Purgatorio</item>
+        <item>https://it.wikipedia.org/wiki/Mark Boyle</item>
+        <item>https://it.wikipedia.org/wiki/Stemma di Siena</item>
+        <item>https://it.wikipedia.org/wiki/Ma con gran pena le reca giù</item>
+        <item>https://it.wikipedia.org/wiki/Cinisca</item>
+        <item>https://it.wikipedia.org/wiki/Corpo grottesco</item>
+        <item>https://it.wikipedia.org/wiki/Bandiera terrestre</item>
+        <item>https://it.wikipedia.org/wiki/Australia-Samoa Americane 31-0</item>
+        <item>https://it.wikipedia.org/wiki/Santo Prepuzio</item>
+        <item>https://it.wikipedia.org/wiki/Controversia di Praga</item>
+        <item>https://it.wikipedia.org/wiki/Cappellone degli Spagnoli</item>
+        <item>https://it.wikipedia.org/wiki/Macchia fredda nella radiazione cosmica di fondo</item>
+        <item>https://it.wikipedia.org/wiki/TARDIS</item>
+        <item>https://it.wikipedia.org/wiki/Sudicio Rinverdito</item>
+        <item>https://it.wikipedia.org/wiki/Glicone</item>
+        <item>https://it.wikipedia.org/wiki/Fine del mondo</item>
+        <item>https://it.wikipedia.org/wiki/Punto di Feynman</item>
+        <item>https://it.wikipedia.org/wiki/Cospirazione della General Motors</item>
+        <item>https://it.wikipedia.org/wiki/Leggenda nera dell\'Inquisizione</item>
+        <item>https://it.wikipedia.org/wiki/Grande Macchia Rossa</item>
+        <item>https://it.wikipedia.org/wiki/Digivice</item>
+        <item>https://it.wikipedia.org/wiki/Petalismo</item>
+        <item>https://it.wikipedia.org/wiki/Cacopedia</item>
+        <item>https://it.wikipedia.org/wiki/Porta Alchemica</item>
+        <item>https://it.wikipedia.org/wiki/Negazionismo dell\'Olocausto</item>
+        <item>https://it.wikipedia.org/wiki/Principato di Sealand</item>
+        <item>https://it.wikipedia.org/wiki/NESARA</item>
+        <item>https://it.wikipedia.org/wiki/CHE/COSA/TE/NE/FAI/DI/UN/TITOLO</item>
+        <item>https://it.wikipedia.org/wiki/Les Fastes de la grande et ancienne Mxnxstrxndxsx</item>
+        <item>https://it.wikipedia.org/wiki/Gata Carogna</item>
+        <item>https://it.wikipedia.org/wiki/Gödel, Escher, Bach: un\'eterna ghirlanda brillante</item>
+        <item>https://it.wikipedia.org/wiki/Ancoraggio (PNL)</item>
+        <item>https://it.wikipedia.org/wiki/Architettura di un processore basato su registri generali</item>
+        <item>https://it.wikipedia.org/wiki/Alice Prin</item>
+        <item>https://it.wikipedia.org/wiki/Autoleone</item>
+        <item>https://it.wikipedia.org/wiki/Stati per consumo di birra pro capite</item>
+        <item>https://it.wikipedia.org/wiki/Kolinahr</item>
+        <item>https://it.wikipedia.org/wiki/Blakennomion</item>
+        <item>https://it.wikipedia.org/wiki/Gallerie del monte Soratte</item>
+        <item>https://it.wikipedia.org/wiki/Stadium</item>
+        <item>https://it.wikipedia.org/wiki/Moto di puro rotolamento</item>
+        <item>https://it.wikipedia.org/wiki/Emerenzia</item>
+        <item>https://it.wikipedia.org/wiki/Optofono</item>
+        <item>https://it.wikipedia.org/wiki/Penis captivus</item>
+        <item>https://it.wikipedia.org/wiki/Aelia Laelia Crispis</item>
+        <item>https://it.wikipedia.org/wiki/Technobabble</item>
+        <item>https://it.wikipedia.org/wiki/I cancelli del cielo</item>
+        <item>https://it.wikipedia.org/wiki/Museum of Bad Art</item>
+        <item>https://it.wikipedia.org/wiki/Specie aliena</item>
+        <item>https://it.wikipedia.org/wiki/Craniopagus parasiticus</item>
+        <item>https://it.wikipedia.org/wiki/Vincenzo Tiberio</item>
+        <item>https://it.wikipedia.org/wiki/Vuvuzela</item>
+        <item>https://it.wikipedia.org/wiki/Kalakukko</item>
+        <item>https://it.wikipedia.org/wiki/Cioccolato delle forze armate statunitensi</item>
+        <item>https://it.wikipedia.org/wiki/Orologio dell\'apocalisse</item>
+        <item>https://it.wikipedia.org/wiki/Porta del Tempo</item>
+        <item>https://it.wikipedia.org/wiki/Varietà invariante</item>
+        <item>https://it.wikipedia.org/wiki/Toilette in Giappone</item>
+        <item>https://it.wikipedia.org/wiki/Archeologia misteriosa</item>
+        <item>https://it.wikipedia.org/wiki/Beffa del monossido di diidrogeno</item>
+        <item>https://it.wikipedia.org/wiki/Piede da trincea</item>
+        <item>https://it.wikipedia.org/wiki/Nottolino browniano</item>
+        <item>https://it.wikipedia.org/wiki/Irukandji</item>
+        <item>https://it.wikipedia.org/wiki/Pionieri mormoni con carretto a mano</item>
+        <item>https://it.wikipedia.org/wiki/Ferrovia della Jungfrau</item>
+        <item>https://it.wikipedia.org/wiki/Roar (nome)</item>
+        <item>https://it.wikipedia.org/wiki/Rolfing</item>
+        <item>https://it.wikipedia.org/wiki/Cosmonauti perduti</item>
+        <item>https://it.wikipedia.org/wiki/Coppa del mondo VIVA</item>
+        <item>https://it.wikipedia.org/wiki/Isola Budelli</item>
+        <item>https://it.wikipedia.org/wiki/Ambystoma mexicanum</item>
+        <item>https://it.wikipedia.org/wiki/Labirinto di Cnosso</item>
+        <item>https://it.wikipedia.org/wiki/Uovo con gallina</item>
+        <item>https://it.wikipedia.org/wiki/Profezie sul 21 dicembre 2012</item>
+        <item>https://it.wikipedia.org/wiki/Sindrome di Parigi</item>
+        <item>https://it.wikipedia.org/wiki/Adam Kadmon (personaggio)</item>
+        <item>https://it.wikipedia.org/wiki/Carlo Urbani</item>
+        <item>https://it.wikipedia.org/wiki/Teoria del complotto sull\'attacco di Pearl Harbor</item>
+        <item>https://it.wikipedia.org/wiki/Monte Testaccio</item>
+        <item>https://it.wikipedia.org/wiki/Pizzaiolo acrobatico</item>
+        <item>https://it.wikipedia.org/wiki/Boeing X-43</item>
+        <item>https://it.wikipedia.org/wiki/Volo Aeroflot 593</item>
+        <item>https://it.wikipedia.org/wiki/2012 DA14</item>
+        <item>https://it.wikipedia.org/wiki/Villa Mocenigo (Marocco)</item>
+        <item>https://it.wikipedia.org/wiki/RoboCup</item>
+        <item>https://it.wikipedia.org/wiki/Ilse Koch</item>
+        <item>https://it.wikipedia.org/wiki/Laboratorio di Zetetica</item>
+        <item>https://it.wikipedia.org/wiki/Interzato in grembo appuntato</item>
+        <item>https://it.wikipedia.org/wiki/Cleptocrazia</item>
+        <item>https://it.wikipedia.org/wiki/Friendly Floatees</item>
+        <item>https://it.wikipedia.org/wiki/Ipotesi sull\'elezione papale di Giuseppe Siri</item>
+        <item>https://it.wikipedia.org/wiki/Diamante del fabbricante di cucchiai</item>
+        <item>https://it.wikipedia.org/wiki/Chiasmodon niger</item>
+        <item>https://it.wikipedia.org/wiki/Dita a V</item>
+        <item>https://it.wikipedia.org/wiki/Malarioterapia</item>
+        <item>https://it.wikipedia.org/wiki/La prigione (opera teatrale)</item>
+        <item>https://it.wikipedia.org/wiki/Hexakosioihexekontahexafobia</item>
+        <item>https://it.wikipedia.org/wiki/Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch</item>
+        <item>https://it.wikipedia.org/wiki/Fantawestern</item>
+        <item>https://it.wikipedia.org/wiki/Satelliti naturali di Marte</item>
+        <item>https://it.wikipedia.org/wiki/Città di transizione</item>
+        <item>https://it.wikipedia.org/wiki/Borghi putridi</item>
+        <item>https://it.wikipedia.org/wiki/Derweze</item>
+        <item>https://it.wikipedia.org/wiki/Stronzate. Un saggio filosofico</item>
+        <item>https://it.wikipedia.org/wiki/Jack il saltatore</item>
+        <item>https://it.wikipedia.org/wiki/Cross (album)</item>
+        <item>https://it.wikipedia.org/wiki/Effetto Holtzman</item>
+        <item>https://it.wikipedia.org/wiki/Pianoforte a gatti</item>
+        <item>https://it.wikipedia.org/wiki/Getto blu</item>
+        <item>https://it.wikipedia.org/wiki/Lingua della suocera</item>
+        <item>https://it.wikipedia.org/wiki/Paradosso del mentitore</item>
+        <item>https://it.wikipedia.org/wiki/Meretrix</item>
+        <item>https://it.wikipedia.org/wiki/Piramidologia</item>
+        <item>https://it.wikipedia.org/wiki/Sindrome di Fregoli</item>
+        <item>https://it.wikipedia.org/wiki/Antigravità</item>
+        <item>https://it.wikipedia.org/wiki/Idroscalo di Torino</item>
+        <item>https://it.wikipedia.org/wiki/Viaggio immaginario</item>
+        <item>https://it.wikipedia.org/wiki/Cropsey</item>
+        <item>https://it.wikipedia.org/wiki/Sbarramento Pian dei Morti</item>
+        <item>https://it.wikipedia.org/wiki/La nave e il faro (leggenda metropolitana)</item>
+        <item>https://it.wikipedia.org/wiki/Jon Frum</item>
+        <item>https://it.wikipedia.org/wiki/Watch the K Foundation Burn a Million Quid</item>
+        <item>https://it.wikipedia.org/wiki/Vergine di Norimberga</item>
+        <item>https://it.wikipedia.org/wiki/Pioggia di animali</item>
+        <item>https://it.wikipedia.org/wiki/L\'opera da tre soldi</item>
+        <item>https://it.wikipedia.org/wiki/Donaudampfschiffahrtselektrizitätenhauptbetriebswerkbauunterbeamtengesellschaft</item>
+        <item>https://it.wikipedia.org/wiki/Corpus Clock</item>
+        <item>https://it.wikipedia.org/wiki/Toussaint Louverture</item>
+        <item>https://it.wikipedia.org/wiki/...4..3..2..1...morte</item>
+        <item>https://it.wikipedia.org/wiki/Bella \'mbriana</item>
+        <item>https://it.wikipedia.org/wiki/Vaso di Dorchester</item>
+        <item>https://it.wikipedia.org/wiki/Traduttore universale</item>
+        <item>https://it.wikipedia.org/wiki/Criosollevamento</item>
+        <item>https://it.wikipedia.org/wiki/Sismoscopio di Zhang Heng</item>
+        <item>https://it.wikipedia.org/wiki/Raimondo di Sangro</item>
+        <item>https://it.wikipedia.org/wiki/Boomdotto</item>
+        <item>https://it.wikipedia.org/wiki/Razzie Award alla peggior sceneggiatura</item>
+        <item>https://it.wikipedia.org/wiki/Monastero di Santa Caterina (Egitto)</item>
+        <item>https://it.wikipedia.org/wiki/Paradosso della predestinazione</item>
+        <item>https://it.wikipedia.org/wiki/Scazzamurrieddhru</item>
+        <item>https://it.wikipedia.org/wiki/Mil Mi-12</item>
+        <item>https://it.wikipedia.org/wiki/Il naufragio del Titan</item>
+        <item>https://it.wikipedia.org/wiki/Emicrania da gelato</item>
+        <item>https://it.wikipedia.org/wiki/Agloe</item>
+        <item>https://it.wikipedia.org/wiki/Eric Moussambani</item>
+        <item>https://it.wikipedia.org/wiki/Uomo falena</item>
+        <item>https://it.wikipedia.org/wiki/Chicken tikka masala</item>
+        <item>https://it.wikipedia.org/wiki/Bullshit!</item>
+        <item>https://it.wikipedia.org/wiki/Pioggia rossa in Kerala</item>
+        <item>https://it.wikipedia.org/wiki/Globus Cassus</item>
+        <item>https://it.wikipedia.org/wiki/Calendario sexy</item>
+        <item>https://it.wikipedia.org/wiki/Lingua artificiale</item>
+        <item>https://it.wikipedia.org/wiki/Satellite KEO</item>
+        <item>https://it.wikipedia.org/wiki/Clinica Burzynski</item>
+        <item>https://it.wikipedia.org/wiki/Genio del male</item>
+        <item>https://it.wikipedia.org/wiki/Armonica a bicchieri</item>
+        <item>https://it.wikipedia.org/wiki/Riordino dei musei del Castello Sforzesco</item>
+        <item>https://it.wikipedia.org/wiki/SS Schenectady</item>
+        <item>https://it.wikipedia.org/wiki/Cervello positronico</item>
+        <item>https://it.wikipedia.org/wiki/Sacrario militare di Redipuglia</item>
+        <item>https://it.wikipedia.org/wiki/Domenico Mastini</item>
+        <item>https://it.wikipedia.org/wiki/Teoria del complotto lunare</item>
+        <item>https://it.wikipedia.org/wiki/Tafazzi</item>
+        <item>https://it.wikipedia.org/wiki/Servizio P</item>
+        <item>https://it.wikipedia.org/wiki/Gropecunt Lane</item>
+        <item>https://it.wikipedia.org/wiki/Pascalina</item>
+        <item>https://it.wikipedia.org/wiki/Fontana delle tette</item>
+        <item>https://it.wikipedia.org/wiki/Abraham de Moivre</item>
+        <item>https://it.wikipedia.org/wiki/Buonadonna</item>
+        <item>https://it.wikipedia.org/wiki/Noetica (pseudoscienza)</item>
+        <item>https://it.wikipedia.org/wiki/Acámbaro</item>
+        <item>https://it.wikipedia.org/wiki/Affinità-divergenze fra il compagno Togliatti e noi - Del conseguimento della maggiore età</item>
+        <item>https://it.wikipedia.org/wiki/Per Euxenippo</item>
+        <item>https://it.wikipedia.org/wiki/Labirinto acquatico di Morris</item>
+        <item>https://it.wikipedia.org/wiki/Albero del Ténéré</item>
+        <item>https://it.wikipedia.org/wiki/Principio di autoconsistenza di Novikov</item>
+        <item>https://it.wikipedia.org/wiki/Strada guidata</item>
+        <item>https://it.wikipedia.org/wiki/Yonaguni</item>
+        <item>https://it.wikipedia.org/wiki/Bo (nome)</item>
+        <item>https://it.wikipedia.org/wiki/Leo Pardi</item>
+        <item>https://it.wikipedia.org/wiki/Interpretazione a molti mondi</item>
+        <item>https://it.wikipedia.org/wiki/Inugami</item>
+        <item>https://it.wikipedia.org/wiki/Respirazione olotropica</item>
+        <item>https://it.wikipedia.org/wiki/Moltiplicatore monetario</item>
+        <item>https://it.wikipedia.org/wiki/Altrove (fumetto)</item>
+        <item>https://it.wikipedia.org/wiki/Aeroporto di Lukla</item>
+        <item>https://it.wikipedia.org/wiki/Carrozza_Centoporte</item>
+        <item>https://it.wikipedia.org/wiki/Paga quello che vuoi</item>
+        <item>https://it.wikipedia.org/wiki/Prescienza</item>
+        <item>https://it.wikipedia.org/wiki/Club 27</item>
+        <item>https://it.wikipedia.org/wiki/Pietre di Ica</item>
+        <item>https://it.wikipedia.org/wiki/Contessina Selvaggia Serbelloni Mazzanti Viendalmare</item>
+        <item>https://it.wikipedia.org/wiki/Linda Burfield Hazzard</item>
+        <item>https://it.wikipedia.org/wiki/Mona (nome)</item>
+        <item>https://it.wikipedia.org/wiki/Canguro fantasma</item>
+        <item>https://it.wikipedia.org/wiki/Lago di Ha! Ha!</item>
+        <item>https://it.wikipedia.org/wiki/Lingerie Football League</item>
+        <item>https://it.wikipedia.org/wiki/Morte da ventilatore</item>
+        <item>https://it.wikipedia.org/wiki/Da Atlantide alla Sfinge</item>
+        <item>https://it.wikipedia.org/wiki/Ponte di Einstein-Rosen</item>
+        <item>https://it.wikipedia.org/wiki/30 febbraio</item>
+        <item>https://it.wikipedia.org/wiki/Effetto Leidenfrost</item>
+        <item>https://it.wikipedia.org/wiki/Architettura eoliana</item>
+        <item>https://it.wikipedia.org/wiki/Spada dell\'Islam</item>
+        <item>https://it.wikipedia.org/wiki/274301 Wikipedia</item>
+        <item>https://it.wikipedia.org/wiki/Sinarchia</item>
+        <item>https://it.wikipedia.org/wiki/Miracolo eucaristico di Lanciano</item>
+        <item>https://it.wikipedia.org/wiki/Frontiera dei portafogli</item>
+        <item>https://it.wikipedia.org/wiki/Cimitero delle 366 Fosse</item>
+        <item>https://it.wikipedia.org/wiki/Baldwin Street</item>
+        <item>https://it.wikipedia.org/wiki/Guerra dei trecentotrentacinque anni</item>
+        <item>https://it.wikipedia.org/wiki/Ittioterapia</item>
+        <item>https://it.wikipedia.org/wiki/Scemo del villaggio</item>
+        <item>https://it.wikipedia.org/wiki/Fotografie post mortem</item>
+        <item>https://it.wikipedia.org/wiki/Antonov An-225 Mriya</item>
+        <item>https://it.wikipedia.org/wiki/Googol</item>
+        <item>https://it.wikipedia.org/wiki/Accoppiamento vibronico</item>
+        <item>https://it.wikipedia.org/wiki/Tarrare</item>
+        <item>https://it.wikipedia.org/wiki/Sperrbrecher</item>
+        <item>https://it.wikipedia.org/wiki/Emmy Noether</item>
+        <item>https://it.wikipedia.org/wiki/Joseph Pujol</item>
+        <item>https://it.wikipedia.org/wiki/Intervista a Marco Travaglio a Satyricon</item>
+        <item>https://it.wikipedia.org/wiki/Messaggio in bottiglia</item>
+        <item>https://it.wikipedia.org/wiki/Procedimenti giudiziari a carico di Oscar Wilde</item>
+        <item>https://it.wikipedia.org/wiki/Numero di Erdős</item>
+        <item>https://it.wikipedia.org/wiki/Pianta mangia-uomini</item>
+        <item>https://it.wikipedia.org/wiki/Imperial Camel Corps</item>
+        <item>https://it.wikipedia.org/wiki/Edgar Cayce</item>
+        <item>https://it.wikipedia.org/wiki/Labirinto di Lemno</item>
+        <item>https://it.wikipedia.org/wiki/Immondo corruttore</item>
+        <item>https://it.wikipedia.org/wiki/Orbitale di Banks</item>
+        <item>https://it.wikipedia.org/wiki/Viola pomposa</item>
+        <item>https://it.wikipedia.org/wiki/2160p</item>
+        <item>https://it.wikipedia.org/wiki/Aci Trezza</item>
+        <item>https://it.wikipedia.org/wiki/Manhattanhenge</item>
+        <item>https://it.wikipedia.org/wiki/Arrocco Pam-Krabbé</item>
+        <item>https://it.wikipedia.org/wiki/Pianeti immaginari</item>
+        <item>https://it.wikipedia.org/wiki/Acciaio effervescente</item>
+        <item>https://it.wikipedia.org/wiki/Margherita Teresa d\'Asburgo</item>
+        <item>https://it.wikipedia.org/wiki/Great Blue Hole</item>
+        <item>https://it.wikipedia.org/wiki/Pierre Plantard</item>
+        <item>https://it.wikipedia.org/wiki/Time ball</item>
+        <item>https://it.wikipedia.org/wiki/Kaman K-MAX</item>
+        <item>https://it.wikipedia.org/wiki/Sepolcro di Matteo Ferrillo</item>
+        <item>https://it.wikipedia.org/wiki/Bambini indaco</item>
+        <item>https://it.wikipedia.org/wiki/Automobile a vapore</item>
+        <item>https://it.wikipedia.org/wiki/Assedio di Waco</item>
+        <item>https://it.wikipedia.org/wiki/2M1207 b</item>
+        <item>https://it.wikipedia.org/wiki/Cerro Torre</item>
+        <item>https://it.wikipedia.org/wiki/Aquila delle Scimmie</item>
+        <item>https://it.wikipedia.org/wiki/Helltown</item>
+        <item>https://it.wikipedia.org/wiki/Labirinto di siepi</item>
+        <item>https://it.wikipedia.org/wiki/Balena 52-hertz</item>
+        <item>https://it.wikipedia.org/wiki/Parco dei Mostri</item>
+        <item>https://it.wikipedia.org/wiki/Fahrenheit 451</item>
+        <item>https://it.wikipedia.org/wiki/Uomo dei Miracoli</item>
+        <item>https://it.wikipedia.org/wiki/ISBN</item>
+        <item>https://it.wikipedia.org/wiki/Nazireato</item>
+        <item>https://it.wikipedia.org/wiki/William Windsor (capra)</item>
+        <item>https://it.wikipedia.org/wiki/Leggenda metropolitana</item>
+        <item>https://it.wikipedia.org/wiki/Supercazzora</item>
+        <item>https://it.wikipedia.org/wiki/Leggenda sulle coincidenze Lincoln-Kennedy</item>
+        <item>https://it.wikipedia.org/wiki/Mike il pollo senza testa</item>
+        <item>https://it.wikipedia.org/wiki/Paradosso del formaggio coi buchi</item>
+        <item>https://it.wikipedia.org/wiki/Batteria di Baghdad</item>
+        <item>https://it.wikipedia.org/wiki/Guerra degli scimpanzé del Gombe</item>
+        <item>https://it.wikipedia.org/wiki/Chiese di Chiloé</item>
+        <item>https://it.wikipedia.org/wiki/Punto triplo</item>
+        <item>https://it.wikipedia.org/wiki/Piaga del Ballo</item>
+        <item>https://it.wikipedia.org/wiki/Passaggio per pesci</item>
+        <item>https://it.wikipedia.org/wiki/Ryugyong Hotel</item>
+        <item>https://it.wikipedia.org/wiki/Schwäbische Hausfrau</item>
+        <item>https://it.wikipedia.org/wiki/Chesley Bonestell</item>
+        <item>https://it.wikipedia.org/wiki/Segnaletica e allestimento della Metropolitana Milanese</item>
+        <item>https://it.wikipedia.org/wiki/Team Hoyt</item>
+        <item>https://it.wikipedia.org/wiki/Ada Lovelace</item>
+        <item>https://it.wikipedia.org/wiki/Dalton Highway</item>
+        <item>https://it.wikipedia.org/wiki/Sfera di Dyson</item>
+        <item>https://it.wikipedia.org/wiki/Il Club Bilderberg</item>
+        <item>https://it.wikipedia.org/wiki/Guardia corsa papale</item>
+        <item>https://it.wikipedia.org/wiki/English as She Is Spoke</item>
+        <item>https://it.wikipedia.org/wiki/Base 211</item>
+        <item>https://it.wikipedia.org/wiki/Alfa Centauri Bb</item>
+        <item>https://it.wikipedia.org/wiki/Vista dalla finestra a Le Gras</item>
+        <item>https://it.wikipedia.org/wiki/Superleggera (sedia)</item>
+        <item>https://it.wikipedia.org/wiki/Ammasso aperto</item>
+        <item>https://it.wikipedia.org/wiki/Atlanta Nights</item>
+        <item>https://it.wikipedia.org/wiki/Pornocrazia</item>
+        <item>https://it.wikipedia.org/wiki/Pokémon shock</item>
+        <item>https://it.wikipedia.org/wiki/Pseudoscienza</item>
+        <item>https://it.wikipedia.org/wiki/Vestito verde Versace di Jennifer Lopez</item>
+        <item>https://it.wikipedia.org/wiki/Albero di Jesse</item>
+        <item>https://it.wikipedia.org/wiki/Oscar (gatto)</item>
+        <item>https://it.wikipedia.org/wiki/Secondo Pollo</item>
+        <item>https://it.wikipedia.org/wiki/Test di Turing</item>
+        <item>https://it.wikipedia.org/wiki/Scudo deflettore</item>
+        <item>https://it.wikipedia.org/wiki/Bunga bunga</item>
+        <item>https://it.wikipedia.org/wiki/Elettrosensibilità</item>
+        <item>https://it.wikipedia.org/wiki/Brooks Agnew</item>
+        <item>https://it.wikipedia.org/wiki/Amenukal dei Kel Adagh</item>
+        <item>https://it.wikipedia.org/wiki/The Vegetable Orchestra</item>
+        <item>https://it.wikipedia.org/wiki/SM U-118</item>
+        <item>https://it.wikipedia.org/wiki/Bubo bubo</item>
+        <item>https://it.wikipedia.org/wiki/Nano cervello</item>
+        <item>https://it.wikipedia.org/wiki/Oro nazista</item>
+        <item>https://it.wikipedia.org/wiki/Alligatori nelle fogne</item>
+        <item>https://it.wikipedia.org/wiki/Demon core</item>
+        <item>https://it.wikipedia.org/wiki/Ayahuasca</item>
+        <item>https://it.wikipedia.org/wiki/Carlos Castaneda</item>
+        <item>https://it.wikipedia.org/wiki/Bigfoot</item>
+        <item>https://it.wikipedia.org/wiki/Vadim Aleksandrovič Černobrov</item>
+        <item>https://it.wikipedia.org/wiki/Vagina dentata</item>
+        <item>https://it.wikipedia.org/wiki/Trotula de Ruggiero</item>
+        <item>https://it.wikipedia.org/wiki/Pianeta artificiale</item>
+        <item>https://it.wikipedia.org/wiki/Finocchiona</item>
+        <item>https://it.wikipedia.org/wiki/Charles-André Merda</item>
+        <item>https://it.wikipedia.org/wiki/Agopuntura</item>
+        <item>https://it.wikipedia.org/wiki/Isole della Delusione</item>
+        <item>https://it.wikipedia.org/wiki/Women Airforce Service Pilots</item>
+        <item>https://it.wikipedia.org/wiki/Il santo Graal (saggio)</item>
+        <item>https://it.wikipedia.org/wiki/Rotolamento di uova</item>
+        <item>https://it.wikipedia.org/wiki/Effetto Kulešov</item>
+        <item>https://it.wikipedia.org/wiki/Esperimento Rosenhan</item>
+        <item>https://it.wikipedia.org/wiki/Dogon</item>
+        <item>https://it.wikipedia.org/wiki/ICEHOTEL</item>
+        <item>https://it.wikipedia.org/wiki/Bosco Verticale</item>
+        <item>https://it.wikipedia.org/wiki/Sagittarius A*</item>
+        <item>https://it.wikipedia.org/wiki/Piccola Scala</item>
+        <item>https://it.wikipedia.org/wiki/Fluorizzazione dell\'acqua</item>
+        <item>https://it.wikipedia.org/wiki/Minareto di Fasano</item>
+        <item>https://it.wikipedia.org/wiki/Osservatorio astronomico Sphinx</item>
+        <item>https://it.wikipedia.org/wiki/Chiesa di San Giovanni (Cerreto Sannita)</item>
+        <item>https://it.wikipedia.org/wiki/Stati Uniti d\'Europa</item>
+        <item>https://it.wikipedia.org/wiki/Bart Sibrel</item>
+        <item>https://it.wikipedia.org/wiki/Concursante</item>
+        <item>https://it.wikipedia.org/wiki/Skull and Bones</item>
+        <item>https://it.wikipedia.org/wiki/Hoverboard</item>
+        <item>https://it.wikipedia.org/wiki/Raid Roma-Tokyo</item>
+        <item>https://it.wikipedia.org/wiki/Anno_senza_estate</item>
+        <item>https://it.wikipedia.org/wiki/Football Club Internazionale Milano</item>
+        <item>https://it.wikipedia.org/wiki/Allevamento di schiavi negli Stati Uniti</item>
+        <item>https://it.wikipedia.org/wiki/Citrus aurantium bizzarria</item>
+        <item>https://it.wikipedia.org/wiki/Cicceide</item>
+        <item>https://it.wikipedia.org/wiki/Stazioni fantasma della metropolitana di Parigi</item>
+        <item>https://it.wikipedia.org/wiki/Fuga geografica</item>
+        <item>https://it.wikipedia.org/wiki/Misticismo quantico</item>
+        <item>https://it.wikipedia.org/wiki/Caproni Ca.60 Transaereo</item>
+        <item>https://it.wikipedia.org/wiki/Cavallo islandese</item>
+        <item>https://it.wikipedia.org/wiki/Ponte delle Tette</item>
+        <item>https://it.wikipedia.org/wiki/Principessa Mafalda</item>
+        <item>https://it.wikipedia.org/wiki/Fionda gravitazionale</item>
+        <item>https://it.wikipedia.org/wiki/Salto di Bidone</item>
+        <item>https://it.wikipedia.org/wiki/Combattimento con le uova</item>
+        <item>https://it.wikipedia.org/wiki/Rinascimento cesenate</item>
+        <item>https://it.wikipedia.org/wiki/Casu marzu</item>
+        <item>https://it.wikipedia.org/wiki/Concordia (Antartide)</item>
+        <item>https://it.wikipedia.org/wiki/Obsolescenza programmata</item>
+        <item>https://it.wikipedia.org/wiki/Up Up Up Up Up Up</item>
+        <item>https://it.wikipedia.org/wiki/Bobobo-bo Bo-bobo</item>
+        <item>https://it.wikipedia.org/wiki/Snopes</item>
+        <item>https://it.wikipedia.org/wiki/Primo cubano</item>
+        <item>https://it.wikipedia.org/wiki/Durlindana</item>
+        <item>https://it.wikipedia.org/wiki/In girum imus nocte et consumimur igni</item>
+        <item>https://it.wikipedia.org/wiki/Glossario delle frasi fatte</item>
+        <item>https://it.wikipedia.org/wiki/Paperone de\' Paperoni</item>
+        <item>https://it.wikipedia.org/wiki/Moschetto Balilla</item>
+        <item>https://it.wikipedia.org/wiki/Paradosso del gatto imburrato</item>
+        <item>https://it.wikipedia.org/wiki/Forme uniche della continuità nello spazio</item>
+        <item>https://it.wikipedia.org/wiki/Palazzo Cheval</item>
+        <item>https://it.wikipedia.org/wiki/Fiat N.3</item>
+        <item>https://it.wikipedia.org/wiki/Paradosso di Achille e la tartaruga</item>
+        <item>https://it.wikipedia.org/wiki/cobra di Pugačëv</item>
+        <item>https://it.wikipedia.org/wiki/Museo archeologico virtuale</item>
+        <item>https://it.wikipedia.org/wiki/Costanti di accoppiamento</item>
+        <item>https://it.wikipedia.org/wiki/Teatro all\'italiana</item>
+        <item>https://it.wikipedia.org/wiki/Dilemma del prigioniero</item>
+        <item>https://it.wikipedia.org/wiki/Zuffa tra Pompeiani e Nocerini</item>
+        <item>https://it.wikipedia.org/wiki/Piramidi bosniache</item>
+        <item>https://it.wikipedia.org/wiki/Faro di Tiberio</item>
+        <item>https://it.wikipedia.org/wiki/Stuxnet</item>
+        <item>https://it.wikipedia.org/wiki/Central-Mid levels escalator</item>
+        <item>https://it.wikipedia.org/wiki/Scala di Scoville</item>
+        <item>https://it.wikipedia.org/wiki/Enneagramma della personalità</item>
+        <item>https://it.wikipedia.org/wiki/Joshua A. Norton</item>
+        <item>https://it.wikipedia.org/wiki/P♡P</item>
+        <item>https://it.wikipedia.org/wiki/Sindrome respiratoria mediorientale da Coronavirus</item>
+        <item>https://it.wikipedia.org/wiki/San Lucifero</item>
+        <item>https://it.wikipedia.org/wiki/Siege Perilous (fumetto)</item>
+        <item>https://it.wikipedia.org/wiki/Anomalia dell\'Ararat</item>
+        <item>https://it.wikipedia.org/wiki/Fiat Tagliero</item>
+        <item>https://it.wikipedia.org/wiki/Pila a combustibile ad acqua di Stanley Meyer</item>
+        <item>https://it.wikipedia.org/wiki/Satis elucet maiorem habere vim ad discendum liberam curiositatem quam meticulosam necessitatem</item>
+        <item>https://it.wikipedia.org/wiki/Battaglione sacro</item>
+        <item>https://it.wikipedia.org/wiki/I segreti perduti della tecnologia nazista</item>
+        <item>https://it.wikipedia.org/wiki/Canale della Mona</item>
+        <item>https://it.wikipedia.org/wiki/Wikipedia:Clausola della palla di neve</item>
+        <item>https://it.wikipedia.org/wiki/Sindrome di Alice nel Paese delle Meraviglie</item>
+        <item>https://it.wikipedia.org/wiki/Elettrotreno FS ETR 400</item>
+        <item>https://it.wikipedia.org/wiki/RRRrrrr!!!</item>
+        <item>https://it.wikipedia.org/wiki/L\'uomo che sconfisse il boogie</item>
+        <item>https://it.wikipedia.org/wiki/Lampade di Dendera</item>
+        <item>https://it.wikipedia.org/wiki/Agnello vegetale della Tartaria</item>
+        <item>https://it.wikipedia.org/wiki/Bartitsu</item>
+        <item>https://it.wikipedia.org/wiki/Ecce Homo (Elías García Martínez)</item>
+        <item>https://it.wikipedia.org/wiki/Bendis</item>
+        <item>https://it.wikipedia.org/wiki/Monte Athos</item>
+        <item>https://it.wikipedia.org/wiki/Benandanti</item>
+        <item>https://it.wikipedia.org/wiki/Bücherverbrennungen</item>
+        <item>https://it.wikipedia.org/wiki/Vestito di carne di Lady Gaga</item>
+        <item>https://it.wikipedia.org/wiki/Controversia sulla remissione della scomunica al vescovo Richard Williamson</item>
+        <item>https://it.wikipedia.org/wiki/Elefante da guerra</item>
+        <item>https://it.wikipedia.org/wiki/Memoria del mondo</item>
+        <item>https://it.wikipedia.org/wiki/Satellite Black Knight</item>
+        <item>https://it.wikipedia.org/wiki/Tormentone estivo</item>
+        <item>https://it.wikipedia.org/wiki/NIAI RK-I</item>
+        <item>https://it.wikipedia.org/wiki/Terapia di conversione</item>
+        <item>https://it.wikipedia.org/wiki/Charles Domery</item>
+        <item>https://it.wikipedia.org/wiki/Maneki neko</item>
+        <item>https://it.wikipedia.org/wiki/Paradosso del barbiere</item>
+        <item>https://it.wikipedia.org/wiki/Teteun</item>
+        <item>https://it.wikipedia.org/wiki/Guglielmo Braccio di Ferro</item>
+        <item>https://it.wikipedia.org/wiki/Microchip (impianto umano)</item>
+        <item>https://it.wikipedia.org/wiki/Miodesopsie</item>
+        <item>https://it.wikipedia.org/wiki/Piezonucleare</item>
+        <item>https://it.wikipedia.org/wiki/Sepoltura dei videogiochi Atari</item>
+        <item>https://it.wikipedia.org/wiki/VY Canis Majoris</item>
+        <item>https://it.wikipedia.org/wiki/Sol Invictus</item>
+        <item>https://it.wikipedia.org/wiki/Fetus in fetu</item>
+        <item>https://it.wikipedia.org/wiki/Piccola era glaciale</item>
+        <item>https://it.wikipedia.org/wiki/Pastafarianesimo</item>
+        <item>https://it.wikipedia.org/wiki/Tartaruga delle Galapagos</item>
+        <item>https://it.wikipedia.org/wiki/Argentinosaurus huinculensis</item>
+        <item>https://it.wikipedia.org/wiki/Percorso del cavallo</item>
+        <item>https://it.wikipedia.org/wiki/Sci estremo</item>
+        <item>https://it.wikipedia.org/wiki/Viktoria Savs</item>
+        <item>https://it.wikipedia.org/wiki/Effetto Streisand</item>
+        <item>https://it.wikipedia.org/wiki/Cronovisore</item>
+        <item>https://it.wikipedia.org/wiki/Armiamoci e partite</item>
+        <item>https://it.wikipedia.org/wiki/Hameau de la Reine</item>
+        <item>https://it.wikipedia.org/wiki/NORAD Tracks Santa</item>
+        <item>https://it.wikipedia.org/wiki/UVB-76</item>
+        <item>https://it.wikipedia.org/wiki/Tûranor PlanetSolar</item>
+        <item>https://it.wikipedia.org/wiki/Anopticon</item>
+        <item>https://it.wikipedia.org/wiki/Rapport</item>
+        <item>https://it.wikipedia.org/wiki/Colonna di Ferro</item>
+        <item>https://it.wikipedia.org/wiki/Utero artificiale</item>
+        <item>https://it.wikipedia.org/wiki/Fuente Magna</item>
+        <item>https://it.wikipedia.org/wiki/Alessandra Giliani</item>
+        <item>https://it.wikipedia.org/wiki/Morte di Giovanni Paolo I</item>
+        <item>https://it.wikipedia.org/wiki/HD 80606 b</item>
+        <item>https://it.wikipedia.org/wiki/Tubo di Krasnikov</item>
+        <item>https://it.wikipedia.org/wiki/Operazione Highjump</item>
+        <item>https://it.wikipedia.org/wiki/Salita in discesa</item>
+        <item>https://it.wikipedia.org/wiki/Qualunquone</item>
+        <item>https://it.wikipedia.org/wiki/Rinoceronte (Dürer)</item>
+        <item>https://it.wikipedia.org/wiki/Teorie del complotto sull\'attentato al World Trade Center dell\'11 settembre 2001</item>
+        <item>https://it.wikipedia.org/wiki/Bosco dell\'Alevé</item>
+        <item>https://it.wikipedia.org/wiki/Clairvius Narcisse</item>
+        <item>https://it.wikipedia.org/wiki/Tardigrada</item>
+        <item>https://it.wikipedia.org/wiki/Sindrome itai-itai</item>
+        <item>https://it.wikipedia.org/wiki/Bixi</item>
+        <item>https://it.wikipedia.org/wiki/D\'oh!</item>
+        <item>https://it.wikipedia.org/wiki/Transnistria</item>
+        <item>https://it.wikipedia.org/wiki/Analogo solare</item>
+        <item>https://it.wikipedia.org/wiki/Boom sonico</item>
+        <item>https://it.wikipedia.org/wiki/Giufà</item>
+        <item>https://it.wikipedia.org/wiki/Aron Ralston</item>
+        <item>https://it.wikipedia.org/wiki/Cioccolismo</item>
+        <item>https://it.wikipedia.org/wiki/St. Mary\'s (metropolitana di Londra)</item>
+        <item>https://it.wikipedia.org/wiki/Chiesa di Santa Passera</item>
+        <item>https://it.wikipedia.org/wiki/Bushismo</item>
+        <item>https://it.wikipedia.org/wiki/Come farsi una cultura mostruosa</item>
+        <item>https://it.wikipedia.org/wiki/Begich Towers Condominium</item>
+        <item>https://it.wikipedia.org/wiki/Allium ascalonicum</item>
+        <item>https://it.wikipedia.org/wiki/Jona 10</item>
+        <item>https://it.wikipedia.org/wiki/Chemurgia</item>
+        <item>https://it.wikipedia.org/wiki/Battaglioni femminili della morte</item>
+        <item>https://it.wikipedia.org/wiki/Urban Legends</item>
+        <item>https://it.wikipedia.org/wiki/Diritto reale di godimento</item>
+        <item>https://it.wikipedia.org/wiki/Sciovinismo del carbonio</item>
+        <item>https://it.wikipedia.org/wiki/Cospirazione della sorpresa d\'ottobre</item>
+        <item>https://it.wikipedia.org/wiki/Sale himalayano</item>
+        <item>https://it.wikipedia.org/wiki/Effetto Mozart</item>
+        <item>https://it.wikipedia.org/wiki/Radioso maggio</item>
+        <item>https://it.wikipedia.org/wiki/Savinien Cyrano de Bergerac</item>
+        <item>https://it.wikipedia.org/wiki/La Scarzuola</item>
+        <item>https://it.wikipedia.org/wiki/Gruppo Bilderberg</item>
+        <item>https://it.wikipedia.org/wiki/Piramidi di Pantiacolla</item>
+        <item>https://it.wikipedia.org/wiki/Geode di Coso</item>
+        <item>https://it.wikipedia.org/wiki/Precipitevolissimevolmente</item>
+        <item>https://it.wikipedia.org/wiki/La linea di sangue del Santo Graal</item>
+        <item>https://it.wikipedia.org/wiki/Dahu</item>
+        <item>https://it.wikipedia.org/wiki/Placca dei Pioneer</item>
+        <item>https://it.wikipedia.org/wiki/Sorelle della Perpetua Indulgenza</item>
+        <item>https://it.wikipedia.org/wiki/Porta Palatina</item>
+        <item>https://it.wikipedia.org/wiki/Digosville</item>
+        <item>https://it.wikipedia.org/wiki/Bioritmo</item>
+        <item>https://it.wikipedia.org/wiki/Steorn</item>
+        <item>https://it.wikipedia.org/wiki/Paradosso del gatto di Schrödinger</item>
+        <item>https://it.wikipedia.org/wiki/Muro marocchino</item>
+        <item>https://it.wikipedia.org/wiki/Monastero di Santa Caterina</item>
+        <item>https://it.wikipedia.org/wiki/Dispositivo di occultamento</item>
+        <item>https://it.wikipedia.org/wiki/Fontana (Duchamp)</item>
+        <item>https://it.wikipedia.org/wiki/Elvis\' Greatest Shit</item>
+        <item>https://it.wikipedia.org/wiki/I vitelli dei romani sono belli</item>
+        <item>https://it.wikipedia.org/wiki/Eruttazione</item>
+        <item>https://it.wikipedia.org/wiki/Acquedotto Carolino</item>
+        <item>https://it.wikipedia.org/wiki/Temporale di neve</item>
+        <item>https://it.wikipedia.org/wiki/Headington Shark</item>
+        <item>https://it.wikipedia.org/wiki/Esplosione della carcassa di un cetaceo</item>
+        <item>https://it.wikipedia.org/wiki/Supercalifragilistichespiralidoso</item>
+        <item>https://it.wikipedia.org/wiki/Miracolina</item>
+        <item>https://it.wikipedia.org/wiki/Elepoli</item>
+        <item>https://it.wikipedia.org/wiki/John Titor</item>
+        <item>https://it.wikipedia.org/wiki/San Guinefort</item>
+        <item>https://it.wikipedia.org/wiki/Macchina che legge e che scrive</item>
+        <item>https://it.wikipedia.org/wiki/Linothorax</item>
+        <item>https://it.wikipedia.org/wiki/Testa di Oliver Cromwell</item>
+        <item>https://it.wikipedia.org/wiki/Cacciavite sonico</item>
+        <item>https://it.wikipedia.org/wiki/Regola dei cinque secondi</item>
+        <item>https://it.wikipedia.org/wiki/Teoria della Terra cava</item>
+        <item>https://it.wikipedia.org/wiki/HE 1523-0901</item>
+        <item>https://it.wikipedia.org/wiki/Sarchiapone</item>
+        <item>https://it.wikipedia.org/wiki/Arcobaleno lunare</item>
+        <item>https://it.wikipedia.org/wiki/Giovanni Antonio Amedeo Plana</item>
+        <item>https://it.wikipedia.org/wiki/Fabbriche di Careggine</item>
+        <item>https://it.wikipedia.org/wiki/Hahaha</item>
+        <item>https://it.wikipedia.org/wiki/Coleottero bombardiere</item>
+        <item>https://it.wikipedia.org/wiki/Physalia physalis</item>
+        <item>https://it.wikipedia.org/wiki/Una struttura di archivio, per l\'insieme, per il cambiamento e per l\'indeterminato</item>
+        <item>https://it.wikipedia.org/wiki/Nido dell\'Aquila</item>
+        <item>https://it.wikipedia.org/wiki/Putsch di Monaco</item>
+        <item>https://it.wikipedia.org/wiki/Lingua artistica</item>
+        <item>https://it.wikipedia.org/wiki/Air guitar</item>
+        <item>https://it.wikipedia.org/wiki/Madonna del manganello</item>
+        <item>https://it.wikipedia.org/wiki/Mary Toft</item>
+        <item>https://it.wikipedia.org/wiki/Pipetta Pasteur</item>
+        <item>https://it.wikipedia.org/wiki/Tromba marina (strumento musicale)</item>
+        <item>https://it.wikipedia.org/wiki/Priorato di Sion</item>
+        <item>https://it.wikipedia.org/wiki/H.L._Hunley</item>
+        <item>https://it.wikipedia.org/wiki/Toire no Hanako-san (folclore)</item>
+        <item>https://it.wikipedia.org/wiki/Blue Star Acid</item>
+        <item>https://it.wikipedia.org/wiki/Consonno</item>
+        <item>https://it.wikipedia.org/wiki/Scimmia Skunk</item>
+        <item>https://it.wikipedia.org/wiki/Cimitero delle Fontanelle</item>
+        <item>https://it.wikipedia.org/wiki/The Company of Undertakers</item>
+        <item>https://it.wikipedia.org/wiki/Teletrasporto</item>
+        <item>https://it.wikipedia.org/wiki/Villa dei Misteri</item>
+        <item>https://it.wikipedia.org/wiki/Santa Nonna</item>
+        <item>https://it.wikipedia.org/wiki/Razzismo scientifico</item>
+        <item>https://it.wikipedia.org/wiki/Lingua romanza d\'Africa</item>
+        <item>https://it.wikipedia.org/wiki/Labirinto di Meride</item>
+        <item>https://it.wikipedia.org/wiki/Ammasso della Chioma</item>
+        <item>https://it.wikipedia.org/wiki/Olivetti Elea 9003</item>
+        <item>https://it.wikipedia.org/wiki/Religione Jedi nei censimenti</item>
+        <item>https://it.wikipedia.org/wiki/Le due Babilonie</item>
+        <item>https://it.wikipedia.org/wiki/Escopetarra</item>
+        <item>https://it.wikipedia.org/wiki/Pantalica</item>
+        <item>https://it.wikipedia.org/wiki/Treno turbogetto</item>
+        <item>https://it.wikipedia.org/wiki/Sei gradi di separazione</item>
+        <item>https://it.wikipedia.org/wiki/Arco (lampada)</item>
+        <item>https://it.wikipedia.org/wiki/Lettera del Diavolo</item>
+        <item>https://it.wikipedia.org/wiki/Tabi</item>
+        <item>https://it.wikipedia.org/wiki/Minuto di 61 secondi</item>
+        <item>https://it.wikipedia.org/wiki/Kunsthaus Tacheles</item>
+        <item>https://it.wikipedia.org/wiki/The Brig</item>
+        <item>https://it.wikipedia.org/wiki/Lorem ipsum</item>
+        <item>https://it.wikipedia.org/wiki/Casu frazigu</item>
+        <item>https://it.wikipedia.org/wiki/Batracomiomachia</item>
+        <item>https://it.wikipedia.org/wiki/Ora del Garda</item>
+        <item>https://it.wikipedia.org/wiki/Frislanda</item>
+        <item>https://it.wikipedia.org/wiki/Pacific Trash Vortex</item>
+        <item>https://it.wikipedia.org/wiki/Giraffa dei Medici</item>
+        <item>https://it.wikipedia.org/wiki/Thomas Midgley</item>
+        <item>https://it.wikipedia.org/wiki/Alert</item>
+        <item>https://it.wikipedia.org/wiki/Coober Pedy</item>
+        <item>https://it.wikipedia.org/wiki/Cosmic latte</item>
+        <item>https://it.wikipedia.org/wiki/Metropolitan Life Insurance Company Tower</item>
+        <item>https://it.wikipedia.org/wiki/Battaglione \"Azad Hindoustan\"</item>
+        <item>https://it.wikipedia.org/wiki/Giuseppe Castiglione</item>
+        <item>https://it.wikipedia.org/wiki/Bouncing bomb</item>
+        <item>https://it.wikipedia.org/wiki/Teorema della scimmia instancabile</item>
+        <item>https://it.wikipedia.org/wiki/Berta filava</item>
+        <item>https://it.wikipedia.org/wiki/Love Canal</item>
+        <item>https://it.wikipedia.org/wiki/Il poeta mangiatore di leoni nel covo di pietra‎</item>
+        <item>https://it.wikipedia.org/wiki/Caccia parassita</item>
+        <item>https://it.wikipedia.org/wiki/Santi di ghiaccio</item>
+        <item>https://it.wikipedia.org/wiki/Kormoran (HSK 8)</item>
+        <item>https://it.wikipedia.org/wiki/Motivi geometrici islamici</item>
+        <item>https://it.wikipedia.org/wiki/Franz Reichelt</item>
+        <item>https://it.wikipedia.org/wiki/Séraphine de Senlis</item>
+        <item>https://it.wikipedia.org/wiki/La nona onda</item>
+        <item>https://it.wikipedia.org/wiki/Raggio verde</item>
+        <item>https://it.wikipedia.org/wiki/Organo del Boardwalk Hall Auditorium</item>
+        <item>https://it.wikipedia.org/wiki/King Camp Gillette</item>
+        <item>https://it.wikipedia.org/wiki/CG 36500</item>
+        <item>https://it.wikipedia.org/wiki/Fulmine globulare</item>
+        <item>https://it.wikipedia.org/wiki/Leelah Alcorn</item>
+        <item>https://it.wikipedia.org/wiki/Bottiglia Codd</item>
+        <item>https://it.wikipedia.org/wiki/Silbo gomero</item>
+        <item>https://it.wikipedia.org/wiki/Mummia di Manchester</item>
+        <item>https://it.wikipedia.org/wiki/Monte Stella (Milano)</item>
+        <item>https://it.wikipedia.org/wiki/Synsepalum dulcificum</item>
+        <item>https://it.wikipedia.org/wiki/Frank Lentini</item>
+        <item>https://it.wikipedia.org/wiki/Sindrome_di_Stendhal</item>
+        <item>https://it.wikipedia.org/wiki/Bomber stream</item>
+        <item>https://it.wikipedia.org/wiki/Macchine anatomiche</item>
+        <item>https://it.wikipedia.org/wiki/Ambasciatori (Holbein il Giovane)</item>
+        <item>https://it.wikipedia.org/wiki/Incidente di Gleiwitz</item>
+        <item>https://it.wikipedia.org/wiki/Operazione Chrome Dome</item>
+        <item>https://it.wikipedia.org/wiki/Ab anbar</item>
+        <item>https://it.wikipedia.org/wiki/Coseano</item>
+        <item>https://it.wikipedia.org/wiki/Clavier à lumières</item>
+        <item>https://it.wikipedia.org/wiki/Torre Guinigi</item>
+        <item>https://it.wikipedia.org/wiki/Guerra meteorologica (1940-1945)</item>
+        <item>https://it.wikipedia.org/wiki/Elephant walk</item>
+        <item>https://it.wikipedia.org/wiki/Jim Abbott</item>
+        <item>https://it.wikipedia.org/wiki/Dingo Fence</item>
+        <item>https://it.wikipedia.org/wiki/Fiat Mefistofele</item>
+        <item>https://it.wikipedia.org/wiki/D.B. Cooper</item>
+        <item>https://it.wikipedia.org/wiki/sindrome della mano aliena</item>
+        <item>https://it.wikipedia.org/wiki/Rappresentativa Calcistica Dipendenti Vaticani</item>
+        <item>https://it.wikipedia.org/wiki/Battaglia dell\'Isola Ramree</item>
+        <item>https://it.wikipedia.org/wiki/Isola delle Rose (micronazione)</item>
+        <item>https://it.wikipedia.org/wiki/Kitty Genovese</item>
+        <item>https://it.wikipedia.org/wiki/Volto su Marte</item>
+        <item>https://it.wikipedia.org/wiki/Tumore facciale del diavolo</item>
+        <item>https://it.wikipedia.org/wiki/Pykrete</item>
+        <item>https://it.wikipedia.org/wiki/The Elements</item>
+        <item>https://it.wikipedia.org/wiki/Deflategate</item>
+        <item>https://it.wikipedia.org/wiki/Alfabeto Deseret</item>
+        <item>https://it.wikipedia.org/wiki/Strada del Karakorum</item>
+        <item>https://it.wikipedia.org/wiki/Tarzan Boy</item>
+        <item>https://it.wikipedia.org/wiki/Suolo poligonale</item>
+        <item>https://it.wikipedia.org/wiki/Digit ratio</item>
+        <item>https://it.wikipedia.org/wiki/Moresnet</item>
+        <item>https://it.wikipedia.org/wiki/Perito (astronomia)</item>
+        <item>https://it.wikipedia.org/wiki/Hákarl</item>
+        <item>https://it.wikipedia.org/wiki/Autoscatto del macaco</item>
+        <item>https://it.wikipedia.org/wiki/Elvavrålet</item>
+        <item>https://it.wikipedia.org/wiki/Repubblica di Cospaia</item>
+        <item>https://it.wikipedia.org/wiki/Aeroporto di Barra</item>
+        <item>https://it.wikipedia.org/wiki/Alan Smithee</item>
+        <item>https://it.wikipedia.org/wiki/Ambasciata Tenshō</item>
+        <item>https://it.wikipedia.org/wiki/Sinodo del cadavere</item>
+        <item>https://it.wikipedia.org/wiki/Centralia (Pennsylvania)</item>
+        <item>https://it.wikipedia.org/wiki/Citrus bizzarria</item>
+        <item>https://it.wikipedia.org/wiki/Calitri</item>
+        <item>https://it.wikipedia.org/wiki/Disco di Festo</item>
+        <item>https://it.wikipedia.org/wiki/588º Reggimento bombardamento notturno</item>
+        <item>https://it.wikipedia.org/wiki/Uomo di Tollund</item>
+        <item>https://it.wikipedia.org/wiki/Moretto fiumano</item>
+        <item>https://it.wikipedia.org/wiki/Balaeniceps rex</item>
+        <item>https://it.wikipedia.org/wiki/Isabella di Morra</item>
+        <item>https://it.wikipedia.org/wiki/Signora di Brassempouy</item>
+        <item>https://it.wikipedia.org/wiki/Psiconautica</item>
+        <item>https://it.wikipedia.org/wiki/Horsetail Fall</item>
+        <item>https://it.wikipedia.org/wiki/Avvelenamento di massa di Pont-Saint-Esprit</item>
+        <item>https://it.wikipedia.org/wiki/Casa sulle nuvole</item>
+        <item>https://it.wikipedia.org/wiki/Dreamachine</item>
+        <item>https://it.wikipedia.org/wiki/Otaku</item>
+        <item>https://it.wikipedia.org/wiki/Beffa della Dreadnought</item>
+        <item>https://it.wikipedia.org/wiki/War_of_the_Worlds_(programma_radiofonico)</item>
+        <item>https://it.wikipedia.org/wiki/Effetto Dunning-Kruger</item>
+        <item>https://it.wikipedia.org/wiki/Seawise Giant</item>
+        <item>https://it.wikipedia.org/wiki/Box junction</item>
+        <item>https://it.wikipedia.org/wiki/Vallone dei Mulini</item>
+        <item>https://it.wikipedia.org/wiki/Muretto di Alassio</item>
+        <item>https://it.wikipedia.org/wiki/B. Traven</item>
+        <item>https://it.wikipedia.org/wiki/Settembre eterno</item>
+        <item>https://it.wikipedia.org/wiki/Galleria dell\'Eufrate</item>
+        <item>https://it.wikipedia.org/wiki/Panthera leo persica</item>
+        <item>https://it.wikipedia.org/wiki/Tyrrell P34</item>
+        <item>https://it.wikipedia.org/wiki/Pando (albero)</item>
+        <item>https://it.wikipedia.org/wiki/Alaska Railroad</item>
+        <item>https://it.wikipedia.org/wiki/Cunicoli di Claudio</item>
+        <item>https://it.wikipedia.org/wiki/Inter-Services and Dominions Rugby Championship</item>
+        <item>https://it.wikipedia.org/wiki/Bestia del Gévaudan</item>
+        <item>https://it.wikipedia.org/wiki/Off the Wall (album Michael Jackson)</item>
+        <item>https://it.wikipedia.org/wiki/80 cm K (E)</item>
+        <item>https://it.wikipedia.org/wiki/Victor Lustig</item>
+        <item>https://it.wikipedia.org/wiki/Linciaggio di Jesse Washington</item>
+        <item>https://it.wikipedia.org/wiki/Yanar Dag</item>
+        <item>https://it.wikipedia.org/wiki/Dickin Medal</item>
+        <item>https://it.wikipedia.org/wiki/Giorno del pi greco</item>
+        <item>https://it.wikipedia.org/wiki/Filatoio Rosso di Caraglio</item>
+        <item>https://it.wikipedia.org/wiki/Maddalena Ventura con il marito e il figlio</item>
+        <item>https://it.wikipedia.org/wiki/Bosio &amp; Caratsch</item>
+        <item>https://it.wikipedia.org/wiki/Fortezza di San Nicolò</item>
+        <item>https://it.wikipedia.org/wiki/Seebad Prora</item>
+        <item>https://it.wikipedia.org/wiki/Khnumhotep e Niankhkhnum</item>
+        <item>https://it.wikipedia.org/wiki/Casa della Storia europea</item>
+        <item>https://it.wikipedia.org/wiki/Colle dell\'Iseran</item>
+        <item>https://it.wikipedia.org/wiki/Ponte sullo stretto di Bering</item>
+        <item>https://it.wikipedia.org/wiki/Incidente ferroviario della stazione di Parigi Montparnasse</item>
+        <item>https://it.wikipedia.org/wiki/Diari di Hitler</item>
+        <item>https://it.wikipedia.org/wiki/Nannie Doss</item>
+        <item>https://it.wikipedia.org/wiki/XXV della campagna romana</item>
+        <item>https://it.wikipedia.org/wiki/Isola di North Sentinel</item>
+        <item>https://it.wikipedia.org/wiki/Nigella sativa</item>
+        <item>https://it.wikipedia.org/wiki/Vasa (galeone)</item>
+        <item>https://it.wikipedia.org/wiki/Kopi Luwak</item>
+        <item>https://it.wikipedia.org/wiki/João Lourenço</item>
+        <item>https://it.wikipedia.org/wiki/Teleferica Massaua-Asmara</item>
+        <item>https://it.wikipedia.org/wiki/Problema di Monty Hall</item>
+        <item>https://it.wikipedia.org/wiki/Pyramiden</item>
+        <item>https://it.wikipedia.org/wiki/Concessione italiana di Tientsin</item>
+        <item>https://it.wikipedia.org/wiki/problema di Monty Hall</item>
+        <item>https://it.wikipedia.org/wiki/Città murata di Kowloon</item>
+        <item>https://it.wikipedia.org/wiki/Sark</item>
+        <item>https://it.wikipedia.org/wiki/Francesco Foglia</item>
+        <item>https://it.wikipedia.org/wiki/Carlo Airoldi</item>
+        <item>https://it.wikipedia.org/wiki/YInMn Blue</item>
+        <item>https://it.wikipedia.org/wiki/Vegetarianismo di Adolf Hitler</item>
+        <item>https://it.wikipedia.org/wiki/Battaglia di Los Angeles</item>
+        <item>https://it.wikipedia.org/wiki/Silene stenophylla</item>
+        <item>https://it.wikipedia.org/wiki/Cacareco</item>
+        <item>https://it.wikipedia.org/wiki/Italica (nave)</item>
+        <item>https://it.wikipedia.org/wiki/Eduard Bloch</item>
+        <item>https://it.wikipedia.org/wiki/Campo profughi di Latina</item>
+        <item>https://it.wikipedia.org/wiki/Paradosso dell\'area scomparsa</item>
+        <item>https://it.wikipedia.org/wiki/Sonata per clavicembalo K. 30</item>
+        <item>https://it.wikipedia.org/wiki/Vulcano di fango</item>
+        <item>https://it.wikipedia.org/wiki/Meme</item>
+        <item>https://it.wikipedia.org/wiki/Tecnocrazia</item>
+        <item>https://it.wikipedia.org/wiki/Oclocrazia</item>
+        <item>https://it.wikipedia.org/wiki/Autocrazia</item>
+        <item>https://it.wikipedia.org/wiki/Androcrazia</item>
+        <item>https://it.wikipedia.org/wiki/Dispotismo illuminato</item>
+        <item>https://it.wikipedia.org/wiki/Gerontocrazia</item>
+        <item>https://it.wikipedia.org/wiki/Teocrazia</item>
+        <item>https://it.wikipedia.org/wiki/Stratocrazia</item>
+        <item>https://it.wikipedia.org/wiki/Teoria del complotto sugli UFO</item>
+        <item>https://it.wikipedia.org/wiki/Teoria del complotto sul piano Kalergi</item>
+        <item>https://it.wikipedia.org/wiki/Teoria del complotto giudaico</item>
+        <item>https://it.wikipedia.org/wiki/Revisionismo del Risorgimento</item>
+        <item>https://it.wikipedia.org/wiki/Casa di paglia</item>
+        <item>https://it.wikipedia.org/wiki/Toilette compostante</item>
+        <item>https://it.wikipedia.org/wiki/Flatulenza</item>
+        <item>https://it.wikipedia.org/wiki/Agricoltura sinergica</item>
+        <item>https://it.wikipedia.org/wiki/Maggese</item>
+        <item>https://it.wikipedia.org/wiki/Rotazione delle colture</item>
+        <item>https://it.wikipedia.org/wiki/Mnemotecnica</item>
+        <item>https://it.wikipedia.org/wiki/Poliglotta</item>
+        <item>https://it.wikipedia.org/wiki/Emil Krebs</item>
+        <item>https://it.wikipedia.org/wiki/Eptacaidecafobia</item>
+        <item>https://it.wikipedia.org/wiki/Chiesetta di Piedigrotta</item>
+        <item>https://it.wikipedia.org/wiki/Criptovaluta</item>
+        <item>https://it.wikipedia.org/wiki/Bitcoin</item>
+        <item>https://it.wikipedia.org/wiki/Terremoto di Argenta del 1624</item>
+        <item>https://it.wikipedia.org/wiki/Insonnia familiare fatale</item>
+        <item>https://it.wikipedia.org/wiki/Compagnia barracellare</item>
+        <item>https://it.wikipedia.org/wiki/Margherita Kaiser Parodi</item>
+        <item>https://it.wikipedia.org/wiki/Alto papavero</item>
+        <item>https://it.wikipedia.org/wiki/Spiral Island e Joyxee Island</item>
+        <item>https://it.wikipedia.org/wiki/Spedizione romana alle fonti del Nilo</item>
+        <item>https://it.wikipedia.org/wiki/Spedizione Thornton</item>
+        <item>https://it.wikipedia.org/wiki/Falso documentario</item>
+        <item>https://it.wikipedia.org/wiki/Falso storico</item>
+        <item>https://it.wikipedia.org/wiki/Bufala</item>
     </array>
     <array name="smalltalk">
         <item>Non credo di aver capito...</item>
