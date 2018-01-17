@@ -3,6 +3,7 @@ package techbrain.wikibot.delegates;
 import android.app.Activity;
 import android.content.Context;
 import android.os.AsyncTask;
+import android.text.TextUtils;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -53,6 +54,15 @@ public class WikiCommons {
 								if(matcherUrl.find()){
 									String url = matcherUrl.group(1);
 									System.out.println(url);
+
+									url = url.replace("thumb/", "");
+									String[] sections = url.split("/");
+
+									sections[sections.length-1] = "";
+									url = TextUtils.join("/", sections);
+									//remove last separator
+									url = url.substring(0, url.length()-1);
+
 									urlList.add(url);
 
 									String imageFileName = ImageUtils.getFileNameFromUrl(url);

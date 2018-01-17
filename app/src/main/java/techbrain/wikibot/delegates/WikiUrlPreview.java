@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
-import com.google.gson.JsonElement;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -18,7 +17,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.concurrent.Callable;
 
 import techbrain.wikibot.adapters.ElementAdapter;
 import techbrain.wikibot.beans.MessageElement;
@@ -28,7 +26,15 @@ import techbrain.wikibot.utils.ImageUtils;
 
 public class WikiUrlPreview {
 
-	static String WIKI_SUMMARY_PREFIX = "https://it.wikipedia.org/api/rest_v1/page/summary/";
+	static String WIKI_SUMMARY_PREFIX_IT = "https://it.wikipedia.org/api/rest_v1/page/summary/";
+	static String WIKI_SUMMARY_PREFIX_EN = "https://en.wikipedia.org/w/api.php?format=json&formatversion=2&action=query&prop=revisions|pageprops|info|images|categories&rvprop=ids|timestamp|flags|comment|user|content&cllimit=max&imlimit=max&titles=";
+
+	//example
+	//https://en.wikipedia.org/w/api.php?format=json&formatversion=2&action=query&prop=revisions|pageprops|info|images|categories&rvprop=ids|timestamp|flags|comment|user|content&cllimit=max&imlimit=max&titles=Eastbourne_manslaughter
+
+	//to html
+	//https://www.mediawiki.org/w/api.php?action=parse&text=The%20%3Ccode%3Euselang%3C/code%3E%20parameter%20from%20the%20[[API:Main%20module|main%20module]]%20&title=italia
+
 	private ElementAdapter elementAdapter;
 
 	public void injectPreview(Context context, ElementAdapter elementAdapter, MessageElement messageElement, TextView titleElement, TextView descrElement, boolean scrollDown) {
@@ -84,7 +90,7 @@ public class WikiUrlPreview {
             if(remoteUrl != null){
                 String[] splits = remoteUrl.split("/wiki/");
                 if(splits.length > 1) {
-                    return GET(WIKI_SUMMARY_PREFIX + getPreviewBaseBey(remoteUrl));
+                    return GET(WIKI_SUMMARY_PREFIX_IT + getPreviewBaseBey(remoteUrl));
                 }
             }
 
@@ -101,6 +107,8 @@ public class WikiUrlPreview {
 				 * Define InputStreams to read from the URLConnection.
 				 */
 				InputStream inputStream = ucon.getInputStream();
+
+
 
 				// convert inputstream to string
 				if(inputStream != null) {
@@ -121,7 +129,8 @@ public class WikiUrlPreview {
 							if (!new File(imageFilePath).exists()) {
 								try {
 									DownloadImageTask sdt = new DownloadImageTask(context, new URL(imageUrl), imageFilePath, null);
-									sdt.doInBackground(null);
+									String[] var = new String[0];
+									sdt.doInBackground(var);
 								} catch (Exception e) {
 									e.printStackTrace();
 								}
