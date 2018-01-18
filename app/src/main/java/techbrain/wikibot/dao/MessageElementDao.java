@@ -17,7 +17,7 @@ import java.util.Calendar;
 public class MessageElementDao extends SQLiteOpenHelper {
 
     // If you change the database schema, you must increment the database version.
-    public static final int DATABASE_VERSION = 3;
+    public static final int DATABASE_VERSION = 6;
     public static final String DATABASE_NAME = "wikibot.db";
 
     public static MessageElementDao messageElementDbHelper;

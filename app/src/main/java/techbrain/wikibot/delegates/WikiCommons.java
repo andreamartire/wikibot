@@ -24,6 +24,7 @@ import techbrain.wikibot.utils.ImageUtils;
 public class WikiCommons {
 
 	static String WIKI_COMMONS_PREFIX = "https://commons.wikimedia.org/wiki/Commons:Immagine_del_giorno";
+    static String IMAGE_PATH = "/commons_images/";
 
 	public static String getImageOfDayUrl(final Activity myApp ){
 		String imageUrl = "";
@@ -66,7 +67,7 @@ public class WikiCommons {
 									urlList.add(url);
 
 									String imageFileName = ImageUtils.getFileNameFromUrl(url);
-									String imageFilePath = myApp.getFilesDir().getAbsolutePath() + "/images/" + imageFileName;
+									String imageFilePath = myApp.getFilesDir().getAbsolutePath() + IMAGE_PATH + imageFileName;
 
 									if(!new File(imageFilePath).exists()){
 										//download file out of main thread
@@ -120,7 +121,7 @@ public class WikiCommons {
 	}
 
 	public static java.lang.String getRandomItem(Context context) {
-		String imagePath = context.getFilesDir().getAbsolutePath() + "/images/";
+		String imagePath = context.getFilesDir().getAbsolutePath() + IMAGE_PATH;
 
 		if(new File(imagePath).exists()){
 			File[] files = new File(imagePath).listFiles();

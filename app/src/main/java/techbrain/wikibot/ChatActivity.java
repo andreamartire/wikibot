@@ -134,7 +134,9 @@ public class ChatActivity extends AppCompatActivity {
         setContentView(R.layout.main_chat);
 
         currLang = WikiLangEnum.EN;
-        if(Locale.getDefault().getDisplayLanguage().equalsIgnoreCase("IT")){
+
+        String displayLang = Locale.getDefault().getLanguage();
+        if("IT".equalsIgnoreCase(displayLang)){
             currLang = WikiLangEnum.IT;
         }
 
@@ -376,11 +378,13 @@ public class ChatActivity extends AppCompatActivity {
 
         String randomImageFilePath = WikiCommons.getRandomItem(context);
 
-        MessageElement element = new MessageElement(MessageType.IMAGE, randomImageFilePath);
+        if(randomImageFilePath != null){
+            MessageElement element = new MessageElement(MessageType.IMAGE, randomImageFilePath);
 
-        addMessage(this, listItems, element);
+            addMessage(this, listItems, element);
 
-        adapter.notifyDataSetChanged();
+            adapter.notifyDataSetChanged();
+        }
     }
 
     public static void addMessage(Context context, ArrayList<MessageElement> listItems, MessageElement element) {
@@ -434,6 +438,16 @@ public class ChatActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
+    }
+
+    @Override
+    protected void onResume() {
+        addRandomProverb(this, listItems, adapter);
+        addRandomImage(this, listItems, adapter);
+        addRandomCuriosita(this, listItems, adapter);
+        addRandomQuote(this, listItems, adapter);
+
+        super.onResume();
     }
 
     @Override

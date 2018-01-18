@@ -163,10 +163,11 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
 
                                     Drawable image = Drawable.createFromPath(element.getLocalImageFilePath());
                                     if (image != null) {
-                                        float prop = height / (float) width;
-
                                         WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+                                        //Integer realWidth = ImageUtils.getRealWidthSize(wm);
                                         Integer realWidth = new Float(ImageUtils.getRealWidthSize(wm) / (float) 3).intValue();
+
+                                        float prop = height / (float) width;
                                         int customHeight = (int) (realWidth * prop);
 
                                         //select downloaded image
@@ -230,18 +231,19 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
 
                             if (bitmap != null) {
                                 int width = bitmap.getWidth();
-                                int height = bitmap.getHeight();
+                                int customHeight = bitmap.getHeight();
 
                                 Drawable image = Drawable.createFromPath(value);
                                 if (image != null) {
-                                    float prop = height / (float) width;
-
                                     WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
                                     Integer realWidth = ImageUtils.getRealWidthSize(wm);
-                                    int customHeight = (int) (realWidth * prop);
+
+                                    float prop = customHeight / (float) width;
+                                    customHeight = (int) (realWidth * prop);
+                                    image = ImageUtils.scaleImage(context, image, realWidth, customHeight);
 
                                     //select downloaded image
-                                    imageElement.setImageDrawable(ImageUtils.scaleImage(context, image, realWidth, customHeight));
+                                    imageElement.setImageDrawable(image);
                                     imageElement.setVisibility(View.VISIBLE);
                                 }
                             }

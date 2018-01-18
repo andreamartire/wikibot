@@ -18,6 +18,7 @@ import android.view.WindowManager;
 import java.io.BufferedInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.net.URL;
@@ -78,12 +79,30 @@ public class DownloadImageTask extends AsyncTask<String, Integer, String> {
             byte[] b = baf.toByteArray();
             Drawable image = new BitmapDrawable(context.getResources(), BitmapFactory.decodeByteArray(b, 0, b.length));
 
+            //get image
             Bitmap bitmap = ((BitmapDrawable)image).getBitmap();
             ByteArrayOutputStream stream = new ByteArrayOutputStream();
             bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
             byte[] bitmapdata = stream.toByteArray();
 
-            /* Convert the Bytes read to a String. */
+            //get image info
+            image = new BitmapDrawable(context.getResources(), BitmapFactory.decodeByteArray(bitmapdata, 0, bitmapdata.length));
+            bitmap = ((BitmapDrawable)image).getBitmap();
+            int imageWidth = bitmap.getWidth();
+            int imageHeight = bitmap.getHeight();
+            float prop = imageHeight / (float) imageWidth;
+            WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+            Integer realWidth = ImageUtils.getRealWidthSize(wm);
+            int customHeight = (int) (realWidth * prop);
+
+            //scale image
+            image = ImageUtils.scaleImage(context, image, realWidth, customHeight);
+            bitmap = ((BitmapDrawable)image).getBitmap();
+            stream = new ByteArrayOutputStream();
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+            bitmapdata = stream.toByteArray();
+
+            //save image
             FileOutputStream fos = new FileOutputStream(file);
             fos.write(bitmapdata);
             fos.close();

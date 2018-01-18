@@ -90,7 +90,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/sendButton"
             android:background="@drawable/rounded_buttons"
-            android:text="@string/label_send"/>
+            android:src="@drawable/ic_send_black_24dp"/>
     </LinearLayout>
 
     <WebView
