@@ -67,7 +67,7 @@ public class RetrieveGoogleTask extends AsyncTask<String, Void, String> {
                             && !link.contains("wiki/Discussione")
                             && !link.contains("wiki/Discussioni_")
                             && !link.contains("wiki/Template")
-                            && !link.contains("wiki/Wikipedia:Bar")
+                            && !link.contains("wiki/Wikipedia%3A")
                             && !link.contains("wiki/File:")
                             && !link.contains("wiki/Utente:")){
                         firstLink = link;

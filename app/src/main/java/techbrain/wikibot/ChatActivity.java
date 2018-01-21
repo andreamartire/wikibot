@@ -165,7 +165,7 @@ public class ChatActivity extends AppCompatActivity {
 
         final ListView list = (ListView) findViewById(R.id.listContents);
 
-        adapter = new ElementAdapter(this, R.layout.single_element, listItems);
+        adapter = new ElementAdapter(this, R.layout.single_element, listItems, currLang);
         list.setAdapter(adapter);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

@@ -34,6 +34,7 @@ import techbrain.wikibot.ChatActivity;
 import techbrain.wikibot.R;
 import techbrain.wikibot.beans.MessageElement;
 import techbrain.wikibot.beans.MessageType;
+import techbrain.wikibot.delegates.WikiLangEnum;
 import techbrain.wikibot.delegates.WikiUrlPreview;
 import techbrain.wikibot.utils.ImageUtils;
 
@@ -42,12 +43,14 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
     private Context context;
     private int resource;
     private ArrayList<MessageElement> elements;
+    private WikiLangEnum currLang;
 
-    public ElementAdapter(Context context, int resource, ArrayList<MessageElement> elements) {
+    public ElementAdapter(Context context, int resource, ArrayList<MessageElement> elements, WikiLangEnum currLang) {
         super(context, resource, elements);
         this.context = context;
         this.resource = resource;
         this.elements = elements;
+        this.currLang = currLang;
     }
 
     @Override
@@ -141,7 +144,8 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                         break;
                     case WIKIURL:
                         try{
-                            titleElement.setText(WikiUrlPreview.getPreviewBaseBey(value));
+                            String baseText = WikiUrlPreview.getPreviewBaseBey(value);
+                            titleElement.setText(baseText);
                             titleElement.setVisibility(View.VISIBLE);
                             previewView.setBackgroundResource(R.drawable.descr_element_rounded);
                             userTextElement.setVisibility(View.GONE);
@@ -184,7 +188,20 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                                 titleElement.setGravity(Gravity.RIGHT);
 
                                 if(element.getPreviewTextHtml() != null && element.getPreviewTextHtml().trim().length()>0){
-                                    descrElement.setText(Html.fromHtml(element.getPreviewTextHtml()));
+                                    String cleanedTextHtml = element.getPreviewTextHtml()
+                                            .replaceAll("<p>","")
+                                            .replaceAll("</p>","")
+                                            .replaceAll("<span>","")
+                                            .replaceAll("</span>","")
+                                            .replaceAll("\\n","");
+
+                                    if(cleanedTextHtml.length() < 10){
+                                        descrElement.setText(element.getPreviewText());
+                                    }
+                                    else{
+                                        descrElement.setText(Html.fromHtml(element.getPreviewTextHtml()));
+                                    }
+
                                     descrElement.setVisibility(View.VISIBLE);
                                     descrElement.setBackgroundColor(Color.WHITE);
                                     titleElement.setVisibility(View.GONE);
@@ -194,7 +211,7 @@ public class ElementAdapter extends ArrayAdapter<MessageElement> {
                             if(element.getPreviewDone() == 0){
                                 boolean scrollDown = position >= elements.size()-2;
 
-                                new WikiUrlPreview().injectPreview(context, this, element, titleElement, descrElement, scrollDown);
+                                new WikiUrlPreview().injectPreview(context, this, element, titleElement, descrElement, scrollDown, currLang);
                             }
                         }catch (Throwable e){
                             e.printStackTrace();

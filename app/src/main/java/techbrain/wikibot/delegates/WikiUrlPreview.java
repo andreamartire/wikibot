@@ -17,6 +17,9 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import techbrain.wikibot.adapters.ElementAdapter;
 import techbrain.wikibot.beans.MessageElement;
@@ -28,6 +31,7 @@ public class WikiUrlPreview {
 
 	static String WIKI_SUMMARY_PREFIX_IT = "https://it.wikipedia.org/api/rest_v1/page/summary/";
 	static String WIKI_SUMMARY_PREFIX_EN = "https://en.wikipedia.org/w/api.php?format=json&formatversion=2&action=query&prop=revisions|pageprops|info|images|categories&rvprop=ids|timestamp|flags|comment|user|content&cllimit=max&imlimit=max&titles=";
+	static String WIKI_PREFIX_EN = "https://en.wikipedia.org/wiki/";
 
 	//example
 	//https://en.wikipedia.org/w/api.php?format=json&formatversion=2&action=query&prop=revisions|pageprops|info|images|categories&rvprop=ids|timestamp|flags|comment|user|content&cllimit=max&imlimit=max&titles=Eastbourne_manslaughter
@@ -37,10 +41,10 @@ public class WikiUrlPreview {
 
 	private ElementAdapter elementAdapter;
 
-	public void injectPreview(Context context, ElementAdapter elementAdapter, MessageElement messageElement, TextView titleElement, TextView descrElement, boolean scrollDown) {
+	public void injectPreview(Context context, ElementAdapter elementAdapter, MessageElement messageElement, TextView titleElement, TextView descrElement, boolean scrollDown, WikiLangEnum currLang) {
 		this.elementAdapter = elementAdapter;
 		// call AsynTask to perform network operation on separate thread
-		new HttpAsyncTask(context, messageElement, titleElement, descrElement, scrollDown).execute();
+		new HttpAsyncTask(context, messageElement, titleElement, descrElement, scrollDown, currLang).execute();
 	}
 
 	public static String getPreviewBaseBey(String remoteUrl){
@@ -75,13 +79,16 @@ public class WikiUrlPreview {
 		TextView titleElement;
 		TextView descrElement;
         boolean scrollDown;
+		WikiLangEnum currLang;
 
-		public HttpAsyncTask(Context context, MessageElement messageElement, TextView titleElement, TextView descrElement, boolean scrollDown){			super();
+		public HttpAsyncTask(Context context, MessageElement messageElement, TextView titleElement, TextView descrElement, boolean scrollDown, WikiLangEnum currLang){
+			super();
 			this.context = context;
 			this.messageElement = messageElement;
 			this.titleElement = titleElement;
 			this.descrElement = descrElement;
             this.scrollDown = scrollDown;
+			this.currLang = currLang;
 		}
 
 		@Override
@@ -90,7 +97,12 @@ public class WikiUrlPreview {
             if(remoteUrl != null){
                 String[] splits = remoteUrl.split("/wiki/");
                 if(splits.length > 1) {
-                    return GET(WIKI_SUMMARY_PREFIX_IT + getPreviewBaseBey(remoteUrl));
+					if(WikiLangEnum.IT.equals(currLang)){
+						return GET(WIKI_SUMMARY_PREFIX_IT + getPreviewBaseBey(remoteUrl));
+					}
+					else{
+						return GET(WIKI_PREFIX_EN + getPreviewBaseBey(remoteUrl));
+					}
                 }
             }
 
@@ -108,99 +120,159 @@ public class WikiUrlPreview {
 				 */
 				InputStream inputStream = ucon.getInputStream();
 
-
-
 				// convert inputstream to string
 				if(inputStream != null) {
 					final String result = convertInputStreamToString(inputStream);
 
-					final SummaryItWiki element = new Gson().fromJson(result, SummaryItWiki.class);
-
-					String extractHtml = null;
-                    String extractText = null;
-					String imageFilePath = null;
-
-					if(element != null) {
-						String imageUrl = element.getThumbnail().getSource();
-						if (imageUrl != null) {
-							String imageFileName = ImageUtils.getFileNameFromUrl(imageUrl);
-							imageFilePath = context.getFilesDir().getAbsolutePath() + "/preview/" + imageFileName;
-
-							if (!new File(imageFilePath).exists()) {
-								try {
-									DownloadImageTask sdt = new DownloadImageTask(context, new URL(imageUrl), imageFilePath, null);
-									String[] var = new String[0];
-									sdt.doInBackground(var);
-								} catch (Exception e) {
-									e.printStackTrace();
-								}
-							}
-
-							extractHtml = element.getExtract_html();
-                            extractText = element.getExtract();
-
-                            int limit = 210;
-
-							if (extractHtml != null && extractHtml.trim().length() > 0) {
-								if (extractHtml.contains("</p>")) {
-
-									extractHtml = extractHtml.split("</p>")[0];
-
-									if (extractHtml.split("</p>")[0].length() > limit) {
-										extractHtml = extractHtml.substring(0, limit) + "...</p>";
-									}
-								} else {
-									if (extractHtml.length() > limit) {
-										extractHtml = extractHtml.substring(0, limit) + "...</p>";
-									}
-								}
-							}
-
-                            if (extractText != null && extractText.trim().length() > limit) {
-                                extractText = extractText.substring(0, limit) + "...";
-                            }
-						}
-					}
-
-					final String valueExtractHtml = extractHtml;
-                    final String valueExtractText = extractText;
-					final String valueImageFilePath = imageFilePath;
-
-					((Activity)context).runOnUiThread(new Runnable() {
-						@Override
-						public void run() {
-							try {
-
-								messageElement.setLocalImageFilePath(valueImageFilePath);
-								messageElement.setPreviewText(valueExtractText);
-								messageElement.setPreviewTextHtml(valueExtractHtml);
-								messageElement.setPreviewDone(1);
-
-								if(valueExtractHtml != null){
-									descrElement.setText(Html.fromHtml(valueExtractHtml));
-								}
-								descrElement.setVisibility(View.VISIBLE);
-
-								titleElement.setText("");
-								titleElement.setVisibility(View.GONE);
-
-								if (scrollDown) {
-									elementAdapter.notifyDataSetChanged();
-								}
-
-								MessageElementDao.getInstance((Activity) context).update(messageElement);
-
-							} catch (Throwable ex){
-								ex.printStackTrace();
-							}
-						}
-					});
+					manageResult(result, currLang);
 				}
 			} catch (Throwable e) {
 				e.printStackTrace();
 			}
 
 			return "";
+		}
+
+		private void manageResult(String result, WikiLangEnum currLang) {
+			if(WikiLangEnum.IT.equals(currLang)){
+				manageLangIt(result);
+			}
+			else {
+				manageLangEn(result);
+			}
+		}
+
+		private void manageLangEn(String result) {
+			if(result != null){
+				String[] sections = result.split("<p>");
+
+				boolean found = false;
+				if(sections != null){
+
+					ArrayList<String> arrayList = new ArrayList<>(Arrays.asList(sections));
+
+					if(arrayList.size() > 0){
+						for(int i = 1; i < arrayList.size(); i++){
+							final String sect = arrayList.get(i);
+							if(!found){
+								found = true;
+
+								((Activity)context).runOnUiThread(new Runnable() {
+									@Override
+									public void run() {
+										try {
+
+											messageElement.setLocalImageFilePath(null);
+											messageElement.setPreviewText(null);
+											messageElement.setPreviewTextHtml(sect);
+											messageElement.setPreviewDone(1);
+
+											descrElement.setText(sect);
+											descrElement.setVisibility(View.VISIBLE);
+
+											titleElement.setText("");
+											titleElement.setVisibility(View.GONE);
+
+											if (scrollDown) {
+												elementAdapter.notifyDataSetChanged();
+											}
+
+											MessageElementDao.getInstance((Activity) context).update(messageElement);
+
+										} catch (Throwable ex){
+											ex.printStackTrace();
+										}
+									}
+								});
+							}
+						}
+					}
+				}
+			}
+		}
+
+		private void manageLangIt(String result) {
+			final SummaryItWiki element = new Gson().fromJson(result, SummaryItWiki.class);
+
+			String extractHtml = null;
+			String extractText = null;
+			String imageFilePath = null;
+
+			if(element != null) {
+				String imageUrl = element.getThumbnail().getSource();
+				if (imageUrl != null) {
+					String imageFileName = ImageUtils.getFileNameFromUrl(imageUrl);
+					imageFilePath = context.getFilesDir().getAbsolutePath() + "/preview/" + imageFileName;
+
+					if (!new File(imageFilePath).exists()) {
+						try {
+							DownloadImageTask sdt = new DownloadImageTask(context, new URL(imageUrl), imageFilePath, null);
+							String[] var = new String[0];
+							sdt.doInBackground(var);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+
+					extractHtml = element.getExtract_html();
+					extractText = element.getExtract();
+
+					int limit = 210;
+
+					if (extractHtml != null && extractHtml.trim().length() > 0) {
+						if (extractHtml.contains("</p>")) {
+
+							extractHtml = extractHtml.split("</p>")[0];
+
+							if (extractHtml.split("</p>")[0].length() > limit) {
+								extractHtml = extractHtml.substring(0, limit) + "...</p>";
+							}
+						} else {
+							if (extractHtml.length() > limit) {
+								extractHtml = extractHtml.substring(0, limit) + "...</p>";
+							}
+						}
+					}
+
+					if (extractText != null && extractText.trim().length() > limit) {
+						extractText = extractText.substring(0, limit) + "...";
+					}
+				}
+			}
+
+			final String valueExtractHtml = extractHtml;
+			final String valueExtractText = extractText;
+			final String valueImageFilePath = imageFilePath;
+
+			((Activity)context).runOnUiThread(new Runnable() {
+				@Override
+				public void run() {
+				try {
+
+					messageElement.setLocalImageFilePath(valueImageFilePath);
+					messageElement.setPreviewText(valueExtractText);
+					messageElement.setPreviewTextHtml(valueExtractHtml);
+					messageElement.setPreviewDone(1);
+
+					if(valueExtractHtml != null){
+						descrElement.setText(Html.fromHtml(valueExtractHtml));
+					}
+					descrElement.setVisibility(View.VISIBLE);
+
+					titleElement.setText("");
+					titleElement.setVisibility(View.GONE);
+
+					if (scrollDown) {
+						elementAdapter.notifyDataSetChanged();
+					}
+
+					MessageElementDao.getInstance((Activity) context).update(messageElement);
+
+				} catch (Throwable ex){
+					ex.printStackTrace();
+				}
+				}
+			});
 		}
 
 		private String convertInputStreamToString(InputStream inputStream) throws IOException {
